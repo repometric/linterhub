@@ -24,6 +24,17 @@
             }
         },
         {
+            "name": "phpcheckstyle",
+            "description": "PHPCheckstyle is an open-source tool that helps PHP programmers adhere to certain coding conventions.",
+            "url": "https://phpcheckstyle.github.io",
+            "languages": ["php"],
+            "license": "OSL-2.1",
+            "platform": "php",
+            "config": {
+                "package": "phpcheckstyle/phpcheckstyle"
+            }
+        },
+        {
             "name": "phpcodefixer",
             "description": "PhpCodeFixer finds usage of deprecated functions, variables and ini directives in your php code.",
             "url": "https://github.com/wapmorgan/PhpCodeFixer",
