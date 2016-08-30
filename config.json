@@ -24,6 +24,17 @@
             }
         },
         {
+            "name": "phan",
+            "description": "Phan is a static analyzer that looks for common issues and will verify type compatibility on various operations when type information is available or can be deduced.",
+            "url": "https://github.com/etsy/phan",
+            "languages": ["php"],
+            "license": "MIT",
+            "platform": "php",
+            "config": {
+                "package": "etsy/phan:dev-master"
+            }
+        },
+        {
             "name": "php-assumptions",
             "description": "PHP Assumptions is a static code analysis tool doing checks for weak assumptions.",
             "url": "https://github.com/rskuipers/php-assumptions",
