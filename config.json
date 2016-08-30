@@ -5,6 +5,8 @@
             "name": "deptrac",
             "description": "Deptrac is a static code analysis tool that helps to enforce rules for dependencies between software layers.",
             "url": "https://github.com/sensiolabs-de/deptrac",
+            "languages": ["php"],
+            "license": "MIT",
             "platform": "php",
             "config": {
                 "package": "sensiolabs-de/deptrac:dev-master"
@@ -14,9 +16,9 @@
             "name": "parse",
             "description": "The Parse scanner is a static scanning tool to review your PHP code for potential security-related issues.",
             "url": "https://github.com/psecio/parse",
-            "platform": "php",
             "languages": ["php"],
             "license": "MIT",
+            "platform": "php",
             "config": {
                 "package": "psecio/parse"
             }
@@ -25,6 +27,8 @@
             "name": "phpmd",
             "description": "It takes a given PHP source code base and look for several potential problems within that source.",
             "url": "https://phpmd.org",
+            "languages": ["php"],
+            "license": "BSD-3-Clause",
             "platform": "php",
             "config": {
                 "package": "phpmd/phpmd"
@@ -34,6 +38,8 @@
             "name": "phpmetrics",
             "description": "PhpMetrics provides various metrics about PHP projects.",
             "url": "http://phpmetrics.org",
+            "languages": ["php"],
+            "license": "MIT",
             "platform": "php",
             "config": {
                 "package": "phpmetrics/phpmetrics"
@@ -43,6 +49,8 @@
             "name": "php_codesniffer",
             "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files to detect and fix violations of a defined set of coding standards.",
             "url": "https://github.com/squizlabs/PHP_CodeSniffer",
+            "languages": ["php"],
+            "license": "BSD-3-Clause",
             "platform": "php",
             "config": {
                 "package": "squizlabs/php_codesniffer=*"
