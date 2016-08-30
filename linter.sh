@@ -91,7 +91,7 @@ function storage_destroy()
 function engine_name()
 {
     local Name=$1
-    EngineDock=linters/alpine/$Name/$Dockerfile
+    EngineDock=dockers/alpine/$Name/$Dockerfile
     EngineImage=$Prefix-$Name-image
     EngineInstance=$Prefix-$Name-instance 
 }
@@ -117,7 +117,7 @@ function engine_images()
 
 function engine_online()
 {
-    # docker search
+    echo "docker search"
 }
 
 function engine_offline()

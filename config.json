@@ -11,6 +11,17 @@
             }
         },
         {
+            "name": "parse",
+            "description": "The Parse scanner is a static scanning tool to review your PHP code for potential security-related issues.",
+            "url": "https://github.com/psecio/parse",
+            "platform": "php",
+            "languages": ["php"],
+            "license": "MIT",
+            "config": {
+                "package": "psecio/parse"
+            }
+        },
+        {
             "name": "phpmd",
             "description": "It takes a given PHP source code base and look for several potential problems within that source.",
             "url": "https://phpmd.org",
