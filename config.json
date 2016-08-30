@@ -24,6 +24,17 @@
             }
         },
         {
+            "name": "phpsa",
+            "description": "PHPSA is a development tool aimed at bringing static analysis for PHP applications and libraries.",
+            "url": "https://phpsa.dmtry.me",
+            "languages": ["php"],
+            "license": "MIT",
+            "platform": "php",
+            "config": {
+                "package": "ovr/phpsa"
+            }
+        },
+        {
             "name": "phpmd",
             "description": "It takes a given PHP source code base and look for several potential problems within that source.",
             "url": "https://phpmd.org",
