@@ -24,6 +24,17 @@
             }
         },
         {
+            "name": "php-assumptions",
+            "description": "PHP Assumptions is a static code analysis tool doing checks for weak assumptions.",
+            "url": "https://github.com/rskuipers/php-assumptions",
+            "languages": ["php"],
+            "license": "MIT",
+            "platform": "php",
+            "config": {
+                "package": "rskuipers/php-assumptions"
+            }
+        },
+        {
             "name": "phpcheckstyle",
             "description": "PHPCheckstyle is an open-source tool that helps PHP programmers adhere to certain coding conventions.",
             "url": "https://phpcheckstyle.github.io",
