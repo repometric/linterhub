@@ -24,6 +24,17 @@
             }
         },
         {
+            "name": "phpcodefixer",
+            "description": "PhpCodeFixer finds usage of deprecated functions, variables and ini directives in your php code.",
+            "url": "https://github.com/wapmorgan/PhpCodeFixer",
+            "languages": ["php"],
+            "license": "BSD-3-Clause",
+            "platform": "php",
+            "config": {
+                "package": "wapmorgan/php-code-fixer"
+            }
+        },
+        {
             "name": "phpsa",
             "description": "PHPSA is a development tool aimed at bringing static analysis for PHP applications and libraries.",
             "url": "https://phpsa.dmtry.me",
