@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Linters hub</title>
+  <title>Linters Hub</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -66,7 +66,7 @@
           <td><a href="{{ linter.url }}">{{ linter.name }}</a></td>
           <td class="hidden-xs">{{ linter.description }}</td>
           <td>{{ linter.languages.join(", ") }}</td>
-          <td>{{ linter.platform == "TODO" ? "No" : "Yes" }}</td>
+          <td class="{{ linter.rm_docker ? 'danger': '' }}">{{ linter.rm_docker ? "No" : "Yes" }}</td>
           <td class="hidden-xs"><a href="https://opensource.org/licenses/{{linter.license}}">{{ linter.license }}</a></td>
         </tr>
       </tbody>
@@ -82,7 +82,17 @@ angular.module('sortApp', [])
     $scope.linters = [];
     $http.get("../config.json")
       .then(function (res) { 
-        $scope.linters = res.data.linters;
+        $scope.linters = res.data.linters.map(function (item) {
+          return {
+            name: item.name,
+            description: item.description,
+            url: item.url,
+            platform: item.platform,
+            license: item.license,
+            languages: item.languages,
+            rm_docker: item.platform == "TODO"
+          }
+        });
       });
 });
 </script>
