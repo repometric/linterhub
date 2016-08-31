@@ -63,14 +63,15 @@
       </thead>
       <tbody>
         <tr ng-repeat="linter in linters | orderBy:sortType:sortReverse | filter:search">
-          <td>{{ linter.name }}</td>
+          <td><a href="{{ linter.url }}">{{ linter.name }}</a></td>
           <td class="hidden-xs">{{ linter.description }}</td>
           <td>{{ linter.languages.join(", ") }}</td>
-          <td>{{ linter.platform != "TODO" }}</td>
+          <td>{{ linter.platform == "TODO" ? "No" : "Yes" }}</td>
           <td class="hidden-xs">{{ linter.license }}</td>
         </tr>
       </tbody>
     </table>
+
   </div>
 <script>
 angular.module('sortApp', [])
