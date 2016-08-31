@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Linters hub</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <style>
+      body { padding-top:50px; }
+  </style>
+</head>
+<body>
+  <div class="container" ng-app="sortApp" ng-controller="mainController">
+    <form>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+          <input type="text" class="form-control" placeholder="Search" ng-model="search">
+        </div>
+      </div>
+    </form>
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td>
+            <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+              Name
+              <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+          <td class="hidden-xs">
+            <a href="#" ng-click="sortType = 'description'; sortReverse = !sortReverse">
+            Description
+              <span ng-show="sortType == 'description' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'description' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+          <td>
+            <a href="#" ng-click="sortType = 'languages'; sortReverse = !sortReverse">
+            Languages 
+              <span ng-show="sortType == 'languages' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'languages' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+          <td>
+            <a href="#" ng-click="sortType = 'platform'; sortReverse = !sortReverse">
+            Dockerfile 
+              <span ng-show="sortType == 'platform' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'platform' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+          <td class="hidden-xs">
+            <a href="#" ng-click="sortType = 'license'; sortReverse = !sortReverse">
+            License 
+              <span ng-show="sortType == 'license' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'license' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="linter in linters | orderBy:sortType:sortReverse | filter:search">
+          <td>{{ linter.name }}</td>
+          <td class="hidden-xs">{{ linter.description }}</td>
+          <td>{{ linter.languages.join(", ") }}</td>
+          <td>{{ linter.platform != "TODO" }}</td>
+          <td class="hidden-xs">{{ linter.license }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<script>
+angular.module('sortApp', [])
+  .controller('mainController', function($scope, $http) {
+    $scope.sortType = 'name';
+    $scope.sortReverse = false;
+    $scope.searchFish = '';
+    $scope.linters = [];
+    $http.get("../config.json")
+      .then(function (res) { 
+        $scope.linters = res.data.linters; 
+      })
+});
+</script>
+</body>
+</html>

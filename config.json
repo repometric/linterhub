@@ -1,5 +1,4 @@
 {
-    /* Linters */
     "linters": [
         {
             "name": "deptrac",
@@ -120,7 +119,6 @@
             }
         }
     ],
-    /* Development platforms */
     "platforms": {
         "custom": "",
         "go": "",
@@ -129,7 +127,6 @@
         "python" : "pip install",
         "ruby": "gem install"
     },
-    /* Docker images */
     "dockers": {
         "alpine": {
             "TODO": "",
