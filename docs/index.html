@@ -67,7 +67,7 @@
           <td class="hidden-xs">{{ linter.description }}</td>
           <td>{{ linter.languages.join(", ") }}</td>
           <td>{{ linter.platform == "TODO" ? "No" : "Yes" }}</td>
-          <td class="hidden-xs">{{ linter.license }}</td>
+          <td class="hidden-xs"><a href="https://opensource.org/licenses/{{linter.license}}">{{ linter.license }}</a></td>
         </tr>
       </tbody>
     </table>
@@ -82,8 +82,8 @@ angular.module('sortApp', [])
     $scope.linters = [];
     $http.get("../config.json")
       .then(function (res) { 
-        $scope.linters = res.data.linters; 
-      })
+        $scope.linters = res.data.linters;
+      });
 });
 </script>
 </body>
