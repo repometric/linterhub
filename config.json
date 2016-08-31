@@ -1,6 +1,15 @@
 {
     "linters": [
         {
+            "name": "jscpd",
+            "description": "Copy/paste detector for programming source code.",
+            "url": "https://github.com/kucherenko/jscpd",
+            "languages": ["javascript", "java", "yaml", "coffeescript", "c++", "haxe", "php", "c#", "typescript", "go", "python", "html", "ruby", "c", "scss", "less", "css", "erlang", "swift"],
+            "license": "MIT",
+            "platform": "nodejs" 
+        },
+
+        {
             "name": "coffeelint",
             "description": "CoffeeLint is a style checker that helps keep CoffeeScript code clean and consistent.",
             "url": "http://www.coffeelint.org",
@@ -22,6 +31,14 @@
             "name": "eslint",
             "description": "A fully pluggable tool for identifying and reporting on patterns in JavaScript.",
             "url": "http://eslint.org",
+            "languages": ["javascript"],
+            "license": "MIT",
+            "platform": "nodejs"
+        },
+        {
+            "name": "jslint",
+            "description": "The JavaScript Code Quality Tool.",
+            "url": "http://jslint.com",
             "languages": ["javascript"],
             "license": "MIT",
             "platform": "nodejs"
