@@ -68,6 +68,14 @@
             }
         },
         {
+            "name": "phplint",
+            "description": "PHPLint is a validator and documentator for PHP 5 and PHP 7 programs.",
+            "url": "http://www.icosaedro.it/phplint/",
+            "languages": ["php"],
+            "license": "BSD-3-Clause",
+            "platform": "TODO"
+        },
+        {
             "name": "phpsa",
             "description": "PHPSA is a development tool aimed at bringing static analysis for PHP applications and libraries.",
             "url": "https://phpsa.dmtry.me",
@@ -124,6 +132,7 @@
     /* Docker images */
     "dockers": {
         "alpine": {
+            "TODO": "",
             "base": "alpine",
             "go": "golang:alpine",
             "java": "openjdk:8-alpine",

@@ -28,12 +28,18 @@ namespace Repometric.Dockers.Generator
                 let package = ReadConfig(config, "package", name)
                 let run = cmd + " " + package
                 let model = new { docker, name, cmd, run, path }
-                let content = Format(template, model)
+                let content = platform == "TODO" ? "" : Format(template, model)
                 select new { name, path, content };
 
             var list = query.ToList();
             foreach (var item in list)
             {
+                if (string.IsNullOrEmpty(item.content))
+                {
+                    Console.WriteLine("TODO: " + item.name);
+                    continue;
+                }
+
                 Directory.CreateDirectory(item.path);
                 File.WriteAllText(item.path + "Dockerfile", item.content);
                 Console.WriteLine("Generate: " + item.name);
