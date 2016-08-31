@@ -90,7 +90,8 @@ angular.module('sortApp', [])
             platform: item.platform,
             license: item.license,
             languages: item.languages,
-            rm_docker: item.platform == "TODO"
+            rm_docker: item.platform == "TODO",
+            rm_cli: false
           }
         });
       });

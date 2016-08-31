@@ -6,7 +6,7 @@
             "url": "https://github.com/sensiolabs-de/deptrac",
             "languages": ["php"],
             "license": "MIT",
-            "platform": "php",
+            "platform": "TODO",
             "config": {
                 "package": "sensiolabs-de/deptrac:dev-master"
             }
@@ -28,7 +28,7 @@
             "url": "https://github.com/etsy/phan",
             "languages": ["php"],
             "license": "MIT",
-            "platform": "php",
+            "platform": "TODO",
             "config": {
                 "package": "etsy/phan:dev-master"
             }
@@ -50,7 +50,7 @@
             "url": "https://phpcheckstyle.github.io",
             "languages": ["php"],
             "license": "OSL-2.1",
-            "platform": "php",
+            "platform": "TODO",
             "config": {
                 "package": "phpcheckstyle/phpcheckstyle"
             }
@@ -61,7 +61,7 @@
             "url": "https://github.com/wapmorgan/PhpCodeFixer",
             "languages": ["php"],
             "license": "BSD-3-Clause",
-            "platform": "php",
+            "platform": "TODO",
             "config": {
                 "package": "wapmorgan/php-code-fixer"
             }
