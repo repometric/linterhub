@@ -1,6 +1,50 @@
 {
     "linters": [
         {
+            "name": "coffeelint",
+            "description": "CoffeeLint is a style checker that helps keep CoffeeScript code clean and consistent.",
+            "url": "http://www.coffeelint.org",
+            "languages": ["coffeescript"],
+            "license": "MIT",
+            "platform": "nodejs"
+        },
+
+        {
+            "name": "csslint",
+            "description": "Automated linting of Cascading Stylesheets.",
+            "url": "http://csslint.net",
+            "languages": ["css"],
+            "license": "MIT",
+            "platform": "nodejs"
+        },
+
+        {
+            "name": "eslint",
+            "description": "A fully pluggable tool for identifying and reporting on patterns in JavaScript.",
+            "url": "http://eslint.org",
+            "languages": ["javascript"],
+            "license": "MIT",
+            "platform": "nodejs"
+        },
+
+        {
+            "name": "html-inspector",
+            "description": "HTML Inspector is a code quality tool to help you and your team write better markup.",
+            "url": "https://github.com/philipwalton/html-inspector",
+            "languages": ["html"],
+            "license": "MIT",
+            "platform": "nodejs"            
+        },
+        {
+            "name": "htmlhint",
+            "description": "HTMLHint is a Static Code Analysis Tool for HTML.",
+            "url": "http://htmlhint.com",
+            "languages": ["html"],
+            "license": "MIT",
+            "platform": "nodejs" 
+        },
+
+        {
             "name": "deptrac",
             "description": "Deptrac is a static code analysis tool that helps to enforce rules for dependencies between software layers.",
             "url": "https://github.com/sensiolabs-de/deptrac",
@@ -111,7 +155,7 @@
             "name": "php_codesniffer",
             "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files to detect and fix violations of a defined set of coding standards.",
             "url": "https://github.com/squizlabs/PHP_CodeSniffer",
-            "languages": ["php"],
+            "languages": ["css", "javascript", "php"],
             "license": "BSD-3-Clause",
             "platform": "php",
             "config": {
