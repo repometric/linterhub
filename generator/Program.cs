@@ -15,6 +15,19 @@ namespace Repometric.Dockers.Generator
             const string defaultTemplate = @"default";
             var linters = JObject.Parse(File.ReadAllText(configFile));
 
+            if (args[0] == "reformat") 
+            {
+                var reformat = new {
+                    linters = linters["linters"].OrderBy(x => x["name"]),
+                    platforms = linters["platforms"],
+                    dockers = linters["dockers"]
+                };
+
+                var content = JsonConvert.SerializeObject(reformat, Formatting.Indented);
+                File.WriteAllText(configFile, content);
+                return;
+            }
+
             var image = args[0];
 
             var query = 

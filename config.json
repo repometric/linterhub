@@ -1,235 +1,295 @@
 {
-    "linters": [
-        {
-            "name": "jscpd",
-            "description": "Copy/paste detector for programming source code.",
-            "url": "https://github.com/kucherenko/jscpd",
-            "languages": ["javascript", "java", "yaml", "coffeescript", "c++", "haxe", "php", "c#", "typescript", "go", "python", "html", "ruby", "c", "scss", "less", "css", "erlang", "swift"],
-            "license": "MIT",
-            "platform": "nodejs" 
-        },
-
-        {
-            "name": "coffeelint",
-            "description": "CoffeeLint is a style checker that helps keep CoffeeScript code clean and consistent.",
-            "url": "http://www.coffeelint.org",
-            "languages": ["coffeescript"],
-            "license": "MIT",
-            "platform": "nodejs"
-        },
-
-        {
-            "name": "csslint",
-            "description": "Automated linting of Cascading Stylesheets.",
-            "url": "http://csslint.net",
-            "languages": ["css"],
-            "license": "MIT",
-            "platform": "nodejs"
-        },
-
-        {
-            "name": "eslint",
-            "description": "A fully pluggable tool for identifying and reporting on patterns in JavaScript.",
-            "url": "http://eslint.org",
-            "languages": ["javascript"],
-            "license": "MIT",
-            "platform": "nodejs"
-        },
-        {
-            "name": "jslint",
-            "description": "The JavaScript Code Quality Tool.",
-            "url": "http://jslint.com",
-            "languages": ["javascript"],
-            "license": "MIT",
-            "platform": "nodejs"
-        },
-        {
-            "name": "nsp",
-            "description": "Node Security helps you keep your node applications secure.",
-            "url": "https://nodesecurity.io",
-            "languages": ["nodejs"],
-            "license": "Apache-2.0",
-            "platform": "nodejs"
-        },
-        {
-            "name": "sass-lint",
-            "description": "A Node-only Sass linter for both sass and scss syntax.",
-            "url": "https://github.com/sasstools/sass-lint",
-            "languages": ["sass", "scss"],
-            "license": "MIT",
-            "platform": "nodejs" 
-        },
-        {
-            "name": "stylint",
-            "description": "Improve your Stylus code with Stylint.",
-            "url": "https://rosspatton.github.io/stylint",
-            "languages": ["stylus"],
-            "license": "GPL-2.0",
-            "platform": "nodejs" 
-        },
-        {
-            "name": "tslint",
-            "description": "Improve your Stylus code with Stylint.",
-            "url": "http://palantir.github.io/tslint/",
-            "languages": ["typescript"],
-            "license": "Apache-2.0",
-            "platform": "nodejs" 
-        },
-
-        {
-            "name": "html-inspector",
-            "description": "HTML Inspector is a code quality tool to help you and your team write better markup.",
-            "url": "https://github.com/philipwalton/html-inspector",
-            "languages": ["html"],
-            "license": "MIT",
-            "platform": "nodejs"            
-        },
-        {
-            "name": "htmlhint",
-            "description": "HTMLHint is a Static Code Analysis Tool for HTML.",
-            "url": "http://htmlhint.com",
-            "languages": ["html"],
-            "license": "MIT",
-            "platform": "nodejs" 
-        },
-
-        {
-            "name": "deptrac",
-            "description": "Deptrac is a static code analysis tool that helps to enforce rules for dependencies between software layers.",
-            "url": "https://github.com/sensiolabs-de/deptrac",
-            "languages": ["php"],
-            "license": "MIT",
-            "platform": "TODO",
-            "config": {
-                "package": "sensiolabs-de/deptrac:dev-master"
-            }
-        },
-        {
-            "name": "parse",
-            "description": "The Parse scanner is a static scanning tool to review your PHP code for potential security-related issues.",
-            "url": "https://github.com/psecio/parse",
-            "languages": ["php"],
-            "license": "MIT",
-            "platform": "php",
-            "config": {
-                "package": "psecio/parse"
-            }
-        },
-        {
-            "name": "phan",
-            "description": "Phan is a static analyzer that looks for common issues and will verify type compatibility on various operations when type information is available or can be deduced.",
-            "url": "https://github.com/etsy/phan",
-            "languages": ["php"],
-            "license": "MIT",
-            "platform": "TODO",
-            "config": {
-                "package": "etsy/phan:dev-master"
-            }
-        },
-        {
-            "name": "php-assumptions",
-            "description": "PHP Assumptions is a static code analysis tool doing checks for weak assumptions.",
-            "url": "https://github.com/rskuipers/php-assumptions",
-            "languages": ["php"],
-            "license": "MIT",
-            "platform": "php",
-            "config": {
-                "package": "rskuipers/php-assumptions"
-            }
-        },
-        {
-            "name": "phpcheckstyle",
-            "description": "PHPCheckstyle is an open-source tool that helps PHP programmers adhere to certain coding conventions.",
-            "url": "https://phpcheckstyle.github.io",
-            "languages": ["php"],
-            "license": "OSL-2.1",
-            "platform": "TODO",
-            "config": {
-                "package": "phpcheckstyle/phpcheckstyle"
-            }
-        },
-        {
-            "name": "phpcodefixer",
-            "description": "PhpCodeFixer finds usage of deprecated functions, variables and ini directives in your php code.",
-            "url": "https://github.com/wapmorgan/PhpCodeFixer",
-            "languages": ["php"],
-            "license": "BSD-3-Clause",
-            "platform": "TODO",
-            "config": {
-                "package": "wapmorgan/php-code-fixer"
-            }
-        },
-        {
-            "name": "phplint",
-            "description": "PHPLint is a validator and documentator for PHP 5 and PHP 7 programs.",
-            "url": "http://www.icosaedro.it/phplint/",
-            "languages": ["php"],
-            "license": "BSD-3-Clause",
-            "platform": "TODO"
-        },
-        {
-            "name": "phpsa",
-            "description": "PHPSA is a development tool aimed at bringing static analysis for PHP applications and libraries.",
-            "url": "https://phpsa.dmtry.me",
-            "languages": ["php"],
-            "license": "MIT",
-            "platform": "php",
-            "config": {
-                "package": "ovr/phpsa"
-            }
-        },
-        {
-            "name": "phpmd",
-            "description": "It takes a given PHP source code base and look for several potential problems within that source.",
-            "url": "https://phpmd.org",
-            "languages": ["php"],
-            "license": "BSD-3-Clause",
-            "platform": "php",
-            "config": {
-                "package": "phpmd/phpmd"
-            }
-        },
-        {
-            "name": "phpmetrics",
-            "description": "PhpMetrics provides various metrics about PHP projects.",
-            "url": "http://phpmetrics.org",
-            "languages": ["php"],
-            "license": "MIT",
-            "platform": "php",
-            "config": {
-                "package": "phpmetrics/phpmetrics"
-            }
-        },
-        {
-            "name": "php_codesniffer",
-            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files to detect and fix violations of a defined set of coding standards.",
-            "url": "https://github.com/squizlabs/PHP_CodeSniffer",
-            "languages": ["css", "javascript", "php"],
-            "license": "BSD-3-Clause",
-            "platform": "php",
-            "config": {
-                "package": "squizlabs/php_codesniffer=*"
-            }
-        }
-    ],
-    "platforms": {
-        "custom": "",
-        "go": "",
-        "nodejs": "npm install -g",
-        "php": "composer global require",
-        "python" : "pip install",
-        "ruby": "gem install"
+  "linters": [
+    {
+      "name": "coffeelint",
+      "description": "CoffeeLint is a style checker that helps keep CoffeeScript code clean and consistent.",
+      "url": "http://www.coffeelint.org",
+      "languages": [
+        "coffeescript"
+      ],
+      "license": "MIT",
+      "platform": "nodejs"
     },
-    "dockers": {
-        "alpine": {
-            "TODO": "",
-            "base": "alpine",
-            "go": "golang:alpine",
-            "java": "openjdk:8-alpine",
-            "nodejs": "mhart/alpine-node",
-            "php": "composer/composer:alpine",
-            "python" : "python:3-alpine",
-            "ruby": "cybercode/alpine-ruby:2.3"
-        }
+    {
+      "name": "csslint",
+      "description": "Automated linting of Cascading Stylesheets.",
+      "url": "http://csslint.net",
+      "languages": [
+        "css"
+      ],
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "deptrac",
+      "description": "Deptrac is a static code analysis tool that helps to enforce rules for dependencies between software layers.",
+      "url": "https://github.com/sensiolabs-de/deptrac",
+      "languages": [
+        "php"
+      ],
+      "license": "MIT",
+      "platform": "TODO",
+      "config": {
+        "package": "sensiolabs-de/deptrac:dev-master"
+      }
+    },
+    {
+      "name": "eslint",
+      "description": "A fully pluggable tool for identifying and reporting on patterns in JavaScript.",
+      "url": "http://eslint.org",
+      "languages": [
+        "javascript"
+      ],
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "html-inspector",
+      "description": "HTML Inspector is a code quality tool to help you and your team write better markup.",
+      "url": "https://github.com/philipwalton/html-inspector",
+      "languages": [
+        "html"
+      ],
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "htmlhint",
+      "description": "HTMLHint is a Static Code Analysis Tool for HTML.",
+      "url": "http://htmlhint.com",
+      "languages": [
+        "html"
+      ],
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "jscpd",
+      "description": "Copy/paste detector for programming source code.",
+      "url": "https://github.com/kucherenko/jscpd",
+      "languages": [
+        "javascript",
+        "java",
+        "yaml",
+        "coffeescript",
+        "c++",
+        "haxe",
+        "php",
+        "c#",
+        "typescript",
+        "go",
+        "python",
+        "html",
+        "ruby",
+        "c",
+        "scss",
+        "less",
+        "css",
+        "erlang",
+        "swift"
+      ],
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "jslint",
+      "description": "The JavaScript Code Quality Tool.",
+      "url": "http://jslint.com",
+      "languages": [
+        "javascript"
+      ],
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "nsp",
+      "description": "Node Security helps you keep your node applications secure.",
+      "url": "https://nodesecurity.io",
+      "languages": [
+        "nodejs"
+      ],
+      "license": "Apache-2.0",
+      "platform": "nodejs"
+    },
+    {
+      "name": "parse",
+      "description": "The Parse scanner is a static scanning tool to review your PHP code for potential security-related issues.",
+      "url": "https://github.com/psecio/parse",
+      "languages": [
+        "php"
+      ],
+      "license": "MIT",
+      "platform": "php",
+      "config": {
+        "package": "psecio/parse"
+      }
+    },
+    {
+      "name": "phan",
+      "description": "Phan is a static analyzer that looks for common issues and will verify type compatibility on various operations when type information is available or can be deduced.",
+      "url": "https://github.com/etsy/phan",
+      "languages": [
+        "php"
+      ],
+      "license": "MIT",
+      "platform": "TODO",
+      "config": {
+        "package": "etsy/phan:dev-master"
+      }
+    },
+    {
+      "name": "php-assumptions",
+      "description": "PHP Assumptions is a static code analysis tool doing checks for weak assumptions.",
+      "url": "https://github.com/rskuipers/php-assumptions",
+      "languages": [
+        "php"
+      ],
+      "license": "MIT",
+      "platform": "php",
+      "config": {
+        "package": "rskuipers/php-assumptions"
+      }
+    },
+    {
+      "name": "php_codesniffer",
+      "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files to detect and fix violations of a defined set of coding standards.",
+      "url": "https://github.com/squizlabs/PHP_CodeSniffer",
+      "languages": [
+        "css",
+        "javascript",
+        "php"
+      ],
+      "license": "BSD-3-Clause",
+      "platform": "php",
+      "config": {
+        "package": "squizlabs/php_codesniffer=*"
+      }
+    },
+    {
+      "name": "phpcheckstyle",
+      "description": "PHPCheckstyle is an open-source tool that helps PHP programmers adhere to certain coding conventions.",
+      "url": "https://phpcheckstyle.github.io",
+      "languages": [
+        "php"
+      ],
+      "license": "OSL-2.1",
+      "platform": "TODO",
+      "config": {
+        "package": "phpcheckstyle/phpcheckstyle"
+      }
+    },
+    {
+      "name": "phpcodefixer",
+      "description": "PhpCodeFixer finds usage of deprecated functions, variables and ini directives in your php code.",
+      "url": "https://github.com/wapmorgan/PhpCodeFixer",
+      "languages": [
+        "php"
+      ],
+      "license": "BSD-3-Clause",
+      "platform": "TODO",
+      "config": {
+        "package": "wapmorgan/php-code-fixer"
+      }
+    },
+    {
+      "name": "phplint",
+      "description": "PHPLint is a validator and documentator for PHP 5 and PHP 7 programs.",
+      "url": "http://www.icosaedro.it/phplint/",
+      "languages": [
+        "php"
+      ],
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "phpmd",
+      "description": "It takes a given PHP source code base and look for several potential problems within that source.",
+      "url": "https://phpmd.org",
+      "languages": [
+        "php"
+      ],
+      "license": "BSD-3-Clause",
+      "platform": "php",
+      "config": {
+        "package": "phpmd/phpmd"
+      }
+    },
+    {
+      "name": "phpmetrics",
+      "description": "PhpMetrics provides various metrics about PHP projects.",
+      "url": "http://phpmetrics.org",
+      "languages": [
+        "php"
+      ],
+      "license": "MIT",
+      "platform": "php",
+      "config": {
+        "package": "phpmetrics/phpmetrics"
+      }
+    },
+    {
+      "name": "phpsa",
+      "description": "PHPSA is a development tool aimed at bringing static analysis for PHP applications and libraries.",
+      "url": "https://phpsa.dmtry.me",
+      "languages": [
+        "php"
+      ],
+      "license": "MIT",
+      "platform": "php",
+      "config": {
+        "package": "ovr/phpsa"
+      }
+    },
+    {
+      "name": "sass-lint",
+      "description": "A Node-only Sass linter for both sass and scss syntax.",
+      "url": "https://github.com/sasstools/sass-lint",
+      "languages": [
+        "sass",
+        "scss"
+      ],
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "stylint",
+      "description": "Improve your Stylus code with Stylint.",
+      "url": "https://rosspatton.github.io/stylint",
+      "languages": [
+        "stylus"
+      ],
+      "license": "GPL-2.0",
+      "platform": "nodejs"
+    },
+    {
+      "name": "tslint",
+      "description": "Improve your Stylus code with Stylint.",
+      "url": "http://palantir.github.io/tslint/",
+      "languages": [
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "platform": "nodejs"
     }
+  ],
+  "platforms": {
+    "custom": "",
+    "go": "",
+    "nodejs": "npm install -g",
+    "php": "composer global require",
+    "python": "pip install",
+    "ruby": "gem install"
+  },
+  "dockers": {
+    "alpine": {
+      "TODO": "",
+      "base": "alpine",
+      "go": "golang:alpine",
+      "java": "openjdk:8-alpine",
+      "nodejs": "mhart/alpine-node",
+      "php": "composer/composer:alpine",
+      "python": "python:3-alpine",
+      "ruby": "cybercode/alpine-ruby:2.3"
+    }
+  }
 }
