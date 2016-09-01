@@ -43,6 +43,38 @@
             "license": "MIT",
             "platform": "nodejs"
         },
+        {
+            "name": "nsp",
+            "description": "Node Security helps you keep your node applications secure.",
+            "url": "https://nodesecurity.io",
+            "languages": ["nodejs"],
+            "license": "Apache-2.0",
+            "platform": "nodejs"
+        },
+        {
+            "name": "sass-lint",
+            "description": "A Node-only Sass linter for both sass and scss syntax.",
+            "url": "https://github.com/sasstools/sass-lint",
+            "languages": ["sass", "scss"],
+            "license": "MIT",
+            "platform": "nodejs" 
+        },
+        {
+            "name": "stylint",
+            "description": "Improve your Stylus code with Stylint.",
+            "url": "https://rosspatton.github.io/stylint",
+            "languages": ["stylus"],
+            "license": "GPL-2.0",
+            "platform": "nodejs" 
+        },
+        {
+            "name": "tslint",
+            "description": "Improve your Stylus code with Stylint.",
+            "url": "http://palantir.github.io/tslint/",
+            "languages": ["typescript"],
+            "license": "Apache-2.0",
+            "platform": "nodejs" 
+        },
 
         {
             "name": "html-inspector",
