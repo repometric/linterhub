@@ -263,7 +263,7 @@
     },
     {
       "name": "tslint",
-      "description": "Improve your Stylus code with Stylint.",
+      "description": "TSLint checks your TypeScript code for readability, maintainability, and functionality errors.",
       "url": "http://palantir.github.io/tslint/",
       "languages": [
         "typescript"
