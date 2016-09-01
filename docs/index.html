@@ -66,7 +66,7 @@
           <td><a href="{{ linter.url }}">{{ linter.name }}</a></td>
           <td class="hidden-xs">{{ linter.description }}</td>
           <td>{{ linter.languages.join(", ") }}</td>
-          <td class="{{ linter.rm_docker ? 'danger': '' }}">{{ linter.rm_docker ? "No" : "Yes" }}</td>
+          <td class="{{ linter.rm_docker ? 'danger': '' }}"><a href='../dockers/alpine/{{linter.name}}/Dockerfile'>{{ linter.rm_docker ? "No" : "Yes" }}</a></td>
           <td class="hidden-xs"><a href="https://opensource.org/licenses/{{linter.license}}">{{ linter.license }}</a></td>
         </tr>
       </tbody>
