@@ -92,6 +92,16 @@
       "platform": "nodejs"
     },
     {
+      "name": "jshint",
+      "description": "JSHint is a tool that helps to detect errors and potential problems in your JavaScript code.",
+      "url": "http://jshint.com",
+      "languages": [
+        "javascript"
+      ],
+      "license": "MIT, JSON",
+      "platform": "nodejs"
+    },
+    {
       "name": "jslint",
       "description": "The JavaScript Code Quality Tool.",
       "url": "http://jslint.com",
