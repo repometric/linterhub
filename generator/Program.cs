@@ -20,7 +20,8 @@ namespace Repometric.Dockers.Generator
                 var reformat = new {
                     linters = linters["linters"].OrderBy(x => x["name"]),
                     platforms = linters["platforms"],
-                    dockers = linters["dockers"]
+                    dockers = linters["dockers"],
+                    licenses = linters["licenses"]
                 };
 
                 var content = JsonConvert.SerializeObject(reformat, Formatting.Indented);

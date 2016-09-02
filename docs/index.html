@@ -67,7 +67,11 @@
           <td class="hidden-xs">{{ linter.description }}</td>
           <td>{{ linter.languages.join(", ") }}</td>
           <td class="{{ linter.rm_docker ? 'danger': '' }}"><a href='../dockers/alpine/{{linter.name}}/Dockerfile'>{{ linter.rm_docker ? "No" : "Yes" }}</a></td>
-          <td class="hidden-xs"><a href="https://opensource.org/licenses/{{linter.license}}">{{ linter.license }}</a></td>
+          <td class="hidden-xs">
+            <span ng-repeat="license in linter.licenses">
+              <a href="{{ licenses[license] }}">{{license}}</a>{{$last ? '' : ', '}}
+            </span>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -80,6 +84,7 @@ angular.module('sortApp', [])
     $scope.sortReverse = false;
     $scope.searchFish = '';
     $scope.linters = [];
+    $scope.licenses = [];
     $http.get("../config.json")
       .then(function (res) { 
         $scope.linters = res.data.linters.map(function (item) {
@@ -88,12 +93,13 @@ angular.module('sortApp', [])
             description: item.description,
             url: item.url,
             platform: item.platform,
-            license: item.license,
+            licenses: item.license.split(','),
             languages: item.languages,
             rm_docker: item.platform == "TODO",
             rm_cli: false
           }
         });
+        $scope.licenses = res.data.licenses;
       });
 });
 </script>

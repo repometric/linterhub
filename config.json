@@ -98,7 +98,7 @@
       "languages": [
         "javascript"
       ],
-      "license": "MIT, JSON",
+      "license": "MIT,JSON",
       "platform": "nodejs"
     },
     {
@@ -301,5 +301,13 @@
       "python": "python:3-alpine",
       "ruby": "cybercode/alpine-ruby:2.3"
     }
+  },
+  "licenses": {
+    "MIT": "https://opensource.org/licenses/MIT",
+    "GPL-2.0": "https://opensource.org/licenses/GPL-2.0",
+    "Apache-2.0": "https://opensource.org/licenses/Apache-2.0",
+    "BSD-3-Clause": "https://opensource.org/licenses/BSD-3-Clause",
+    "OSL-2.1": "https://opensource.org/licenses/OSL-2.1",
+    "JSON": "http://directory.fsf.org/wiki/License:JSON"
   }
 }
