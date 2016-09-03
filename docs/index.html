@@ -94,7 +94,7 @@ angular.module('sortApp', [])
             url: item.url,
             platform: item.platform,
             licenses: item.license.split(','),
-            languages: item.languages,
+            languages: item.languages.split(','),
             rm_docker: item.platform == "TODO",
             rm_cli: false
           }
