@@ -17,6 +17,22 @@
       "platform": "ruby"
     },
     {
+      "name": "checkstyle",
+      "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.",
+      "url": "http://checkstyle.sourceforge.net",
+      "languages": "java",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "clang",
+      "description": "The Clang Static Analyzer is a source code analysis tool that finds bugs in C, C++, and Objective-C programs.",
+      "url": "http://clang-analyzer.llvm.org",
+      "languages": "c,c++,objective c",
+      "license": "LLVM",
+      "platform": "TODO"
+    },
+    {
       "name": "coffeelint",
       "description": "CoffeeLint is a style checker that helps keep CoffeeScript code clean and consistent.",
       "url": "http://www.coffeelint.org",
@@ -30,6 +46,14 @@
       "url": "http://cppcheck.sourceforge.net",
       "languages": "c,c++",
       "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "cqual",
+      "description": "Cqual is a type-based analysis tool that provides a lightweight, practical mechanism for specifying and checking properties of C programs.",
+      "url": "http://www.cs.umd.edu/~jfoster/cqual/",
+      "languages": "c",
+      "license": "GPL-2.0",
       "platform": "TODO"
     },
     {
@@ -74,6 +98,14 @@
       "languages": "python",
       "license": "MIT",
       "platform": "python"
+    },
+    {
+      "name": "flawfinder",
+      "description": "FlawFinder is a simple yet efficient ad quick tool that scans your C/C++ source code for calls to typical vulnerable library functions.",
+      "url": "http://www.dwheeler.com/flawfinder/",
+      "languages": "c,c++",
+      "license": "GPL-2.0",
+      "platform": "TODO"
     },
     {
       "name": "flay",
@@ -124,6 +156,14 @@
       "platform": "python"
     },
     {
+      "name": "jlint",
+      "description": "Jlint will check your Java code and find bugs, inconsistencies and synchronization problems by doing data flow analysis and building the lock graph.",
+      "url": "http://jlint.sourceforge.net",
+      "languages": "java",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
       "name": "jscpd",
       "description": "Copy/paste detector for programming source code.",
       "url": "https://github.com/kucherenko/jscpd",
@@ -146,6 +186,14 @@
       "languages": "javascript",
       "license": "MIT",
       "platform": "nodejs"
+    },
+    {
+      "name": "lapse",
+      "description": "The Security Scanner for Java EE Applications.",
+      "url": "https://www.owasp.org/index.php/Category:OWASP_LAPSE_Project",
+      "languages": "java",
+      "license": "GPL-3.0",
+      "platform": "TODO"
     },
     {
       "name": "linty-fresh",
@@ -199,6 +247,14 @@
       "platform": "python"
     },
     {
+      "name": "perlcritic",
+      "description": "Perl Critic external link checks whether your code complies with best practices.",
+      "url": "http://search.cpan.org/dist/Perl-Critic/lib/Perl/Critic.pm#COPYRIGHT",
+      "languages": "perl",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
       "name": "phan",
       "description": "Phan is a static analyzer that looks for common issues and will verify type compatibility on various operations when type information is available or can be deduced.",
       "url": "https://github.com/etsy/phan",
@@ -219,6 +275,14 @@
       "config": {
         "package": "rskuipers/php-assumptions"
       }
+    },
+    {
+      "name": "php-sat",
+      "description": "Static analysis for PHP.",
+      "url": "http://www.program-transformation.org/PHP/PhpSat",
+      "languages": "php",
+      "license": "GPL-3.0",
+      "platform": "TODO"
     },
     {
       "name": "php_codesniffer",
@@ -295,12 +359,36 @@
       }
     },
     {
+      "name": "pixy",
+      "description": "Pixy is a scanner static code analysis tools that scans PHP applications for security vulnerabilities.",
+      "url": "https://github.com/oliverklee/pixy",
+      "languages": "php",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "pmd",
+      "description": "PMD is a source code analyzer. It finds common programming flaws like unused variables, empty catch blocks, unnecessary object creation, and so forth. Additionally it includes CPD, the copy-paste-detector.",
+      "url": "https://pmd.github.io",
+      "languages": "java,javascript,apex,pl/sql,velocity,xml,xsl,c,c++,c#,ruby,fortran,ruby,scala,objective c,matlab,python,go,swift",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
       "name": "prospector",
       "description": "Prospector is a tool to analyse Python code and output information about errors, potential problems, convention violations and complexity.",
       "url": "http://prospector.landscape.io",
       "languages": "python",
       "license": "GPL-2.0",
       "platform": "python"
+    },
+    {
+      "name": "pychecker",
+      "description": "Pychecker is a lint-like tool for python, which will mostly find bugs that would be found by compilers for less dynamic languages..",
+      "url": "http://pychecker.sourceforge.net",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "TODO"
     },
     {
       "name": "pyflakes",
@@ -327,6 +415,22 @@
       "platform": "python"
     },
     {
+      "name": "rats",
+      "description": "RATS targets various languages and has specific detection rules for each.",
+      "url": "https://security.web.cern.ch/security/recommendations/en/codetools/rats.shtml",
+      "languages": "c,c++,php,python,perl,ruby",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "rips",
+      "description": "RIPS is a static source code analyser for the detection of vulnerabilities in PHP applications.",
+      "url": "http://rips-scanner.sourceforge.net",
+      "languages": "php",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "rubocop",
       "description": "RuboCop is a Ruby static code analyzer.",
       "url": "http://batsov.com/rubocop",
@@ -349,6 +453,22 @@
       "languages": "sass,scss",
       "license": "MIT",
       "platform": "nodejs"
+    },
+    {
+      "name": "smatch",
+      "description": "Smatch has been completely rewritten in C and now uses sparse as a C parser instead of gcc as a C parser.",
+      "url": "http://smatch.sourceforge.net",
+      "languages": "c",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "splint",
+      "description": "Splint is a tool for statically checking C programs for security vulnerabilities and coding mistakes.",
+      "url": "http://www.splint.org",
+      "languages": "c",
+      "license": "Unknown",
+      "platform": "TODO"
     },
     {
       "name": "stylint",
@@ -381,6 +501,22 @@
       "languages": "typescript",
       "license": "Apache-2.0",
       "platform": "nodejs"
+    },
+    {
+      "name": "uno",
+      "description": "Uno is a simple tool for source code analysis.",
+      "url": "http://spinroot.com/uno/",
+      "languages": "c",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "vcg",
+      "description": "Visual Code Grepper is an automated code security review tool that handles C/C++, Java, C#, VB and PL/SQL.",
+      "url": "c,c++,java,c#,vb,pl/sql",
+      "languages": "c,c++",
+      "license": "GPL-2.0",
+      "platform": "TODO"
     },
     {
       "name": "vnu",
@@ -428,6 +564,7 @@
     }
   },
   "licenses": {
+    "Unknown": "#",
     "MIT": "https://opensource.org/licenses/MIT",
     "GPL-2.0": "https://opensource.org/licenses/GPL-2.0",
     "Apache-2.0": "https://opensource.org/licenses/Apache-2.0",
@@ -439,6 +576,7 @@
     "MPL-2.0": "https://opensource.org/licenses/MPL-2.0",
     "GPL-3.0": "https://opensource.org/licenses/GPL-3.0",
     "BSD-2-Clause": "https://opensource.org/licenses/BSD-2-Clause",
-    "LGPL-3.0": "https://opensource.org/licenses/LGPL-3.0"
+    "LGPL-3.0": "https://opensource.org/licenses/LGPL-3.0",
+    "LLVM": "http://llvm.org/releases/2.8/LICENSE.TXT"
   }
 }
