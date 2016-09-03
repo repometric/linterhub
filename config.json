@@ -25,6 +25,14 @@
       "platform": "nodejs"
     },
     {
+      "name": "cppcheck",
+      "description": "Cppcheck is a static analysis tool for C/C++ code.",
+      "url": "http://cppcheck.sourceforge.net",
+      "languages": "c,c++",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
       "name": "csslint",
       "description": "Automated linting of Cascading Stylesheets.",
       "url": "http://csslint.net",
@@ -50,6 +58,14 @@
       "languages": "javascript",
       "license": "MIT",
       "platform": "nodejs"
+    },
+    {
+      "name": "findbugs",
+      "description": "Program which uses static analysis to look for bugs in Java code",
+      "url": "http://findbugs.sourceforge.net",
+      "languages": "java",
+      "license": "LGPL-3.0",
+      "platform": "TODO"
     },
     {
       "name": "flake8",
@@ -90,6 +106,14 @@
       "languages": "html",
       "license": "MIT",
       "platform": "nodejs"
+    },
+    {
+      "name": "javascriptlint",
+      "description": "It provides a robust framework that can not only check JavaScript syntax but also examine the coding techniques used in the script and warn against questionable practices.",
+      "url": "http://www.javascriptlint.com",
+      "languages": "javascript",
+      "license": "PL-2.0",
+      "platform": "TODO"
     },
     {
       "name": "jedi",
@@ -365,6 +389,22 @@
       "languages": "swift",
       "license": "MIT",
       "platform": "TODO"
+    },
+    {
+      "name": "wap",
+      "description": "WAP is a source code static analysis and data mining tool to detect and correct input validation vulnerabilities in web applications written in PHP with a low rate of false positives.",
+      "url": "http://awap.sourceforge.net",
+      "languages": "java,c,c++,html,css,javascript,asp,coldfusion,php,perl,python,cobol,.net,c#,vb.net,visual basic",
+      "license": "BSD-2-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "yasca",
+      "description": "Yasca is a source code analysis tool.",
+      "url": "http://www.scovetta.com/yasca.html",
+      "languages": "php",
+      "license": "GPL-3.0",
+      "platform": "TODO"
     }
   ],
   "platforms": {
@@ -396,6 +436,9 @@
     "JSON": "http://directory.fsf.org/wiki/License:JSON",
     "PSF": "https://opensource.org/licenses/Python-2.0",
     "Expat": "http://directory.fsf.org/wiki/License:Expat",
-    "MPL-2.0": "https://opensource.org/licenses/MPL-2.0"
+    "MPL-2.0": "https://opensource.org/licenses/MPL-2.0",
+    "GPL-3.0": "https://opensource.org/licenses/GPL-3.0",
+    "BSD-2-Clause": "https://opensource.org/licenses/BSD-2-Clause",
+    "LGPL-3.0": "https://opensource.org/licenses/LGPL-3.0"
   }
 }
