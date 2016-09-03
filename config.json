@@ -335,12 +335,36 @@
       "platform": "nodejs"
     },
     {
+      "name": "swiftlint",
+      "description": "A tool to enforce Swift style and conventions.",
+      "url": "https://github.com/realm/SwiftLint",
+      "languages": "swift",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "tailor",
+      "description": "It analyzes your code to ensure consistent styling and help avoid bugs.",
+      "url": "https://tailor.sh/",
+      "languages": "swift",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
       "name": "tslint",
       "description": "TSLint checks your TypeScript code for readability, maintainability, and functionality errors.",
       "url": "http://palantir.github.io/tslint/",
       "languages": "typescript",
       "license": "Apache-2.0",
       "platform": "nodejs"
+    },
+    {
+      "name": "vnu",
+      "description": "It analyzes your code to ensure consistent styling and help avoid bugs.",
+      "url": "https://validator.github.io/validator/",
+      "languages": "swift",
+      "license": "MIT",
+      "platform": "TODO"
     }
   ],
   "platforms": {
