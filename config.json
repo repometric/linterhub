@@ -92,6 +92,14 @@
       "platform": "nodejs"
     },
     {
+      "name": "jedi",
+      "description": "Awesome autocompletion and static analysis library for python.",
+      "url": "http://jedi.jedidjah.ch",
+      "languages": "python",
+      "license": "MIT,PSF",
+      "platform": "python"
+    },
+    {
       "name": "jscpd",
       "description": "Copy/paste detector for programming source code.",
       "url": "https://github.com/kucherenko/jscpd",
@@ -116,12 +124,36 @@
       "platform": "nodejs"
     },
     {
+      "name": "linty-fresh",
+      "description": "Keep your codebase sparkly clean with the power of LINT.",
+      "url": "https://github.com/lyft/linty_fresh",
+      "languages": "python",
+      "license": "Apache-2.0",
+      "platform": "python"
+    },
+    {
+      "name": "lizard",
+      "description": "A simple code complexity analyser without caring about the C/C++ header files or Java imports, supports most of the popular languages.",
+      "url": "https://github.com/terryyin/lizard",
+      "languages": "c,c++,java,c#,javascript,objective c,swift,python,ruby,ttcn-3,php,scala",
+      "license": "MIT",
+      "platform": "python"
+    },
+    {
       "name": "nsp",
       "description": "Node Security helps you keep your node applications secure.",
       "url": "https://nodesecurity.io",
       "languages": "nodejs",
       "license": "Apache-2.0",
       "platform": "nodejs"
+    },
+    {
+      "name": "ocstyle",
+      "description": "Objective-C style checker.",
+      "url": "https://github.com/Cue/ocstyle",
+      "languages": "objective c",
+      "license": "Apache-2.0",
+      "platform": "python"
     },
     {
       "name": "parse",
@@ -133,6 +165,14 @@
       "config": {
         "package": "psecio/parse"
       }
+    },
+    {
+      "name": "pep8",
+      "description": "pep8 is a tool to check your Python code against some of the style conventions in PEP 8.",
+      "url": "https://pypi.python.org/pypi/pep8",
+      "languages": "python",
+      "license": "Expat",
+      "platform": "python"
     },
     {
       "name": "phan",
@@ -231,6 +271,54 @@
       }
     },
     {
+      "name": "prospector",
+      "description": "Prospector is a tool to analyse Python code and output information about errors, potential problems, convention violations and complexity.",
+      "url": "http://prospector.landscape.io",
+      "languages": "python",
+      "license": "GPL-2.0",
+      "platform": "python"
+    },
+    {
+      "name": "pyflakes",
+      "description": "Pyflakes analyzes programs and detects various errors.",
+      "url": "https://pypi.python.org/pypi/pyflakes",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "python"
+    },
+    {
+      "name": "pylint",
+      "description": "Pylint is a Python source code analyzer which looks for programming errors, helps enforcing a coding standard and sniffs for some code smells.",
+      "url": "https://pylint.org",
+      "languages": "python",
+      "license": "GPL-2.0",
+      "platform": "python"
+    },
+    {
+      "name": "radon",
+      "description": "Radon is a Python tool that computes various metrics from the source code.",
+      "url": "https://pypi.python.org/pypi/radon",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "python"
+    },
+    {
+      "name": "rubocop",
+      "description": "RuboCop is a Ruby static code analyzer.",
+      "url": "http://batsov.com/rubocop",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
+      "name": "ruby-lint",
+      "description": "ruby-lint is a static code analysis tool for Ruby.",
+      "url": "http://code.yorickpeterse.com/ruby-lint/latest/",
+      "languages": "ruby",
+      "license": "MPL-2.0",
+      "platform": "ruby"
+    },
+    {
       "name": "sass-lint",
       "description": "A Node-only Sass linter for both sass and scss syntax.",
       "url": "https://github.com/sasstools/sass-lint",
@@ -281,6 +369,9 @@
     "Apache-2.0": "https://opensource.org/licenses/Apache-2.0",
     "BSD-3-Clause": "https://opensource.org/licenses/BSD-3-Clause",
     "OSL-2.1": "https://opensource.org/licenses/OSL-2.1",
-    "JSON": "http://directory.fsf.org/wiki/License:JSON"
+    "JSON": "http://directory.fsf.org/wiki/License:JSON",
+    "PSF": "https://opensource.org/licenses/Python-2.0",
+    "Expat": "http://directory.fsf.org/wiki/License:Expat",
+    "MPL-2.0": "https://opensource.org/licenses/MPL-2.0"
   }
 }
