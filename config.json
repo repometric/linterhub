@@ -1,6 +1,22 @@
 {
   "linters": [
     {
+      "name": "bandit",
+      "description": "Security oriented static analyser for python code.",
+      "url": "https://pypi.python.org/pypi/bandit",
+      "languages": "python",
+      "license": "Apache-2.0",
+      "platform": "python"
+    },
+    {
+      "name": "brakeman",
+      "description": "A static analysis security vulnerability scanner for Ruby on Rails applications.",
+      "url": "http://brakemanscanner.org",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
       "name": "coffeelint",
       "description": "CoffeeLint is a style checker that helps keep CoffeeScript code clean and consistent.",
       "url": "http://www.coffeelint.org",
@@ -34,6 +50,30 @@
       "languages": "javascript",
       "license": "MIT",
       "platform": "nodejs"
+    },
+    {
+      "name": "flake8",
+      "description": "flake8 is a python tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.",
+      "url": "http://flake8.pycqa.org",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "python"
+    },
+    {
+      "name": "flay",
+      "description": "Flay analyzes code for structural similarities.",
+      "url": "https://github.com/seattlerb/flay",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
+      "name": "flog",
+      "description": "Flog reports the most tortured code in an easy to read pain report.",
+      "url": "https://github.com/seattlerb/flog",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "ruby"
     },
     {
       "name": "html-inspector",
