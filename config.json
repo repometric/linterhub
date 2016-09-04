@@ -41,6 +41,14 @@
       "platform": "nodejs"
     },
     {
+      "name": "cpd",
+      "description": "CPD, the copy-paste-detector.",
+      "url": "https://pmd.github.io",
+      "languages": "java,javascript,apex,pl/sql,velocity,xml,xsl,c,c++,c#,ruby,fortran,ruby,scala,objective c,matlab,python,go,swift",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
       "name": "cppcheck",
       "description": "Cppcheck is a static analysis tool for C/C++ code.",
       "url": "http://cppcheck.sourceforge.net",
@@ -384,9 +392,9 @@
     },
     {
       "name": "pmd",
-      "description": "PMD is a source code analyzer. It finds common programming flaws like unused variables, empty catch blocks, unnecessary object creation, and so forth. Additionally it includes CPD, the copy-paste-detector.",
+      "description": "PMD is a source code analyzer. It finds common programming flaws like unused variables, empty catch blocks, unnecessary object creation, and so forth.",
       "url": "https://pmd.github.io",
-      "languages": "java,javascript,apex,pl/sql,velocity,xml,xsl,c,c++,c#,ruby,fortran,ruby,scala,objective c,matlab,python,go,swift",
+      "languages": "java,javascript,apex,pl/sql,velocity,xml,xsl",
       "license": "BSD-3-Clause",
       "platform": "TODO"
     },
