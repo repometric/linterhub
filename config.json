@@ -1,6 +1,14 @@
 {
   "linters": [
     {
+      "name": "Infer",
+      "description": "Infer is a static analysis tool for Java, Objective-C and C.",
+      "url": "hhttp://www.squale.org",
+      "languages": "java,c,objective c",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
       "name": "bandit",
       "description": "Security oriented static analyser for python code.",
       "url": "https://pypi.python.org/pypi/bandit",
@@ -255,6 +263,14 @@
       "platform": "TODO"
     },
     {
+      "name": "perltidy",
+      "description": "Perltidy is a Perl script which indents and reformats Perl scripts to make them easier to read.",
+      "url": "http://perltidy.sourceforge.net",
+      "languages": "perl",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
       "name": "phan",
       "description": "Phan is a static analyzer that looks for common issues and will verify type compatibility on various operations when type information is available or can be deduced.",
       "url": "https://github.com/etsy/phan",
@@ -455,6 +471,22 @@
       "platform": "nodejs"
     },
     {
+      "name": "shellcheck",
+      "description": "ShellCheck, a static analysis tool for shell scripts.",
+      "url": "https://www.shellcheck.net",
+      "languages": "shell",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "shlint",
+      "description": "Shlint uses locally available shells to test a shellscript for portability issues.",
+      "url": "https://github.com/duggan/shlint",
+      "languages": "shell",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
       "name": "smatch",
       "description": "Smatch has been completely rewritten in C and now uses sparse as a C parser instead of gcc as a C parser.",
       "url": "http://smatch.sourceforge.net",
@@ -468,6 +500,22 @@
       "url": "http://www.splint.org",
       "languages": "c",
       "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "squale",
+      "description": "Perltidy is a Perl script which indents and reformats Perl scripts to make them easier to read.",
+      "url": "hhttp://www.squale.org",
+      "languages": "java,c,c++,c#,php,cobol",
+      "license": "LGPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "stanse",
+      "description": "Error-finding tool based on static analysis.",
+      "url": "http://www.scovetta.com/yasca.html",
+      "languages": "c,c++,c#,java",
+      "license": "GPL-2.0",
       "platform": "TODO"
     },
     {
