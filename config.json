@@ -9,6 +9,14 @@
       "platform": "python"
     },
     {
+      "name": "blast",
+      "description": "BLAST is a static software verification tool for C language that solves the reachability problem.",
+      "url": "http://forge.ispras.ru/projects/blast",
+      "languages": "c",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
       "name": "brakeman",
       "description": "A static analysis security vulnerability scanner for Ruby on Rails applications.",
       "url": "http://brakemanscanner.org",
@@ -212,6 +220,14 @@
       "platform": "TODO"
     },
     {
+      "name": "lapseplus",
+      "description": "OWASP LAPSE Project is an initiative to make available to developers and auditors a tool for detecting vulnerabilities in Java EE Applications.",
+      "url": "https://www.owasp.org/index.php/OWASP_LAPSE_Project",
+      "languages": "java",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "linty-fresh",
       "description": "Keep your codebase sparkly clean with the power of LINT.",
       "url": "https://github.com/lyft/linty_fresh",
@@ -226,6 +242,14 @@
       "languages": "c,c++,java,c#,javascript,objective c,swift,python,ruby,ttcn-3,php,scala",
       "license": "MIT",
       "platform": "python"
+    },
+    {
+      "name": "mops",
+      "description": "MOPS is a tool for finding security bugs in C programs and for verifying conformance to rules of defensive programming.",
+      "url": "https://people.eecs.berkeley.edu/~daw/mops/",
+      "languages": "c",
+      "license": "Unknown",
+      "platform": "TODO"
     },
     {
       "name": "nsp",
@@ -451,6 +475,14 @@
       "description": "RIPS is a static source code analyser for the detection of vulnerabilities in PHP applications.",
       "url": "http://rips-scanner.sourceforge.net",
       "languages": "php",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "rosecheckers",
+      "description": "Rosecheckers tool performs static analysis on C/C++ source files.",
+      "url": "http://www.cert.org/secure-coding/tools/rosecheckers.cfm",
+      "languages": "c,c++",
       "license": "Unknown",
       "platform": "TODO"
     },
