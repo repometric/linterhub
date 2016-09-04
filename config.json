@@ -570,7 +570,7 @@
       "name": "vnu",
       "description": "It analyzes your code to ensure consistent styling and help avoid bugs.",
       "url": "https://validator.github.io/validator/",
-      "languages": "swift",
+      "languages": "html",
       "license": "MIT",
       "platform": "TODO"
     },

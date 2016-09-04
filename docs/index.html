@@ -21,7 +21,7 @@
         </div>
       </div>
     </form>
-
+    <h4>Showing {{filtered.length}} Linters.</h4>
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
@@ -63,7 +63,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="linter in linters | orderBy:sortType:sortReverse | filter:search">
+        <tr ng-repeat="linter in linters | orderBy:sortType:sortReverse | filter:search as filtered">
           <td><a href="{{ linter.url }}">{{ linter.name }}</a></td>
           <td class="hidden-xs">{{ linter.description }}</td>
           <td>{{ linter.languages.join(", ") }}</td>
@@ -91,7 +91,7 @@ angular.module('sortApp', [])
   .controller('mainController', function($scope, $http) {
     $scope.sortType = 'name';
     $scope.sortReverse = false;
-    $scope.searchFish = '';
+    $scope.search = '';
     $scope.linters = [];
     $scope.licenses = [];
     $http.get("../config.json")
