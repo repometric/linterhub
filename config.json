@@ -1,14 +1,6 @@
 {
   "linters": [
     {
-      "name": "Infer",
-      "description": "Infer is a static analysis tool for Java, Objective-C and C.",
-      "url": "hhttp://www.squale.org",
-      "languages": "java,c,objective c",
-      "license": "BSD-3-Clause",
-      "platform": "TODO"
-    },
-    {
       "name": "bandit",
       "description": "Security oriented static analyser for python code.",
       "url": "https://pypi.python.org/pypi/bandit",
@@ -146,6 +138,14 @@
       "languages": "html",
       "license": "MIT",
       "platform": "nodejs"
+    },
+    {
+      "name": "infer",
+      "description": "Infer is a static analysis tool for Java, Objective-C and C.",
+      "url": "http://fbinfer.com/",
+      "languages": "java,c,objective c",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
     },
     {
       "name": "javascriptlint",
