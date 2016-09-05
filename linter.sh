@@ -35,6 +35,7 @@ main() {
         # Engine commands
         -eb|engine:build)    engine_build;;
         -ea|engine:analyze)  engine_analyze;;
+        -es|engine:save)     engine_save;;
         # Engine image commands
         -ei|engine:images)   engine_images;;
         -eo|engine:online)   engine_online;;
@@ -109,6 +110,12 @@ function engine_analyze()
     fi
 }
 
+function engine_save()
+{
+    mkdir -p images
+    docker save $EngineImage | gzip -c
+}
+
 # Engine image functions
 function engine_images()
 {
@@ -179,6 +186,7 @@ OPTIONS:
     ______________________________
     engine:build name             Build engine image.
     engine:analyze name command   Analyze the shared storage volume using engine.
+    engine:save name              Save engine image.
     ______________________________
     engine:run engine             Run engine image in interactive mode.
     engine:exec name command      Execute command in the specified running engine.
