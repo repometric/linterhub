@@ -102,7 +102,7 @@ angular.module('sortApp', [])
       "https://github.com/exakat/php-static-analysis-tools",
       "http://www.codeanalysistools.com"
     ]
-    $http.get("../config.json")
+    $http.get("config.json")
       .then(function (res) { 
         $scope.linters = res.data.linters.map(function (item) {
           return {
