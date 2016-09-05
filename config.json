@@ -33,11 +33,35 @@
       "platform": "TODO"
     },
     {
+      "name": "ckjm",
+      "description": "The program ckjm calculates Chidamber and Kemerer object-oriented metrics by processing the bytecode of compiled Java files.",
+      "url": "http://www.spinellis.gr/sw/ckjm/",
+      "languages": "java",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "clang",
       "description": "The Clang Static Analyzer is a source code analysis tool that finds bugs in C, C++, and Objective-C programs.",
       "url": "http://clang-analyzer.llvm.org",
       "languages": "c,c++,objective c",
       "license": "LLVM",
+      "platform": "TODO"
+    },
+    {
+      "name": "classycle",
+      "description": "Classycle's Analyser analyses the static class and package dependencies in Java applications or libraries.",
+      "url": "http://classycle.sourceforge.net",
+      "languages": "java",
+      "license": "BSD-2-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "codenarc",
+      "description": "CodeNarc analyzes Groovy code for defects, bad practices, inconsistencies, style issues and more.",
+      "url": "http://codenarc.sourceforge.net",
+      "languages": "groovy",
+      "license": "Apache-2.0",
       "platform": "TODO"
     },
     {
@@ -81,6 +105,14 @@
       "platform": "nodejs"
     },
     {
+      "name": "daikon",
+      "description": "Dynamic invariant detection runs a program, observes the values that the program computes, and then reports properties that were true over the observed executions.",
+      "url": "http://classycle.sourceforge.net",
+      "languages": "c,c++,c#,eiffel,f#,java,perl,vb",
+      "license": "LGPL-2.0",
+      "platform": "TODO"
+    },
+    {
       "name": "deptrac",
       "description": "Deptrac is a static code analysis tool that helps to enforce rules for dependencies between software layers.",
       "url": "https://github.com/sensiolabs-de/deptrac",
@@ -90,6 +122,14 @@
       "config": {
         "package": "sensiolabs-de/deptrac:dev-master"
       }
+    },
+    {
+      "name": "drivenmetrics",
+      "description": "DrivenMetrics is a metrics library to be used with your .net project.",
+      "url": "https://github.com/garrensmith/DrivenMetrics",
+      "languages": "c#,vb.net",
+      "license": "Unknown",
+      "platform": "TODO"
     },
     {
       "name": "eslint",
@@ -132,12 +172,52 @@
       "platform": "ruby"
     },
     {
+      "name": "flexpmd",
+      "description": "FlexPMD is a tool that helps to improve code quality by auditing any AS3/Flex source directory and detecting common bad practices.",
+      "url": "https://sourceforge.net/adobe/flexpmd/home/Home/",
+      "languages": "flex",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "flog",
       "description": "Flog reports the most tortured code in an easy to read pain report.",
       "url": "https://github.com/seattlerb/flog",
       "languages": "ruby",
       "license": "MIT",
       "platform": "ruby"
+    },
+    {
+      "name": "fxcop",
+      "description": "FxCop is an application that analyzes managed code assemblies and reports information about the assemblies, such as possible design, localization, performance, and security improvements.",
+      "url": "http://www.scovetta.com/yasca.html",
+      "languages": "c#,vb.net",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "gendarme",
+      "description": "Gendarme is a extensible rule-based tool to find problems in .NET applications and libraries.",
+      "url": "http://www.mono-project.com/docs/tools+libraries/tools/gendarme/",
+      "languages": "c#,vb.net",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "gmetrics",
+      "description": "The GMetrics project provides calculation and reporting of size and complexity metrics for Groovy source code.",
+      "url": "http://gmetrics.sourceforge.net",
+      "languages": "groovy",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "helium",
+      "description": "Helium is a tool for discovering unused CSS across many pages on a web site.",
+      "url": "https://github.com/geuis/helium-css",
+      "languages": "css",
+      "license": "MIT",
+      "platform": "TODO"
     },
     {
       "name": "html-inspector",
@@ -196,6 +276,14 @@
       "platform": "nodejs"
     },
     {
+      "name": "jscs",
+      "description": "JSCS is a code style linter and formatter for your style guide.",
+      "url": "http://jscs.info",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
       "name": "jshint",
       "description": "JSHint is a tool that helps to detect errors and potential problems in your JavaScript code.",
       "url": "http://jshint.com",
@@ -244,6 +332,14 @@
       "platform": "python"
     },
     {
+      "name": "metric_fu",
+      "description": "Metric_fu is a set of rake tasks that make it easy to generate metrics reports.",
+      "url": "http://metricfu.github.com/metric_fu",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
       "name": "mops",
       "description": "MOPS is a tool for finding security bugs in C programs and for verifying conformance to rules of defensive programming.",
       "url": "https://people.eecs.berkeley.edu/~daw/mops/",
@@ -277,6 +373,14 @@
       "config": {
         "package": "psecio/parse"
       }
+    },
+    {
+      "name": "pdepend",
+      "description": "PHP_Depend is a small program that performs static code analysis on a given source base.",
+      "url": "https://pdepend.org",
+      "languages": "php",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
     },
     {
       "name": "pep8",
@@ -366,6 +470,14 @@
       }
     },
     {
+      "name": "phpcpd",
+      "description": "Copy/Paste Detector (CPD) for PHP code.",
+      "url": "https://github.com/sebastianbergmann/phpcpd",
+      "languages": "php",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
       "name": "phplint",
       "description": "PHPLint is a validator and documentator for PHP 5 and PHP 7 programs.",
       "url": "http://www.icosaedro.it/phplint/",
@@ -396,6 +508,14 @@
       }
     },
     {
+      "name": "phpparser",
+      "description": "PHP Parser analyses PHP scripts including all included files and checks whether variables, constants, functions and classes are both used and defined.",
+      "url": "https://sourceforge.net/projects/phpparser/",
+      "languages": "php",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
       "name": "phpsa",
       "description": "PHPSA is a development tool aimed at bringing static analysis for PHP applications and libraries.",
       "url": "https://phpsa.dmtry.me",
@@ -415,6 +535,14 @@
       "platform": "TODO"
     },
     {
+      "name": "plato",
+      "description": "JavaScript source code visualization, static analysis, and complexity tool.",
+      "url": "https://github.com/es-analysis/plato",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
       "name": "pmd",
       "description": "PMD is a source code analyzer. It finds common programming flaws like unused variables, empty catch blocks, unnecessary object creation, and so forth.",
       "url": "https://pmd.github.io",
@@ -429,6 +557,14 @@
       "languages": "python",
       "license": "GPL-2.0",
       "platform": "python"
+    },
+    {
+      "name": "py_static_check",
+      "description": "py_static_check can statically check your Python code for a lot of common errors.",
+      "url": "https://pypi.python.org/pypi/py_static_check",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "TODO"
     },
     {
       "name": "pychecker",
@@ -471,11 +607,27 @@
       "platform": "TODO"
     },
     {
+      "name": "reek",
+      "description": "Code smell detector for Ruby.",
+      "url": "https://github.com/troessner/reek/wiki",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
       "name": "rips",
       "description": "RIPS is a static source code analyser for the detection of vulnerabilities in PHP applications.",
       "url": "http://rips-scanner.sourceforge.net",
       "languages": "php",
       "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "roodi",
+      "description": "It parses your Ruby code and warns you about design issues you have based on the checks that is has configured.",
+      "url": "http://roodi.rubyforge.org",
+      "languages": "ruby",
+      "license": "MIT",
       "platform": "TODO"
     },
     {
@@ -501,6 +653,14 @@
       "languages": "ruby",
       "license": "MPL-2.0",
       "platform": "ruby"
+    },
+    {
+      "name": "saikuro",
+      "description": "Saikuro is a Ruby cyclomatic complexity analyzer.",
+      "url": "http://saikuro.rubyforge.org",
+      "languages": "ruby",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
     },
     {
       "name": "sass-lint",
@@ -583,6 +743,22 @@
       "platform": "TODO"
     },
     {
+      "name": "tattletale",
+      "description": "Tattletale is a tool that can help you get an overview of the project you are working on or a product that you depend on.",
+      "url": "http://tattletale.jboss.org",
+      "languages": "java",
+      "license": "LGPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "tern",
+      "description": "Tern is a stand-alone code-analysis engine for JavaScript.",
+      "url": "http://ternjs.net",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
       "name": "tslint",
       "description": "TSLint checks your TypeScript code for readability, maintainability, and functionality errors.",
       "url": "http://palantir.github.io/tslint/",
@@ -591,10 +767,34 @@
       "platform": "nodejs"
     },
     {
+      "name": "ucdetector",
+      "description": "UCDetector is a tool to find unnecessary (dead) public java code..",
+      "url": "http://www.ucdetector.org",
+      "languages": "java",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "uno",
       "description": "Uno is a simple tool for source code analysis.",
       "url": "http://spinroot.com/uno/",
       "languages": "c",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "usus",
+      "description": "Common coding and design practices in software projects.",
+      "url": "https://github.com/usus/usus-plugins/wiki",
+      "languages": "java",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "ususnet",
+      "description": "Provides static code analysis for software developed with .NET.",
+      "url": "https://github.com/usus/Usus.NET",
+      "languages": "c#,vb.net",
       "license": "Unknown",
       "platform": "TODO"
     },
@@ -665,6 +865,7 @@
     "GPL-3.0": "https://opensource.org/licenses/GPL-3.0",
     "BSD-2-Clause": "https://opensource.org/licenses/BSD-2-Clause",
     "LGPL-3.0": "https://opensource.org/licenses/LGPL-3.0",
+    "LGPL-2.0": "http://directory.fsf.org/wiki/License:LGPLv2",
     "LLVM": "http://llvm.org/releases/2.8/LICENSE.TXT"
   }
 }
