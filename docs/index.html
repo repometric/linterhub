@@ -68,7 +68,7 @@
           <td class="hidden-xs">{{ linter.description }}</td>
           <td>{{ linter.languages.join(", ") }}</td>
           <td class="{{ linter.rm_docker ? 'danger': '' }}"><a href='../dockers/alpine/{{linter.name}}/Dockerfile'>{{ linter.rm_docker ? "No" : "Yes" }}</a></td>
-          <td class="hidden-xs">
+          <td class="{{ linter.licenseUnknown ? 'danger hidden-xs' : 'hidden-xs'}}">
             <span ng-repeat="license in linter.licenses">
               <a href="{{ licenses[license] }}">{{license}}</a>{{$last ? '' : ', '}}
             </span>
@@ -105,6 +105,7 @@ angular.module('sortApp', [])
             url: item.url,
             platform: item.platform,
             licenses: item.license.split(','),
+            licenseUnknown: item.license.indexOf('Unknown') >= 0,
             languages: item.languages.split(','),
             rm_docker: item.platform == "TODO",
             rm_cli: false
