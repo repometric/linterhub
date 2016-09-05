@@ -75,17 +75,13 @@
           </td>
         </tr>
       </tbody>
-      <!-- 
-https://samate.nist.gov/index.php/Source_Code_Security_Analyzers.html
-https://security.web.cern.ch/security/recommendations/en/code_tools.shtml
-http://spinroot.com/static/
-https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis
-http://www.dwheeler.com/flawfinder/
-http://www.cert.org/secure-coding/tools/index.cfm
-https://github.com/exakat/php-static-analysis-tools
-http://www.codeanalysistools.com
-      -->
     </table>
+    <div>
+      <h4>References</h4>
+      <ul ng-repeat="reference in references">
+        <li><a href="{{reference}}">{{reference}}</a></li>
+      </ul>
+    </div>
 
   </div>
 <script>
@@ -96,6 +92,16 @@ angular.module('sortApp', [])
     $scope.search = '';
     $scope.linters = [];
     $scope.licenses = [];
+    $scope.references = [
+      "https://samate.nist.gov/index.php/Source_Code_Security_Analyzers.html",
+      "https://security.web.cern.ch/security/recommendations/en/code_tools.shtml",
+      "http://spinroot.com/static/",
+      "https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis",
+      "http://www.dwheeler.com/flawfinder/",
+      "http://www.cert.org/secure-coding/tools/index.cfm",
+      "https://github.com/exakat/php-static-analysis-tools",
+      "http://www.codeanalysistools.com"
+    ]
     $http.get("../config.json")
       .then(function (res) { 
         $scope.linters = res.data.linters.map(function (item) {
