@@ -1,6 +1,6 @@
 # FAQ
   - How to prepare:
-    - Install [Docker Toolbox], [Oracle Virtual Box], [Cygwin] (for Windows).
+    - Install [Docker Toolbox], [Oracle Virtual Box], [Cygwin] for Windows.
     - Update envinorement variable PATH with pathes to installed software.
   - How to start:
     -  Open terminal (command line), navigate to the root folter of this project.
