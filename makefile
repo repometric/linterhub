@@ -5,4 +5,4 @@ dockers:
 	dotnet run -p generator alpine
 
 tests:
-	sh test.sh alpine
+	sh scripts/test.sh alpine
