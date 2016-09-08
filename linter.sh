@@ -77,9 +77,8 @@ main() {
 function parse_args() {
     # VM
     Storage="$Prefix-storage-instance"
-    HostShare="HOST_SHARE_$Session"
-    DockShare="/DOCKER_SHARE_$Session"
-    Session=$(date +%s|md5|base64|head -c 8)
+    HostShare="HOST_SHARE"
+    DockShare="/DOCKER_SHARE"
     while [[ $# -gt 1 ]] 
     do
         key="$1"
@@ -104,19 +103,34 @@ function parse_args() {
 # General functions
 function analyze()
 {
-    Path="$Command"
-    storage_build;
+    # Storage session
+    Session=$(date +%s|md5|base64|head -c 8)
+    Storage="$Storage_$Session"
+    HostShare="$HostShare_$Session"
+    DockShare="$DockShare_$Session"
+    # Storage build
+    Mode="storage:build"
+    main
+    # Linters
     IFS='+' read -ra linters <<< "$Name"
     for linterPart in "${linters[@]}"; do
         IFS=':' read -ra linter <<< "$linterPart"
-        engine_name ${linter[0]};
-        engine_build;
-        Output="";
+        # Linter session
+        Name=${linter[0]}
+        Image="$Prefix-$Name-image-$Session"
+        Instance="$Prefix-$Name-instance-$Session"
+        # Linter build
+        Mode="engine:build"
+        main
+        # Linter analyze
         Command=${linter[1]};
         Output=${linter[2]};
-        engine_analyze;
+        Mode="engine:analyze"
+        main
     done
-    storage_destroy;
+    # Storage destroy
+   Mode="storage:destroy"
+   main
 }
 
 function usage()
