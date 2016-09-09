@@ -11,7 +11,6 @@ Storage="scripts/storage.sh"
 
 main() {
     # Mode
-    echo "$Mode"
     case $Mode in
         # Storage commands
         -sb|storage:build)    sh $Storage \
@@ -81,12 +80,9 @@ function parse_args() {
     Volume="$Prefix-storage-instance"
     HostShare="HOST_SHARE"
     DockShare="/DOCKER_SHARE"
-    echo "zz: $#"
-    echo "aaaa: $Args"
     while [[ $# -gt 1 ]] 
     do
         key="$1"
-        echo "k: $key"
         case $key in
             --mode)      Mode="$2";;
             --name)      Name="$2"
