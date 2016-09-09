@@ -180,3 +180,4 @@ fi
 eval $(docker-machine env default --shell bash)
 parse_args $Args
 main $Args
+exit $?

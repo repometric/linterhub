@@ -90,3 +90,4 @@ function engine_offline()
 
 parse_args "$@"
 main "$@"
+exit $?

@@ -56,3 +56,4 @@ function storage_destroy()
 
 parse_args "$@"
 main "$@"
+exit $?
