@@ -4,24 +4,26 @@
 Version="0.3"
 Prefix="rm"
 Start="/bin/sh"
+Workdir="/shared"
 # Script
 Engine="scripts/engine.sh"
 Storage="scripts/storage.sh"
 
 main() {
     # Mode
+    echo "$Mode"
     case $Mode in
         # Storage commands
         -sb|storage:build)    sh $Storage \
                                 --mode build \
-                                --instance $Storage \
+                                --instance $Volume \
                                 --dockshare $DockShare \
                                 --hostshare $HostShare \
-                                --path $Path \
+                                --path "$Path" \
                               ;;
         -sd|storage:destroy)  sh $Storage \
                                 --mode destroy \
-                                --instance $Storage \
+                                --instance $Volume \
                                 --dockshare $DockShare \
                                 --hostshare $HostShare \
                               ;;
@@ -30,15 +32,15 @@ main() {
                                 --mode build \
                                 --image $Image \
                                 --dock $Dock \
-                                --workdir $Workdir \
+                                --workdir "$Workdir" \
                               ;;
         -ea|engine:analyze)   sh $Engine \
                                 --mode analyze \
                                 --image $Image \
                                 --instance $Instance \
-                                --share $Storage \
-                                --command $Command \
-                                --output $Output \
+                                --share $Volume \
+                                --command "$Command" \
+                                --output "$Output" \
                               ;;
         -es|engine:export)    sh $Engine \
                                 --mode export \
@@ -53,13 +55,13 @@ main() {
                                 --mode run \
                                 --image $Image \
                                 --instance $Instance \
-                                --share rm-Storage \
+                                --share $Volume \
                                 --start $Start \
                               ;;
         -ee|engine:exec)      sh $Engine \
                                 --mode exec \
                                 --instance $Instance \
-                                --command $Command \
+                                --command "$Command" \
                               ;;
         -ed|engine:destroy)   sh $Engine \
                                 --mode destroy \
@@ -76,13 +78,17 @@ main() {
 
 function parse_args() {
     # VM
-    Storage="$Prefix-storage-instance"
+    Volume="$Prefix-storage-instance"
     HostShare="HOST_SHARE"
     DockShare="/DOCKER_SHARE"
+    echo "zz: $#"
+    echo "aaaa: $Args"
     while [[ $# -gt 1 ]] 
     do
         key="$1"
+        echo "k: $key"
         case $key in
+            --mode)      Mode="$2";;
             --name)      Name="$2"
                          Dock="dockers/alpine/$Name/Dockerfile"
                          Image="$Prefix-$Name-image"
@@ -105,9 +111,9 @@ function analyze()
 {
     # Storage session
     Session=$(date +%s|md5|base64|head -c 8)
-    Storage="$Storage_$Session"
-    HostShare="$HostShare_$Session"
-    DockShare="$DockShare_$Session"
+    Volume="$Prefix-storage-instance-$Session"
+    HostShare="HOST_SHARE_$Session"
+    DockShare="/DOCKER_SHARE_$Session"
     # Storage build
     Mode="storage:build"
     main
@@ -117,14 +123,15 @@ function analyze()
         IFS=':' read -ra linter <<< "$linterPart"
         # Linter session
         Name=${linter[0]}
-        Image="$Prefix-$Name-image-$Session"
+        Dock="dockers/alpine/$Name/Dockerfile"
+        Image="$Prefix-$Name-image"
         Instance="$Prefix-$Name-instance-$Session"
         # Linter build
         Mode="engine:build"
         main
         # Linter analyze
-        Command=${linter[1]};
-        Output=${linter[2]};
+        Command="${linter[1]}"
+        Output="${linter[2]}"
         Mode="engine:analyze"
         main
     done
@@ -139,29 +146,36 @@ cat << EOF
 usage: $0 options
 
 OPTIONS:
+    setup                         Setup environment.
+    analyze                       Perform analysis.
     help                          Display a list of available commands.
     version                       Display the current version of the CLI.
-    setup                         Setup current environment.
-    analyze                       Perform analysis.
+
+MODES:
     ______________________________ 
-    storage:build path            Build storage image with shared volume.
+    storage:build                 Build storage image with shared volume.
     storage:destroy               Destroy storage image.
     ______________________________
-    engine:images                 List all built engines.
-    engine:offline                List all installed engines.
-    engine:online                 ToDo
+    engine:images                 ToDo.
+    engine:offline                ToDo.
+    engine:online                 ToDo.
     ______________________________
-    engine:build name             Build engine image.
-    engine:analyze name command   Analyze the shared storage volume using engine.
-    engine:save name              Save engine image.
+    engine:build                  Build engine image.
+    engine:analyze                Analyze the shared storage volume using engine.
+    engine:save                   Save engine image.
     ______________________________
-    engine:run engine             Run engine image in interactive mode.
-    engine:exec name command      Execute command in the specified running engine.
-    engine:destroy name           Destroy engine instance.
+    engine:run                    Run engine image in interactive mode.
+    engine:exec                   Execute command in the specified running engine.
+    engine:destroy                Destroy engine instance.
+    ______________________________ 
 EOF
 }
 
-eval $(docker-machine env default --shell bash)
+Args="$@"
+if [ "$1" != "--mode" ]; then
+    Args="--mode $@"
+fi
 
-parse_args "$@"
-main "$@"
+eval $(docker-machine env default --shell bash)
+parse_args $Args
+main $Args
