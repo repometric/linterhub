@@ -2,10 +2,10 @@ basedir=$1
 mkdir -p tests
 for dir in "dockers/$basedir"/*; do
     if test -d "$dir"; then
-        dir="$(basename $dir)"  # Returns just "to"
-        mkdir -p tests/$dir
-        echo "Test: $dir"
-        sh linter.sh engine:build "$dir" > tests/"$dir"/build.txt
-        sh linter.sh engine:save "$dir" > tests/"$dir"/image.tgz
+        name="$(basename $dir)"  # Returns just "to"
+        mkdir -p tests/$name
+        echo "Test: $name"
+        sh linter.sh --mode engine:build "$name" > tests/"$name"/build.txt
+        sh linter.sh --mode engine:save "$name" > tests/"$name"/image.tgz
     fi
 done
