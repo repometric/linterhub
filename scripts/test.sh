@@ -5,7 +5,7 @@ for dir in "dockers/$basedir"/*; do
         name="$(basename $dir)"  # Returns just "to"
         mkdir -p tests/$name
         echo "Test: $name"
-        sh linter.sh --mode engine:build "$name" > tests/"$name"/build.txt
-        sh linter.sh --mode engine:save "$name" > tests/"$name"/image.tgz
+        sh linter.sh --mode engine:build --name "$name" > tests/"$name"/build.txt
+        sh linter.sh --mode engine:save --name "$name" > tests/"$name"/image.tgz
     fi
 done
