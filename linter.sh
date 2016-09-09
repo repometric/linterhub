@@ -164,6 +164,11 @@ MODES:
     engine:exec                   Execute command in the specified running engine.
     engine:destroy                Destroy engine instance.
     ______________________________ 
+
+EXAMPLES:
+    sh linter.sh analyze eslint:"eslint *.js":report.txt --path /project/path
+
+    Analyze all js files from --path using eslint linter and save report to report.txt
 EOF
 }
 
