@@ -9,7 +9,7 @@ for dir in "dockers/$basedir"/*; do
         mkdir -p tests/$name
         echo "${COL_YELLOW}Test: $name.${COL_RESET}"
         echo "1. Build: \c"
-        sh linter.sh --mode engine:build --name "$name" > tests/"$name"/build.txt
+        sh linterhub.sh --mode engine:build --name "$name" > tests/"$name"/build.txt
         if [ $? -eq 0 ]
         then
             echo "${COL_GREEN}OK${COL_RESET}"
@@ -17,7 +17,7 @@ for dir in "dockers/$basedir"/*; do
             echo "${COL_RED}FAIL${COL_RESET}"
         fi
         echo "2. Save : \c"
-        sh linter.sh --mode engine:save --name "$name" > tests/"$name"/image.tgz
+        sh linterhub.sh --mode engine:export --name "$name" > tests/"$name"/image.tgz
         if [ $? -eq 0 ]
         then
             echo "${COL_GREEN}OK${COL_RESET}"

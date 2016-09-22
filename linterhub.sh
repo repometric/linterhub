@@ -167,7 +167,7 @@ MODES:
     ______________________________ 
 
 EXAMPLES:
-    sh linter.sh analyze eslint:"eslint *.js":report.txt --path /project/path
+    sh linterhub.sh analyze eslint:"eslint *.js":report.txt --path /project/path
 
     Analyze all js files from --path using eslint linter and save report to report.txt
 EOF
@@ -178,7 +178,6 @@ if [ "$1" != "--mode" ]; then
     Args="--mode $@"
 fi
 
-#eval $(docker-machine env default --shell bash)
 parse_args $Args
 main $Args
 exit $?
