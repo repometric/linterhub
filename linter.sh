@@ -6,8 +6,8 @@ Prefix="rm"
 Start="/bin/sh"
 Workdir="/shared"
 # Script
-Engine="scripts/engine.sh"
-Storage="scripts/storage.sh"
+Engine="bin/engine.sh"
+Storage="bin/storage.sh"
 
 main() {
     # Mode
