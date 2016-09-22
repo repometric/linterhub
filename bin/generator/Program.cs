@@ -11,7 +11,7 @@ namespace Repometric.Dockers.Generator
     {
         public static void Main(string[] args)
         {
-            const string configFile = @"config.json";
+            const string configFile = @"docs/linters.json";
             const string defaultTemplate = @"default";
             var linters = JObject.Parse(File.ReadAllText(configFile));
 
