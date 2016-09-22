@@ -8,6 +8,7 @@ Workdir="/shared"
 # Script
 Engine="bin/engine.sh"
 Storage="bin/storage.sh"
+Check="bin/check.sh"
 
 main() {
     # Mode
@@ -68,7 +69,7 @@ main() {
                               ;;
         # General commands
         -a|analyze)           analyze;;
-        -s|setup)             sh scripts/setup.sh;;
+        -c|check)             sh $Check;;
         -v|--version|version) echo $Version;;
         -h|--help|help|?|-?)  usage;;
         *)                    echo Unknown command. Try "$0 -help".;;
@@ -177,7 +178,7 @@ if [ "$1" != "--mode" ]; then
     Args="--mode $@"
 fi
 
-eval $(docker-machine env default --shell bash)
+#eval $(docker-machine env default --shell bash)
 parse_args $Args
 main $Args
 exit $?
