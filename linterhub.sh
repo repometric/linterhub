@@ -167,9 +167,9 @@ MODES:
     ______________________________ 
 
 EXAMPLES:
-    sh linterhub.sh analyze eslint:"eslint *.js":report.txt --path /project/path
+    sh linterhub.sh analyze eslint:"eslint *.js":output.txt --path /project/path
 
-    Analyze all js files from --path using eslint linter and save report to report.txt
+    Analyze all js files from --path using eslint linter and save report to output.txt
 EOF
 }
 

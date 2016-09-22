@@ -37,7 +37,7 @@ function parse_args() {
 # Engine functions
 function engine_build()
 {
-    docker build --build-arg WORKDIR=$Workdir --no-cache=true -t $EngineImage -f $EngineDock . 
+    docker build --build-arg WORKDIR=$Workdir -t $EngineImage -f $EngineDock . 
 }
 
 function engine_analyze()

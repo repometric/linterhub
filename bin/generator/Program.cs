@@ -36,13 +36,15 @@ namespace Repometric.Dockers.Generator
                 let name = (string)linter["name"]
                 let platform = (string)linter["platform"]
                 let docker = linters["dockers"][image][platform]
-                let cmd = linters["platforms"][platform]
+                let commands = linters["platforms"][platform]
                 let path = @"dockers/" + image + "/" + name + "/"
                 let config = linter["config"]
-                let templateFile = "templates/" + ReadConfig(config, "template", defaultTemplate)
+                let templateFile = "templates/" + ReadValue(config, "template", defaultTemplate)
                 let template = File.ReadAllText(templateFile)
-                let package = ReadConfig(config, "package", name)
-                let run = cmd + " " + package
+                let package = ReadValue(config, "package", name)
+                let version = linter["version"]
+                let cmd = ReadValue(commands, "latest", "")
+                let run = Format(cmd, new { package })
                 let model = new { docker, name, cmd, run, path }
                 let content = platform == "TODO" ? "" : Format(template, model)
                 select new { name, path, content };
@@ -64,7 +66,7 @@ namespace Repometric.Dockers.Generator
             Console.WriteLine("Total: " + list.Count);
         }
 
-        static string ReadConfig(JToken config, string name, string defaultValue)
+        static string ReadValue(JToken config, string name, string defaultValue)
         {
             return (string)(config != null && config[name] != null ? config[name] : defaultValue);
         }

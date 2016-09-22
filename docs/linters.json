@@ -98,6 +98,7 @@
     },
     {
       "name": "csslint",
+      "version": "1.0.3",
       "description": "Automated linting of Cascading Stylesheets.",
       "url": "http://csslint.net",
       "languages": "css",
@@ -832,12 +833,30 @@
     }
   ],
   "platforms": {
-    "custom": "",
-    "go": "",
-    "nodejs": "npm install -g",
-    "php": "composer global require",
-    "python": "pip install",
-    "ruby": "gem install"
+    "custom": {
+      "latest": "",
+      "stable": ""
+    },
+    "go": {
+      "latest": "",
+      "stable": ""
+    },
+    "nodejs": {
+      "latest": "npm install -g {package}",
+      "stable": "npm install -g {package}@{version}"
+    },
+    "php": {
+      "latest": "composer global require {package}",
+      "stable": "composer global require {package}:{version}"
+    },
+    "python": {
+      "latest": "pip install {package}",
+      "stable": "pip install {package}=={version}"
+    },
+    "ruby": {
+      "latest": "gem install {package}",
+      "stable": "gem install {package} -v {version}"
+    }
   },
   "dockers": {
     "alpine": {
