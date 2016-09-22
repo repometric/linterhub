@@ -13,15 +13,17 @@ namespace Repometric.Dockers.Generator
         {
             const string configFile = @"docs/linters.json";
             const string defaultTemplate = @"default";
-            var linters = JObject.Parse(File.ReadAllText(configFile));
+            var version = "latest";
+            var lintersFile = File.ReadAllText(configFile);
 
             if (args[0] == "reformat") 
             {
+                var lintersJson = JObject.Parse(lintersFile);
                 var reformat = new {
-                    linters = linters["linters"].OrderBy(x => x["name"]),
-                    platforms = linters["platforms"],
-                    dockers = linters["dockers"],
-                    licenses = linters["licenses"]
+                    linters = lintersJson["linters"].OrderBy(x => x["name"]),
+                    platforms = lintersJson["platforms"],
+                    dockers = lintersJson["dockers"],
+                    licenses = lintersJson["licenses"]
                 };
 
                 var content = JsonConvert.SerializeObject(reformat, Formatting.Indented);
@@ -31,23 +33,20 @@ namespace Repometric.Dockers.Generator
 
             var image = args[0];
 
+            var linters = JsonConvert.DeserializeObject<Linters>(lintersFile);
             var query = 
-                from linter in linters["linters"]
-                let name = (string)linter["name"]
-                let platform = (string)linter["platform"]
-                let docker = linters["dockers"][image][platform]
-                let commands = linters["platforms"][platform]
-                let path = @"dockers/" + image + "/" + name + "/"
-                let config = linter["config"]
-                let templateFile = "templates/" + ReadValue(config, "template", defaultTemplate)
+                from linter in linters.linters
+                let docker = linters.dockers[image][linter.platform]
+                let commands = linters.platforms[linter.platform]
+                let path = @"dockers/" + image + "/" + linter.name + "/"
+                let templateFile = "templates/" + ReadValue(linter.config, "template", defaultTemplate)
                 let template = File.ReadAllText(templateFile)
-                let package = ReadValue(config, "package", name)
-                let version = linter["version"]
-                let cmd = ReadValue(commands, "latest", "")
+                let package = ReadValue(linter.config, "package", linter.name)
+                let cmd = ReadValue(commands, version, "")
                 let run = Format(cmd, new { package })
-                let model = new { docker, name, cmd, run, path }
-                let content = platform == "TODO" ? "" : Format(template, model)
-                select new { name, path, content };
+                let model = new { docker, linter.name, cmd, run, path }
+                let content = linter.platform == "TODO" ? "" : Format(template, model)
+                select new { linter.name, path, content };
 
             var list = query.ToList();
             foreach (var item in list)
@@ -78,6 +77,25 @@ namespace Repometric.Dockers.Generator
                 input = input.Replace("{" + prop.Name + "}", (prop.GetValue(p) ?? "(null)").ToString());
             }
             return input;
+        }
+
+        public class Linters
+        {
+            public Linter[] linters;
+            public JObject platforms;
+            public JObject licenses;
+            public JObject dockers;
+            public class Linter
+            {
+                public string name;
+                public string version;
+                public string description;
+                public string url;
+                public string languages;
+                public string license;
+                public string platform;
+                public JObject config;
+            }
         }
     }
 }
