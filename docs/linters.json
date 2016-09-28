@@ -688,6 +688,14 @@
       "platform": "TODO"
     },
     {
+      "name": "simian",
+      "description": "Simian (Similarity Analyser) identifies duplication in source code",
+      "url": "http://www.harukizaemon.com/simian/index.html",
+      "languages": "java,c#,c,c++,cobol,ruby,jsp,asp,html,xml,vb,groovy",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "smatch",
       "description": "Smatch has been completely rewritten in C and now uses sparse as a C parser instead of gcc as a C parser.",
       "url": "http://smatch.sourceforge.net",
@@ -766,6 +774,14 @@
       "languages": "typescript",
       "license": "Apache-2.0",
       "platform": "nodejs"
+    },
+    {
+      "name": "tuli",
+      "description": "A static analysis engine for php.",
+      "url": "https://github.com/ircmaxell/Tuli",
+      "languages": "php",
+      "license": "MIT",
+      "platform": "TODO"
     },
     {
       "name": "ucdetector",

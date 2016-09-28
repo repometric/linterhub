@@ -79,7 +79,7 @@ main() {
         -a|analyze)           analyze;;
         -c|check)             sh $Check;;
         -v|--version|version) echo $Version;;
-        -h|--help|help|?|-?)  cat docs/cmd.txt;;
+        -h|--help|help|?|-?)  cat docs/usage.md;;
         *)                    echo "${COL_RED}Unknown command. Try '$0 -help'${COL_RESET}";;
     esac
 }
