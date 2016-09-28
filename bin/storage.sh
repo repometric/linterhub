@@ -30,7 +30,9 @@ function parse_args() {
 # Storage functions
 function storage_mount()
 {
-    VBoxManage sharedfolder add default --name $HostShare --hostpath $Path --transient
+	#Path = "C:/xampp/htdocs/debugger.html"
+	#echo "!!!" $Path
+    VBoxManage sharedfolder add default --name $HostShare --hostpath "C:\xampp\htdocs\debugger.html\public\js\clients\chrome" --transient
     docker-machine ssh default "sudo mkdir $DockerShare"
     docker-machine ssh default "sudo mount -t vboxsf $HostShare $DockerShare"
 }
