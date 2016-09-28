@@ -17,6 +17,9 @@ Check="bin/check.sh"
 
 main() {
     # Mode
+    if [ -z "$Mode" ]; then
+        Mode="$1"
+    fi
     case $Mode in
         # Storage commands
         -sb|storage:build)    sh $Storage \
@@ -76,8 +79,8 @@ main() {
         -a|analyze)           analyze;;
         -c|check)             sh $Check;;
         -v|--version|version) echo $Version;;
-        -h|--help|help|?|-?)  usage;;
-        *)                    echo Unknown command. Try "$0 -help".;;
+        -h|--help|help|?|-?|-h)  usage;;
+        *)                    echo "${COL_RED}Unknown command. Try '$0 -help'${COL_RESET}";;
     esac
 }
 
