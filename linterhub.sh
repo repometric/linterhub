@@ -18,7 +18,7 @@ Check="bin/check.sh"
 main() {
     # Mode
     if [ -z "$Mode" ]; then
-        Mode="$1"
+        Mode=$1
     fi
     case $Mode in
         # Storage commands
@@ -105,6 +105,7 @@ function parse_args() {
             --output)    Output="$2";;
             --workdir)   Workdir="$2";;
             --path)      Path="$2";;
+            --clean)     Clean="true";;
             *)           echo "${COL_RED}ERROR: Unknown command $1${COL_RESET}"
         esac
         shift
@@ -133,8 +134,10 @@ function analyze()
         Image="$Prefix-$Name-image"
         Instance="$Prefix-$Name-instance-$Session"
         # Linter build
-        Mode="engine:build"
-        main
+        if [ -n "$Clean" ]; then
+            Mode="engine:build"
+            main
+        fi
         # Linter analyze
         Command="${linter[1]}"
         Output="${linter[2]}"
