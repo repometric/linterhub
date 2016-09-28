@@ -106,6 +106,7 @@ function parse_args() {
             --workdir)   Workdir="$2";;
             --path)      Path="$2";;
             --clean)     Clean="true";;
+            --session)   Session="true";;
             *)           echo "${COL_RED}ERROR: Unknown command $1${COL_RESET}"
         esac
         shift
@@ -116,14 +117,18 @@ function parse_args() {
 # General functions
 function analyze()
 {
-    # Storage session
-    Session=$(date +%s|md5|base64|head -c 8)
-    Volume="$Prefix-storage-instance-$Session"
-    HostShare="HOST_SHARE_$Session"
-    DockShare="/DOCKER_SHARE_$Session"
-    # Storage build
-    Mode="storage:build"
-    main
+    if [ -n "$Session" ]; then
+        # Storage session
+        Session=$(date +%s|md5|base64|head -c 8)
+        Volume="$Prefix-storage-instance-$Session"
+        HostShare="HOST_SHARE_$Session"
+        DockShare="/DOCKER_SHARE_$Session"
+    fi
+    if [ -c "$Clean" ]; then
+        # Storage build
+        Mode="storage:build"
+        main
+    fi
     # Linters
     IFS='+' read -ra linters <<< "$Name"
     for linterPart in "${linters[@]}"; do
@@ -133,8 +138,8 @@ function analyze()
         Dock="dockers/alpine/$Name/Dockerfile"
         Image="$Prefix-$Name-image"
         Instance="$Prefix-$Name-instance-$Session"
-        # Linter build
         if [ -n "$Clean" ]; then
+            # Linter build
             Mode="engine:build"
             main
         fi
@@ -144,9 +149,11 @@ function analyze()
         Mode="engine:analyze"
         main
     done
-    # Storage destroy
-   Mode="storage:destroy"
-   main
+    if [ -c "$Clean" ]; then
+        # Storage destroy
+        Mode="storage:destroy"
+        main
+    fi
 }
 
 function usage()
