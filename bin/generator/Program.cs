@@ -13,7 +13,7 @@ namespace Repometric.Dockers.Generator
         {
             const string configFile = @"docs/linters.json";
             const string defaultTemplate = @"default";
-            var version = "latest";
+            var versionType = "latest";
             var lintersFile = File.ReadAllText(configFile);
 
             if (args[0] == "reformat") 
@@ -42,7 +42,7 @@ namespace Repometric.Dockers.Generator
                 let templateFile = "templates/" + ReadValue(linter.config, "template", defaultTemplate)
                 let template = File.ReadAllText(templateFile)
                 let package = ReadValue(linter.config, "package", linter.name)
-                let cmd = ReadValue(commands, version, "")
+                let cmd = ReadValue(commands, versionType, "")
                 let run = Format(cmd, new { package })
                 let model = new { docker, linter.name, cmd, run, path }
                 let content = linter.platform == "TODO" ? "" : Format(template, model)

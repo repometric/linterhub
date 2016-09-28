@@ -1,3 +1,9 @@
+set -e
+
+source bin/colors.sh
+echo "${COL_BLUE}TRACE: Start $0${COL_RESET}"
+echo "${COL_BLUE}TRACE: $@${COL_RESET}"
+
 # Shared Consts
 SharedVolume="/shared"
 SharedDock="busybox"
@@ -30,27 +36,33 @@ function parse_args() {
 # Storage functions
 function storage_mount()
 {
+    echo "${COL_GREEN}INFO: Map host folder to VM${COL_RESET}"
     VBoxManage sharedfolder add default --name $HostShare --hostpath $Path --transient
+    echo "${COL_GREEN}INFO: Create folder in VM${COL_RESET}"
     docker-machine ssh default "sudo mkdir $DockerShare"
+    echo "${COL_GREEN}INFO: Mount VM folder in dock${COL_RESET}"
     docker-machine ssh default "sudo mount -t vboxsf $HostShare $DockerShare"
 }
 
 function storage_unmount()
 {
-    VBoxManage sharedfolder remove default --name $HostShare --transient
+    echo "${COL_GREEN}INFO: Unmount VM folder in dock${COL_RESET}"
     docker-machine ssh default "sudo umount $DockerShare -v"
+    echo "${COL_GREEN}INFO: Delete folder in VM${COL_RESET}"
     docker-machine ssh default "sudo rmdir $DockerShare"
 }
 
 function storage_build()
 {
     storage_mount
-    docker run --name $Instance -v $DockerShare:$SharedVolume $SharedDock true
+    echo "${COL_GREEN}INFO: Run storage dock${COL_RESET}"
+    docker run --name $Instance -v $Path:$SharedVolume $SharedDock true
 }
 
 function storage_destroy()
 {
     storage_unmount
+    echo "${COL_GREEN}INFO: Destroy storage dock${COL_RESET}"
     docker rm -f $Instance
 }
 

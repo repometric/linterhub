@@ -1,7 +1,12 @@
 #!/bin/bash
+#set -e
+
+source bin/colors.sh
+echo "${COL_BLUE}TRACE: Start $0${COL_RESET}"
+echo "${COL_BLUE}TRACE: $@${COL_RESET}"
 
 # Constants
-Version="0.3"
+Version="0.4"
 Prefix="rm"
 Start="/bin/sh"
 Workdir="/shared"
@@ -97,6 +102,7 @@ function parse_args() {
             --output)    Output="$2";;
             --workdir)   Workdir="$2";;
             --path)      Path="$2";;
+            *)           echo "${COL_RED}ERROR: Unknown command $1${COL_RESET}"
         esac
         shift
         shift
@@ -143,7 +149,7 @@ cat << EOF
 usage: $0 options
 
 OPTIONS:
-    setup                         Setup environment.
+    check                         Check environment.
     analyze                       Perform analysis.
     help                          Display a list of available commands.
     version                       Display the current version of the CLI.
@@ -167,17 +173,12 @@ MODES:
     ______________________________ 
 
 EXAMPLES:
-    sh linterhub.sh analyze eslint:"eslint *.js":output.txt --path /project/path
+    sh linterhub.sh --mode analyze --name eslint:"eslint *.js":output.txt --path /project/path
 
     Analyze all js files from --path using eslint linter and save report to output.txt
 EOF
 }
 
-Args="$@"
-if [ "$1" != "--mode" ]; then
-    Args="--mode $@"
-fi
-
-parse_args $Args
-main $Args
+parse_args "$@"
+main "$@"
 exit $?

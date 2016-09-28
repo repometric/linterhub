@@ -1,3 +1,9 @@
+set -e
+
+source bin/colors.sh
+echo "${COL_BLUE}TRACE: Start $0${COL_RESET}"
+echo "${COL_BLUE}TRACE: $@${COL_RESET}"
+
 # Entry point
 function main() {
     case $Mode in
@@ -37,11 +43,13 @@ function parse_args() {
 # Engine functions
 function engine_build()
 {
+    echo "${COL_GREEN}INFO: Build linter dock${COL_RESET}"
     docker build --build-arg WORKDIR=$Workdir -t $EngineImage -f $EngineDock . 
 }
 
 function engine_analyze()
 {
+    echo "${COL_GREEN}INFO: Run analysis${COL_RESET}"
     if [ ! "$Output" ];
         then docker run -i --rm --name $EngineInstance --volumes-from=$Share $EngineImage $Command
         else docker run -i --rm --name $EngineInstance --volumes-from=$Share $EngineImage $Command > "$Output"
@@ -50,6 +58,7 @@ function engine_analyze()
 
 function engine_export()
 {
+    echo "${COL_GREEN}INFO: Save dock${COL_RESET}"
     mkdir -p images
     docker save $EngineImage | gzip -c
 }
@@ -57,16 +66,19 @@ function engine_export()
 # Engine debug functions
 function engine_run()
 {
+    echo "${COL_GREEN}INFO: Run linter dock${COL_RESET}"
     docker run -i -d --name $EngineInstance --volumes-from=$Share $EngineImage $Startup
 }
 
 function engine_exec()
 {
+    echo "${COL_GREEN}INFO: Execute command in linter dock${COL_RESET}"
     docker exec -it $EngineInstance $Command
 }
 
 function engine_destroy()
 {
+    echo "${COL_GREEN}INFO: Destroy linter dock${COL_RESET}"
     docker rm -f $EngineInstance
 }
 
