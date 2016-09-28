@@ -81,12 +81,14 @@ function parse_args() {
     Volume="$Prefix-storage-instance"
     HostShare="HOST_SHARE"
     DockShare="/DOCKER_SHARE"
+	echo "Fullcmd: $@"
     while [[ $# -gt 1 ]] 
     do
         key="$1"
         case $key in
             --mode)      Mode="$2";;
-            --name)      Name="$2"
+            --name)     echo "--- $2" 
+						Name="$2"
                          Dock="dockers/alpine/$Name/Dockerfile"
                          Image="$Prefix-$Name-image"
                          Instance="$Prefix-$Name-instance"
@@ -107,7 +109,7 @@ function parse_args() {
 function analyze()
 {
     # Storage session
-    Session=$(date +%s|md5|base64|head -c 8)
+    Session="12346" #$(date +%s|md5|base64|head -c 8)
     Volume="$Prefix-storage-instance-$Session"
     HostShare="HOST_SHARE_$Session"
     DockShare="/DOCKER_SHARE_$Session"
@@ -116,6 +118,7 @@ function analyze()
     main
     # Linters
     IFS='+' read -ra linters <<< "$Name"
+	echo "nn $Name"
     for linterPart in "${linters[@]}"; do
         IFS=':' read -ra linter <<< "$linterPart"
         # Linter session
@@ -127,7 +130,10 @@ function analyze()
         Mode="engine:build"
         main
         # Linter analyze
-        Command="${linter[1]}"
+        Command=${linter[1]}
+		echo "cmd $Command"
+		#Command="jshint --reporter checkstyle ./"
+		#Command="ls"
         Output="${linter[2]}"
         Mode="engine:analyze"
         main
