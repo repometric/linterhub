@@ -124,7 +124,7 @@ function analyze()
         HostShare="HOST_SHARE_$Session"
         DockShare="/DOCKER_SHARE_$Session"
     fi
-    if [ -c "$Clean" ]; then
+    if [ -n "$Clean" ] || [ -n "$Session" ] ; then
         # Storage build
         Mode="storage:build"
         main
@@ -149,7 +149,7 @@ function analyze()
         Mode="engine:analyze"
         main
     done
-    if [ -c "$Clean" ]; then
+    if [ -n "$Clean" ] || [ -n "$Session" ]; then
         # Storage destroy
         Mode="storage:destroy"
         main
