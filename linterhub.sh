@@ -119,7 +119,8 @@ function analyze()
 {
     if [ -n "$Session" ]; then
         # Storage session
-        Session=$(date +%s|sha512sum|base64|head -c 8)
+        Session=$RANDOM
+        # Not cross platform - Session=$(date +%s|md5|base64|head -c 8)
         Volume="$Prefix-storage-instance-$Session"
         HostShare="HOST_SHARE_$Session"
         DockShare="/DOCKER_SHARE_$Session"

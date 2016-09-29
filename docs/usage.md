@@ -25,6 +25,6 @@ MODES:
     ______________________________ 
 
 EXAMPLES:
-    sh linterhub.sh --mode analyze --name eslint:"eslint *.js":output.txt --path /project/path
+    sh linterhub.sh --mode analyze --name jslint:"jslint *.js":output.txt --path /project/path --session true --clean true
 
     Analyze all js files from --path using eslint linter and save report to output.txt
