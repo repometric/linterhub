@@ -56,7 +56,12 @@ function storage_build()
 {
     storage_mount
     echo "${COL_GREEN}INFO: Run storage dock${COL_RESET}"
-    docker run --name $Instance -v $Path:$SharedVolume $SharedDock true
+	Folder=$Path
+	if docker info | grep -q "provider=virtualbox"; then 
+		echo "${COL_GREEN}INFO: Use VirtualBox driver${COL_RESET}"
+		Folder=$DockerShare
+	fi
+    docker run --name $Instance -v $Folder:$SharedVolume $SharedDock true
 }
 
 function storage_destroy()
