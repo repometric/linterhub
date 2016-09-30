@@ -7,7 +7,7 @@
     -  Exec `sh linterhub.sh setup` (for Windows just `linter setup`), pay attention to Warnings and Errors.
   - How to test:
     - Exec `sh linterhub.sh --help`, it displays the list of available commands.
-    - Exec `sh linterhub.sh analyze "linter":"command":"output.file" "/path/to/project"` to analyse the project.
+    - Exec `sh linterhub.sh analyze --name "linter":"command":"output.file" --path "/path/to/project" --session true --clean true` to analyse the project.
   - How to add new linter:
     - Create a new issue with: name, description, url, supported languages, license of linter.
 
