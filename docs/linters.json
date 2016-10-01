@@ -25,6 +25,14 @@
       "platform": "ruby"
     },
     {
+      "name": "ccm",
+      "description": "CCM is a tool that analyzes c, c++, c#, javascript and TypeScript code and reports back with cyclomatic complexity metric.",
+      "url": "https://github.com/jonasblunck/ccm",
+      "languages": "c,c++,c#,javascript,typescript",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "checkstyle",
       "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.",
       "url": "http://checkstyle.sourceforge.net",
@@ -94,6 +102,14 @@
       "url": "http://www.cs.umd.edu/~jfoster/cqual/",
       "languages": "c",
       "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "credo",
+      "description": "Credo is a static code analysis tool for the Elixir language with a focus on teaching and code consistency.",
+      "url": "http://credo-ci.org",
+      "languages": "elixir",
+      "license": "Unknown",
       "platform": "TODO"
     },
     {
@@ -210,6 +226,14 @@
       "url": "http://gmetrics.sourceforge.net",
       "languages": "groovy",
       "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "gometalinter",
+      "description": "Concurrently run Go lint tools and normalise their output.",
+      "url": "https://github.com/alecthomas/gometalinter",
+      "languages": "go",
+      "license": "MIT",
       "platform": "TODO"
     },
     {
@@ -821,6 +845,14 @@
       "url": "c,c++,java,c#,vb,pl/sql",
       "languages": "c,c++",
       "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "visualcodegrepper",
+      "description": "VCG is an automated code security review tool for C++, C#, VB, PHP, Java and PL/SQL which is intended to drastically speed up the code review process by identifying bad/insecure code.",
+      "url": "https://github.com/nccgroup/VCG",
+      "languages": "c++,c#,vb,php,java,sql",
+      "license": "Unknown",
       "platform": "TODO"
     },
     {
