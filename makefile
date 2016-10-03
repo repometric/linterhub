@@ -3,4 +3,4 @@ dockers:
 	dotnet run -p bin/generator alpine
 
 tests:
-	sh bin/test.sh alpine
+	sh bin/lh_test.sh alpine

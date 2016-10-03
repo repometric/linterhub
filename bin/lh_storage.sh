@@ -1,8 +1,8 @@
 set -e
 
-source bin/colors.sh
-echo "${COL_BLUE}TRACE: Start $0${COL_RESET}"
-echo "${COL_BLUE}TRACE: $@${COL_RESET}"
+source bin/lh_utils.sh
+
+log START "$@"
 
 # Shared Consts
 SharedVolume="/shared"
@@ -36,29 +36,29 @@ function parse_args() {
 # Storage functions
 function storage_mount()
 {
-    echo "${COL_GREEN}INFO: Map host folder to VM${COL_RESET}"
+    log INFO "Map host folder to VM"
     VBoxManage sharedfolder add default --name $HostShare --hostpath $Path --transient
-    echo "${COL_GREEN}INFO: Create folder in VM${COL_RESET}"
+    log INFO "Create folder in VM"
     docker-machine ssh default "sudo mkdir $DockerShare"
-    echo "${COL_GREEN}INFO: Mount VM folder in dock${COL_RESET}"
+    log INFO "Mount VM folder in dock"
     docker-machine ssh default "sudo mount -t vboxsf $HostShare $DockerShare"
 }
 
 function storage_unmount()
 {
-    echo "${COL_GREEN}INFO: Unmount VM folder in dock${COL_RESET}"
+    log INFO "Unmount VM folder in dock"
     docker-machine ssh default "sudo umount $DockerShare -v"
-    echo "${COL_GREEN}INFO: Delete folder in VM${COL_RESET}"
+    log INFO "INFO: Delete folder in VM"
     docker-machine ssh default "sudo rmdir $DockerShare"
 }
 
 function storage_build()
 {
     storage_mount
-    echo "${COL_GREEN}INFO: Run storage dock${COL_RESET}"
+    log INFO "Run storage dock"
 	Folder=$Path
 	if docker info | grep -q "provider=virtualbox"; then 
-		echo "${COL_GREEN}INFO: Use VirtualBox driver${COL_RESET}"
+		log INFO "Use VirtualBox driver"
 		Folder=$DockerShare
 	fi
     docker run --name $Instance -v $Folder:$SharedVolume $SharedDock true
@@ -67,7 +67,7 @@ function storage_build()
 function storage_destroy()
 {
     storage_unmount
-    echo "${COL_GREEN}INFO: Destroy storage dock${COL_RESET}"
+    log INFO "Destroy storage dock"
     docker rm -f $Instance
 }
 
