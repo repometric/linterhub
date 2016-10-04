@@ -2,7 +2,7 @@ set -e
 
 source bin/lh_utils.sh
 
-log START "$@"
+log RUN "$@"
 
 # Shared Consts
 SharedVolume="/shared"

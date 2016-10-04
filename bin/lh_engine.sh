@@ -2,7 +2,7 @@ set -e
 
 source bin/lh_utils.sh
 
-log START "$@"
+log RUN "$@"
 
 # Entry point
 function main() {
@@ -15,6 +15,10 @@ function main() {
         -r|run)      engine_run;;
         -e|exec)     engine_exec;;
         -d|destroy)  engine_destroy;;
+        # Engine images
+        -i|images)   engine_images;;
+        -o|online)   engine_online;;
+        -f|offline)  engine_offline;;
     esac
 }
 
@@ -85,19 +89,20 @@ function engine_destroy()
 # Engine image functions
 function engine_images()
 {
-    echo "docker images"
-    #docker images | grep $Prefix
+    log INFO "Docker containers"
+    docker images | grep $Prefix
 }
 
 function engine_online()
 {
+    log INFO "Docker online images"
     echo "docker search"
 }
 
 function engine_offline()
 {
-    echo "ls"
-    # ls -d */ | sed 's#/##'
+    log INFO "Docker offline images"
+    ls -d dockers/alpine/*/ | cut -f3 -d'/'
 }
 
 parse_args "$@"

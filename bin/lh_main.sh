@@ -3,10 +3,10 @@
 
 source bin/lh_utils.sh
 
-log START "$@"
+log RUN "$@"
 
 # Constants
-Version="0.4"
+Version="0.5"
 Prefix="rm"
 Start="/bin/sh"
 Workdir="/shared"
@@ -56,9 +56,16 @@ main() {
                                 --image $Image \
                               ;;
         # Engine image commands
-        -ei|engine:images)    echo "TODO";;
-        -eo|engine:online)    echo "TODO";;
-        -ef|engine:offline)   echo "TODO";;
+        -ei|engine:images)    sh $Engine \
+                                --mode images \
+                                --prefix $Prefix \
+                              ;;
+        -eo|engine:online)    sh $Engine \
+                                --mode online \
+                              ;;
+        -ef|engine:offline)   sh $Engine \
+                                --mode offline \
+                              ;;
         # Engine debug commands
         -er|engine:run)       sh $Engine \
                                 --mode run \

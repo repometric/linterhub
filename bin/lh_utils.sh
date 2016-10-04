@@ -20,10 +20,22 @@ case "$(uname -s)" in
 esac
 
 # Logs
+ERROR=8
+WARN=4
+INFO=2
+TRACE=1
+RUN=$TRACE
+
+LOG_LEVEL=1
 
 function log ()
 {
-    case $1 in
+    level=$1
+    if [ ${!level} -lt $LOG_LEVEL ]; then
+        return 0
+    fi
+
+    case $level in
         ERROR)  echo "${COL_RED}ERROR: $2${COL_RESET}"
                 ;;
         WARN)   echo "${COL_YELLOW}WARN : $2${COL_RESET}"
@@ -32,8 +44,8 @@ function log ()
                 ;;
         TRACE)  echo "${COL_BLUE}TRACE: $2${COL_RESET}"
                 ;;
-        START)  log TRACE "Start: $0"
-                log TRACE "Cmd  : $2"
+        RUN)    log TRACE "Start: $0"
+                log TRACE "Cmd  : $*"
                 ;;
         *)      
                 echo $*
