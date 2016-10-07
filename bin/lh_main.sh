@@ -21,6 +21,12 @@ main() {
     if [ -z "$Mode" ]; then
         Mode=$1
     fi
+	if [ -n "$Env" ]; then
+	log INFO "Configure environment"
+		eval $(docker-machine.exe env --shell sh)
+		# Do it once per instance
+		Env=
+	fi
     case $Mode in
         # Storage commands
         -sb|storage:build)    sh $Storage \
@@ -115,6 +121,7 @@ function parse_args() {
             --path)      Path="$2";;
             --clean)     Clean="true";;
             --session)   Session="true";;
+			--env)       Env="true";;
             *)           log ERROR "Unknown command $1"
         esac
         shift
