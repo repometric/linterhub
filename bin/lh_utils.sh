@@ -37,6 +37,7 @@ function log ()
 
     case $level in
         ERROR)  echo "${COL_RED}ERROR: $2${COL_RESET}"
+                echo "ERROR: $2" 1>&2
                 ;;
         WARN)   echo "${COL_YELLOW}WARN : $2${COL_RESET}"
                 ;;
