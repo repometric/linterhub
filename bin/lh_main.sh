@@ -23,7 +23,7 @@ main() {
     fi
 	if [ -n "$Env" ]; then
 	log INFO "Configure environment"
-		eval $(docker-machine.exe env --shell sh)
+        eval $(docker-machine.exe env --shell sh)
 		# Do it once per instance
 		Env=
 	fi
@@ -160,8 +160,9 @@ function analyze()
             main
         fi
         # Linter analyze
-        Command="${linter[1]}"
+        Command="\"${linter[1]}"\"
         Output="${linter[2]}"
+        echo "COM: $Command"
         Mode="engine:analyze"
         main
     done

@@ -55,8 +55,8 @@ function engine_analyze()
 {
     log INFO "Run analysis"
     if [ ! "$Output" ];
-        then docker run -i --rm --name $EngineInstance --volumes-from=$Share $EngineImage $Command
-        else docker run -i --rm --name $EngineInstance --volumes-from=$Share $EngineImage $Command > "$Output"
+        then docker run -i --rm --name $EngineInstance --volumes-from=$Share $EngineImage ${Command//[\"]}
+        else docker run -i --rm --name $EngineInstance --volumes-from=$Share $EngineImage ${Command//[\"]} > "$Output"
     fi
 }
 
