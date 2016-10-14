@@ -67,7 +67,7 @@ function storage_destroy()
 {
     storage_unmount
     log INFO "Destroy storage dock"
-    if [ $LOG_LEVEL -le $INFO ]; 
+    if [ $LOG_LEVEL -le $TRACE ]; 
         then docker rm -f $Instance
         else docker rm -f $Instance &>/dev/null
     fi

@@ -47,7 +47,7 @@ function parse_args() {
 function engine_build()
 {
     log INFO "Build linter dock"
-    if [ $LOG_LEVEL -le $INFO ]; 
+    if [ $LOG_LEVEL -le $TRACE ]; 
         then docker build --build-arg WORKDIR=$Workdir -t $EngineImage -f $EngineDock . 
         else docker build --build-arg WORKDIR=$Workdir -t $EngineImage -f $EngineDock . &>/dev/null
     fi
@@ -85,7 +85,7 @@ function engine_exec()
 function engine_destroy()
 {
     log INFO "Destroy linter dock"
-    if [ $LOG_LEVEL -le $INFO ]; 
+    if [ $LOG_LEVEL -le $TRACE ]; 
         then docker rm -f $EngineInstance
         else docker rm -f $EngineInstance &>/dev/null
     fi
