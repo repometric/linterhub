@@ -20,13 +20,23 @@ case "$(uname -s)" in
 esac
 
 # Logs
+NO=16
 ERROR=8
 WARN=4
 INFO=2
 TRACE=1
 RUN=$TRACE
 
-LOG_LEVEL=1
+LOG_LEVEL=$TRACE
+
+function setLogLevel()
+{
+    level=$1
+    case ${level#[-+]} in
+        *[!0-9]* ) LOG_LEVEL=${!level};;
+        * )        LOG_LEVEL=$level;;
+    esac  
+}
 
 function log ()
 {

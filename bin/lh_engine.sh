@@ -2,8 +2,6 @@ set -e
 
 source bin/lh_utils.sh
 
-log RUN "$@"
-
 # Entry point
 function main() {
     case $Mode in
@@ -38,6 +36,7 @@ function parse_args() {
             --share)     Share="$2";;
             --prefix)    Prefix="$2";;
             --start)     Startup="$2";;
+            --log)       setLogLevel $2;;
         esac
         shift
         shift
@@ -48,7 +47,10 @@ function parse_args() {
 function engine_build()
 {
     log INFO "Build linter dock"
-    docker build --build-arg WORKDIR=$Workdir -t $EngineImage -f $EngineDock . 
+    if [ $LOG_LEVEL -le $INFO ]; 
+        then docker build --build-arg WORKDIR=$Workdir -t $EngineImage -f $EngineDock . 
+        else docker build --build-arg WORKDIR=$Workdir -t $EngineImage -f $EngineDock . &>/dev/null
+    fi
 }
 
 function engine_analyze()
@@ -70,7 +72,7 @@ function engine_export()
 # Engine debug functions
 function engine_run()
 {
-    elog INFO "Run linter dock"
+    log INFO "Run linter dock"
     docker run -i -d --name $EngineInstance --volumes-from=$Share $EngineImage $Startup
 }
 
@@ -83,7 +85,10 @@ function engine_exec()
 function engine_destroy()
 {
     log INFO "Destroy linter dock"
-    docker rm -f $EngineInstance
+    if [ $LOG_LEVEL -le $INFO ]; 
+        then docker rm -f $EngineInstance
+        else docker rm -f $EngineInstance &>/dev/null
+    fi
 }
 
 # Engine image functions
@@ -106,5 +111,6 @@ function engine_offline()
 }
 
 parse_args "$@"
+log RUN "$@"
 main "$@"
 exit $?

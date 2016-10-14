@@ -2,8 +2,6 @@ set -e
 
 source bin/lh_utils.sh
 
-log RUN "$@"
-
 # Shared Consts
 SharedVolume="/shared"
 SharedDock="busybox"
@@ -27,6 +25,7 @@ function parse_args() {
             --hostshare) HostShare="$2";;
             --dockshare) DockerShare="$2";;
             --path)      Path="$2";;
+            --log)       setLogLevel $2;;
         esac
         shift
         shift
@@ -68,9 +67,13 @@ function storage_destroy()
 {
     storage_unmount
     log INFO "Destroy storage dock"
-    docker rm -f $Instance
+    if [ $LOG_LEVEL -le $INFO ]; 
+        then docker rm -f $Instance
+        else docker rm -f $Instance &>/dev/null
+    fi
 }
 
 parse_args "$@"
+log RUN "$@"
 main "$@"
 exit $?

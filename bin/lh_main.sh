@@ -3,8 +3,6 @@
 
 source bin/lh_utils.sh
 
-log RUN "$@"
-
 # Constants
 Version="0.5"
 Prefix="rm"
@@ -35,12 +33,14 @@ main() {
                                 --dockshare $DockShare \
                                 --hostshare $HostShare \
                                 --path "$Path" \
+                                --log $LOG_LEVEL \
                               ;;
         -sd|storage:destroy)  sh $Storage \
                                 --mode destroy \
                                 --instance $Volume \
                                 --dockshare $DockShare \
                                 --hostshare $HostShare \
+                                --log $LOG_LEVEL \
                               ;;
         # Engine commands
         -eb|engine:build)     sh $Engine \
@@ -48,6 +48,7 @@ main() {
                                 --image $Image \
                                 --dock $Dock \
                                 --workdir "$Workdir" \
+                                --log $LOG_LEVEL \
                               ;;
         -ea|engine:analyze)   sh $Engine \
                                 --mode analyze \
@@ -56,21 +57,26 @@ main() {
                                 --share $Volume \
                                 --command "$Command" \
                                 --output "$Output" \
+                                --log $LOG_LEVEL \
                               ;;
         -es|engine:export)    sh $Engine \
                                 --mode export \
                                 --image $Image \
+                                --log $LOG_LEVEL \
                               ;;
         # Engine image commands
         -ei|engine:images)    sh $Engine \
                                 --mode images \
                                 --prefix $Prefix \
+                                --log $LOG_LEVEL \
                               ;;
         -eo|engine:online)    sh $Engine \
                                 --mode online \
+                                --log $LOG_LEVEL \
                               ;;
         -ef|engine:offline)   sh $Engine \
                                 --mode offline \
+                                --log $LOG_LEVEL \
                               ;;
         # Engine debug commands
         -er|engine:run)       sh $Engine \
@@ -79,15 +85,18 @@ main() {
                                 --instance $Instance \
                                 --share $Volume \
                                 --start $Start \
+                                --log $LOG_LEVEL \
                               ;;
         -ee|engine:exec)      sh $Engine \
                                 --mode exec \
                                 --instance $Instance \
                                 --command "$Command" \
+                                --log $LOG_LEVEL \
                               ;;
         -ed|engine:destroy)   sh $Engine \
                                 --mode destroy \
                                 --instance $Instance \
+                                --log $LOG_LEVEL \
                               ;;
         # General commands
         -a|analyze)           analyze;;
@@ -122,6 +131,7 @@ function parse_args() {
             --clean)     Clean="true";;
             --session)   Session="true";;
 			--env)       Env="true";;
+            --log)       setLogLevel $2;;
             *)           log ERROR "Unknown command $1"
         esac
         shift
@@ -162,7 +172,6 @@ function analyze()
         # Linter analyze
         Command="\"${linter[1]}"\"
         Output="${linter[2]}"
-        echo "COM: $Command"
         Mode="engine:analyze"
         main
     done
@@ -174,5 +183,6 @@ function analyze()
 }
 
 parse_args "$@"
+log RUN "$@"
 main "$@"
 exit $?
