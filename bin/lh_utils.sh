@@ -27,7 +27,7 @@ INFO=2
 TRACE=1
 RUN=$TRACE
 
-LOG_LEVEL=$TRACE
+LOG_LEVEL=$INFO
 
 function setLogLevel()
 {
