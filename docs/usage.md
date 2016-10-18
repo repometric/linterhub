@@ -22,15 +22,15 @@ Please also note that argument 'jslint *.js' is specific for each engine and in 
 | --------------- | ---------------------------------- |
 | storage:build   | Build storage container.           |
 | storage:destroy | Destroy storage container.         |
+| engine:build    | Build engine cointainer.           |
+| engine:analyze  | Analyze the storage using engine.  |
+| engine:start    | Run engine in interactive mode.    |
+| engine:exec     | Execute command inside container.  |
+| engine:stop     | Stop engine container.             |
 | engine:images   | List built containers.             |
 | engine:offline  | List available configs (offline).  |
 | engine:online   | List available configs (online).   |
-| engine:mirror   | List pre-build mirrors.            |
-| engine:build    | Build engine cointainer.           |
-| engine:analyze  | Analyze the storage using engine.  |
+| engine:mirror   | List pre-build containers.         |
 | engine:save     | Export container.                  |
 | engine:load     | Import container.                  |
-| engine:start    | Run container in interactive mode. |
-| engine:exec     | Execute command inside container.  |
-| engine:stop     | Stop engine container.             |
 
