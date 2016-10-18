@@ -4,7 +4,7 @@
 source bin/lh_utils.sh
 
 # Constants
-Version="0.5"
+Version="0.6"
 Prefix="rm"
 Start="/bin/sh"
 Workdir="/shared"
@@ -20,7 +20,7 @@ main() {
         Mode=$1
     fi
 	if [ -n "$Env" ]; then
-	log INFO "Configure environment"
+	    log INFO "Configure environment"
         eval $(docker-machine.exe env --shell sh)
 		# Do it once per instance
 		Env=
@@ -78,9 +78,13 @@ main() {
                                 --mode offline \
                                 --log $LOG_LEVEL \
                               ;;
+        -ef|engine:mirror)    sh $Engine \
+                                --mode mirror \
+                                --log $LOG_LEVEL \
+                              ;;
         # Engine debug commands
-        -er|engine:run)       sh $Engine \
-                                --mode run \
+        -er|engine:start)     sh $Engine \
+                                --mode start \
                                 --image $Image \
                                 --instance $Instance \
                                 --share $Volume \
@@ -93,8 +97,8 @@ main() {
                                 --command "$Command" \
                                 --log $LOG_LEVEL \
                               ;;
-        -ed|engine:destroy)   sh $Engine \
-                                --mode destroy \
+        -ed|engine:stop)      sh $Engine \
+                                --mode stop \
                                 --instance $Instance \
                                 --log $LOG_LEVEL \
                               ;;
@@ -102,7 +106,7 @@ main() {
         -a|analyze)           analyze;;
         -c|check)             sh $Check;;
         -v|--version|version) echo $Version;;
-        -h|--help|help|?|-?)  cat docs/usage.txt;;
+        -h|--help|help|?|-?)  cat docs/usage.md;;
         *)                    log ERROR "Unknown command. Try '$0 -help'";;
     esac
 }

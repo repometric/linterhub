@@ -9,14 +9,16 @@ function main() {
         -b|build)    engine_build;;
         -a|analyze)  engine_analyze;;
         -s|export)   engine_export;;
+        -l|import)   engine_import;;
         # Engine debug commands
-        -r|run)      engine_run;;
+        -r|start)    engine_run;;
         -e|exec)     engine_exec;;
-        -d|destroy)  engine_destroy;;
+        -d|stop)     engine_destroy;;
         # Engine images
         -i|images)   engine_images;;
         -o|online)   engine_online;;
         -f|offline)  engine_offline;;
+        -m|mirror)   engine_mirror;;
     esac
 }
 
@@ -69,6 +71,12 @@ function engine_export()
     docker save $EngineImage | gzip -c
 }
 
+function engine_import()
+{
+    log INFO "Load dock"
+    echo "ToDo"
+}
+
 # Engine debug functions
 function engine_run()
 {
@@ -108,6 +116,12 @@ function engine_offline()
 {
     log INFO "Docker offline images"
     ls -d dockers/alpine/*/ | cut -f3 -d'/'
+}
+
+function engine_mirror()
+{
+    log INFO "Docker mirror images"
+    echo "ToDo"
 }
 
 parse_args "$@"

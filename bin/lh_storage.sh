@@ -47,17 +47,17 @@ function storage_unmount()
 {
     log INFO "Unmount VM folder in dock"
     docker-machine ssh default "sudo umount $DockerShare -v"
-    log INFO "INFO: Delete folder in VM"
+    log INFO "Delete folder in VM"
     docker-machine ssh default "sudo rmdir $DockerShare"
 }
 
 function storage_build()
 {
-    storage_mount
     log INFO "Run storage dock"
 	Folder=$Path
 	if docker info | grep -q "provider=virtualbox"; then 
 		log INFO "Use VirtualBox driver"
+        storage_mount
 		Folder=$DockerShare
 	fi
     docker run --name $Instance -v $Folder:$SharedVolume $SharedDock true
@@ -65,11 +65,14 @@ function storage_build()
 
 function storage_destroy()
 {
-    storage_unmount
     log INFO "Destroy storage dock"
-    if [ $LOG_LEVEL -le $TRACE ]; 
-        then docker rm -f $Instance
-        else docker rm -f $Instance &>/dev/null
+    if docker info | grep -q "provider=virtualbox"; then 
+        log INFO "Use VirtualBox driver"
+        storage_unmount
+        if [ $LOG_LEVEL -le $TRACE ]; 
+            then docker rm -f $Instance
+            else docker rm -f $Instance &>/dev/null
+        fi
     fi
 }
 
