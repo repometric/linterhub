@@ -1,5 +1,5 @@
-FROM mhart/alpine-node
+FROM openjdk:9-jre
 MAINTAINER Repometric <docker@repometric.com>
 ARG WORKDIR
-RUN npm install -g typescript tslint
+ADD classycle.tar .
 WORKDIR $WORKDIR
