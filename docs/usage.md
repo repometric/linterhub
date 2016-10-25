@@ -31,6 +31,6 @@ Please also note that argument 'jslint *.js' is specific for each engine and in 
 | engine:offline  | List available configs (offline).  |
 | engine:online   | List available configs (online).   |
 | engine:mirror   | List pre-build containers.         |
-| engine:save     | Export container.                  |
-| engine:load     | Import container.                  |
+| engine:export   | Export container.                  |
+| engine:import   | Import container.                  |
 

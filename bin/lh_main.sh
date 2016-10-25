@@ -64,6 +64,11 @@ main() {
                                 --image $Image \
                                 --log $LOG_LEVEL \
                               ;;
+        -es|engine:import)    sh $Engine \
+                                --mode import \
+                                --image $Image \
+                                --log $LOG_LEVEL \
+                              ;;
         # Engine image commands
         -ei|engine:images)    sh $Engine \
                                 --mode images \
