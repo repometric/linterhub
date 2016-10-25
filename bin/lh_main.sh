@@ -139,6 +139,7 @@ function parse_args() {
             --path)      Path="$2";;
             --clean)     Clean="true";;
             --session)   Session="true";;
+            --native)    Native="true";;
 			--env)       Env="true";;
             --log)       setLogLevel $2;;
             *)           log ERROR "Unknown command $1"
@@ -151,6 +152,25 @@ function parse_args() {
 # General functions
 function analyze()
 {
+    if [ -n "$Native" ]; then
+        log INFO "Native mode"
+        Current=$PWD
+        cd $Path
+        IFS='+' read -ra linters <<< "$Name"
+        for linterPart in "${linters[@]}"; do
+            IFS=':' read -ra linter <<< "$linterPart"
+            Name=${linter[0]}
+            Command="\"${linter[1]}"\"
+            Output="${linter[2]}"
+            log INFO "Run analysis"
+            if [ ! "$Output" ];
+                then ${Command//[\"]}
+                else ${Command//[\"]} > "$Current/$Output"
+            fi
+        done
+        cd $Current
+        return 0
+    fi
     if [ -n "$Session" ]; then
         # Storage session
         Session=$RANDOM
@@ -159,7 +179,7 @@ function analyze()
         HostShare="HOST_SHARE_$Session"
         DockShare="/DOCKER_SHARE_$Session"
     fi
-    if [ -n "$Clean" ] || [ -n "$Session" ] ; then
+    if [ -n "$Clean" ] || [ -n "$Session" ]; then
         # Storage build
         Mode="storage:build"
         main
