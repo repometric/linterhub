@@ -4,8 +4,10 @@ set -e
 source bin/lh_utils.sh
 
 log INFO "Check environment"
-command -v VBoxManage >/dev/null 2>&1 || { log ERROR "VirtualBox is not installed or not in the PATH." >&2; exit 1; }
 command -v docker >/dev/null 2>&1 || { log ERROR "Docker is not installed or not in the PATH." >&2; exit 1; }
+if docker info | grep -q "provider=virtualbox"; then 
+    command -v VBoxManage >/dev/null 2>&1 || { log ERROR "VirtualBox is not installed or not in the PATH." >&2; exit 1; }
+fi
 log INFO "Docker init"
 case "$(uname -s)" in
     Darwin)
