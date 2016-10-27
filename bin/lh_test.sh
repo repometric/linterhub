@@ -1,3 +1,5 @@
+#!/bin/bash
+
 source bin/lh_utils.sh
 
 basedir=$1

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Colors
 
 ESC_SEQ="\x1b["
@@ -9,7 +11,7 @@ COL_BLUE=$ESC_SEQ"34;01m"
 
 # Disable colors for Windows
 case "$(uname -s)" in
-    CYGWIN*|MINGW*|MSYS*)
+    CYGWIN*|MINGW*|MSYS|Linux*)
 		ESC_SEQ=""
 		COL_RESET=""
 		COL_RED=""
@@ -29,7 +31,7 @@ RUN=$TRACE
 
 LOG_LEVEL=$INFO
 
-function setLogLevel()
+setLogLevel ()
 {
     level=$1
     case ${level#[-+]} in
@@ -38,7 +40,7 @@ function setLogLevel()
     esac  
 }
 
-function log ()
+log ()
 {
     level=$1
     if [ ${!level} -lt $LOG_LEVEL ]; then

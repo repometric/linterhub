@@ -14,7 +14,8 @@ Engine="bin/lh_engine.sh"
 Storage="bin/lh_storage.sh"
 Check="bin/lh_check.sh"
 
-main() {
+main () 
+{
     # Mode
     if [ -z "$Mode" ]; then
         Mode=$1
@@ -116,7 +117,8 @@ main() {
     esac
 }
 
-function parse_args() {
+parse_args ()
+{
     # VM
     Volume="$Prefix-storage-instance"
     HostShare="HOST_SHARE"
@@ -150,7 +152,7 @@ function parse_args() {
 }
 
 # General functions
-function analyze()
+analyze ()
 {
     if [ -n "$Native" ]; then
         log INFO "Native mode"

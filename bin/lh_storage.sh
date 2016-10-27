@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 
 source bin/lh_utils.sh
@@ -7,7 +9,8 @@ SharedVolume="/shared"
 SharedDock="busybox"
 
 # Entry point
-function main() {
+main ()
+{
     case $Mode in
         # Storage commands
         -b|build)   storage_build;;
@@ -15,7 +18,8 @@ function main() {
     esac
 }
 
-function parse_args() {
+parse_args ()
+{
     while [[ $# -gt 1 ]] 
     do
         key="$1"
@@ -33,7 +37,7 @@ function parse_args() {
 }
 
 # Storage functions
-function storage_mount()
+storage_mount ()
 {
     log INFO "Map host folder to VM"
     VBoxManage sharedfolder add default --name $HostShare --hostpath $Path --transient
@@ -43,7 +47,7 @@ function storage_mount()
     docker-machine ssh default "sudo mount -t vboxsf $HostShare $DockerShare"
 }
 
-function storage_unmount()
+storage_unmount ()
 {
     log INFO "Unmount VM folder in dock"
     docker-machine ssh default "sudo umount $DockerShare -v"
@@ -51,7 +55,7 @@ function storage_unmount()
     docker-machine ssh default "sudo rmdir $DockerShare"
 }
 
-function storage_build()
+storage_build ()
 {
     log INFO "Run storage dock"
 	Folder=$Path
@@ -63,7 +67,7 @@ function storage_build()
     docker run --name $Instance -v $Folder:$SharedVolume $SharedDock true
 }
 
-function storage_destroy()
+storage_destroy ()
 {
     log INFO "Destroy storage dock"
     if docker info | grep -q "provider=virtualbox"; then 

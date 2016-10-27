@@ -1,3 +1,5 @@
+#!/bin/bash
+
 set -e
 source bin/lh_utils.sh
 

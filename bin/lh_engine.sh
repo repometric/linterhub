@@ -1,9 +1,12 @@
+#!/bin/bash
+
 set -e
 
 source bin/lh_utils.sh
 
 # Entry point
-function main() {
+main () 
+{
     case $Mode in
         # Engine commands
         -b|build)    engine_build;;
@@ -22,7 +25,8 @@ function main() {
     esac
 }
 
-function parse_args() {
+parse_args ()
+{
     while [[ $# -gt 1 ]] 
     do
         key="$1"
@@ -46,7 +50,7 @@ function parse_args() {
 }
 
 # Engine functions
-function engine_build()
+engine_build ()
 {
     log INFO "Build linter dock"
     if [ $LOG_LEVEL -le $TRACE ]; 
@@ -55,7 +59,7 @@ function engine_build()
     fi
 }
 
-function engine_analyze()
+engine_analyze ()
 {
     log INFO "Run analysis"
     if [ ! "$Output" ];
@@ -64,33 +68,33 @@ function engine_analyze()
     fi
 }
 
-function engine_export()
+engine_export ()
 {
     log INFO "Save dock"
     mkdir -p images
     docker save $EngineImage | gzip -c
 }
 
-function engine_import()
+engine_import ()
 {
     log INFO "Load dock"
     echo "ToDo"
 }
 
 # Engine debug functions
-function engine_run()
+engine_run ()
 {
     log INFO "Run linter dock"
     docker run -i -d --name $EngineInstance --volumes-from=$Share $EngineImage $Startup
 }
 
-function engine_exec()
+engine_exec ()
 {
     log INFO "Execute command in linter dock"
     docker exec -it $EngineInstance $Command
 }
 
-function engine_destroy()
+engine_destroy ()
 {
     log INFO "Destroy linter dock"
     if [ $LOG_LEVEL -le $TRACE ]; 
@@ -100,25 +104,25 @@ function engine_destroy()
 }
 
 # Engine image functions
-function engine_images()
+engine_images ()
 {
     log INFO "Docker containers"
     docker images | grep $Prefix
 }
 
-function engine_online()
+engine_online ()
 {
     log INFO "Docker online images"
     echo "docker search"
 }
 
-function engine_offline()
+engine_offline ()
 {
     log INFO "Docker offline images"
     ls -d dockers/alpine/*/ | cut -f3 -d'/'
 }
 
-function engine_mirror()
+engine_mirror ()
 {
     log INFO "Docker mirror images"
     echo "ToDo"
