@@ -1,4 +1,4 @@
-# FAQ
+# Getting started
   - **How to prepare:**
     - Install [Docker Engine] or [Docker Toolbox] + [Oracle Virtual Box].
     - It's recommented to have bash installed ([Cygwin] for Windows).
