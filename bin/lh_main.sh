@@ -110,9 +110,11 @@ main ()
                               ;;
         # General commands
         -a|analyze)           analyze;;
+        -i|info)              cat docs/linters.json;;
         -c|check)             sh $Check;;
         -v|--version|version) echo $Version;;
         -h|--help|help|?|-?)  cat docs/usage.md;;
+        -d|--dev|dev|help-dev) cat docs/usage-dev.md;;
         *)                    log ERROR "Unknown command. Try '$0 -help'";;
     esac
 }
@@ -135,7 +137,6 @@ parse_args ()
                          ;;
             --command)   Command="$2";;
             --start)     Start="$2";;
-            --share)     Share="$2";;
             --output)    Output="$2";;
             --workdir)   Workdir="$2";;
             --path)      Path="$2";;

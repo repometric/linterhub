@@ -71,7 +71,6 @@ engine_analyze ()
 engine_export ()
 {
     log INFO "Save dock"
-    mkdir -p images
     docker save $EngineImage | gzip -c
 }
 

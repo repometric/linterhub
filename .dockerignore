@@ -1,3 +1,4 @@
+.git
 bin/*/bin
 bin/*/obj
 *.lock.json
