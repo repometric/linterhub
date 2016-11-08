@@ -1,4 +1,4 @@
-FROM openjdk:9-jre
+FROM openjdk:8-jre-alpine
 MAINTAINER Repometric <docker@repometric.com>
 ARG WORKDIR
 ADD vnu.tar .
