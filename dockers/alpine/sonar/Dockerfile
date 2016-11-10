@@ -1,5 +1,6 @@
-FROM frolvlad/alpine-python3
+FROM openjdk:8-jre-alpine
 MAINTAINER Repometric <docker@repometric.com>
 ARG WORKDIR
-RUN pip install lizard
+ADD sonar.tar .
+ENV PATH=$PATH:/sonar/bin
 WORKDIR $WORKDIR
