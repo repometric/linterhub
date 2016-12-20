@@ -1,4 +1,4 @@
-bin/*/bin
-bin/*/obj
+src/*/bin
+src/*/obj
 *.lock.json
 tests

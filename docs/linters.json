@@ -341,6 +341,14 @@
       "platform": "TODO"
     },
     {
+      "name": "lesslint",
+      "description": "Lint less styles.",
+      "url": "https://github.com/ecomfe/node-lesslint",
+      "languages": "less",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "linty-fresh",
       "description": "Keep your codebase sparkly clean with the power of LINT.",
       "url": "https://github.com/lyft/linty_fresh",
@@ -749,6 +757,14 @@
       "url": "http://www.scovetta.com/yasca.html",
       "languages": "c,c++,c#,java",
       "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "stylelint",
+      "description": "A mighty, modern CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets.",
+      "url": "http://stylelint.io/",
+      "languages": "css,less,scss",
+      "license": "MIT",
       "platform": "TODO"
     },
     {
