@@ -1,6 +1,14 @@
 {
   "linters": [
     {
+      "name": "alex",
+      "description": "Catch insensitive, inconsiderate writing.",
+      "url": "http://alexjs.com",
+      "languages": "plaintext",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
       "name": "bandit",
       "description": "Security oriented static analyser for python code.",
       "url": "https://pypi.python.org/pypi/bandit",
@@ -15,6 +23,14 @@
       "languages": "c",
       "license": "Apache-2.0",
       "platform": "TODO"
+    },
+    {
+      "name": "bootlint",
+      "description": "HTML linter for Bootstrap projects.",
+      "url": "https://github.com/twbs/bootlint",
+      "languages": "html",
+      "license": "MIT",
+      "platform": "nodejs"
     },
     {
       "name": "brakeman",
@@ -113,6 +129,14 @@
       "platform": "TODO"
     },
     {
+      "name": "csscomb",
+      "description": "CSScomb is a coding style formatter for CSS.",
+      "url": "http://csscomb.com",
+      "languages": "css",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
       "name": "csslint",
       "version": "1.0.3",
       "description": "Automated linting of Cascading Stylesheets.",
@@ -146,6 +170,14 @@
       "url": "https://github.com/garrensmith/DrivenMetrics",
       "languages": "c#,vb.net",
       "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "elvis",
+      "description": "Erlang Style Reviewer.",
+      "url": "https://github.com/inaka/elvis",
+      "languages": "erlang",
+      "license": "Apache-2.0",
       "platform": "TODO"
     },
     {
@@ -229,6 +261,22 @@
       "platform": "TODO"
     },
     {
+      "name": "golint",
+      "description": "This is a linter for Go source code.",
+      "url": "https://github.com/golang/lint",
+      "languages": "go",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "golint",
+      "description": "This is a linter for Go source code.",
+      "url": "https://github.com/golang/lint",
+      "languages": "go",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "gometalinter",
       "description": "Concurrently run Go lint tools and normalise their output.",
       "url": "https://github.com/alecthomas/gometalinter",
@@ -237,11 +285,27 @@
       "platform": "TODO"
     },
     {
+      "name": "govet",
+      "description": "Vet examines Go source code and reports suspicious constructs.",
+      "url": "https://golang.org/cmd/vet/",
+      "languages": "go",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "helium",
       "description": "Helium is a tool for discovering unused CSS across many pages on a web site.",
       "url": "https://github.com/geuis/helium-css",
       "languages": "css",
       "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "hlint",
+      "description": "Haskell source code suggestions.",
+      "url": "https://github.com/ndmitchell/hlint",
+      "languages": "haskell",
+      "license": "Unknown",
       "platform": "TODO"
     },
     {
@@ -349,6 +413,14 @@
       "platform": "TODO"
     },
     {
+      "name": "linter",
+      "description": "Style linter for Dart.",
+      "url": "https://dart-lang.github.io/linter/",
+      "languages": "dart",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
       "name": "linty-fresh",
       "description": "Keep your codebase sparkly clean with the power of LINT.",
       "url": "https://github.com/lyft/linty_fresh",
@@ -363,6 +435,14 @@
       "languages": "c,c++,java,c#,javascript,objective c,swift,python,ruby,ttcn-3,php,scala",
       "license": "MIT",
       "platform": "python"
+    },
+    {
+      "name": "lualint",
+      "description": "lualint performs luac-based static analysis of global variable usage in Lua source code.",
+      "url": "https://github.com/philips/lualint",
+      "languages": "lua",
+      "license": "MIT",
+      "platform": "TODO"
     },
     {
       "name": "metric_fu",
@@ -387,6 +467,14 @@
       "languages": "nodejs",
       "license": "Apache-2.0",
       "platform": "nodejs"
+    },
+    {
+      "name": "oclint",
+      "description": "OCLint is a static code analysis tool for improving quality and reducing defects by inspecting C, C++ and Objective-C code and looking for potential problems.",
+      "url": "http://oclint.org",
+      "languages": "c,c++,objective c",
+      "license": "Unknown",
+      "platform": "TODO"
     },
     {
       "name": "ocstyle",
@@ -584,6 +672,14 @@
       "platform": "TODO"
     },
     {
+      "name": "proselint",
+      "description": "A linter for prose.",
+      "url": "http://proselint.com",
+      "languages": "plaintext",
+      "license": "Unknown",
+      "platform": "python"
+    },
+    {
       "name": "prospector",
       "description": "Prospector is a tool to analyse Python code and output information about errors, potential problems, convention violations and complexity.",
       "url": "http://prospector.landscape.io",
@@ -752,6 +848,14 @@
       "platform": "TODO"
     },
     {
+      "name": "standard",
+      "description": "JavaScript Standard Style Guide.",
+      "url": "http://standardjs.com",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
       "name": "stanse",
       "description": "Error-finding tool based on static analysis.",
       "url": "http://www.scovetta.com/yasca.html",
@@ -886,6 +990,14 @@
       "languages": "java,c,c++,html,css,javascript,asp,coldfusion,php,perl,python,cobol,.net,c#,vb.net,visual basic",
       "license": "BSD-2-Clause",
       "platform": "TODO"
+    },
+    {
+      "name": "xo",
+      "description": "JavaScript happiness style linter.",
+      "url": "https://github.com/sindresorhus/xo",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "nodejs"
     },
     {
       "name": "yasca",
