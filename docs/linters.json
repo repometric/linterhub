@@ -414,6 +414,14 @@
     },
     {
       "name": "linter",
+      "description": "Linter is a Scala static analysis compiler plugin which adds compile-time checks for various possible bugs, inefficiencies, and style problems.",
+      "url": "https://github.com/HairyFotr/linter",
+      "languages": "scala",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "linter",
       "description": "Style linter for Dart.",
       "url": "https://dart-lang.github.io/linter/",
       "languages": "dart",
@@ -443,6 +451,22 @@
       "languages": "lua",
       "license": "MIT",
       "platform": "TODO"
+    },
+    {
+      "name": "markdownlint",
+      "description": "Style checker and lint tool for Markdown files.",
+      "url": "https://github.com/DavidAnson/markdownlint",
+      "languages": "markdown",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "mdl",
+      "description": "Markdown lint tool.",
+      "url": "https://github.com/mivok/markdownlint",
+      "languages": "markdown",
+      "license": "MIT",
+      "platform": "ruby"
     },
     {
       "name": "metric_fu",
@@ -672,6 +696,14 @@
       "platform": "TODO"
     },
     {
+      "name": "polylint",
+      "description": "Catch errors in your polymer project before even running your code.",
+      "url": "https://github.com/PolymerLabs/polylint",
+      "languages": "html,polymer",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
       "name": "proselint",
       "description": "A linter for prose.",
       "url": "http://proselint.com",
@@ -688,6 +720,14 @@
       "platform": "python"
     },
     {
+      "name": "puppet-lint",
+      "description": "Puppet Lint will test modules and manifests against the recommended Puppet style guidelines.",
+      "url": "https://github.com/rodjek/puppet-lint",
+      "languages": "puppet",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
       "name": "py_static_check",
       "description": "py_static_check can statically check your Python code for a lot of common errors.",
       "url": "https://pypi.python.org/pypi/py_static_check",
@@ -702,6 +742,14 @@
       "languages": "python",
       "license": "MIT",
       "platform": "TODO"
+    },
+    {
+      "name": "pycodestyle",
+      "description": "Simple Python style checker in one Python file.",
+      "url": "http://pycodestyle.pycqa.org/en/latest/",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "python"
     },
     {
       "name": "pyflakes",
@@ -744,6 +792,14 @@
       "platform": "TODO"
     },
     {
+      "name": "remark-lint",
+      "description": "Markdown code style linter.",
+      "url": "https://github.com/mivok/markdownlint",
+      "languages": "markdown",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
       "name": "rips",
       "description": "RIPS is a static source code analyser for the detection of vulnerabilities in PHP applications.",
       "url": "http://rips-scanner.sourceforge.net",
@@ -784,6 +840,14 @@
       "platform": "ruby"
     },
     {
+      "name": "rust-clippy",
+      "description": "A bunch of lints to catch common mistakes and improve your Rust code.",
+      "url": "https://github.com/Manishearth/rust-clippy",
+      "languages": "rust",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
       "name": "saikuro",
       "description": "Saikuro is a Ruby cyclomatic complexity analyzer.",
       "url": "http://saikuro.rubyforge.org",
@@ -798,6 +862,30 @@
       "languages": "sass,scss",
       "license": "MIT",
       "platform": "nodejs"
+    },
+    {
+      "name": "scalastyle",
+      "description": "Scalastyle examines your Scala code and indicates potential problems with it.",
+      "url": "http://www.scalastyle.org",
+      "languages": "scala",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "scapegoat",
+      "description": "Scala compiler plugin for static code analysis.",
+      "url": "https://github.com/sksamuel/scapegoat",
+      "languages": "scala",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "scss-lint",
+      "description": "Configurable tool for writing clean and consistent SCSS.",
+      "url": "https://github.com/brigade/scss-lint",
+      "languages": "scss",
+      "license": "MIT",
+      "platform": "ruby"
     },
     {
       "name": "shellcheck",
@@ -989,6 +1077,14 @@
       "url": "http://awap.sourceforge.net",
       "languages": "java,c,c++,html,css,javascript,asp,coldfusion,php,perl,python,cobol,.net,c#,vb.net,visual basic",
       "license": "BSD-2-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "wartremover",
+      "description": "WartRemover is a flexible Scala code linting tool.",
+      "url": "https://github.com/puffnfresh/wartremover",
+      "languages": "scala",
+      "license": "Apache-2.0",
       "platform": "TODO"
     },
     {
