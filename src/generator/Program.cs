@@ -42,13 +42,15 @@ namespace Repometric.Dockers.Generator
                 let templateFile = "templates/" + ReadValue(linter.config, "template", defaultTemplate)
                 let template = File.ReadAllText(templateFile)
                 let templateSh = File.ReadAllText("templates/default.sh")
+                let templateBat = File.ReadAllText("templates/default.bat")
                 let package = ReadValue(linter.config, "package", linter.name)
                 let cmd = ReadValue(commands, versionType, "")
                 let run = Format(cmd, new { package })
                 let model = new { docker, linter.name, cmd, run, path }
                 let content = linter.platform == "TODO" ? "" : Format(template, model)
                 let contentSh = linter.platform == "TODO" ? "" : Format(templateSh, model)
-                select new { linter.name, path, content, contentSh };
+                let contentBat = linter.platform == "TODO" ? "" : Format(templateBat, model)
+                select new { linter.name, path, content, contentSh, contentBat };
 
             var list = query.ToList();
             foreach (var item in list)
@@ -62,6 +64,7 @@ namespace Repometric.Dockers.Generator
                 Directory.CreateDirectory(item.path);
                 File.WriteAllText(item.path + "Dockerfile", item.content);
                 File.WriteAllText(item.path + "install.sh", item.contentSh);
+                File.WriteAllText(item.path + "install.bat", item.contentBat);
                 Console.WriteLine("Generate: " + item.name);
             }
 
