@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# cant find linter (exit code)
+readonly LINTER_DEXIST=152
+
 set -e
 
 source bin/lh_utils.sh
@@ -82,7 +85,7 @@ engine_linter_version ()
         fi
     else
         log TRACE "Can't find $Linter"
-        exit 152
+        exit LINTER_DEXIST
     fi
 }
 
