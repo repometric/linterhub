@@ -77,8 +77,8 @@ engine_linter_version ()
     log TRACE "Getting $Linter version..."
     if hash "$Linter" 2>/dev/null; then
         if [ ! "$Command" ];
-            then $Linter --version 2>&1 > /dev/null
-        else $Command
+            then $Linter --version 2>&1
+        else $Command 2>&1
         fi
     else
         echo "Can't find $Linter"
