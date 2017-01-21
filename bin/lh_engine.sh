@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# cant find linter (exit code)
+readonly LINTER_DEXIST=152
+
 set -e
 
 source bin/lh_utils.sh
@@ -74,17 +77,21 @@ engine_analyze ()
 
 engine_linter_version ()
 {
-    log INFO "Getting $Linter version..."
+    log TRACE "Getting $Linter version..."
     if hash "$Linter" 2>/dev/null; then
-        $Linter --version
+        if [ ! "$Command" ];
+            then $Linter --version 2>&1
+        else $Command 2>&1
+        fi
     else
-        log INFO "Can't find $Linter"
+        log TRACE "Can't find $Linter"
+        exit LINTER_DEXIST
     fi
 }
 
 engine_linter_install ()
 {
-    log INFO "Installing $Linter..."
+    log TRACE "Installing $Linter..."
     check=$( dockers/alpine/$Linter/install.sh 2>&1 > /dev/null) # stderr is empty 0__o
 }
 

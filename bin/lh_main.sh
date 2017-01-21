@@ -4,7 +4,7 @@
 source bin/lh_utils.sh
 
 # Constants
-Version="0.6"
+Version="0.7"
 Prefix="rm"
 Start="/bin/sh"
 Workdir="/shared"
@@ -113,6 +113,7 @@ main ()
         -ev|engine:version) sh $Engine \
                             --mode linter:version \
                             --linter $Name \
+                            --command "$Command" \
                             ;;
         -ei|engine:install) sh $Engine \
                             --mode linter:install \
