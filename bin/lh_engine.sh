@@ -81,7 +81,8 @@ engine_linter_version ()
         else $Command 2>&1
         fi
     else
-        echo "Can't find $Linter"
+        log TRACE "Can't find $Linter"
+        exit 152
     fi
 }
 
