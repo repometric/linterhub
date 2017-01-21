@@ -113,6 +113,7 @@ main ()
         -ev|engine:version) sh $Engine \
                             --mode linter:version \
                             --linter $Name \
+                            --command "$Command" \
                             ;;
         -ei|engine:install) sh $Engine \
                             --mode linter:install \
