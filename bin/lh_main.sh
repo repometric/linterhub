@@ -108,6 +108,17 @@ main ()
                                 --instance $Instance \
                                 --log $LOG_LEVEL \
                               ;;
+
+        # Engine install commands (for linters)
+        -ev|engine:version) sh $Engine \
+                            --mode linter:version \
+                            --linter $Name \
+                            ;;
+        -ei|engine:install) sh $Engine \
+                            --mode linter:install \
+                            --linter $Name \
+                            ;;
+        
         # General commands
         -a|analyze)           analyze;;
         -i|info)              cat docs/linters.json;;
