@@ -22,6 +22,9 @@ main ()
         -o|online)   engine_online;;
         -f|offline)  engine_offline;;
         -m|mirror)   engine_mirror;;
+        # Engine installing linters
+        -lv|linter:version) engine_linter_version;;
+        -li|linter:install) engine_linter_install;;
     esac
 }
 
@@ -43,6 +46,7 @@ parse_args ()
             --prefix)    Prefix="$2";;
             --start)     Startup="$2";;
             --log)       setLogLevel $2;;
+            --linter)    Linter="$2";;
         esac
         shift
         shift
@@ -66,6 +70,22 @@ engine_analyze ()
         then docker run -i --rm --name $EngineInstance --volumes-from=$Share $EngineImage ${Command//[\"]}
         else docker run -i --rm --name $EngineInstance --volumes-from=$Share $EngineImage ${Command//[\"]} > "$Output"
     fi
+}
+
+engine_linter_version ()
+{
+    log INFO "Getting $Linter version..."
+    if hash "$Linter" 2>/dev/null; then
+        $Linter --version
+    else
+        log INFO "Can't find $Linter"
+    fi
+}
+
+engine_linter_install ()
+{
+    log INFO "Installing $Linter..."
+    check=$( dockers/alpine/$Linter/install.sh 2>&1 > /dev/null) # stderr is empty 0__o
 }
 
 engine_export ()
