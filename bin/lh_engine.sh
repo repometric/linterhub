@@ -85,7 +85,7 @@ engine_linter_version ()
         fi
     else
         log TRACE "Can't find $Linter"
-        exit LINTER_DEXIST
+        exit $LINTER_DEXIST
     fi
 }
 
