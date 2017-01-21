@@ -74,20 +74,20 @@ engine_analyze ()
 
 engine_linter_version ()
 {
-    log INFO "Getting $Linter version..."
+    log TRACE "Getting $Linter version..."
     if hash "$Linter" 2>/dev/null; then
         if [ ! "$Command" ];
-            then $Linter --version
+            then $Linter --version 2>&1 > /dev/null
         else $Command
         fi
     else
-        log INFO "Can't find $Linter"
+        echo "Can't find $Linter"
     fi
 }
 
 engine_linter_install ()
 {
-    log INFO "Installing $Linter..."
+    log TRACE "Installing $Linter..."
     check=$( dockers/alpine/$Linter/install.sh 2>&1 > /dev/null) # stderr is empty 0__o
 }
 
