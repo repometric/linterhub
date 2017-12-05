@@ -1,0 +1,33 @@
+{
+    "$schema": "./../.schema/engine.json",
+    "name": "jshint",
+    "description": "JSHint is a community-driven tool that detects errors and potential problems in JavaScript code.",
+    "url": "http://jshint.com",
+    "version": "jshint v2.9.5",
+    "languages": [
+        "javascript"
+    ],
+    "configs": [
+        ".jshintrc"
+    ],
+    "license": "MIT",
+    "areas": [
+        "syntax",
+        "formatting",
+        "complexity",
+        "unused code"
+    ],
+    "requirements": [
+        {
+            "manager": "system",
+            "package": "npm"
+        },
+        {
+            "manager": "npm",
+            "package": "jshint",
+            "version": "2.9.5"
+        }
+    ],
+    "exit": 2,
+    "stdin": true
+}
