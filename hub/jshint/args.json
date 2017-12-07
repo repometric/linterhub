@@ -1,7 +1,6 @@
 {
     "$schema": "./../.schema/args.json",
-    "title": "jshint args schema",
-    "description": "jshint configuration",
+    "id": "jshint",
     "type": "object",
     "allOf": [
         {
@@ -9,6 +8,10 @@
         }
     ],
     "definitions": {
+        "cmd": {
+            "success": 2,
+            "version": "jshint v2.9.5"
+        },
         "options": {
             "type": "object",
             "properties": {

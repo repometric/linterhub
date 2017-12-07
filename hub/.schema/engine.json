@@ -4,6 +4,8 @@
     "description": "The meta information of engine",
     "type": "object",
     "properties": {
+        "$schema": {
+        },
         "id": {
             "type": "string",
             "description": "The engine id, used only when the engine name is not unique",
@@ -22,69 +24,18 @@
             "description": "The engine url (homepage, documentation or repository)",
             "format": "uri"
         },
-        "version": {
-            "type": "string",
-            "description": "The engine version, equal to the output of version command"
-        },
         "areas": {
             "type": "array",
             "description": "The engine areas",
             "items": {
-                "type": "string",
-                "enum": [
-                    "code simplification",
-                    "commented code",
-                    "complexity",
-                    "documentation",
-                    "duplication",
-                    "formatting",
-                    "grammar",
-                    "memory leak",
-                    "security",
-                    "simplification",
-                    "smell",
-                    "spelling",
-                    "syntax",
-                    "unreachable code",
-                    "unused code"
-                ]
+                "$ref": "@type.area.json#/definitions/area"
             }
-        },
-        "executable": {
-            "type": "string",
-            "description": "The engine executable name; by default equal to the engine name"
         },
         "languages": {
             "type": "array",
             "description": "The list of supported languages",
             "items": {
-                "type": "string",
-                "enum": [
-                    "coffeescript",
-                    "css",
-                    "html",
-                    "xml",
-                    "javascript",
-                    "json",
-                    "jsx",
-                    "sass",
-                    "typescript",
-                    "c",
-                    "cpp",
-                    "csharp",
-                    "groovy",
-                    "php",
-                    "ruby",
-                    "fortran",
-                    "plsql",
-                    "scala",
-                    "objectivec",
-                    "perl",
-                    "swift",
-                    "python",
-                    "java",
-                    "pug"
-                ]
+                "$ref": "@type.language.json#/definitions/language"
             }
         },
         "extensions": {
@@ -104,76 +55,20 @@
         "license": {
             "type": "string",
             "description": "The engine license",
-            "enum": [
-                "Unknown",
-                "AGPL-3.0",
-                "Apache-2.0",
-                "MIT",
-                "ISC"
-            ]
+            "$ref": "@type.license.json#/definitions/license"
         },
-        "requirements": {
-            "type": "array",
-            "description": "The engine requirements",
-            "items": {
-                "$ref": "#/definitions/requirement"
-            }
-        },
-        "multiple": {
-            "type": "boolean",
-            "description": "Can use masks for multiple files analyze",
-            "default": true
-        },
-        "exit": {
-            "type": "integer",
-            "description": "Success exit code",
-            "default": 0
-        },
-        "active": {
-            "type": "boolean",
-            "description": "A value indicating whether engine is active, false means than engine is not supported anymore",
-            "default": true
-        },
-        "stdin": {
-            "type": "boolean",
-            "description": "Wherther engine supports stdin analysis",
-            "default": false
+        "agreement": {
+            "type": "string",
+            "description": "The engine custom agreement"
         }
     },
     "required": [
         "name",
         "description",
         "url",
+        "areas",
         "languages",
-        "license",
-        "areas"
+        "license"
     ],
-    "definitions": {
-        "requirement": {
-            "type": "object",
-            "description": "The engine dependency",
-            "properties": {
-                "manager": {
-                    "type": "string",
-                    "description": "The manager for dependency",
-                    "enum": [
-                        "system",
-                        "url",
-                        "composer",
-                        "gem",
-                        "npm",
-                        "pip"
-                    ]
-                },
-                "package": {
-                    "type": "string",
-                    "description": "The package name"
-                },
-                "version": {
-                    "type": "string",
-                    "description": "The package version"
-                }
-            }
-        }
-    }
+    "additionalProperties": false
 }
