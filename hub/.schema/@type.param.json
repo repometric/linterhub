@@ -8,6 +8,7 @@
             "enum": [
                 "linterhub:config",
                 "linterhub:stdin",
+                "linterhub:filename",
                 "linterhub:verson",
                 "linterhub:path"
             ]
