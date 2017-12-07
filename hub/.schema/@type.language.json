@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "This schema describes the language or format supported by engine",
+    "description": "The engine language or format",
+    "definitions": {
+        "language": {
+            "type": "string",
+            "enum": [
+                "coffeescript",
+                "css",
+                "html",
+                "xml",
+                "javascript",
+                "json",
+                "jsx",
+                "sass",
+                "typescript",
+                "c",
+                "cpp",
+                "csharp",
+                "groovy",
+                "php",
+                "ruby",
+                "fortran",
+                "plsql",
+                "scala",
+                "objectivec",
+                "perl",
+                "swift",
+                "python",
+                "java",
+                "pug"
+            ]
+        }
+    }
+}

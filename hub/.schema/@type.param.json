@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "This schema describes special engine params for linterhub",
+    "description": "The engine args configurable by lunterhub",
+    "definitions": {
+        "param": {
+            "type": "string",
+            "enum": [
+                "linterhub:config",
+                "linterhub:stdin",
+                "linterhub:verson",
+                "linterhub:path"
+            ]
+        }
+    }
+}
