@@ -1,0 +1,20 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "tslint",
+    "requirements": [
+        [
+            {
+                "manager": "pacman",
+                "package": "npm"
+            },{
+                "manager": "system",
+                "package": "typescript"
+            },{
+                "manager": "npm",
+                "package": "tslint",
+                "version": "5.8.0",
+                "engine": true
+            }
+        ]
+    ]
+}

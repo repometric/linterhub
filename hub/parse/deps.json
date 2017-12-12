@@ -1,0 +1,17 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "parse",
+    "requirements": [
+        [
+            {
+                "manager": "pacman",
+                "package": "npm"
+            }, {
+                "manager": "npm",
+                "package": "parse",
+                "version": "1.11.0",
+                "engine": true
+            }
+        ]
+    ]
+}

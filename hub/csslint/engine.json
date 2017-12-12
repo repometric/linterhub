@@ -1,0 +1,19 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "csslint",
+    "description": "CSSLint",
+    "url": "http://csslint.net/",
+    "areas": [
+        "css",
+        "oocss",
+        "csslint"
+    ],
+    "languages": [
+        "css",
+        "oocss"
+    ],
+    "configs": [
+        ".csslintrc"
+    ],
+    "license": "MIT"
+}

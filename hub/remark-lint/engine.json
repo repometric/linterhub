@@ -1,0 +1,17 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "remark-lint",
+    "description": "Lint markdown with remark",
+    "url": null,
+    "areas": [
+        "markdown",
+        "lint",
+        "validate",
+        "remark"
+    ],
+    "languages": [
+        "text"
+    ],
+    "configs": null,
+    "license": "MIT"
+}

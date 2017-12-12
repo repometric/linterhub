@@ -1,0 +1,18 @@
+{
+    "$schema": "./../.schema/engine.json",
+    "name": "tslint",
+    "description": "An extensible static analysis linter for the TypeScript language",
+    "url": "https://github.com/palantir/tslint.git",
+    "areas": [
+        "cli",
+        "typescript",
+        "linter"
+    ],
+    "languages": [
+        "typescript"
+    ],
+    "configs": [
+        ".json"
+    ],
+    "license": "Apache-2.0"
+}

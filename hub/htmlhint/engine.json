@@ -1,0 +1,19 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "htmlhint",
+    "description": "A Static Code Analysis Tool for HTML",
+    "url": "https://github.com/yaniswang/HTMLHint#readme",
+    "areas": [
+        "html",
+        "hint",
+        "Analysis",
+        "Javascript"
+    ],
+    "languages": [
+        "html"
+    ],
+    "configs": [
+        ".htmlhintrc"
+    ],
+    "license": "MIT"
+}

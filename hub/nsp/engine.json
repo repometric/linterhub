@@ -1,0 +1,17 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "nsp",
+    "description": "The Node Security (nodesecurity.io) command line interface",
+    "url": "https://github.com/nodesecurity/nsp#readme",
+    "areas": [
+        "security",
+        "nsp",
+        "nodesecurity"
+    ],
+    "languages": [
+        "javscript",
+        "node.js"
+    ],
+    "configs": null,
+    "license": "Apache-2.0"
+}

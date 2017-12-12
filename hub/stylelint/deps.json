@@ -1,0 +1,17 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "stylelint",
+    "requirements": [
+        [
+            {
+                "manager": "pacman",
+                "package": "npm"
+            },{
+                "manager": "npm",
+                "package": "stylelint",
+                "version": null,
+                "engine": true
+            }
+        ]
+    ]
+}

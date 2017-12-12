@@ -1,0 +1,42 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "xo",
+    "description": "JavaScript happiness style linter",
+    "url": "https://github.com/sindresorhus/xo#readme",
+    "areas": [
+        "cli-app",
+        "cli",
+        "xo",
+        "xoxo",
+        "hugs",
+        "kisses",
+        "happy",
+        "happiness",
+        "code",
+        "quality",
+        "style",
+        "lint",
+        "linter",
+        "jscs",
+        "jshint",
+        "jslint",
+        "eslint",
+        "validate",
+        "code style",
+        "standard",
+        "strict",
+        "check",
+        "checker",
+        "verify",
+        "enforce",
+        "hint",
+        "simple"
+    ],
+    "languages": [
+        "javascipt"
+    ],
+    "configs": [
+        ".json"
+    ],
+    "license": "MIT"
+}

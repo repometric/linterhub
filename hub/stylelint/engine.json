@@ -1,0 +1,28 @@
+{
+    "$schema": "./../.schema/engine.json",
+    "name": "stylelint",
+    "description": "A mighty, modern CSS linter.",
+    "url": "https://stylelint.io",
+    "areas": [
+        "css",
+        "less",
+        "scss",
+        "sugarss",
+        "lint",
+        "linter",
+        "stylelint"
+    ],
+    "languages": [
+        "css",
+        "less",
+        "scss"
+    ],
+    "configs": [
+        ".json",
+        ".yml",
+        ".js",
+        ".stylelintrc",
+        ".yaml"
+    ],
+    "license": "MIT"
+}

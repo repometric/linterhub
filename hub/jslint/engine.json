@@ -1,0 +1,21 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "jslint",
+    "description": "The JavaScript Code Quality Tool",
+    "url": "https://github.com/reid/node-jslint",
+    "areas": [
+        "lint",
+        "jslint",
+        "code-quality",
+        "static-analysis",
+        "jshint",
+        "eslint"
+    ],
+    "languages": [
+        "javascript"
+    ],
+    "configs": [
+        ".conf"
+    ],
+    "license": "BSD-3-Clause"
+}

@@ -1,0 +1,18 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "coffeelint",
+    "requirements": [
+        [
+            {
+                "manager": "system",
+                "package": "npm"
+            },
+            {
+                "manager": "npm",
+                "package": "coffeelint",
+                "version": "2.0.7",
+                "engine": true
+            }
+        ]
+    ]
+}

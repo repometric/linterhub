@@ -1,0 +1,20 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "sass-lint",
+    "description": "All Node Sass linter!",
+    "url": "https://github.com/sasstools/sass-lint",
+    "areas": [
+        "Sass",
+        "SCSS",
+        "lint"
+    ],
+    "languages": [
+        "sass",
+        "scss"
+    ],
+    "configs": [
+        ".yml",
+        ".sass-lintrc"
+    ],
+    "license": "MIT"
+}

@@ -1,0 +1,18 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "jedi",
+    "description": "jedi  a language for Web development",
+    "url": "http://github.com/baixing/jedi",
+    "areas": [
+        "view",
+        "template",
+        "dsl"
+    ],
+    "languages": [
+        "pug",
+        "jedi",
+        "coffeekup"
+    ],
+    "configs": null,
+    "license": "Apache-2.0"
+}

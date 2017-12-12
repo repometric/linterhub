@@ -1,0 +1,27 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "stylint",
+    "description": "A linter for stylus",
+    "url": "https://github.com/SimenB/stylint#readme",
+    "areas": [
+        "cli",
+        "css",
+        "hinter",
+        "lint",
+        "linter",
+        "styl",
+        "style",
+        "stylint",
+        "stylus",
+        "stylus-hint",
+        "stylus-lint"
+    ],
+    "languages": [
+        "css"
+    ],
+    "configs": [
+        ".configrc",
+        ".stylintrc"
+    ],
+    "license": "GPL-3.0"
+}

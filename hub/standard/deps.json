@@ -1,0 +1,17 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "standard",
+    "requirements": [
+        [
+            {
+                "manager": "pacman",
+                "package": "npm"
+            },{
+                "manager": "npm",
+                "package": "standard",
+                "version": null,
+                "engine": true
+            }
+        ]
+    ]
+}
