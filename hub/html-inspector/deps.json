@@ -1,0 +1,18 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "html-inspector",
+    "requirements": [
+        [
+            {
+                "manager": "pacman",
+                "package": "npm"
+            },
+            {
+                "manager": "npm",
+                "package": "html-inspector",
+                "version": "0.8.2",
+                "engine": true
+            }
+        ]
+    ]
+}

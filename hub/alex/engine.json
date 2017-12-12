@@ -1,0 +1,30 @@
+{
+    "$shema":"./../.schema/engine.json",
+    "name":"alex",
+    "description":"Catch insensitive, inconsiderate writing",
+    "url":"http://alexjs.com",
+    "areas":[
+        "cli-app",
+        "cli",
+        "bin",
+        "alex",
+        "equal",
+        "race",
+        "religion",
+        "sex",
+        "orientation",
+        "identity",
+        "gender",
+        "sensitive",
+        "insensitive",
+        "neutral",
+        "writing",
+        "language",
+        "english"
+    ],
+    "languages":[
+        "text"
+    ],
+    "configs":null,
+    "license":"MIT"
+}

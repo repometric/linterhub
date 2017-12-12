@@ -1,0 +1,17 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "proselint",
+    "requirements": [
+        [
+            {
+                "manager": "pacman",
+                "package": "npm"
+            },{
+                "manager": "npm",
+                "package": "proselint",
+                "version": "0.1.7",
+                "engine": true
+            }
+        ]
+    ]
+}

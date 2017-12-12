@@ -1,0 +1,15 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "mdl",
+    "description": "MDL Developer toolkit",
+    "url": null,
+    "areas": [
+        "moodle",
+        "yui"
+    ],
+    "languages": [
+        "javascript"
+    ],
+    "configs": null,
+    "license": "BSD"
+}

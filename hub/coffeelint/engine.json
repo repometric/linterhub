@@ -1,0 +1,18 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "coffeelint",
+    "description": "Lint your CoffeeScript",
+    "url": "http://www.coffeelint.org",
+    "areas": [
+        "lint",
+        "coffeescript",
+        "coffee-script"
+    ],
+    "languages": [
+        "coffeescript"
+    ],
+    "configs": [
+        ".json"
+    ],
+    "license": "MIT"
+}

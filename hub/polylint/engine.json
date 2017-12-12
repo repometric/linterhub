@@ -1,0 +1,18 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "polylint",
+    "description": "Keeps your Polymer Elements clean and functional!",
+    "url": "https://github.com/PolymerLabs/polylint",
+    "areas": [
+        "html",
+        "polylint"
+    ],
+    "languages": [
+        "html",
+        "javascript"
+    ],
+    "configs": [
+        ".json"
+    ],
+    "license": "BSD-3-Clause"
+}

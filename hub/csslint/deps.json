@@ -1,0 +1,17 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "csslint",
+    "requirements": [
+        [
+            {
+                "manager": "pacman",
+                "package": "npm"
+            },{
+                "manager": "npm",
+                "package": "csslint",
+                "version": "1.0.5",
+                "engine": true
+            }
+        ]
+    ]
+}

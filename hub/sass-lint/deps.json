@@ -1,0 +1,17 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "sass-lint",
+    "requirements": [
+        [
+            {
+                "manager": "pacman",
+                "package": "npm"
+            },{
+                "manager": "npm",
+                "package": "sass-lint",
+                "version": "1.12.1",
+                "engine": true
+            }
+        ]
+    ]
+}

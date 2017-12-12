@@ -1,0 +1,21 @@
+{
+    "$shema": "./../.schema/engine.json",
+    "name": "proselint",
+    "description": "Proselint wrapper with a friendly reporter",
+    "url": "https://github.com/sapegin/proselint",
+    "areas": [
+        "proselint",
+        "lint",
+        "linting",
+        "prose",
+        "text",
+        "markdown"
+    ],
+    "languages": [
+        "text"
+    ],
+    "configs": [
+        ".proselintrc"
+    ],
+    "license": "MIT"
+}
