@@ -1,0 +1,17 @@
+{
+    "$schema":"./../.schema/deps.json",
+    "id":"pug-lint",
+    "requirements":[
+        [
+            {
+                "manager": "pacman",
+                "package": "npm"
+            },{
+                "manager":"npm",
+                "package":"pug-lint",
+                "version":"2.5.0",
+                "engine":true
+            }
+        ]
+    ]
+}
