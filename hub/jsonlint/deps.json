@@ -1,0 +1,18 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "jsonlint",
+    "requirements": [
+        [
+            {
+                "manager": "pacman",
+                "package": "npm"
+            },
+            {
+                "manager": "npm",
+                "package": "jsonlint",
+                "version": "1.6.2",
+                "engine": true
+            }
+        ]
+    ]
+}
