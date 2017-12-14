@@ -6,7 +6,8 @@
             {
                 "manager": "pacman",
                 "package": "npm"
-            },{
+            },
+            {
                 "manager": "npm",
                 "package": "polylint",
                 "version": "2.10.4",

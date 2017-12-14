@@ -1,11 +1,11 @@
 {
-    "$schema":"./../.schema/engine.json",
-    "name":"alex",
-    "description":"Catch insensitive, inconsiderate writing",
-    "url":"http://alexjs.com",
-    "areas":[],
-    "languages":[
+    "$schema": "./../.schema/engine.json",
+    "name": "alex",
+    "description": "Catch insensitive, inconsiderate writing",
+    "url": "http://alexjs.com",
+    "areas": [],
+    "languages": [
         "text"
     ],
-    "license":"MIT"
+    "license": "MIT"
 }

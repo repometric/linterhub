@@ -4,11 +4,11 @@
     "description": "Keep a watchful eye on your css colors",
     "url": "http://github.com/SlexAxton/css-colorguard",
     "areas": [
-        "css", 
-        "colors", 
-        "lint", 
-        "csslint", 
-        "postcss", 
+        "css",
+        "colors",
+        "lint",
+        "csslint",
+        "postcss",
         "postcss-plugin"
     ],
     "languages": [

@@ -1,16 +1,17 @@
 {
-    "$schema":"./../.schema/deps.json",
-    "id":"colorguard",
-    "requirements":[
+    "$schema": "./../.schema/deps.json",
+    "id": "colorguard",
+    "requirements": [
         [
             {
                 "manager": "pacman",
                 "package": "npm"
-            },{
-                "manager":"npm",
-                "package":"colorguard",
-                "version":"1.2.0",
-                "engine":true
+            },
+            {
+                "manager": "npm",
+                "package": "colorguard",
+                "version": "1.2.0",
+                "engine": true
             }
         ]
     ]

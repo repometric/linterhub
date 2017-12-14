@@ -47,11 +47,11 @@
                     "type": "string",
                     "description": "Show version"
                 },
-                "--syntx":{
+                "--syntx": {
                     "type": "string",
                     "description": "syntax to evaluate the file(s) with (either sass or scss)"
                 },
-                "--no-exit":{
+                "--no-exit": {
                     "type": "string",
                     "description": "do not exit on errors (default: true)"
                 },

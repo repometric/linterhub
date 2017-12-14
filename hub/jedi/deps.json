@@ -6,7 +6,8 @@
             {
                 "manager": "pacman",
                 "package": "npm"
-            },{
+            },
+            {
                 "manager": "npm",
                 "package": "jedi",
                 "version": "1.0.0-rc6.4",

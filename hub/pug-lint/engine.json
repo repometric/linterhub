@@ -1,9 +1,9 @@
 {
-    "$shema":"./../.schema/engine.json",
-    "name":"pug-lint",
-    "description":"An unopinionated and configurable linter and style checker for Pug (formerly Jade)",
-    "url":"https://github.com/pugjs/pug-lint",
-    "areas":[
+    "$shema": "./../.schema/engine.json",
+    "name": "pug-lint",
+    "description": "An unopinionated and configurable linter and style checker for Pug (formerly Jade)",
+    "url": "https://github.com/pugjs/pug-lint",
+    "areas": [
         "puglint",
         "jadelint",
         "pug-lint",
@@ -55,7 +55,7 @@
         "pug-hinting",
         "jade-hinting"
     ],
-    "languages":[
+    "languages": [
         "jade"
     ],
     "configs": [
@@ -63,5 +63,5 @@
         ".js",
         ".json"
     ],
-    "license":"ISC"
+    "license": "ISC"
 }

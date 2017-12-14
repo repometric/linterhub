@@ -6,7 +6,8 @@
             {
                 "manager": "pacman",
                 "package": "npm"
-            },{
+            },
+            {
                 "manager": "npm",
                 "package": "jslint",
                 "version": "0.11.0",

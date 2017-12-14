@@ -2,7 +2,7 @@
   "name": "linterhub",
   "version": "0.0.0",
   "scripts": {
-    "prettify": "node .ci/schema.prettify.js",
+    "format": "node .ci/schema.format.js",
     "validate": "node .ci/schema.validate.js"
   },
   "license": "MIT",

@@ -6,7 +6,8 @@
             {
                 "manager": "pacman",
                 "package": "npm"
-            },{
+            },
+            {
                 "manager": "npm",
                 "package": "jscpd",
                 "version": "0.6.17",

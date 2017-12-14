@@ -6,7 +6,8 @@
             {
                 "manager": "pacman",
                 "package": "npm"
-            },{
+            },
+            {
                 "manager": "npm",
                 "package": "htmlhint",
                 "version": "0.9.13",

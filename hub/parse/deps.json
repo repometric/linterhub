@@ -6,7 +6,8 @@
             {
                 "manager": "pacman",
                 "package": "npm"
-            }, {
+            },
+            {
                 "manager": "npm",
                 "package": "parse",
                 "version": "1.11.0",

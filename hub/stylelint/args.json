@@ -28,7 +28,7 @@
                 },
                 "--ignore-pattern": {
                     "type": "string",
-                    "description":  "Pattern of files to ignore (in addition to those in .stylelintignore)"
+                    "description": "Pattern of files to ignore (in addition to those in .stylelintignore)"
                 },
                 "--syntax": {
                     "id": "args:--syntax",
@@ -45,7 +45,7 @@
                     "type": "null",
                     "description": "Automatically fix violations of certain rules."
                 },
-               "--custom-syntax": {
+                "--custom-syntax": {
                     "id": "args:--custom-syntax",
                     "type": "string",
                     "description": "Module name or path to a JS file exporting a PostCSS-compatible syntax."
@@ -98,12 +98,12 @@
                     "type": "null",
                     "description": "Only register warnings for rules with an error-level severity (ignore warning-level)"
                 },
-                "--color" : {
+                "--color": {
                     "id": "args:--color",
                     "type": "null",
                     "description": "Force enabling of color."
                 },
-                "--no-color" : {
+                "--no-color": {
                     "id": "args:--no-color",
                     "type": "null",
                     "description": "Force disabling of color."

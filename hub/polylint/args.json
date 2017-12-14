@@ -7,7 +7,7 @@
             "$ref": "#/definitions/options"
         }
     ],
-     "definitions": {
+    "definitions": {
         "options": {
             "type": "object",
             "properties": {
@@ -63,7 +63,7 @@
                     "type": "null",
                     "description": "Show help"
                 },
-				"--stdin": {
+                "--stdin": {
                     "id": "linterhub:stdin",
                     "type": "null",
                     "description": "Lint code provided on stdin"

@@ -7,7 +7,7 @@
             "$ref": "#/definitions/options"
         }
     ],
-     "definitions": {
+    "definitions": {
         "options": {
             "type": "object",
             "properties": {
@@ -91,7 +91,7 @@
                     "type": "string",
                     "description": "Specify a filename for the --stdin option"
                 },
-				"--stdin": {
+                "--stdin": {
                     "id": "linterhub:stdin",
                     "type": "null",
                     "description": "Lint code provided on stdin"

@@ -6,10 +6,12 @@
             {
                 "manager": "pacman",
                 "package": "npm"
-            },{
+            },
+            {
                 "manager": "system",
                 "package": "typescript"
-            },{
+            },
+            {
                 "manager": "npm",
                 "package": "tslint",
                 "version": "5.8.0",

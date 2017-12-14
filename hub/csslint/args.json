@@ -7,7 +7,7 @@
             "$ref": "#/definitions/options"
         }
     ],
-     "definitions": {
+    "definitions": {
         "options": {
             "type": "object",
             "properties": {

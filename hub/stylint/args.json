@@ -7,13 +7,13 @@
             "$ref": "#/definitions/options"
         }
     ],
-     "definitions": {
+    "definitions": {
         "options": {
             "type": "object",
             "properties": {
                 "--watch": {
                     "id": "args:--watch",
-                    "type":"boolean",
+                    "type": "boolean",
                     "description": "Watch file or directory and run lint on change"
                 },
                 "--strict": {

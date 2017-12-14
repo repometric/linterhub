@@ -7,7 +7,7 @@
             "$ref": "#/definitions/options"
         }
     ],
-     "definitions": {
+    "definitions": {
         "options": {
             "type": "object",
             "properties": {
@@ -22,7 +22,7 @@
                     "description": "Run the tool in detect mode, returning detected options."
                 },
                 "--lint": {
-                    "id":"args:--lint",
+                    "id": "args:--lint",
                     "type": "null",
                     "description": "Run the tool in linter mode, without modifying files."
                 },
