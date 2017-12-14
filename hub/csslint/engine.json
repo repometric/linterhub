@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "csslint",
     "description": "CSSLint",
     "url": "http://csslint.net/",

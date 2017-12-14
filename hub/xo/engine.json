@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "xo",
     "description": "JavaScript happiness style linter",
     "url": "https://github.com/sindresorhus/xo#readme",

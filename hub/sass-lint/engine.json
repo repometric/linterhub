@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "sass-lint",
     "description": "All Node Sass linter!",
     "url": "https://github.com/sasstools/sass-lint",

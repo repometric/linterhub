@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "jedi",
     "description": "jedi  a language for Web development",
     "url": "http://github.com/baixing/jedi",

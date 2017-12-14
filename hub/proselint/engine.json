@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "proselint",
     "description": "Proselint wrapper with a friendly reporter",
     "url": "https://github.com/sapegin/proselint",

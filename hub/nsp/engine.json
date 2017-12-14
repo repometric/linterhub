@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "nsp",
     "description": "The Node Security (nodesecurity.io) command line interface",
     "url": "https://github.com/nodesecurity/nsp#readme",

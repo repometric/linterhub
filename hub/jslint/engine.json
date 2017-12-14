@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "jslint",
     "description": "The JavaScript Code Quality Tool",
     "url": "https://github.com/reid/node-jslint",

@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "mdl",
     "description": "MDL Developer toolkit",
     "url": null,

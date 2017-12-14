@@ -9,7 +9,7 @@
             },{
                 "manager": "npm",
                 "package": "stylelint",
-                "version": null,
+                "version": "1.5.9",
                 "engine": true
             }
         ]

@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "htmlhint",
     "description": "A Static Code Analysis Tool for HTML",
     "url": "https://github.com/yaniswang/HTMLHint#readme",

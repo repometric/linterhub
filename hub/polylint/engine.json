@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "polylint",
     "description": "Keeps your Polymer Elements clean and functional!",
     "url": "https://github.com/PolymerLabs/polylint",

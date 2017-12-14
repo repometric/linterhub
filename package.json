@@ -1,0 +1,13 @@
+{
+  "name": "linterhub",
+  "version": "0.0.0",
+  "scripts": {
+    "prettify": "node .ci/schema.prettify.js",
+    "validate": "node .ci/schema.validate.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "fs-finder": "^1.8.1",
+    "wetzel": "0.0.5"
+  }
+}

@@ -9,7 +9,7 @@
             },{
                 "manager": "npm",
                 "package": "standard",
-                "version": null,
+                "version": "10.0.3",
                 "engine": true
             }
         ]

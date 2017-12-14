@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "parse",
     "description": "The Parse JavaScript SDK",
     "url": "https://www.parse.com",

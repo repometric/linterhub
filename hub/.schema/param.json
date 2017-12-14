@@ -13,5 +13,6 @@
                 "linterhub:path"
             ]
         }
-    }
+    },
+    "additionalItems": false
 }

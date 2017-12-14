@@ -19,6 +19,7 @@
     "required": [
         "requirements"
     ],
+    "additionalItems": false,
     "definitions": {
         "requirements": {
             "type": "array",
@@ -34,7 +35,7 @@
                 "manager": {
                     "type": "string",
                     "description": "The manager for dependency",
-                    "$ref": "@type.manager.json#/definitions/manager"
+                    "$ref": "#/definitions/manager"
                 },
                 "package": {
                     "type": "string",
@@ -55,6 +56,28 @@
                 "package"
             ],
             "additionalProperties": false
+        },
+        "manager": {
+            "type": "string",
+            "description": "The package manager",
+            "enum": [
+                "system",
+                "url",
+                "pacman",
+                "bower",
+                "cabal",
+                "cargo",
+                "composer",
+                "conda",
+                "gem",
+                "go",
+                "julia",
+                "luarocks",
+                "maven",
+                "npm",
+                "pip",
+                "yarn"
+            ]
         }
     }
 }

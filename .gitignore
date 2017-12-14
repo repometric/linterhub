@@ -2,3 +2,4 @@ src/*/bin
 src/*/obj
 *.lock.json
 tests
+node_modules/

@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "csscomb",
     "description": "CSS coding style formatter",
     "url": "http://csscomb.com/",

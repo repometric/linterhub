@@ -1,5 +1,5 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "coffeelint",
     "description": "Lint your CoffeeScript",
     "url": "http://www.coffeelint.org",

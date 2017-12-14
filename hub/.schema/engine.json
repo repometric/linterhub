@@ -28,14 +28,14 @@
             "type": "array",
             "description": "The engine areas",
             "items": {
-                "$ref": "@type.area.json#/definitions/area"
+                "$ref": "#/definitions/area"
             }
         },
         "languages": {
             "type": "array",
             "description": "The list of supported languages",
             "items": {
-                "$ref": "@type.language.json#/definitions/language"
+                "$ref": "#/definitions/language"
             }
         },
         "extensions": {
@@ -55,7 +55,7 @@
         "license": {
             "type": "string",
             "description": "The engine license",
-            "$ref": "@type.license.json#/definitions/license"
+            "$ref": "#/definitions/license"
         },
         "agreement": {
             "type": "string",
@@ -70,5 +70,72 @@
         "languages",
         "license"
     ],
-    "additionalProperties": false
+    "additionalProperties": true,
+    "definitions": {
+        "area": {
+            "type": "string",
+            "description": "The engine area",
+            "enum": [
+                "code simplification",
+                "commented code",
+                "complexity",
+                "documentation",
+                "duplication",
+                "formatting",
+                "grammar",
+                "memory leak",
+                "security",
+                "simplification",
+                "smell",
+                "spelling",
+                "syntax",
+                "unreachable code",
+                "unused code"
+            ]
+        },
+        "license": {
+            "type": "string",
+            "description": "The engine license",
+            "enum": [
+                "Custom",
+                "Unknown",
+                "AGPL-3.0",
+                "Apache-2.0",
+                "BSD-3-Clause",
+                "MIT",
+                "ISC"
+            ]
+        },
+        "language": {
+            "type": "string",
+            "description": "The engine language or format",
+            "enum": [
+                "text",
+                "coffeescript",
+                "css",
+                "html",
+                "xml",
+                "javascript",
+                "json",
+                "jsx",
+                "sass",
+                "typescript",
+                "c",
+                "cpp",
+                "csharp",
+                "groovy",
+                "php",
+                "ruby",
+                "fortran",
+                "plsql",
+                "scala",
+                "objectivec",
+                "perl",
+                "swift",
+                "python",
+                "java",
+                "pug"
+            ]
+        }
+    }
 }
