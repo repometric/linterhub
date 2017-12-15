@@ -1,0 +1,18 @@
+{
+    "$schema": "./../.schema/deps.json",
+    "id": "bandit",
+    "requirements": [
+        [
+            {
+                "manager": "pacman",
+                "package": "pip"
+            },
+            {
+                "manager": "pip",
+                "package": "bandit",
+                "version": "1.4.0",
+                "engine": true
+            }
+        ]
+    ]
+}
