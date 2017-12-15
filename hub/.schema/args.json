@@ -5,15 +5,12 @@
     "type": "object",
     "$ref": "http://json-schema.org/draft-04/schema",
     "properties": {
-        "$schema": {
-        },
-        "type": {
-        },
-        "allOf": {
-        },
+        "$schema": {},
+        "type": {},
+        "allOf": {},
         "id": {
             "type": "string",
-            "description": "The engine id"  
+            "description": "The engine id"
         },
         "definitions": {
             "description": "The arguments definitions",
@@ -41,7 +38,7 @@
                         "version": {
                             "type": "string",
                             "description": "The engine version, equal to the output of version command"
-                        }   
+                        }
                     }
                 },
                 "options": {

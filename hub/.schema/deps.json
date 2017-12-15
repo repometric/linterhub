@@ -6,7 +6,7 @@
     "properties": {
         "id": {
             "type": "string",
-            "description": "The engine id"  
+            "description": "The engine id"
         },
         "requirements": {
             "type": "array",
@@ -51,7 +51,7 @@
                     "default": false
                 }
             },
-            "required":[
+            "required": [
                 "manager",
                 "package"
             ],
