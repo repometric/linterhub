@@ -1,6 +1,6 @@
 const fs = require('fs');
 const finder = require('fs-finder');
-const files = finder.findFiles('hub/**/*.json');
+const files = finder.in('hub/').find();
 const results = files.map(function(fileName) {
     const content = fs.readFileSync(fileName).toString();
     const json = JSON.parse(content);

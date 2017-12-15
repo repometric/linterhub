@@ -1,5 +1,4 @@
-Linterhub
+linterhub
 =========
 
-A [list](https://repometric.github.io/linterhub/) of static analysis tools for source code. 
-This repository also contains [some wrappers](/docs/getting-started.md) in order to unify the usage of different linters in your project. 
+A [collection](https://repometric.github.io/linterhub/) of static analysis tools for source code. Each tool (engine) represented as package: metadata, cmd arguments and runtime dependencies.

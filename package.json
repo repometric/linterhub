@@ -1,13 +1,13 @@
 {
-  "name": "linterhub",
-  "version": "0.0.0",
-  "scripts": {
-    "format": "node .ci/schema.format.js",
-    "validate": "node .ci/schema.validate.js"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "fs-finder": "^1.8.1",
-    "wetzel": "0.0.5"
-  }
+    "name": "linterhub",
+    "version": "1.0.0",
+    "scripts": {
+        "format": "node .ci/schema.format.js",
+        "validate": "node .ci/schema.validate.js"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "fs-finder": "^1.8.1",
+        "wetzel": "0.0.5"
+    }
 }

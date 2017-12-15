@@ -1,5 +1,0 @@
-FROM {docker}
-MAINTAINER Repometric <docker@repometric.com>
-ARG WORKDIR
-RUN {run}
-WORKDIR $WORKDIR

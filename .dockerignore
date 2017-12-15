@@ -1,8 +1,0 @@
-.git
-.gitattributes
-.gitignore
-Dockerfile
-makefile
-Readme.md
-tests
-src
