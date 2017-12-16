@@ -1,0 +1,13 @@
+{
+    "$schema": "./../.schema/engine.json",
+    "name": "scss-lint",
+    "description": "Configurable tool for writing clean and consistent SCSS",
+    "url": "https://github.com/brigade/scss-lint",
+    "languages": [
+        "scss"
+    ],
+    "configs": [
+        ".scss-lint.yml"
+    ],
+    "license": "MIT"
+}

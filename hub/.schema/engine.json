@@ -117,6 +117,7 @@
                 "json",
                 "jsx",
                 "sass",
+                "scss",
                 "typescript",
                 "c",
                 "cpp",
