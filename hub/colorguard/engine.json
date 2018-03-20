@@ -1,19 +1,11 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "colorguard",
     "description": "Keep a watchful eye on your css colors",
     "url": "http://github.com/SlexAxton/css-colorguard",
-    "areas": [
-        "css",
-        "colors",
-        "lint",
-        "csslint",
-        "postcss",
-        "postcss-plugin"
-    ],
+    "areas": [],
     "languages": [
         "css"
     ],
-    "configs": null,
     "license": "MIT"
 }

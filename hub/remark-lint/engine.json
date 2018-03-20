@@ -2,16 +2,10 @@
     "$schema": "./../.schema/engine.json",
     "name": "remark-lint",
     "description": "Lint markdown with remark",
-    "url": null,
-    "areas": [
-        "markdown",
-        "lint",
-        "validate",
-        "remark"
-    ],
+    "url": "https://github.com/remarkjs/remark-lint/tree/master/packages/remark-lint",
+    "areas": [],
     "languages": [
         "text"
     ],
-    "configs": null,
     "license": "MIT"
 }

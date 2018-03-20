@@ -3,11 +3,7 @@
     "name": "coffeelint",
     "description": "Lint your CoffeeScript",
     "url": "http://www.coffeelint.org",
-    "areas": [
-        "lint",
-        "coffeescript",
-        "coffee-script"
-    ],
+    "areas": [],
     "languages": [
         "coffeescript"
     ],

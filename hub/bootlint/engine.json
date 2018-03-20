@@ -3,19 +3,9 @@
     "name": "bootlint",
     "description": "HTML linter for Bootstrap projects",
     "url": "https://github.com/twbs/bootlint",
-    "areas": [
-        "bootstrap",
-        "checker",
-        "correctness",
-        "html",
-        "lint",
-        "linter",
-        "validator",
-        "validity"
-    ],
+    "areas": [],
     "languages": [
         "html"
     ],
-    "configs": null,
     "license": "MIT"
 }

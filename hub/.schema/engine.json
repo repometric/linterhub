@@ -101,7 +101,8 @@
                 "Apache-2.0",
                 "BSD-3-Clause",
                 "MIT",
-                "ISC"
+                "ISC",
+                "BSD"
             ]
         },
         "language": {
@@ -133,7 +134,15 @@
                 "swift",
                 "python",
                 "java",
-                "pug"
+                "pug",
+                "oocss",
+                "jedi",
+                "coffeekup",
+                "go",
+                "less",
+                "puppet",
+                "node.js",
+                "jade"
             ]
         }
     }

@@ -3,14 +3,9 @@
     "name": "parse",
     "description": "The Parse JavaScript SDK",
     "url": "https://www.parse.com",
-    "areas": [
-        "cloud",
-        "mobile",
-        "api"
-    ],
+    "areas": [],
     "languages": [
         "javascript"
     ],
-    "configs": null,
     "license": "BSD-3-Clause"
 }

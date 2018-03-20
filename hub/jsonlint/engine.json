@@ -1,15 +1,11 @@
 {
-    "$shema": "./../.schema/engine.json",
+    "$schema": "./../.schema/engine.json",
     "name": "jsonlint",
     "description": "Validate JSON",
     "url": "http://zaach.github.com/jsonlint/'",
-    "areas": [
-        "json",
-        "linter"
-    ],
+    "areas": [],
     "languages": [
         "json"
     ],
-    "configs": null,
     "license": "MIT"
 }

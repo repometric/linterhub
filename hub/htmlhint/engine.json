@@ -3,12 +3,7 @@
     "name": "htmlhint",
     "description": "A Static Code Analysis Tool for HTML",
     "url": "https://github.com/yaniswang/HTMLHint#readme",
-    "areas": [
-        "html",
-        "hint",
-        "Analysis",
-        "Javascript"
-    ],
+    "areas": [],
     "languages": [
         "html"
     ],

@@ -3,15 +3,9 @@
     "name": "markdownlint",
     "description": "A Node.js style checker and lint tool for Markdown/CommonMark files.",
     "url": "https://github.com/DavidAnson/markdownlint",
-    "areas": [
-        "markdown",
-        "lint",
-        "md",
-        "CommonMark",
-        "markdownlint"
-    ],
+    "areas": [],
     "languages": [
-        "javscript",
+        "javascript",
         "node.js"
     ],
     "configs": [
