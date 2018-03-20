@@ -3,7 +3,7 @@
     "name": "csscomb",
     "description": "CSS coding style formatter",
     "url": "http://csscomb.com/",
-    "areas": null,
+    "areas": [],
     "languages": [
         "css"
     ],

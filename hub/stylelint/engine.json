@@ -3,15 +3,7 @@
     "name": "stylelint",
     "description": "A mighty, modern CSS linter.",
     "url": "https://stylelint.io",
-    "areas": [
-        "css",
-        "less",
-        "scss",
-        "sugarss",
-        "lint",
-        "linter",
-        "stylelint"
-    ],
+    "areas": [],
     "languages": [
         "css",
         "less",

@@ -3,10 +3,7 @@
     "name": "polylint",
     "description": "Keeps your Polymer Elements clean and functional!",
     "url": "https://github.com/PolymerLabs/polylint",
-    "areas": [
-        "html",
-        "polylint"
-    ],
+    "areas": [],
     "languages": [
         "html",
         "javascript"

@@ -3,19 +3,7 @@
     "name": "stylint",
     "description": "A linter for stylus",
     "url": "https://github.com/SimenB/stylint#readme",
-    "areas": [
-        "cli",
-        "css",
-        "hinter",
-        "lint",
-        "linter",
-        "styl",
-        "style",
-        "stylint",
-        "stylus",
-        "stylus-hint",
-        "stylus-lint"
-    ],
+    "areas": [],
     "languages": [
         "css"
     ],
@@ -23,5 +11,5 @@
         ".configrc",
         ".stylintrc"
     ],
-    "license": "GPL-3.0"
+    "license": "AGPL-3.0"
 }

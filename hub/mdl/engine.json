@@ -2,14 +2,10 @@
     "$schema": "./../.schema/engine.json",
     "name": "mdl",
     "description": "MDL Developer toolkit",
-    "url": null,
-    "areas": [
-        "moodle",
-        "yui"
-    ],
+    "url": "https://github.com/andrewnicols/mdl",
+    "areas": [],
     "languages": [
         "javascript"
     ],
-    "configs": null,
     "license": "BSD"
 }
