@@ -166,6 +166,10 @@
                 "type": "string",
                 "description": "To specify a configuration YAML file to use"
               },
+              "-i": {
+                "type": "string",
+                "description": "To specify a ignore warnings configuration file to use"
+              },
               "--version": {
                     "id": "linterhub:version",
                     "type": "null",
