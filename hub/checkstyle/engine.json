@@ -1,0 +1,15 @@
+
+{
+  "$schema": "./../.schema/engine.json",
+  "name": "checkstyle",
+  "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standart.",
+  "url": "http://checkstyle.sourceforge.net/",
+  "areas": [],
+  "languages": [
+    "java"
+  ],
+  "configs": [
+    ".xml"
+  ],
+  "license": "LGPL-2.1"
+}
