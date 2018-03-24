@@ -1,0 +1,14 @@
+{
+  "$schema": "./../.schema/engine.json",
+  "name": "brakeman",
+  "description": "A static analysis security vulnerability scanner for Ruby on Rails applications.",
+  "url": "https://brakemanscanner.org/",
+  "areas": [],
+  "languages": [
+    "ruby"
+  ],
+  "configs": [
+    ".yml"
+  ],
+  "license": "MIT"
+}
