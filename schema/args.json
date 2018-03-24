@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "This schema describes the engine arguments schema",
+    "description": "The engine arguments schema",
+    "type": "object",
+    "$ref": "http://json-schema.org/draft-04/schema",
+    "properties": {
+        "$schema": {},
+        "type": {},
+        "allOf": {},
+        "id": {
+            "type": "string",
+            "description": "The engine id"
+        },
+        "definitions": {
+            "description": "The arguments definitions",
+            "type": "object",
+            "$ref": "http://json-schema.org/draft-04/schema",
+            "properties": {
+                "environment": {
+                    "type": "object",
+                    "description": "The environment specific configuraton",
+                    "properties": {
+                        "executable": {
+                            "type": "string",
+                            "description": "The engine executable, by default equal to the engine name"
+                        },
+                        "masks": {
+                            "type": "boolean",
+                            "description": "Whether engine supports masks in file paths",
+                            "default": true
+                        },
+                        "success": {
+                            "type": "integer",
+                            "description": "The success exit code",
+                            "default": 0
+                        },
+                        "version": {
+                            "type": "string",
+                            "description": "The engine version, equal to the output of version command"
+                        }
+                    }
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine arguments",
+                    "$ref": "http://json-schema.org/draft-04/schema"
+                },
+                "section": {
+                    "type": "object",
+                    "description": "The engine configuration section",
+                    "$ref": "http://json-schema.org/draft-04/schema"
+                }
+            },
+            "required": [
+                "section"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "id",
+        "definitions"
+    ],
+    "additionalProperties": false
+}
