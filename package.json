@@ -2,6 +2,7 @@
     "name": "linterhub",
     "version": "1.0.0",
     "scripts": {
+        "www": "gulp",
         "format": "node .ci/schema.format.js",
         "schema-validate": "node .ci/schema.validate.js",
         "hub-validate": "node .ci/hub.validate.js"
@@ -9,9 +10,11 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url" : "https://github.com/repometric/linterhub.git"
+        "url": "https://github.com/repometric/linterhub.git"
     },
     "devDependencies": {
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
         "exit-code": "^1.0.2",
         "fs-finder": "^1.8.1",
         "wetzel": "0.0.5"
