@@ -7,7 +7,7 @@ If unsure about something, just do as best as you're able.
 ### Description
 `Make sure to add all the information needed to understand the issue. Please use preview mode before submitting.`
 
-> NOTE: If you want to add a new engine then please use [`add engine`](/new?template=engine.md) or [`add feature template`](/new?template=feature.md) for new features.
+> NOTE: If you want to add a new feature then please use [`add feature template`](/new?template=feature.md) .
 
 ### Expected behavior
 `What expected to happen`

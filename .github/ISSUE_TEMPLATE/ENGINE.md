@@ -1,6 +1,5 @@
 <!---
-Template : Request to add a new engine to the linterhub
-Title    : Add support for `enginename`
+Template: Request to add a new engine
 ---
 Please delete this text and fill in the template below.
 If unsure about something, just do as best as you're able.
