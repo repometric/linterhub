@@ -30,13 +30,6 @@ return gulp
     .pipe(gulp.dest(path.dest + '/schema'));
 });
 
-// Clean output
-gulp.task('clean', function () {
-    return del([
-      path.dest + '/**/*',
-    ]);
-});
-
 // The default task (called when you run `gulp` from cli)
 gulp.task('default',  [
   'static',
