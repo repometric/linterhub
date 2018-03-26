@@ -1,0 +1,58 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "alex",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/options"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--quiet": {
+                    "id": "args:--quiet",
+                    "type": "null",
+                    "description": "output only warnings and errors"
+                },
+                "--text": {
+                    "id": "args:--text",
+                    "type": "string",
+                    "description": "treat input as plain-text (not markdown)"
+                },
+                "--diff": {
+                    "type": "null",
+                    "description": "ignore unchanged lines (affects Travis only)"
+                },
+                "--why": {
+                    "type": "null",
+                    "description": "output sources (when available)"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "alex"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/options"
+                }
+            }
+        }
+    }
+}
