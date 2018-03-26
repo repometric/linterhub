@@ -8,6 +8,7 @@ install:
 script:
   - npm run www
   - cd www
+  - ls
 deploy:
   provider: pages
   skip_cleanup: true
@@ -15,3 +16,4 @@ deploy:
   on:
     branch: master
     target_branch: gh-pages
+  
