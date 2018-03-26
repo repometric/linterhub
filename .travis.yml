@@ -5,6 +5,8 @@ cache:
     - node_modules
 install:
   - npm install
+  - npm run schema-validate
+  - npm run engine-validate
 script:
   - npm run www
   - cd www

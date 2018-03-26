@@ -1,15 +1,12 @@
-const ec = require('exit-code');
+// Title: Reformat engine files
+// Usage: npm run engine-format
 const fs = require('fs');
-const path = require('path');
 const finder = require('fs-finder');
-const requiredFiles = ['args', 'deps', 'engine'];
-const folders = finder.from('hub').findDirectories();
-const bundle = {};
-const results = folders.map((folder) => {
-    const fc = (file) => fs.readFileSync(path.join(folder, file + '.json'));
-    bundle[path.dirname(folder)] = {};
-    requiredFiles.forEach((file) => {
-        bundle[path.dirname(folder)][file] = fc(file);
-    });
+const files = finder.from('engine').showSystemFiles().find('*.json');
+const results = files.map((fileName) => {
+    const content = fs.readFileSync(fileName).toString();
+    const json = JSON.parse(content);
+    const formatted = JSON.stringify(json, null, 4);
+    console.log(`Format: ${fileName}`);
+    fs.writeFileSync(fileName, formatted + '\n');
 });
-console.log(JSON.stringify(bundle));
