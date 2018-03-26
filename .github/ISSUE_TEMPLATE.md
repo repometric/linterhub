@@ -1,4 +1,4 @@
-<!---
+<!--- 
 Template : Request to fix incorrect bahaviour or mistake
 Title    : Any
 ---
@@ -8,7 +8,7 @@ If unsure about something, just do as best as you're able.
 ### Description
 `Make sure to add all the information needed to understand the issue. Please use preview mode before submitting.`
 
-> NOTE: If you want to add a new engine then please use [ENGINE_TEMPLATE](ENGINE_TEMPLATE.md) or [FEATURE_TEMPLATE](FEATURE_TEMPLATE.md) for new features.
+> NOTE: If you want to add a new engine then please use [ADD_ENGINE](ISSUE_TEMPLATE/ADD_ENGINE.md) or [ADD_FEATURE](ISSUE_TEMPLATE/ADD_FEATURE.md) for new features.
 
 ### Expected behavior
 `What expected to happen`
