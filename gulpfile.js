@@ -5,6 +5,7 @@ var gulp = require('gulp');
 // Common pathes
 var path = {
   docs: './docs/**/*.*',
+  engine: './engine/*.json',
   schema: './schema/*.json',
   dest: './www'
 };
@@ -24,14 +25,22 @@ gulp.task('static', function () {
 });
 
 // Copy static files
-gulp.task('schema', function () {
+gulp.task('engine', function () {
 return gulp
-    .src([path.schema], {base: 'schema'})
-    .pipe(gulp.dest(path.dest + '/schema'));
+    .src([path.engine], {base: 'engine'})
+    .pipe(gulp.dest(path.dest + '/engine'));
 });
+
+// Copy static files
+gulp.task('schema', function () {
+    return gulp
+        .src([path.schema], {base: 'schema'})
+        .pipe(gulp.dest(path.dest + '/schema'));
+    });
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default',  [
   'static',
+  'engine',
   'schema',
 ]);
