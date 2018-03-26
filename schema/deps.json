@@ -11,7 +11,7 @@
         "dependencies": {
             "type": "array",
             "description": "The engine dependencies",
-            "items": {  
+            "items": {
                 "$ref": "#/definitions/dependencies"
             }
         }

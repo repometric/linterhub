@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "scripts": {
         "www": "gulp",
-        "format": "node .ci/schema.format.js",
+        "schema-format": "node .ci/schema.format.js",
         "schema-validate": "node .ci/schema.validate.js",
-        "hub-validate": "node .ci/hub.validate.js"
+        "hub-validate": "node .ci/engine.validate.js"
     },
     "license": "MIT",
     "repository": {

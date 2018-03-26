@@ -1,6 +1,8 @@
+// Title: Reformat schema files
+// Usage: npm run schema-format
 const fs = require('fs');
 const finder = require('fs-finder');
-const files = finder.from('hub').showSystemFiles().find('*.json');
+const files = finder.from('schema').showSystemFiles().find('*.json');
 const results = files.map((fileName) => {
     const content = fs.readFileSync(fileName).toString();
     const json = JSON.parse(content);
