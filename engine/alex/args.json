@@ -47,10 +47,10 @@
                         "alex"
                     ]
                 },
-                "options": {
+                "arguments": {
                     "type": "object",
                     "description": "The engine configuration",
-                    "$ref": "#/definitions/options"
+                    "$ref": "#/definitions/arguments"
                 }
             }
         }
