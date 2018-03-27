@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "www": "gulp",
+        "license-import": "node .ci/license.import.js",
         "schema-format": "node .ci/schema.format.js",
         "schema-validate": "node .ci/schema.validate.js",
         "engine-bundle": "node .ci/engine.bundle.js",

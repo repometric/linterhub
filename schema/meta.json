@@ -66,16 +66,16 @@
         "license": {
             "type": "string",
             "description": "The engine license",
-            "enum": [
-                "Custom",
-                "Unknown",
-                "AGPL-3.0",
-                "Apache-2.0",
-                "BSD-3-Clause",
-                "MIT",
-                "ISC",
-                "BSD",
-                "LGPL-2.1"
+            "oneOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "custom"
+                    ]
+                },
+                {
+                    "$ref": "https://repometric.github.io/linterhub/schema/license.json"
+                }
             ]
         },
         "language": {

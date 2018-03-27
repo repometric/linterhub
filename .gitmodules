@@ -1,0 +1,3 @@
+[submodule "ext/spdx/license-list-data"]
+	path = ext/spdx/license-list-data
+	url = https://github.com/spdx/license-list-data.git
