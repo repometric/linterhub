@@ -4,8 +4,21 @@ const ec = require('exit-code');
 const fs = require('fs');
 const path = require('path');
 const finder = require('fs-finder');
+const validator = require('json-schema-remote');
 const requiredFiles = ['args.json', 'deps.json', 'meta.json'];
 const folders = finder.from('engine').findDirectories();
+const readSchema = (path) => JSON.parse(fs.readFileSync(path));
+const validate = (fileName) => {
+    const schema = readSchema(fileName);
+    validator.validate(schema, schema.$schema).then(() => {
+        console.log(`OK: ${fileName}`);
+    })
+    .catch((error) => {
+        console.log(`Fail: ${fileName}`);
+        console.log(error.errors);
+        process.exitCode = 1;
+    });
+};
 const results = folders.map((folder) => {
     const ex = (file) => fs.existsSync(path.join(folder, file));
     console.log(`Check: ${folder}`);
@@ -14,5 +27,8 @@ const results = folders.map((folder) => {
             console.log(`Missing: ${file}`);
             process.exitCode = 1;
         }
+        validate(path.join(folder, file));
     });
 });
+
+

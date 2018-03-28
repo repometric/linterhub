@@ -17,7 +17,7 @@
         }
     },
     "required": [
-        "requirements"
+        "dependencies"
     ],
     "additionalItems": false,
     "definitions": {
