@@ -3,6 +3,10 @@ node_js: stable
 cache:
   directories:
     - node_modules
+git:
+  submodules: false
+before_install:
+  - git submodule update --init
 install:
   - npm install
   - npm run schema-validate
