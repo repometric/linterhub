@@ -34,7 +34,14 @@
             "type": "array",
             "description": "Common file extensions parsed by engine, if empty then corresponding language extensions are used",
             "items": {
-                "type": "string"
+                "oneOf":[
+                    {
+                        "$ref": "#/definitions/extension"
+                    },
+                    {
+                        "$ref": "#/definitions/language"
+                    }
+                ]
             }
         },
         "configs": {
@@ -79,44 +86,24 @@
             ]
         },
         "language": {
+            "description": "The programming language",
             "type": "string",
-            "description": "The engine language or format",
-            "enum": [
-                "text",
-                "coffeescript",
-                "css",
-                "html",
-                "xml",
-                "javascript",
-                "json",
-                "jsx",
-                "sass",
-                "scss",
-                "typescript",
-                "c",
-                "cpp",
-                "csharp",
-                "groovy",
-                "php",
-                "ruby",
-                "fortran",
-                "plsql",
-                "scala",
-                "objectivec",
-                "perl",
-                "swift",
-                "python",
-                "java",
-                "pug",
-                "oocss",
-                "jedi",
-                "coffeekup",
-                "go",
-                "less",
-                "puppet",
-                "node.js",
-                "jade"
+            "oneOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "any"
+                    ]
+                },
+                {
+                    "$ref": "https://repometric.github.io/linterhub/schema/language.json"
+                }
             ]
+        },
+        "extension": {
+            "description": "The filename extension",
+            "type": "string",
+            "pattern": "^\\..*"
         }
     }
 }

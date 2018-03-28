@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "scripts": {
         "www": "gulp",
+        "language-import": "node .ci/language.import.js",
         "license-import": "node .ci/license.import.js",
         "schema-format": "node .ci/schema.format.js",
         "schema-validate": "node .ci/schema.validate.js",
@@ -20,6 +21,7 @@
         "gulp": "^3.9.1",
         "exit-code": "^1.0.2",
         "fs-finder": "^1.8.1",
+        "js-yaml": "^3.0.2",
         "wetzel": "0.0.5"
     }
 }
