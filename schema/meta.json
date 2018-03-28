@@ -1,4 +1,5 @@
 {
+    "id": "https://repometric.github.io/linterhub/schema/meta.json",
     "$schema": "http://json-schema.org/draft-04/schema",
     "title": "This schema describes the engine definition",
     "description": "The meta information of engine",

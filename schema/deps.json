@@ -1,4 +1,5 @@
 {
+    "id": "https://repometric.github.io/linterhub/schema/deps.json",
     "$schema": "http://json-schema.org/draft-04/schema",
     "title": "This schema describes the engine dependencies",
     "description": "The engine dependencies",
