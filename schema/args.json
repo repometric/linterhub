@@ -1,4 +1,5 @@
 {
+    "id": "https://repometric.github.io/linterhub/schema/args.json",
     "$schema": "http://json-schema.org/draft-04/schema",
     "title": "This schema describes the engine arguments schema",
     "description": "The engine arguments schema",

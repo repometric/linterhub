@@ -5,7 +5,6 @@
     "description": "The meta information of engine",
     "type": "object",
     "properties": {
-        "$schema": {},
         "id": {
             "type": "string",
             "description": "The engine id, used only when the engine name is not unique",

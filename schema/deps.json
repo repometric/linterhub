@@ -61,24 +61,10 @@
         "manager": {
             "type": "string",
             "description": "The package manager",
-            "enum": [
-                "os",
-                "url",
-                "platform",
-                "bower",
-                "cabal",
-                "cargo",
-                "composer",
-                "conda",
-                "gem",
-                "go",
-                "julia",
-                "luarocks",
-                "maven",
-                "npm",
-                "pip",
-                "yarn"
-            ]
+            "oneOf": [        
+            {
+                "$ref": "https://repometric.github.io/linterhub/schema/platform.json"
+            }]
         }
     }
 }
