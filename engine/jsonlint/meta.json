@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "jsonlint",
+    "description": "Validate JSON",
+    "url": "http://zaach.github.com/jsonlint/",
+    "languages": [
+        "json"
+    ],
+    "license": "MIT"
+}
