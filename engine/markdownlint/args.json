@@ -1,0 +1,68 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "markdownlint",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/options"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--ignore": {
+                    "id": "args:--ignore",
+                    "type": "string",
+                    "description": "files to ignore/exclude"
+                },
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "Path to config file of linter"
+                },
+                "--stdin": {
+                    "id": "linterhub:stdin",
+                    "type": "null",
+                    "description": "Read source from standard input"
+                },
+                "--output":{
+                    "id": "linterhub:filename",
+                    "type": "string",
+                    "description": "write issues to file (no console)"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                },
+                "--help":{
+                    "type":"null",
+                    "description": "output usage information"
+                },
+                "--version":{
+                    "type":"null",
+                    "description": "output the version number"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "markdownlint"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

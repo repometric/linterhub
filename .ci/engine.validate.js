@@ -15,7 +15,7 @@ const validate = (fileName) => {
     })
     .catch((error) => {
         console.log(`Fail: ${fileName}`);
-        console.log(error.errors);
+        console.log(error.errors || error);
         process.exitCode = 1;
     });
 };
@@ -23,6 +23,7 @@ validator.preload(readSchema('schema/args.json'));
 validator.preload(readSchema('schema/deps.json'));
 validator.preload(readSchema('schema/language.json'));
 validator.preload(readSchema('schema/license.json'));
+validator.preload(readSchema('schema/platform.json'));
 validator.preload(readSchema('schema/meta.json'));
 const results = folders.map((folder) => {
     const ex = (file) => fs.existsSync(path.join(folder, file));
