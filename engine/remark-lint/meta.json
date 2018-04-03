@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "remark-lint",
+    "description": "remark-lint is a markdown code style linter built on remark",
+    "url": "https://github.com/remarkjs/remark-lint/tree/master/packages/remark-lint",
+    "languages": [
+        "Markdown"
+    ],
+    "license": "MIT"
+}
