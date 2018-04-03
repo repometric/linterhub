@@ -1,0 +1,11 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "sass-lint",
+    "description": "Sass linter for both sass and scss syntax",
+    "url": "https://github.com/sasstools/sass-lint",
+    "languages": [
+        "Sass",
+        "SCSS"
+    ],
+    "license": "MIT"
+}
