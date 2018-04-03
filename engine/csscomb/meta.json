@@ -1,0 +1,13 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "csscomb",
+    "description": "CSS coding style formatter",
+    "url": "http://csscomb.com/",
+    "languages": [
+        "CSS"
+    ],
+    "configs": [
+        ".json"
+    ],
+    "license": "MIT"
+}
