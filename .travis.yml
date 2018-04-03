@@ -11,6 +11,7 @@ install:
   - npm install
   - npm run schema-validate
   - npm run engine-validate
+  - npm run engine-bundle
 script:
   - npm run www
   - cd www
