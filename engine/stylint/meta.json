@@ -1,0 +1,14 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "stylint",
+    "description": "A linter for stylus",
+    "url": "https://github.com/SimenB/stylint#readme",
+    "languages": [
+        "CSS" 
+    ],
+    "configs": [
+        ".configrc",
+        ".stylintrc"
+    ],
+    "license": "AGPL-3.0"
+}
