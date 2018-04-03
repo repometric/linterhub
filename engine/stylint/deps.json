@@ -1,0 +1,15 @@
+{ 
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json", 
+    "name": "stylint", 
+    "dependencies": [ 
+        [ 
+            { 
+                "manager": "npm", 
+                "package": "stylint", 
+                "version": "1.5.9", 
+                "engine": true 
+            } 
+        ] 
+    ] 
+} 
+
