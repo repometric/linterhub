@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "remark-lint",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "npm"
+            },
+            {
+                "manager": "npm",
+                "package": "remark-cli",
+                "version": "5.0.0",
+                "engine": true
+            }
+        ]
+    ]
+}
