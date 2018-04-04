@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "colorguard",
+    "description": "Keep a watchful eye on your css colors",
+    "url": "http://github.com/SlexAxton/css-colorguard",
+    "languages": [
+        "CSS"
+    ],
+    "license": "MIT"
+}
