@@ -1,0 +1,65 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "proselint",
+    "name": "proselint",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/options"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--json":{
+                    "id":"args:--json",
+                    "type":"null",
+                    "description": "Output as JSON."
+                },
+                "--time":{
+                    "id":"args:--time",
+                    "type":"null",
+                    "description": "Time on a corpus."
+                },
+                "--debug": {
+                    "id":"args:--debug",
+                    "type":"null",
+                    "description": "Give verbose output."
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                },
+                "--version": {
+                    "id:": "linterhub:version",
+                    "type": "null",
+                    "description": "Output the version number"
+                },
+                "--help": {
+                    "type": "null",
+                    "description": "Output usage information"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "proselint"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

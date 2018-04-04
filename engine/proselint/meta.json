@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "proselint",
+    "description": "Proselint, a linter for English prose.",
+    "url": "https://github.com/sasstools/sass-lint",
+    "languages": [
+        "Markdown"
+    ],
+    "license": "BSD-3-Clause"
+}
