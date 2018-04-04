@@ -1,0 +1,19 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "stylelint",
+    "description": "A mighty, modern CSS linter.",
+    "url": "https://stylelint.io",
+    "languages": [
+        "CSS",
+        "Less",
+        "SCSS"
+    ],
+    "configs": [
+        ".json",
+        ".yml",
+        ".js",
+        ".stylelintrc",
+        ".yaml"
+    ],
+    "license": "MIT"
+}
