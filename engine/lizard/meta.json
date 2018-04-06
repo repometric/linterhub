@@ -1,0 +1,23 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "lizard",
+    "description": "Lizard is an extensible Cyclomatic Complexity Analyzer for many imperative programming languages",
+    "url": "https://github.com/terryyin/lizard",
+    "languages": [
+        "Objective-C",
+        "C",
+        "C++",
+        "Java",
+        "C#",
+        "JavaScript",
+        "Swift",
+        "Python",
+        "Ruby",
+        "PHP",
+        "Scala",
+        "GDScript",
+        "TTCN-3"
+    ],
+    "agreement": "https://github.com/terryyin/lizard/blob/master/LICENSE.txt",
+    "license": "custom"
+}
