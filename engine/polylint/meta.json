@@ -1,0 +1,14 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "polylint",
+    "description": "Keeps your Polymer Elements clean and functional!",
+    "url": "https://github.com/PolymerLabs/polylint",
+    "languages": [
+        "HTML",
+        "JavaScript" 
+    ],
+    "configs": [
+        ".json"
+    ],
+    "license": "BSD-3-Clause"
+}
