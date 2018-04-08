@@ -1,0 +1,14 @@
+{
+    "id": "https://repometric.github.io/linterhub/schema/language.custom.json",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "languages" : [
+    {
+        "enum": [
+            "OOCSS"
+        ],
+        "extensions": [
+            ".css"
+        ]
+    }
+]
+}
