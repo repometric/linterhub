@@ -1,0 +1,17 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "eslint",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "npm"
+            },
+            {
+                "manager": "npm",
+                "package": "eslint",
+                "version": "4.19.1"
+            }
+        ]
+    ]
+}
