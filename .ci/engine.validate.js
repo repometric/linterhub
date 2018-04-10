@@ -22,6 +22,8 @@ const validate = (fileName) => {
 validator.preload(readSchema('schema/args.json'));
 validator.preload(readSchema('schema/deps.json'));
 validator.preload(readSchema('schema/language.json'));
+validator.preload(readSchema('schema/language.custom.json'));
+validator.preload(readSchema('schema/language.linguist.json'));
 validator.preload(readSchema('schema/license.json'));
 validator.preload(readSchema('schema/platform.json'));
 validator.preload(readSchema('schema/meta.json'));
