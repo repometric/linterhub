@@ -1,7 +1,6 @@
 {
     "id": "https://repometric.github.io/linterhub/schema/args.json",
     "$schema": "http://json-schema.org/draft-04/schema",
-    "name": "The engine name",
     "title": "This schema describes the engine arguments schema",
     "description": "The engine arguments schema",
     "type": "object",
@@ -10,6 +9,10 @@
         "$schema": {},
         "type": {},
         "allOf": {},
+        "name": {
+            "type": "string",
+            "description": "The engine name"
+        },
         "id": {
             "type": "string",
             "description": "The engine id"
