@@ -68,8 +68,8 @@
           "type":"null",
           "description":"do not exit with an error code when errors are due to server problems"
         },
-        "--preprocessor ":{
-          "id":"args:--preprocessor ",
+        "--preprocessor":{
+          "id":"args:--preprocessor",
           "type":"string",
           "description":"project preprocessor"
         },
