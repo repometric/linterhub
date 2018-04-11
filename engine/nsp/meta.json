@@ -1,0 +1,10 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+  "name": "nsp",
+  "description": "node security platform command-line tool",
+  "url": "https://github.com/nodesecurity/nsp",
+  "languages": [
+    "JavaScript"
+  ],
+  "license": "Apache-2.0"
+}
