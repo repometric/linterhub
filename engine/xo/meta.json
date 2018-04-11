@@ -1,0 +1,13 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "xo",
+    "description": "JavaScript happiness style linter",
+    "url": "https://github.com/sindresorhus/xo",
+    "languages": [
+        "JavaScript"
+    ],
+    "configs": [
+        ".json"
+    ],
+    "license": "MIT"
+}
