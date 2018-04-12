@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "plato",
+    "description": "JavaScript source code visualization, static analysis, and complexity tool",
+    "url": "http://github.com/es-analysis/plato",
+    "languages": [
+        "JavaScript"
+    ],
+    "license": "MIT"
+}

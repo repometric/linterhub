@@ -1,0 +1,81 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "plato",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--help": {
+                    "type": "null",
+                    "description": "Display help text"
+                },
+                "--quiet": {
+                    "id": "args:quiet",
+                    "type": "null",
+                    "description": "Reduce output to errors only"
+                },
+                "--exclude": {
+                    "id": "args:exclude",
+                    "type": "string",
+                    "description": "File exclusion regex"
+                },
+                "--dir": {
+                    "type": "string",
+                    "description": "The output directory"
+                },
+                "--recurse": {
+                    "id": "args:recurse",
+                    "type": "null",
+                    "description": "Recursively search directories"
+                },
+                "--title": {
+                    "type": "string",
+                    "description": "Title of the report"
+                },
+                "--date": {
+                    "type": "string",
+                    "description": "Time to use as the report date (seconds, > 9999999999 assumed to be ms)"
+                },
+                "--noempty": {
+                    "id": "args:noempty",
+                    "type": "null",
+                    "description": "Skips empty lines from line count"
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "Print the version"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "plato"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}
