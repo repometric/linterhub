@@ -1,0 +1,17 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "jslint",
+    "description": "The JavaScript Code Quality Tool",
+    "url": "http://jslint.com",
+    "languages": [
+        "JavaScript"
+    ],
+    "extensions": [
+        ".js"
+    ],
+    "configs": [
+        "jslint.conf",
+        ".jslint.conf"
+    ],
+    "license": "MIT"
+}

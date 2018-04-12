@@ -1,0 +1,216 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "jslint",
+    "name": "jslint",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "--json": {
+                    "type": "null",
+                    "description": "Use json as output format"
+                },
+                "-ass": {
+                    "id": "args:-ass",
+                    "type": "null",
+                    "description": "Tolerate assignment expressions"
+                },
+                "-bitwise": {
+                    "id": "args:-bitwise",
+                    "type": "null",
+                    "description": "Tolerate bitwise operators"
+                },
+                "-browser": {
+                    "id": "args:-browser",
+                    "type": "null",
+                    "description": "Assume a browser"
+                },
+                "-closure": {
+                    "id": "args:-closure",
+                    "type": "null",
+                    "description": "Tolerate Google Closure idioms"
+                },
+                "-continue": {
+                    "id": "args:-continue",
+                    "type": "null",
+                    "description": "Tolerate continue"
+                },
+                "-debug": {
+                    "id": "args:-debug",
+                    "type": "null",
+                    "description": "Tolerate debugger statements"
+                },
+                "-devel": {
+                    "id": "args:-devel",
+                    "type": "null",
+                    "description": "Assume console,alert, ..."
+                },
+                "-eqeq": {
+                    "id": "args:-eqeq",
+                    "type": "null",
+                    "description": "Tolerate == and !="
+                },
+                "-evil": {
+                    "id": "args:-evil",
+                    "type": "null",
+                    "description": "Tolerate eval"
+                },
+                "-forin": {
+                    "id": "args:-forin",
+                    "type": "null",
+                    "description": "Tolerate unfiltered for in"
+                },
+                "-indent": {
+                    "id": "args:-indent",
+                    "type": "number",
+                    "description": "Strict white space indentation"
+                },
+                "-maxerr": {
+                    "id": "args:-maxerr",
+                    "type": "number",
+                    "description": "Maximum number of errors"
+                },
+                "-maxlen": {
+                    "id": "args:-maxlen",
+                    "type": "number",
+                    "description": "Maximum line length"
+                },
+                "-newcap": {
+                    "id": "args:-newcap",
+                    "type": "null",
+                    "description": "Tolerate uncapitalized constructors"
+                },
+                "-node": {
+                    "id": "args:-node",
+                    "type": "null",
+                    "description": "Assume Node.js"
+                },
+                "-nomen": {
+                    "id": "args:-nomen",
+                    "type": "null",
+                    "description": "Tolerate dangling underscore in identifiers"
+                },
+                "-passfail": {
+                    "id": "args:-passfail",
+                    "type": "null",
+                    "description": "Stop on first error"
+                },
+                "-plusplus": {
+                    "id": "args:-plusplus",
+                    "type": "null",
+                    "description": "Tolerate ++ and --"
+                },
+                "-predef": {
+                    "id": "args:-predef",
+                    "type": "array",
+                    "description": "Declare additional predefined globals"
+                },
+                "-properties": {
+                    "id": "args:-properties",
+                    "type": "null",
+                    "description": "Require all property names to be declared with /properties/"
+                },
+                "-regexp": {
+                    "id": "args:-regexp",
+                    "type": "null",
+                    "description": "Tolerate . and [^...]. in /RegExp/"
+                },
+                "-rhino": {
+                    "id": "args:-rhino",
+                    "type": "null",
+                    "description": "Assume Rhino"
+                },
+                "-sloppy": {
+                    "id": "args:-sloppy",
+                    "type": "null",
+                    "description": "Tolerate missing 'use strict' pragma"
+                },
+                "-stupid": {
+                    "id": "args:-stupid",
+                    "type": "null",
+                    "description": "Tolerate stupidity (typically, use of sync functions)"
+                },
+                "-todo": {
+                    "id": "args:-todo",
+                    "type": "null",
+                    "description": "Tolerate TODO comments"
+                },
+                "-unparam": {
+                    "id": "args:-unparam",
+                    "type": "null",
+                    "description": "Tolerate unused parameters"
+                },
+                "-vars": {
+                    "id": "args:-vars",
+                    "type": "null",
+                    "description": "Tolerate many var statements per function"
+                },
+                "-white": {
+                    "id": "args:-white",
+                    "type": "null",
+                    "description": "Tolerate ++ and --"
+                },
+                "-anon": {
+                    "id": "args:-anon",
+                    "type": "null",
+                    "description": "Tolerate no space in anonymous function definition"
+                },
+                "-es5": {
+                    "id": "args:-es5",
+                    "type": "null",
+                    "description": "Tolerate ECMAScript 5 syntax"
+                },
+                "-undef": {
+                    "id": "args:-undef",
+                    "type": "null",
+                    "description": "Tolerate variables used before declaration"
+                },
+                "-on": {
+                    "id": "args:-on",
+                    "type": "null",
+                    "description": "Tolerate HTML event handlers"
+                },
+                "-windows": {
+                    "id": "args:-windows",
+                    "type": "null",
+                    "description": "Assume existence of Windows globals"
+                },
+                "-version": {
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "Show version of linter"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "jslint"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}
