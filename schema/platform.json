@@ -12,7 +12,8 @@
         "composer",
         "npm",
         "pip",
-        "yarn"
+        "yarn",
+        "gem"
     ],
     "additionalItems": false
 }
