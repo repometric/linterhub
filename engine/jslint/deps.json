@@ -1,0 +1,17 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "jslint",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "npm"
+            },
+            {
+                "manager": "npm",
+                "package": "jslint",
+                "version": "0.10.3"
+            }
+        ]
+    ]
+}
