@@ -41,7 +41,7 @@
                 "--env": {
                     "id": "args:--env",
                     "type": "string",
-                    "description": "       Use custom eslint environment"
+                    "description": "Use custom eslint environment"
                 },
                 "--parser ": {
                     "id": "args:--parser ",
