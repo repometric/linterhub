@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "standard",
+    "dependencies": [
+      [
+        {
+          "manager": "platform",
+          "package": "npm"
+        },
+        {
+          "manager": "npm",
+          "package": "standard",
+          "version": "11.0.1",
+          "engine": true
+        }
+      ]
+    ]
+  }
