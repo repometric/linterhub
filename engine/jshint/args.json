@@ -19,7 +19,7 @@
                     "description": "Custom configuration file"
                 },
                 "--reporter": {
-                    "id": "args:--reporter",
+                    "id": "--reporter",
                     "type": "string",
                     "description": "Custom reporter (<PATH>|jslint|checkstyle|unix)"
                 },
