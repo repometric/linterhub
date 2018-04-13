@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "htmlhint",
+    "description": "HTMLHint is a Static Code Analysis Tool for HTML",
+    "url": "http://htmlhint.com",
+    "languages": [
+        "HTML"
+    ],
+    "license": "MIT"
+}

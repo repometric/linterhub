@@ -1,0 +1,19 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "htmlhint",
+    
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "npm"
+            },
+            {
+                "manager": "npm",
+                "package": "htmlhint",
+                "version": "0.9.13",
+                "engine": true
+            }
+        ]
+    ]
+}
