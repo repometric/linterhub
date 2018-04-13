@@ -44,7 +44,7 @@
                     "description": "Use custom eslint environment"
                 },
                 "--parser ": {
-                    "id": "args:--parser ",
+                    "id": "args:--parser",
                     "type": "null",
                     "description": "Use custom js parser (e.g. babel-eslint)"
                 },
