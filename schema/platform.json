@@ -14,7 +14,8 @@
         "pip",
         "yarn",
         "gem",
-        "pacman"
+        "pacman",
+        "Chocolatey"
     ],
     "additionalItems": false
 }
