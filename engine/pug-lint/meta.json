@@ -1,0 +1,11 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+  "name": "pug-lint",
+    "description": "An unopinionated and configurable linter and style checker for Pug (formerly Jade)",
+    "url": "https://github.com/pugjs/pug-lint",
+    "areas": [],
+    "languages": [
+        "Jade"
+    ],
+  "license": "ISC"
+}
