@@ -1,0 +1,98 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name":"htmlhint",
+    "id":"htmlhint",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "stdin": {
+                    "id": "linterhub:stdin",
+                    "type": "null",
+                    "description": "Read the source from stdin"
+                },
+                "--nocolor": {
+                    "id":"--nocolor",
+                    "type": "null",
+                    "description": "Disable color"
+                },
+                "--ignore": {
+                    "id": "args:--ignore",
+                    "type": "string",
+                    "description": "Add pattern to exclude matches"
+                },
+                "--format": {
+                    "id":"--format",
+                    "type": "string",
+                    "description": "Output messages as custom format",
+                    "enum": [
+                        "checkstyle",
+                        "compact",
+                        "json",
+                        "junit",
+                        "markdown",
+                        "unix"
+                    ]
+                },
+                "--rulesdir": {
+                    "id": "args:--rulesdir",
+                    "type": "string",
+                    "description": "Load custom rules from file or folder"
+                },
+                "--rules": {
+                    "id": "args:--rules",
+                    "type": "string",
+                    "description": "Set all of the rules available"
+                },
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "Custom configuration file"
+                },
+                "--list": {
+                    "id":"--list",
+                    "type": "string",
+                    "description": "Show all of the rules available"
+                },
+                "--help": {
+                    "type": "string",
+                    "description": "Show help"
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "Show version"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "htmlhint"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}
