@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "scss-lint",
+    "description": "Configurable tool for writing clean and consistent SCSS",
+    "url": "https://github.com/brigade/scss-lint",
+    "languages": [
+      "SCSS"
+    ],
+    "license": "MIT"
+  }
