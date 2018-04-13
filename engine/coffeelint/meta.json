@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "coffeelint",
+    "description": "CoffeeLint is a style checker that helps keep CoffeeScript code clean and consistent",
+    "url": "http://www.coffeelint.org",
+    "languages": [
+        "CoffeeScript"
+    ],
+    "license": "MIT"
+}
