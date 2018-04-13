@@ -56,7 +56,7 @@
                     "description": "Custom configuration file"
                 },
                 "--list": {
-                    "id":"args:--list",
+                    "id":"--list",
                     "type": "string",
                     "description": "Show all of the rules available"
                 },
