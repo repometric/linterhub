@@ -20,6 +20,14 @@
                     "extensions": [
                         ".css"
                     ]
+                },
+                {
+                    "enum": [
+                        "Jade"
+                    ],
+                    "extensions": [
+                        ".jade"
+                    ]
                 }
             ]
         }
