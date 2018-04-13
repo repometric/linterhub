@@ -64,12 +64,12 @@
                     "description": "Extract inline scripts contained in HTML (auto|always|never, default to never)  (Default is never)"
                 },
                 "--jslint-reporter": {
-                    "id": "args:--jslint-reporter",
+                    "id": "--jslint-reporter",
                     "type": "null",
                     "description": "Use a jslint compatible reporter (DEPRECATED, use --reporter=jslint instead)"
                 },
                 "--checkstyle-reporter": {
-                    "id": "args:--checkstyle-reporter",
+                    "id": "--checkstyle-reporter",
                     "type": "null",
                     "description": " Use a CheckStyle compatible XML reporter (DEPRECATED, use --reporter=checkstyle instead)"
                 },
