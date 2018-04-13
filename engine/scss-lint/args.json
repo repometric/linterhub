@@ -25,12 +25,12 @@
             "default": "5"
           },
           "--format":{
-            "id":"args:--format",
+            "id":"--format",
             "type":"string",
             "description":"Output format"
           },
           "--out":{
-            "id":"args:--out",
+            "id":"--out",
             "type":"null",
             "description":"Write output to a file instead of STDOUT"
           },
@@ -55,12 +55,12 @@
             "description":"When linting a file passed via standard input, treat it as having the specified path to apply the appropriate configuration"
           },
           "--color":{
-            "id":"args:--color",
+            "id":"--color",
             "type":"null",
             "description":"Output in color"
           },
           "--no-color":{
-            "id":"args:--no-color",
+            "id":"--no-color",
             "type":"null",
             "description":"Not to output in color"
           },
@@ -70,7 +70,7 @@
             "description":"Show all available formatters"
           },
           "--show-linters":{
-            "id":"args:--show-linters",
+            "id":"--show-linters",
             "type":"null",
             "description":"Show all available linters"
           },
