@@ -13,7 +13,8 @@
         "npm",
         "pip",
         "yarn",
-        "gem"
+        "gem",
+        "pacman"
     ],
     "additionalItems": false
 }
