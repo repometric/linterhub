@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "standard",
+    "description": "JavaScript style guide, linter, and formatter",
+    "url": "https://standardjs.com/",
+    "languages": [
+      "JavaScript"
+    ],
+    "license": "MIT"
+  }
