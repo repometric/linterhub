@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "jshint",
+    "description": "JSHint is a community-driven tool that detects errors and potential problems in JavaScript code",
+    "url": "http://jshint.com",
+    "languages": [
+      "JavaScript"
+    ],
+    "license": "MIT"
+  }
