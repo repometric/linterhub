@@ -36,6 +36,14 @@
                     "extensions": [
                         ".jsp"
                     ]
+                },
+                {
+                    "enum": [
+                        "Apache Velocity"
+                    ],
+                    "extensions": [
+                        ".vm"
+                    ]
                 }
             ]
         }
