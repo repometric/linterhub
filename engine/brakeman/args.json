@@ -32,12 +32,12 @@
                 "description": "To specify the path for scanning"
               },
               "-q": {
-                "id": "args:-q",
+                "id": "-q",
                 "type": "null",
                 "description": "To suppress informational warnings and just output the report"
               },
               "-z": {
-                "id": "args:-z",
+                "id": "-z",
                 "type": "null",
                 "description": "To return an error code when warnings were found"
               },
@@ -101,7 +101,7 @@
                 "description": "To exclude certain checks"
               },
               "-d": {
-                "id": "args:-d",
+                "id": "-d",
                 "type": "null",
                 "description": "To see all kinds of debugging information"
               },
