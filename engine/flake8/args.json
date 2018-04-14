@@ -1,0 +1,215 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "flake8",
+    "name":"flake8",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--help": {
+                    "type": "null",
+                    "description": "output usage information.This can not be specified in config files."
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "output the version number.This can not be specified in config files."
+                },
+                "--verbose": {
+                    "id": "--verbose",
+                    "type": "null",
+                    "description": "Increase the verbosity of Flake8’s output. Each time you specify it, it will print more and more information.This can be specified in config files."
+                },
+                "--quiet": {
+                    "id": "--quiet",
+                    "type": "null",
+                    "description": "Decrease the verbosity of Flake8’s output. Each time you specify it, it will print less and less information.This can be specified in config files."
+                },
+                "--count": {
+                    "id": "--count",
+                    "type": "string",
+                    "description": "Print the total number of errors.This can be specified in config files."
+                },
+                "--diff": {
+                    "id": "--diff",
+                    "type": "null",
+                    "description": "Use the unified diff provided on standard in to only check the modified files and report errors included in the diff.This can not be specified in config files."
+                },
+                "--exclude=": {
+                    "id": "--exclude=",
+                    "type": "string",
+                    "description": "Provide a comma-separated list of glob patterns to exclude from checks. This can be specified in config files.",
+                    "default":".svn,CVS,.bzr,.hg,.git,__pycache__,.tox"
+                },
+                "--filename=": {
+                    "id": "--filename=",
+                    "type": "string",
+                    "description": "Provide a comma-separate list of glob patterns to include for checks.This can be specified in config files.",
+                    "default":"*.py"
+                },
+                "--stdin-display-name=": {
+                    "id": "linterhub:--stdin-display-name=",
+                    "type": "string",
+                    "description": "Provide the name to use to report warnings and errors from code on stdin. Instead of reporting an error as something like: stdin:82:73 E501 line too long. You can specify this option to have it report whatever value you want instead of stdin. This can not be specified in config files.",
+                    "default":"stdin"
+                },
+                "--format=": {
+                    "id": "--format=",
+                    "type": "string",
+                    "description": "Select the formatter used to display errors to the user. This can be specified in config files.",
+                    "enum":[
+                        "default",
+                        "pylint"
+                    ]
+                },
+                "--hang-closing": {
+                    "id": "args:--hang-closing",
+                    "type": "string",
+                    "description": "Toggle whether pycodestyle should enforce matching the indentation of the opening bracket’s line. When you specify this, it will prefer that you hang the closing bracket rather than match the indentation. This can be specified in config files."
+                },
+                "--ignore=": {
+                    "id": "args:--ignore",
+                    "type": "string",
+                    "description": "Specify a list of codes to ignore. The list is expected to be comma-separated, and does not need to specify an error code exactly. Since Flake8 3.0, this can be combined with --select. See --select for more information. For example, if you wish to only ignore W234, then you can specify that. But if you want to ignore all codes that start with W23 you need only specify W23 to ignore them. This also works for W2 and W (for example). This can be specified in config files.",
+                    "default":"E121,E123,E126,E226,E24,E704"
+                },
+                "--max-line-length=": {
+                    "id": "args:--max-line-length=",
+                    "type": "string",
+                    "description": "Set the maximum length that any line (with some exceptions) may be. Exceptions include lines that are either strings or comments which are entirely URLs. For example: # https://some-super-long-domain-name.com/with/some/very/long/path url = ('http://...') This can be specified in config files.",
+                    "default":"79"
+                },
+                "--select=": {
+                    "id": "--select=",
+                    "type": "string",
+                    "description": "Specify the list of error codes you wish Flake8 to report. Similarly to --ignore. You can specify a portion of an error code to get all that start with that string. For example, you can use E, E4, E43, and E431. This can be specified in config files.",
+                    "default":"E,F,W,C"
+                },
+                "--disable-noqa": {
+                    "id": "--disable-noqa",
+                    "type": "string",
+                    "description": "Report all errors, even if it is on the same line as a # NOQA comment. # NOQA can be used to silence messages on specific lines. Sometimes, users will want to see what errors are being silenced without editing the file. This option allows you to see all the warnings, errors, etc. reported. This can be specified in config files."
+                },
+                "--show-source": {
+                    "id": "--show-source",
+                    "type": "string",
+                    "description": "Print the source code generating the error/warning in question. This can be specified in config files."
+                },
+                "--statistics": {
+                    "id": "--statistics",
+                    "type": "string",
+                    "description": "Count the number of occurrences of each error/warning code and print a report. This can be specified in config files."
+                },
+                "--enable-extensions=": {
+                    "id": "args:--enable-extensions=",
+                    "type": "string",
+                    "description": "Enable off-by-default extensions. Plugins to Flake8 have the option of registering themselves as off-by-default. These plugins effectively add themselves to the default ignore list. This can be specified in config files."
+                },
+                "--exit-zero": {
+                    "id": "args:--exit-zero",
+                    "type": "string",
+                    "description": "Force Flake8 to use the exit status code 0 even if there are errors. By default Flake8 will exit with a non-zero integer if there are errors. This can not be specified in config files."
+                },
+                "--install-hook=": {
+                    "id": "--install-hook=",
+                    "type": "string",
+                    "description": "Install a hook for your version control system that is executed before or during commit. This can not be specified in config files.",
+                    "enum":[
+                        "git",
+                        "mercurial"
+                    ]
+                },
+                "--jobs=": {
+                    "id": "--jobs=",
+                    "type": "string",
+                    "description": "Specify the number of subprocesses that Flake8 will use to run checks in parallel. This option is ignored on Windows because multiprocessing does not support Windows across all supported versions of Python. The default behaviour will use the number of CPUs on your machine as reported by multiprocessing.cpu_count(). This can be specified in config files.",
+                    "default":"auto"
+                },
+                "--output-file=": {
+                    "id": "--ouput-file=",
+                    "type": "string",
+                    "description": "Redirect all output to the specified file. This can be specified in config files"
+                },
+                "--tee": {
+                    "id": "--tee",
+                    "type": "string",
+                    "description": "Also print output to stdout if output-file has been configured. This can be specified in config files."
+                },
+                "--append-config=": {
+                    "id": "linterhub:--append-config=",
+                    "type": "string",
+                    "description": "Provide extra config files to parse in after and in addition to the files that Flake8 found on its own. Since these files are the last ones read into the Configuration Parser, so it has the highest precedence if it provides an option specified in another config file. This can not be specified in config files."
+                }, 
+                "--config=": {
+                    "id": "linterhub:--config",
+                    "type": "string",
+                    "description": " Provide a path to a config file that will be the only config file read and used. This will cause Flake8 to ignore all other config files that exist. This can not be specified in config files."
+                },               
+                "--isolated": {
+                    "id": "--isolated",
+                    "type": "string",
+                    "description": "Ignore any config files and use Flake8 as if there were no config files found. This can not be specified in config files"
+                },
+                "--builtins=": {
+                    "id": "--builtins=",
+                    "type": "string",
+                    "description": "Provide a custom list of builtin functions, objects, names, etc. This allows you to let pyflakes know about builtins that it may not immediately recognize so it does not report warnings for using an undefined name. This is registered by the default PyFlakes plugin.This can be specified in config files."
+                },
+                "--doctests": {
+                    "id": "args:--doctests",
+                    "type": "string",
+                    "description": "Enable PyFlakes syntax checking of doctests in docstrings. This is registered by the default PyFlakes plugin.This can be specified in config files"
+                },
+                "--include-in-doctest=": {
+                    "id": "args:--include-in-doctest=",
+                    "type": "string",
+                    "description": "Specify which files are checked by PyFlakes for doctest syntax. This is registered by the default PyFlakes plugin. This can be specified in config files."
+                },
+                "--exclude-from-doctest=": {
+                    "id": "args:--exclude-from-doctest=",
+                    "type": "string",
+                    "description": "Specify which files are not to be checked by PyFlakes for doctest syntax. This is registered by the default PyFlakes plugin. This can be specified in config files."
+                },
+                "--benchmark": {
+                    "id": "--ouput-file=",
+                    "type": "string",
+                    "description": "Collect and print benchmarks for this run of Flake8. This aggregates the total number of: tokens physical lines logical lines files and the number of elapsed seconds. This can not be specified in config files."
+                },
+                "--bug-report": {
+                    "id": "--bug-report",
+                    "type": "string",
+                    "description": "Generate information necessary to file a complete bug report for Flake8. This will pretty-print a JSON blob that should be copied and pasted into a bug report for Flake8."
+                },
+                "--max-complexity=": {
+                    "id": "--max-complexity=",
+                    "type": "string",
+                    "description": "Set the maximum allowed McCabe complexity value for a block of code. This option is provided by the mccabe dependency’s Flake8 plugin This can be specified in config files."
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "flake8"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}
