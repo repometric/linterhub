@@ -1,0 +1,169 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id":"PMD",
+    "name":"PMD",
+    "type":"object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "--failOnViolation": {
+                    "id": "--failOnViolation",
+                    "type": "null",
+                    "description": "By default PMD exits with status 4 if violations are found. Disable this option with '-failOnViolation false' to exit with 0 instead and just write the report."
+                },
+                "-auxclasspath": {
+                    "id": "-auxclasspath",
+                    "type": "string",
+                    "description": "Specifies the classpath for libraries used by the source code. This is used by the type resolution. Alternatively, a 'file://' URL to a text file containing path elements on consecutive lines can be specified."
+                },
+                "-benchmark": {
+                    "id":"-benchmark",
+                    "type": "null",
+                    "description": "Benchmark mode - output a benchmark report upon completion; default to System.err. Default: false"
+                },
+                "-cache": {
+                    "id":"args:-cache",
+                    "type": "string",
+                    "description": "Specify the location of the cache file for incremental analysis."
+                },
+                "-dir": {
+                    "id": "linterhub:dir",
+                    "type": "null",
+                    "description": "Root directory for sources."
+                },
+                "-encoding": {
+                    "id": "args:-encoding",
+                    "type": "string",
+                    "description": "Specifies the character set encoding of the source code files PMD is reading (i.e., UTF-8). Default: UTF-8"
+                },
+                "-filelist": {
+                    "id":"-filelist",
+                    "type": "string",
+                    "description": "Path to a file containing a list of files to analyze."
+                },
+                "-format": {
+                    "id": "-format",
+                    "type": "null",
+                    "description": "Report format type. Default: text"
+                },
+                "-language": {
+                    "id": "args:-language",
+                    "type": "string",
+                    "description": "Specify a language PMD should use."
+                },
+                "-minimumpriority": {
+                    "id": "args:-minimumpriority",
+                    "type": "string",
+                    "description": "Rule priority threshold; rules with lower priority than configured here won't be used. Default is '5' which is the lowest priority. Default: Low",
+                    "enum":[
+                        "High", 
+                        "Medium High",
+                        "Medium",
+                        "Medium Low", 
+                        "Low"
+                        ]
+                },
+                "-norulesetcompatibility": {
+                    "id": "-norulesetcompatibility",
+                    "type": "null",
+                    "description":"Disable the ruleset compatibility filter. The filter is active by default and tries automatically 'fix' old ruleset files with old rule names/ Default: false"
+                },
+                "-reportfile": {
+                    "id": "-reportfile",
+                    "type": "string",
+                    "description":"Sends report output to a file; default to System.out."
+                },
+                "-property": {
+                    "id": "-property",
+                    "type": "string",
+                    "description":"{name}={value}: Define a property for the report format. Default: []"
+                },
+                "-rulesets": {
+                    "id": "args:-rulesets",
+                    "type": "string",
+                    "description":"Comma separated list of ruleset names to use."
+                },
+                "-shortnames": {
+                    "id": "-shortnames",
+                    "type": "null",
+                    "description":"Prints shortened filenames in the report. Default: false"
+                },
+                "-showsuppressed": {
+                    "id": "-showsuppressed",
+                    "type": "null",
+                    "description":"Report should show suppressed rule violations. Default: false"
+                },          
+                "-stress": {
+                    "id": "-stress",
+                    "type": "null",
+                    "description":"Performs a stress test. Default: false"
+                },
+                "-suppressmarker": {
+                    "id": "args:-suppressmarker",
+                    "type": "string",
+                    "description":"Specifies the string that marks the a line which PMD should ignore; default is NOPMD"
+                },
+                "-threads": {
+                    "id": "args:-threads",
+                    "type": "string",
+                    "description":"Sets the number of threads used by PMD. Default: 1",
+                    "default":"1"
+                },
+                "-uri": {
+                    "id": "-uri",
+                    "type": "string",
+                    "description":"Database URI for sources."
+                },
+                "-debug": {
+                    "id": "args:-debug",
+                    "type": "null",
+                    "description":"Debug mode."
+                },
+                "-verbose": {
+                    "id": "args:-verbose",
+                    "type": "null",
+                    "description":"Debug mode."
+                },
+                "--help": {
+                    "type": "string",
+                    "description": "Show help"
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "string",
+                    "description": "Show version"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "PMD"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}
