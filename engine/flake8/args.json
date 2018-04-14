@@ -155,8 +155,8 @@
                     "type": "string",
                     "description": "Ignore any config files and use Flake8 as if there were no config files found. This can not be specified in config files"
                 },
-                "args:--builtins": {
-                    "id": "--builtins",
+                "--builtins": {
+                    "id": "args:--builtins",
                     "type": "string",
                     "description": "Provide a custom list of builtin functions, objects, names, etc. This allows you to let pyflakes know about builtins that it may not immediately recognize so it does not report warnings for using an undefined name. This is registered by the default PyFlakes plugin.This can be specified in config files."
                 },
