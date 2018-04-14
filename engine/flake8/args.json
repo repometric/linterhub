@@ -112,7 +112,7 @@
                     "description": "Enable off-by-default extensions. Plugins to Flake8 have the option of registering themselves as off-by-default. These plugins effectively add themselves to the default ignore list. This can be specified in config files."
                 },
                 "--exit-zero": {
-                    "id": "args:--exit-zero",
+                    "id": "--exit-zero",
                     "type": "string",
                     "description": "Force Flake8 to use the exit status code 0 even if there are errors. By default Flake8 will exit with a non-zero integer if there are errors. This can not be specified in config files."
                 },
@@ -142,12 +142,11 @@
                     "description": "Also print output to stdout if output-file has been configured. This can be specified in config files."
                 },
                 "--append-config": {
-                    "id": "linterhub:--append-config",
                     "type": "string",
                     "description": "Provide extra config files to parse in after and in addition to the files that Flake8 found on its own. Since these files are the last ones read into the Configuration Parser, so it has the highest precedence if it provides an option specified in another config file. This can not be specified in config files."
                 }, 
                 "--config": {
-                    "id": "linterhub:--config",
+                    "id": "linterhub:config",
                     "type": "string",
                     "description": " Provide a path to a config file that will be the only config file read and used. This will cause Flake8 to ignore all other config files that exist. This can not be specified in config files."
                 },               
@@ -156,7 +155,7 @@
                     "type": "string",
                     "description": "Ignore any config files and use Flake8 as if there were no config files found. This can not be specified in config files"
                 },
-                "--builtins": {
+                "args:--builtins": {
                     "id": "--builtins",
                     "type": "string",
                     "description": "Provide a custom list of builtin functions, objects, names, etc. This allows you to let pyflakes know about builtins that it may not immediately recognize so it does not report warnings for using an undefined name. This is registered by the default PyFlakes plugin.This can be specified in config files."
@@ -187,7 +186,7 @@
                     "description": "Generate information necessary to file a complete bug report for Flake8. This will pretty-print a JSON blob that should be copied and pasted into a bug report for Flake8."
                 },
                 "--max-complexity": {
-                    "id": "--max-complexity",
+                    "id": "args:--max-complexity",
                     "type": "string",
                     "description": "Set the maximum allowed McCabe complexity value for a block of code. This option is provided by the mccabe dependency’s Flake8 plugin This can be specified in config files."
                 }
