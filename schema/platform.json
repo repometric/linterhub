@@ -15,7 +15,7 @@
         "yarn",
         "gem",
         "pacman",
-        "Chocolatey"
+        "chocolatey"
     ],
     "additionalItems": false
 }

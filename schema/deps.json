@@ -9,6 +9,10 @@
             "type": "string",
             "description": "The engine id"
         },
+        "name": {
+            "type": "string",
+            "description": "The engine name"
+        },
         "dependencies": {
             "type": "array",
             "description": "The engine dependencies",
@@ -18,6 +22,7 @@
         }
     },
     "required": [
+        "name",
         "dependencies"
     ],
     "additionalItems": false,
