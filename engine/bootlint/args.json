@@ -1,0 +1,55 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "bootlint",
+    "name":"bootlint",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--help": {
+                    "type": "null",
+                    "description": "output usage information"
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "output the version number"
+                },
+                "--disable": {
+                    "id": "args:--disable",
+                    "type": "string",
+                    "description": "Comma-separated list of disabled lint problem IDs"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "bootlint"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}
