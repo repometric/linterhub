@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "bandit",
+    "description": "Security oriented static analyser for python code",
+    "url": "https://wiki.openstack.org/wiki/Security/Projects/Bandit",
+    "languages": [
+        "Python"
+    ],
+    "license": "Apache-2.0"
+}
