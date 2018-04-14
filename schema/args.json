@@ -14,6 +14,10 @@
             "type": "string",
             "description": "The engine id"
         },
+        "name": {
+            "type": "string",
+            "description": "The engine id"
+        },
         "definitions": {
             "description": "The arguments definitions",
             "type": "object",
@@ -44,9 +48,11 @@
                     }
                 },
                 "arguments": {
-                    "type": "object",
+                    "type": "array",
                     "description": "The engine arguments",
-                    "$ref": "http://json-schema.org/draft-04/schema"
+                    "items": {
+                        "$ref": "#/definitions/argument"
+                    }
                 },
                 "section": {
                     "type": "object",
@@ -65,5 +71,50 @@
         "name",
         "definitions"
     ],
+    "definitions": {
+        "argument": {
+            "type": "object",
+            "description": "The engine argument",
+            "properties": {
+                "id": {
+                    "oneOf":[
+                        {
+                            "type": "string",
+                            "pattern": "^linterhub:[a-z]+$"
+                        },
+                        {
+                            "type": "string",
+                            "pattern": "^args:[-a-z]+$"
+                        },
+                        {
+                            "type": "string",
+                            "pattern": "^[-a-z]+$"
+                        }
+                    ],
+                    "description": "The name of the argument from the original tool"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "The value type of the argument. Example: null, number, string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Help text from the original tool for that argument, two sentences maximum"
+                },
+                "default": {
+                    "type": "object",
+                    "description": "The default value for that argument; if argument is readonly and default is not set then 0, \"\" or null is used"
+                },
+                "enum": {
+                    "type": "array",
+                    "description": "Need to use if the argument value has a limited list. Type of argument must be string"
+                }
+            },
+            "required":[
+                "type",
+                "description"
+            ]
+        }
+    },
     "additionalProperties": false
 }

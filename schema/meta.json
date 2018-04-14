@@ -64,8 +64,6 @@
     "required": [
         "name",
         "description",
-        "url",
-        "languages",
         "license"
     ],
     "additionalProperties": true,
