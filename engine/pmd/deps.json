@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "PMD",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "Chocolatey"
+            },
+            {
+                "manager": "Chocolatey",
+                "package": "PMD",
+                "version": "6.2.0",
+                "engine": true
+            }
+        ]
+    ]
+}

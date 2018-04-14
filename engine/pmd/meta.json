@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "PMD",
+    "description": "An extensible cross-language static code analyzer.",
+    "url": "https://pmd.github.io/",
+    "languages": [
+        "Apex",
+        "JavaScript",
+        "Java",
+        "JSP",
+        "PLSQL", 
+        "Maven POM",
+        "Apache Velocity",
+        "XML",
+        "XSLT"
+    ],
+    "license": "Apache-2.0"
+}
