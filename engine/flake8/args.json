@@ -86,13 +86,13 @@
                     "default":"79"
                 },
                 "--select": {
-                    "id": "--select",
+                    "id": "args:--select",
                     "type": "string",
                     "description": "Specify the list of error codes you wish Flake8 to report. Similarly to --ignore. You can specify a portion of an error code to get all that start with that string. For example, you can use E, E4, E43, and E431. This can be specified in config files.",
                     "default":"E,F,W,C"
                 },
                 "--disable-noqa": {
-                    "id": "--disable-noqa",
+                    "id": "args:--disable-noqa",
                     "type": "string",
                     "description": "Report all errors, even if it is on the same line as a # NOQA comment. # NOQA can be used to silence messages on specific lines. Sometimes, users will want to see what errors are being silenced without editing the file. This option allows you to see all the warnings, errors, etc. reported. This can be specified in config files."
                 },
