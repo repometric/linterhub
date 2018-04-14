@@ -5,16 +5,14 @@
     "url": "https://pmd.github.io/",
     "languages": [
         "Apex",
-        "ECMAScript",
+        "JavaScript",
         "Java",
         "JSP",
         "PLSQL", 
-        "pom",
-        "vf",
-        "vm",
-        "wsdl",
-        "xml",
-        "xsl"
+        "Maven POM",
+        "Apache Velocity",
+        "XML",
+        "XSLT"
     ],
-    "license": "MIT"
+    "license": "Apache-2.0"
 }
