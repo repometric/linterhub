@@ -28,6 +28,14 @@
                     "extensions": [
                         ".jade"
                     ]
+                },
+                {
+                    "enum": [
+                        "JSP"
+                    ],
+                    "extensions": [
+                        ".jsp"
+                    ]
                 }
             ]
         }
