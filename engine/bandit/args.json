@@ -49,12 +49,12 @@
                     "description": "comma-separated list of test IDs to skip"
                 },
                 "--level": {
-                    "id": "--level",
+                    "id": "args:--level",
                     "type": "string",
                     "description": "report only issues of a given severity level or higher (-l for LOW, -ll for MEDIUM, -lll for HIGH)"
                 },
                 "--confidence": {
-                    "id": "--confidence",
+                    "id": "args:--confidence",
                     "type": "string",
                     "description": "report only issues of a given confidence level or higher (-i for LOW, -ii for MEDIUM, -iii for HIGH)"
                 },
