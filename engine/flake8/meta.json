@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "flake8",
+    "description": "flake8 is a python tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code",
+    "url": "http://flake8.pycqa.org/",
+    "languages": [
+        "Python"
+    ],
+    "license": "MIT"
+}
