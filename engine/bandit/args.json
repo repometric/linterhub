@@ -1,0 +1,151 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id":"bandit",
+    "name":"bandit",
+    "type":"object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "--recursive": {
+                    "id": "args:--recursive",
+                    "type": "null",
+                    "description": "find and process files in subdirectories"
+                },
+                "--aggregate": {
+                    "id": "--aggregate",
+                    "type": "string",
+                    "description": "aggregate output by vulnerability (default) or by filename"
+                },
+                "--number": {
+                    "id":"--number",
+                    "type": "string",
+                    "description": "maximum number of code lines to output for each issue"
+                },
+                "--configfile": {
+                    "id":"linterhub:--configfile",
+                    "type": "string",
+                    "description": "optional config file to use for selecting plugins and overriding defaults"
+                },
+                "--profile": {
+                    "id": "args:--profile",
+                    "type": "null",
+                    "description": "profile to use (defaults to executing all tests)"
+                },
+                "--tests": {
+                    "id": "args:--tests",
+                    "type": "string",
+                    "description": "comma-separated list of test IDs to run"
+                },
+                "--skip": {
+                    "id":"args:--skip",
+                    "type": "string",
+                    "description": "comma-separated list of test IDs to skip"
+                },
+                "--level": {
+                    "id": "args:--level",
+                    "type": "string",
+                    "description": "report only issues of a given severity level or higher (-l for LOW, -ll for MEDIUM, -lll for HIGH)"
+                },
+                "--confidence": {
+                    "id": "args:--confidence",
+                    "type": "string",
+                    "description": "report only issues of a given confidence level or higher (-i for LOW, -ii for MEDIUM, -iii for HIGH)"
+                },
+                "--format": {
+                    "id": "--format",
+                    "type": "string",
+                    "description": "specify output format",
+                    "enum":[
+                        "csv",
+                        "custom",
+                        "html",
+                        "json",
+                        "screen",
+                        "txt",
+                        "xml",
+                        "yaml"
+                    ]   
+                },
+                "--msg-template": {
+                    "id": "--msg-template",
+                    "type": "string",
+                    "description":"specify output message template (only usable with --format custom), see CUSTOM FORMAT section for list of available values"
+                },
+                "--output": {
+                    "id": "--output",
+                    "type": "string",
+                    "description":"write report to filename"
+                },
+                "--verbose": {
+                    "id": "--verbose",
+                    "type": "null",
+                    "description":"output extra information like excluded and included files"
+                },
+                "--debug": {
+                    "id": "args:--debug",
+                    "type": "null",
+                    "description":"turn on debug mode"
+                },
+                "--ignore-nosec": {
+                    "id": "args:--ignore-nosec",
+                    "type": "null",
+                    "description":"do not skip lines with # nosec comments"
+                },
+                "--exclude": {
+                    "id": "args:--exclude",
+                    "type": "string",
+                    "description":"comma-separated list of paths to exclude from scan (note that these are in addition to the excluded paths provided in the config file)"
+                },          
+                "--baseline": {
+                    "id": "--baseline",
+                    "type": "string",
+                    "description":"path of a baseline report to compare against (only JSON-formatted files are accepted)"
+                },
+                "--ini": {
+                    "id": "--ini",
+                    "type": "string",
+                    "description":"path to a .bandit file that supplies command line arguments"
+                },
+                "--help": {
+                    "type": "string",
+                    "description": "Show help"
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "string",
+                    "description": "Show version"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "bandit"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}
