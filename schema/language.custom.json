@@ -66,6 +66,14 @@
                     "extensions": [
                         ".jedi"
                     ]
+                },
+                {
+                    "enum": [
+                        "TTCN-3"
+                    ],
+                    "extensions":[
+                        ".ttcn"
+                    ]
                 }
             ]
         }
