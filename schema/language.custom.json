@@ -58,6 +58,14 @@
                         ".php",
                         ".xml"
                     ]
+                },
+                {
+                    "enum": [
+                        "JEDI"
+                    ],
+                    "extensions": [
+                        ".jedi"
+                    ]
                 }
             ]
         }
