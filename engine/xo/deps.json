@@ -1,6 +1,7 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
     "id": "xo",
+    "name": "xo",
     "dependencies": [
         [
             {
