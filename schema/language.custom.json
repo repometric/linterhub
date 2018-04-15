@@ -44,6 +44,20 @@
                     "extensions": [
                         ".vm"
                     ]
+                },
+                {
+                    "enum": [
+                        "CoffeeCup"
+                    ],
+                    "extensions": [
+                        ".сtf",
+                        ".rsd",
+                        ".snp",
+                        ".css",
+                        ".html",
+                        ".php",
+                        ".xml"
+                    ]
                 }
             ]
         }
