@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json", 
+    "name": "radon",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "pip"
+            },
+            {
+                "manager": "pip",
+                "package": "radon",
+                "version": "2.2.0",
+                "engine": true
+            }
+        ]
+    ]
+}

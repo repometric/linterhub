@@ -1,0 +1,146 @@
+{ 
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
+    "name": "radon", 
+    "type": "object", 
+    "allOf": [ 
+        { 
+            "$ref": "#/definitions/arguments" 
+        } 
+    ], 
+    "definitions": { 
+        "arguments": { 
+            "type": "object", 
+            "properties": {
+                "--show-complexity":{
+                    "id": "args:--show-complexity",
+                    "type": "null",
+                    "description": "Whether or not to show the actual complexity score together with the A-F rank. Default to False."
+                },
+                "--average":{
+                    "id": "args:--average",
+                    "type": "null",
+                    "description": "If True, at the end of the analysis display the average complexity. Default to False."
+                },
+                "--order":{
+                    "id": "args:--order",
+                    "type": "string",
+                    "description": "The ordering function. Can be SCORE, LINES or ALPHA."
+                },
+                "--no-assert":{
+                    "id": "args:--no-assert",
+                    "type": "null",
+                    "description": "Do not count `assert` statements when computing complexity."
+                },
+                "--show-closures":{
+                    "id": "args:--show-closures",
+                    "type": "null",
+                    "description": "Add closures/inner classes to the output."
+                },
+                "--total-average":{
+                    "id": "args:--total-average",
+                    "type": "null",
+                    "description": "Like `-a, --average`, but it is not influenced by `min` and `max`. Every analyzed block is counted, no matter whether it is displayed or not."
+                },
+                "--xml":{
+                    "type": "null",
+                    "description": "Format results in XML (compatible with CCM)."
+                },
+                "--codeclimate":{
+                    "type": "null",
+                    "description": "Format results for Code Climate."
+                },
+                "--min":{
+                    "id": "args:--min",
+                    "type": "string",
+                    "description": "The minimum MI to display (default to A)."
+                },
+                "--max":{
+                    "id": "args:--max",
+                    "type": "string",
+                    "description": "If given, multiline strings are not counted as comments."
+                },
+                "--multi":{
+                    "id": "args:--multi",
+                    "type": "null",
+                    "description": "If given, multiline strings are not counted as comments."
+                },
+                "--show":{
+                    "id": "args:--show",
+                    "type": "null",
+                    "description": "If given, the actual MI value is shown in results."
+                },
+                "--sort":{
+                    "id": "args:--sort",
+                    "type": "null",
+                    "description": "If given, results are sorted in ascending order."
+                },
+                "--json":{
+                    "type": "null",
+                    "description": "Format results in JSON."
+                },
+                "--summary":{
+                    "id": "args:--summary",
+                    "type": "null",
+                    "description": "If given, at the end of the analysis display the summary of the gathered metrics. Default to False."
+                },
+                "--ignore":{
+                    "id": "args:--ignore",
+                    "type": "string",
+                    "description": "Ignore directories when their name matches one of these glob patterns: radon won't even descend into them. By default, hidden directories (starting with '.') are ignored."
+                },
+                "--exclude":{
+                    "id": "args:--exclude",
+                    "type": "string",
+                    "description": "Exclude files only when their path matches one of these glob patterns. Usually needs quoting at the command line."
+                },
+                "raw":{
+                    "id": "args:raw",
+                    "type": "null",
+                    "description": "Analyze the given Python modules and compute raw metrics."
+                },
+                "cc":{
+                    "id": "args:cc",
+                    "type": "null",
+                    "description": "Analyze the given Python modules and compute Cyclomatic Complexity (CC)."
+                },
+                "mi":{
+                    "id": "args:mi",
+                    "type": "null",
+                    "description": "Analyze the given Python modules and compute the Maintainability Index."
+                },
+                "":{
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "The path to a Python project to inspect."
+                },
+                "--version":{
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "Show program's version number and exit"
+                },
+                "--help":{
+                    "type": "null",
+                    "description": "Show help"
+                }
+            } 
+        }, 
+        "section": { 
+            "type": "object", 
+            "description": "The engine configuration section", 
+            "properties": { 
+                "name": { 
+                    "type": "string", 
+                    "description": "The engine name", 
+                    "enum": [ 
+                        "radon" 
+                    ] 
+                }, 
+                "arguments": { 
+                    "type": "object", 
+                    "description": "The engine configuration", 
+                    "$ref": "#/definitions/arguments" 
+                } 
+            } 
+        } 
+    } 
+} 

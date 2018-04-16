@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "radon",
+    "description": "Radon is a Python tool that computes various metrics from the source code.",
+    "url": "https://github.com/rubik/radon", 
+    "languages": [
+        "Python"
+    ],
+    "license": "MIT"
+}
