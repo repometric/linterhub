@@ -43,7 +43,7 @@
                 },
                 "--limit":{
                     "id": "args:--limit",
-                    "type": "int",
+                    "type": "number",
                     "description": "Stop reporting after N defects are found."
                 },
                 "--quiet":{
