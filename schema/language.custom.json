@@ -66,8 +66,6 @@
                     "extensions": [
                         ".jedi"
                     ]
-<<<<<<< HEAD
-=======
                 },
                 {
                     "enum": [
@@ -76,7 +74,6 @@
                     "extensions":[
                         ".ttcn"
                     ]
->>>>>>> 605f595e9b6e83a4fad0cfab702b85340e6c7c07
                 }
             ]
         }
