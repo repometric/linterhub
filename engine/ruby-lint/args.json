@@ -1,0 +1,71 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+  "id": "ruby-lint",
+  "name": "ruby-lint",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/arguments"
+    }
+  ],
+  "definitions": {
+    "arguments": {
+      "type": "object",
+      "description": "The engine command line arguments",
+      "properties": {
+        "--config":{
+          "id":"linterhub:config",
+          "type":"string",
+          "description":"path to config file"
+        },
+        "--levels":{
+          "id": "--levels",
+          "type": "string",
+          "description": "The reporting levels to enable"
+        },
+        "--presenter":{
+          "id":"args:--presenter",
+          "type":"null",
+          "description":"The presenter to use"
+        },
+        "--analysis":{
+          "id":"args:--analysis",
+          "type":"string",
+          "description":"The analysis classes to use"
+        },
+        "--benchmark":{
+          "id":"--benchmark",
+          "type":"null",
+          "description":"Enables benchmarking mode"
+        },
+        "--version": {
+          "id:": "linterhub:version",
+          "type": "null",
+          "description": "Output the version number"
+        },
+        "--help": {
+          "type": "null",
+          "description": "Output usage information"
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "description": "The engine configuration section",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The engine name",
+          "enum": [
+            "ruby-lint"
+          ]
+        },
+        "arguments": {
+          "type": "object",
+          "description": "The engine configuration",
+          "$ref": "#/definitions/arguments"
+        }
+      }
+    }
+  }
+}
