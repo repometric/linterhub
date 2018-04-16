@@ -19,12 +19,12 @@
                 "--set":{
                     "id": "args:--set",
                     "type": "string",
-                    "description": " Specify a rule set from configfile. Default is 'default'."
+                    "description": "Specify a rule set from configfile. Default is 'default'."
                 },
                 "--log": {
                     "id": "args:--log",
                     "type": "string",
-                    "description": " Save the report to the specified file."
+                    "description": "Save the report to the specified file."
                 },
                 "--xml":{
                     "id": "args:--xml",
@@ -70,7 +70,7 @@
                         "total+",
                         "total-"
                     ],
-                    "description": " Filter defects for the specified confidence levels. Default is 'normal+'" 
+                    "description": "Filter defects for the specified confidence levels. Default is 'normal+'" 
                 },
                 "--severity": {
                     "id": "args:--severity",
