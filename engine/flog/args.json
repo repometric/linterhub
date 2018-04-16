@@ -64,7 +64,7 @@
           "description":"Set the report cutoff threshold (def: 60%)."
         },
         "--verbose":{
-          "id":"--verbose ",
+          "id":"--verbose",
           "type":"null",
           "description":"Display progress during processing."
         },
