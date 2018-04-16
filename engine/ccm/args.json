@@ -1,0 +1,74 @@
+{ 
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
+    "name": "ccm", 
+    "type": "object", 
+    "allOf": [ 
+        { 
+            "$ref": "#/definitions/arguments" 
+        } 
+    ], 
+    "definitions": { 
+        "arguments": { 
+            "type": "object", 
+            "properties": { 
+                "--config-file": { 
+                    "id": "linterhub:config", 
+                    "type": "string", 
+                    "description": "Path to configuration file (see below for structure of file). Using a configuration file provides more control, such as analyzing multiple folders, excluding folders and files and controlling number of metrics outputted." 
+                }, 
+                "--xml":{
+                    "id": "args:--xml",
+                    "type": "string",
+                    "description": "Save the report, as XML, to the specified file."
+                },
+                "--ignorecases":{
+                    "id": "args:--ignorecases",
+                    "type": "string",
+                    "description": "Don't count each case in a switch as additional branch."
+                },
+                "--threshold":{
+                    "id": "args:--threshold",
+                    "type": "string",
+                    "description":"Don't report metrics less than the threshold."
+                },
+                "--nummetrics":{
+                    "id":"args:--nummetrics",
+                    "type": "number",
+                    "description": "Report only top <X> metrics (see numMetrics element in config file)."
+                },
+                "": { 
+                    "id": "linterhub:path", 
+                    "type": "string", 
+                    "description": "Provide a path to source code for analysis. This will be analyzed recursively and 30 worst metrics outputted." 
+                },
+                "--help": { 
+                    "type": "null", 
+                    "description": "Show help" 
+                },
+                "--v": { 
+                    "id": "linterhub:version", 
+                    "type": "null", 
+                    "description": "Add /v if you want ccm-version to be printed to console." 
+                }
+            } 
+        }, 
+        "section": { 
+            "type": "object", 
+            "description": "The engine configuration section", 
+            "properties": { 
+                "name": { 
+                    "type": "string", 
+                    "description": "The engine name", 
+                    "enum": [ 
+                        "ccm" 
+                    ] 
+                }, 
+                "arguments": { 
+                    "type": "object", 
+                    "description": "The engine configuration", 
+                    "$ref": "#/definitions/arguments" 
+                } 
+            } 
+        } 
+    } 
+} 
