@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json", 
+    "name": "checkstyle",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "java"
+            },
+            {
+                "manager": "url",
+                "package": "http://repo1.maven.org/maven2/com/puppycrawl/tools/checkstyle/8.9/checkstyle-8.9.jar",
+                "version": "8.9",
+                "engine": true
+            }
+        ]
+    ]
+}
