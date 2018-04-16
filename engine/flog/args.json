@@ -1,0 +1,111 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+  "id": "flog",
+  "name": "flog",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/arguments"
+    }
+  ],
+  "definitions": {
+    "arguments": {
+      "type": "object",
+      "description": "The engine command line arguments",
+      "properties": {
+        "--all":{
+          "id":"--all",
+          "type":"null",
+          "description":"Display all flog results, not top 60%."
+        },
+        "--blame":{
+          "id": "--blame",
+          "type": "null",
+          "description": "Include blame information for methods."
+        },
+        "--continue":{
+          "id":"args:--continue",
+          "type":"null",
+          "description":"Continue despite syntax errors."
+        },
+        "--details":{
+          "id":"--details",
+          "type":"null",
+          "description":"Show method details."
+        },
+        "--group":{
+          "id":"args:--group",
+          "type":"null",
+          "description":"Group and sort by class."
+        },
+        "--methods-only":{
+          "id":"args:--methods-only",
+          "type":"null",
+          "description":"Skip code outside of methods."
+        },
+        "--quiet":{
+          "id":"--quiet",
+          "type":"null",
+          "description":"Don't show parse errors."
+        },
+        "--extended":{
+          "id":"--extended",
+          "type":"string",
+          "description":"Put file:line on a separate line (for rubymine & friends)."
+        },
+        "--score":{
+          "id":"--score",
+          "type":"null",
+          "description":"Display total score only."
+        },
+        "--threshold":{
+          "id":"args:--threshold",
+          "type":"string",
+          "description":"Set the report cutoff threshold (def: 60%)."
+        },
+        "--verbose":{
+          "id":"--verbose",
+          "type":"null",
+          "description":"Display progress during processing."
+        },
+        "--18":{
+          "id":"args:--18",
+          "type":"null",
+          "description":"Use a ruby 1.8 parser."
+        },
+        "--19":{
+          "id":"args:--19",
+          "type":"null",
+          "description":"Use a ruby 1.9 parser."
+        },
+        "-I": {
+          "id:": "linterhub:I",
+          "type": "string",
+          "description": "Add to LOAD_PATH."
+        },
+        "--help": {
+          "type": "null",
+          "description": "Output usage information"
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "description": "The engine configuration section",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The engine name",
+          "enum": [
+            "flog"
+          ]
+        },
+        "arguments": {
+          "type": "object",
+          "description": "The engine configuration",
+          "$ref": "#/definitions/arguments"
+        }
+      }
+    }
+  }
+}
