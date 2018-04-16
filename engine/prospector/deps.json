@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json", 
+    "name": "prospector",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "pip"
+            },
+            {
+                "manager": "pip",
+                "package": "prospector",
+                "version": "0.12.7",
+                "engine": true
+            }
+        ]
+    ]
+}
