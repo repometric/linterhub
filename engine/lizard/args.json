@@ -1,0 +1,154 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "lizard",
+    "name": "lizard",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/options"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--languages":{
+                    "id": "args:--languages",
+                    "type":"string",
+                    "description": "List the programming languages you want to analyze. if left empty, it'll search for all languages it knows. `lizard -l cpp -l java`searches for C++ and Java code.",
+                    "enum": [
+                        "cpp",
+                        "java",
+                        "csharp",
+                        "javascript",
+                        "python",
+                        "objectivec",
+                        "swift",
+                        "scala",
+                        "GDScript",
+                        "ttcn",
+                        "ruby",
+                        "php"
+                    ]
+                },
+                "--verbose":{
+                    "id": "args:--verbose",
+                    "type":"null",
+                    "description": "Output in verbose mode (long function name)"
+                },
+                "--CCN":{
+                    "id": "args:--CCN",
+                    "type":"integer",
+                    "description": "Threshold for cyclomatic complexity number warning. The default value is 15. Functions with CCN bigger than it will generate warning"
+                },
+                "--input_file":{
+                    "id": "args:--input_file",
+                    "type":"string",
+                    "description": "get a list of filenames from the given file"
+                },
+                "--length":{
+                    "id": "args:--length",
+                    "type":"integer",
+                    "description": "Threshold for maximum function length warning. The default value is 1000. Functions length bigger than it will generate warning"
+                },
+                "--arguments":{
+                    "id": "args:--arguments",
+                    "type":"integer",
+                    "description": "Limit for number of parameters"
+                },
+                "--warnings_only":{
+                    "id": "args:--warnings_only",
+                    "type":"null",
+                    "description": "Show warnings only, using clang/gcc's warning format for printing warnings. http://clang.llvm.org/docs/UsersManual.html#cmdoption-fdiagnostics-format"
+                },
+                "--warning-msvs":{
+                    "id": "args:--warnings-msvs",
+                    "type":"null",
+                    "description": "Show warnings only, using Visual Studio's warning format for printing warnings. https://msdn.microsoft.com/en-us/library/yxkt8b26.aspx"
+                },
+                "--ignore_warnings":{
+                    "id": "args:--ignore_warnings",
+                    "type":"integer",
+                    "description": " If the number of warnings is equal or less than the number, the tool will exit normally; otherwise, it will generate error. If the number is negative, the tool exits normally regardless of the number of warnings. Useful in makefile for legacy code."
+                },
+                "--exclude":{
+                    "id": "args:--exclude",
+                    "type":"string",
+                    "description": "Exclude files that match this pattern. * matches everything, ? matches any single character, './folder/*' exclude everything in the folder recursively. Multiple patterns can be specified. Don't forget to add '' around the pattern."
+                },
+                "--working_threads":{
+                    "id": "args:--working_threads",
+                    "type":"integer",
+                    "description": "Number of working threads. The default value is 1. Using a bigger number can fully utilize the CPU and often faster."
+                },
+                "--xml":{
+                    "id": "args:--xml",
+                    "type":"null",
+                    "description": "Generate XML in cppncss style instead of the tabular output. Useful to generate report in Jenkins server"
+                },
+                "--csv":{
+                    "id": "args:--csv",
+                    "type":"null",
+                    "description": "Generate CSV output as a transform of the default output"
+                },
+                "--html":{
+                    "id": "args:--html",
+                    "type":"null",
+                    "description": "Output HTML report"
+                },
+                "--extension":{
+                    "id": "args:--extension",
+                    "type":"null",
+                    "description": "Calculate modified cyclomatic complexity number, which count a switch/case with multiple cases as one CCN."
+                },
+                "--sort":{
+                    "id": "args:--sort",
+                    "type":"string",
+                    "description": "Sort the warning with field. The field can be nloc, cyclomatic_complexity, token_count, p#arameter_count, etc. Or an customized field."
+                },
+                "--Threshold":{
+                    "id": "args:--Threshold",
+                    "type":"string",
+                    "description": "Set the limit for a field. The field can be nloc, cyclomatic_complexity, token_count, parameter_count, etc. Or an customized file. Lizard will report warning  if a function exceed the limit"
+                },
+                "--whitelist":{
+                    "id": "args:--",
+                    "type":"string",
+                    "description": "The path and file name to the whitelist file. It's './whitelizard.txt' by default. Find more information in README."
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                },
+                "--version": {
+                    "id:": "linterhub:version",
+                    "type": "null",
+                    "description": "Output the version number"
+                },
+                "--help": {
+                    "type": "null",
+                    "description": "Output usage information"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "lizard"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}
