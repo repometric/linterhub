@@ -1,0 +1,10 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+  "name": "flay",
+    "description": "Flay analyzes code for structural similarities. Differences in literal values, variable, class, method names, whitespace, programming style, braces vs do/end, etc are all ignored. Making this totally rad.",
+    "url": "https://github.com/seattlerb/flay",
+    "languages": [
+        "Ruby"
+    ],
+"license": "MIT"
+}
