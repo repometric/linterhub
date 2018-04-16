@@ -1,0 +1,18 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+  "name": "ruby-lint",
+  "dependencies": [
+      [
+          {
+              "manager": "platform",
+              "package": "gem"
+          },
+          {
+              "manager": "gem",
+              "package": "ruby-lint",
+              "version": "2.3.1",
+              "engine": true
+          }
+      ]
+  ]
+}

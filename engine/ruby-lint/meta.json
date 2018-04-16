@@ -1,0 +1,11 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+  "name": "ruby-lint",
+    "description": "ruby-lint is a static code analysis tool for Ruby.",
+    "url": "https://gitlab.com/yorickpeterse/ruby-lint",
+    "areas": [],
+    "languages": [
+        "Ruby"
+    ],
+"license": "MPL-2.0"
+}
