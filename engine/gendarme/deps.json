@@ -1,0 +1,36 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json", 
+    "name": "gendarme",
+    "dependencies": [
+        [
+            {
+                "manager": "os",
+                "package": "win"
+            },
+            {
+                "manager": "platform",
+                "package": ".net",
+                "version": "4.0"
+            },
+            {
+                "manager": "url",
+                "package": "https://github.com/downloads/spouliot/gendarme/gendarme-2.11-snapshot-20110305-win32-setup.zip",
+                "version": "2.11.0.0",
+                "engine": true
+            }
+        ],
+        [
+            {
+                "manager": "platform",
+                "package": "mono",
+                "version": "2.8"
+            },
+            {
+                "manager": "url",
+                "package": "https://github.com/downloads/spouliot/gendarme/gendarme-2.11-snapshot-20110305-win32-setup.zip",
+                "version": "2.11.0.0",
+                "engine": true
+            }
+        ]
+    ]
+}
