@@ -1,0 +1,139 @@
+{ 
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
+    "name": "pycodestyle", 
+    "type": "object", 
+    "allOf": [ 
+        { 
+            "$ref": "#/definitions/arguments" 
+        } 
+    ], 
+    "definitions": { 
+        "arguments": { 
+            "type": "object", 
+            "properties": { 
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "User config file location"
+                },
+                "--benchmark": {
+                    "id": "args:--benchmark",
+                    "type": "null",
+                    "description": "Measure processing speed"
+                },
+                "--diff": {
+                    "id": "linterhub:stdin",
+                    "type": "null",
+                    "description": "Report changes only within line number ranges in the unified diff received on STDIN"
+                },
+                "--format": {
+                    "id": "args:--format",
+                    "type": "string",
+                    "description": "Set the error format [default|pylint|<custom>]"
+                },
+                "--hang-closing": {
+                    "id": "args:--hang-closing",
+                    "type": "null",
+                    "description": "Hang closing bracket instead of matching indentation of opening bracket's line"
+                },
+                "--max-line-length": {
+                    "id": "args:--max-line-length",
+                    "type": "number",
+                    "description": "Set maximum allowed line length (default: 79)"
+                },
+                "--count": {
+                    "id": "args:--count",
+                    "type": "null",
+                    "description": "Print total number of errors and warnings to standard error and set exit code to 1 if total is not null"
+                },
+                "--statistics": {
+                    "id": "args:--statistics",
+                    "type": "null",
+                    "description": "count errors and warnings"
+                },
+                "--show-pep8": {
+                    "id": "args:--show-pep8",
+                    "type": "null",
+                    "description": "Show text of PEP 8 for each error (implies --first)"
+                },
+                "--ignore": {
+                    "id": "args:--ignore",
+                    "type": "string",
+                    "description": "Skip errors and warnings (e.g. E4,W) (default: E121,E123,E126,E226,E24,E704,W503)"
+                },
+                "--show-source": {
+                    "id": "args:--show-source",
+                    "type": "null",
+                    "description": "Show source code for each error"
+                },
+                "--select": {
+                    "id": "args:--select",
+                    "type": "string",
+                    "description": "Select errors and warnings (e.g. E,W6)"
+                },
+                "--filename": {
+                    "id": "linterhub:filename",
+                    "type": "string",
+                    "description": "When parsing directories, only check filenames matching these comma separated patterns (default: *.py)"
+                },
+                "--exclude": {
+                    "id": "args:--exclude",
+                    "type": "string",
+                    "description": "exclude files or directories which match these comma separated patterns (default: .svn,CVS,.bzr,.hg,.git,__pycache__,.tox)"
+                },
+                "--first": {
+                    "id": "args:--first",
+                    "type": "null",
+                    "description": "Show first occurrence of each error"
+                },
+                "--repeat": {
+                    "id": "args:--repeat",
+                    "type": "null",
+                    "description": "(obsolete) show all occurrences of the same error"
+                },
+                "--quiet": {
+                    "id": "args:--quiet",
+                    "type": "null",
+                    "description": "Report only file names, or nothing with -qq"
+                },
+                "--verbose": {
+                    "id": "args:--verbose",
+                    "type": "null",
+                    "description": "Print status messages, or debug with -vv"
+                },
+                "":{
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "The path to a Python project to inspect. Defaults to PWD if not specified. If multiple paths are specified, they must all be files (no directories)."
+                },
+                "--version":{
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "Show program's version number and exit"
+                },
+                "--help":{
+                    "type": "null",
+                    "description": "Show help"
+                }
+            } 
+        }, 
+        "section": { 
+            "type": "object", 
+            "description": "The engine configuration section", 
+            "properties": { 
+                "name": { 
+                    "type": "string", 
+                    "description": "The engine name", 
+                    "enum": [ 
+                        "pycodestyle" 
+                    ] 
+                }, 
+                "arguments": { 
+                    "type": "object", 
+                    "description": "The engine configuration", 
+                    "$ref": "#/definitions/arguments" 
+                } 
+            } 
+        } 
+    } 
+} 
