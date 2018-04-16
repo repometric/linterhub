@@ -1,0 +1,118 @@
+{ 
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
+    "name": "checkstyle", 
+    "type": "object", 
+    "allOf": [ 
+        { 
+            "$ref": "#/definitions/arguments" 
+        } 
+    ], 
+    "definitions": { 
+        "arguments": { 
+            "type": "object", 
+            "properties": { 
+                "--exclude-regexp": {
+                    "id": "args:--exclude-regexp",
+                    "type": "string",
+                    "description": "Regular expression of directory to exclude from CheckStyle"
+                },
+                "--tree-walker-threads-number": {
+                    "id": "args:--tree-walker-threads-number",
+                    "type": "number",
+                    "description": "(experimental) The number of TreeWalker threads (must be greater than zero)"
+                },
+                "--treeWithComments": {
+                    "id": "args:--treeWithComments",
+                    "type": "null",
+                    "description": "Print Abstract Syntax Tree(AST) of the file including comments"
+                },
+                "--tree": {
+                    "id": "args:--tree",
+                    "type": "null",
+                    "description": "Print Abstract Syntax Tree(AST) of the file"
+                },
+                "-p": {
+                    "id": "args:-p",
+                    "type": "string",
+                    "description": "Loads the properties file"
+                },
+                "-o": {
+                    "id": "linterhub:filename",
+                    "type": "string",
+                    "description": "Sets the output file. Defaults to stdout"
+                },
+                "--treeWithJavadoc": {
+                    "id": "args:--treeWithJavadoc",
+                    "type": "null",
+                    "description": "Print full Abstract Syntax Tree of the file"
+                },
+                "--javadocTree": {
+                    "id": "args:--javadocTree",
+                    "type": "null",
+                    "description": "Print Parse tree of the Javadoc comment"
+                },
+                "-f": {
+                    "type": "string",
+                    "description": "Sets the output format. (plain|xml). Defaults to plain"
+                },
+                "--executeIgnoredModules": {
+                    "id": "args:--executeIgnoredModules",
+                    "type": "null",
+                    "description": "Allows ignored modules to be run."
+                },
+                "--exclude": {
+                    "id": "args:--exclude",
+                    "type": "string",
+                    "description": "Directory path to exclude from CheckStyle"
+                },
+                "--debug": {
+                    "id": "args:--debug",
+                    "type": "null",
+                    "description": " Print all debug logging of CheckStyle utility"
+                },
+                "--checker-threads-number": {
+                    "id": "args:--checker-threads-number",
+                    "type": "number",
+                    "description": "(experimental) The number of Checker threads (must be greater than zero)"
+                },
+                "-c": {
+                    "id": "args:-c",
+                    "type": "string",
+                    "description": "Sets the check configuration file to use."
+                },
+                "": { 
+                    "id": "linterhub:path", 
+                    "type": "string", 
+                    "description": "Provide a path to source code for analysis. " 
+                },
+                "--help": { 
+                    "type": "null", 
+                    "description": "Show help" 
+                },
+                "--v": { 
+                    "id": "linterhub:version", 
+                    "type": "null", 
+                    "description": "Show version." 
+                }
+            } 
+        }, 
+        "section": { 
+            "type": "object", 
+            "description": "The engine configuration section", 
+            "properties": { 
+                "name": { 
+                    "type": "string", 
+                    "description": "The engine name", 
+                    "enum": [ 
+                        "checkstyle" 
+                    ] 
+                }, 
+                "arguments": { 
+                    "type": "object", 
+                    "description": "The engine configuration", 
+                    "$ref": "#/definitions/arguments" 
+                } 
+            } 
+        } 
+    } 
+} 
