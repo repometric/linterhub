@@ -1,0 +1,49 @@
+{ 
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
+    "name": "pyflakes", 
+    "type": "object", 
+    "allOf": [ 
+        { 
+            "$ref": "#/definitions/arguments" 
+        } 
+    ], 
+    "definitions": { 
+        "arguments": { 
+            "type": "object", 
+            "properties": { 
+                "":{
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "The path to a Python project to inspect."
+                },
+                "--version":{
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "Show program's version number and exit"
+                },
+                "--help":{
+                    "type": "null",
+                    "description": "Show help"
+                }
+            } 
+        }, 
+        "section": { 
+            "type": "object", 
+            "description": "The engine configuration section", 
+            "properties": { 
+                "name": { 
+                    "type": "string", 
+                    "description": "The engine name", 
+                    "enum": [ 
+                        "pyflakes" 
+                    ] 
+                }, 
+                "arguments": { 
+                    "type": "object", 
+                    "description": "The engine configuration", 
+                    "$ref": "#/definitions/arguments" 
+                } 
+            } 
+        } 
+    } 
+} 
