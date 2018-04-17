@@ -93,6 +93,11 @@
                     ],
                     "description": "The name of the argument from the original tool"
                 },
+                "hideName": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Hide orignal name. Used when engine have multiple arguments without prefix."
+                },
                 "type": {
                     "type": "string",
                     "description": "The value type of the argument. Example: null, number, string"
