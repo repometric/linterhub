@@ -69,7 +69,7 @@
                     "description":"Load plugins from the given Puppet module path."
                 },
                 "--fix ": {
-                    "id": "--fix ",
+                    "id": "--fix",
                     "type": "null",
                     "description":"Attempt to automatically fix errors"
                 },
