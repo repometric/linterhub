@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "puppet-lint",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "gem"
+            },
+            {
+                "manager": "gem",
+                "package": "puppet-lint",
+                "version": "2.3.5",
+                "engine": true
+            }
+        ]
+    ]
+}

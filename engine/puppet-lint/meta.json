@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "puppet-lint",
+    "description": "Puppet Lint tests Puppet code against the recommended Puppet language style guide. Puppet Lint validates only code style; it does not validate syntax.",
+    "url": "https://github.com/rodjek/puppet-lint",
+    "languages": [
+        "Ruby"
+    ],
+    "license": "MIT"
+}
