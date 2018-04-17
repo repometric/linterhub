@@ -18,10 +18,23 @@
                     "type": "string",
                     "description": "url"
                 },
-                "": {
-                    "id": "linterhub:noname",
+                "url_of_sitemap": {
+                    "id:": "args:url_of_sitemap",
                     "type": "string",
-                    "description": "list other arguments: html file to output results and number of max_pages, use space as a delimeter between them"
+                    "hideName": true,
+                    "description": "Url of sitemap"
+                },
+                "output_file": {
+                    "id:": "args:output_file",
+                    "type": "string",
+                    "hideName": true,
+                    "description": "Output file"
+                },
+                "max_pages": {
+                    "id": "args:maxpages",
+                    "type": "string",
+                    "hideName": true,
+                    "description": "Max pages"
                 }
             }
         },
