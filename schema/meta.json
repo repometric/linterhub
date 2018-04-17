@@ -16,7 +16,10 @@
         },
         "alias": {
             "type": "array",
-            "description": "List of engine aliases."
+            "description": "List of engine aliases.",
+            "items": {
+                "type": "string"
+            }
         },
         "description": {
             "type": "string",
