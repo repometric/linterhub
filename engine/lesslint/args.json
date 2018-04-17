@@ -1,0 +1,45 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "lesslint",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/options"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "-v": {
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "Show version"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "lesslint"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/options"
+                }
+            }
+        }
+    }
+}
