@@ -23,12 +23,12 @@
                     "description": "Makes the checker exit non-zero if any warnings are encountered (even if there are no errors).default: [unset; checker exits zero if only warnings are encountered]"
                 },
                 "--errors-only": {
-                    "id": "--errors-only",
+                    "id": "args:--errors-only",
                     "type": "null",
                     "description": "Specifies that only error-level messages and non-document-error messages are reported (so that warnings and info messages are not reported).default: [unset; all message reported, including warnings & info message"
                 },
                 "--exit-zero-always": {
-                    "id": "args:--exit-zero-always",
+                    "id": "--exit-zero-always",
                     "type": "null",
                     "description": "Makes the checker exit zero even if errors are reported for any documents. default: [unset; checker exits 1 if errors are reported for any documents] Makes the checker exit zero even if errors are reported for any documents. default: [unset; checker exits 1 if errors are reported for any documents]"
                 },
