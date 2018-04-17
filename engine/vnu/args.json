@@ -1,0 +1,157 @@
+{ 
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
+    "name": "vnu", 
+    "id":"vnu",
+    "type": "object", 
+    "allOf": [ 
+        { 
+            "$ref": "#/definitions/arguments" 
+        } 
+    ], 
+    "definitions": { 
+        "arguments": { 
+            "type": "object", 
+            "properties": { 
+                "--asciiquotes": {
+                    "id": "args:--asciiquotes",
+                    "type": "null",
+                    "description": "Specifies whether ASCII quotation marks are substituted for Unicode smart quotation marks in messages.default: [unset; Unicode smart quotation marks are used in messages]"
+                },
+                "--Werror": {
+                    "id": "args:--Werror",
+                    "type": "null",
+                    "description": "Makes the checker exit non-zero if any warnings are encountered (even if there are no errors).default: [unset; checker exits zero if only warnings are encountered]"
+                },
+                "--errors-only": {
+                    "id": "args:--errors-only",
+                    "type": "null",
+                    "description": "Specifies that only error-level messages and non-document-error messages are reported (so that warnings and info messages are not reported).default: [unset; all message reported, including warnings & info message"
+                },
+                "--exit-zero-always": {
+                    "id": "--exit-zero-always",
+                    "type": "null",
+                    "description": "Makes the checker exit zero even if errors are reported for any documents. default: [unset; checker exits 1 if errors are reported for any documents] Makes the checker exit zero even if errors are reported for any documents. default: [unset; checker exits 1 if errors are reported for any documents]"
+                },
+                "--filterfile": {
+                    "id": "args:--filterfile",
+                    "type": "string",
+                    "description": "Specifies a filename. Each line of the file contains either a regular  expression or starts with '#' to indicate the line is a comment. Any error message or warning message that matches a regular expression in the file is filtered out (dropped/suppressed). default: [unset; checker does no message filtering]"
+                },
+                "--filterpattern": {
+                    "id": "args:--filterpattern",
+                    "type": "string",
+                    "description": "Specifies a regular expression. Any error message or warning message that matches the regular expression is filtered out (dropped/suppressed). As with all other vnu.jar options, this option may only be specified once. So to filter multiple error messages or warning messages, you must provide a single regular expression that will match all the messages. The typical way to do that for regular expressions is to OR multiple patterns together using the '|' character.default: [unset; checker does no message filtering]"
+                },
+                "--format": {
+                    "id": "--format",
+                    "type": "string",
+                    "description": "Specifies the output format for reporting the results.",
+                    "default":"gnu",
+                    "enum":[
+                        "gnu",
+                        "xml",
+                        "json",
+                        "text"
+                    ]
+                },
+                "--skip-non-css": {
+                    "id": "args:--skip-non-css",
+                    "type": "null",
+                    "description": "Check documents as CSS but skip documents that don’t have *.css extensions. default: [unset; all documents found are checked]"
+                },
+                "--css": {
+                    "id":"args:--css",
+                    "type": "null",
+                    "description": "Force all documents to be checked as CSS, regardless of extension. default: [unset]"
+                },
+                "--skip-non-svg": {
+                    "id": "args:--skip-non-svg",
+                    "type": "null",
+                    "description": "Check documents as SVG but skip documents that don’t have *.svg extensions. default: [unset; all documents found are checked]"
+                },
+                "--svg": {
+                    "id": "args:--svg",
+                    "type": "null",
+                    "description": "Force all documents to be checked as SVG, regardless of extension. default: [unset]"
+                },
+                "--skip-non-html": {
+                    "id": "args:--skip-non-html",
+                    "type": "null",
+                    "description": "Skip documents that don’t have *.html, *.htm, *.xhtml, or *.xht extensions. default: [unset; all documents found are checked, regardless of extension]"
+                },
+                "--html": {
+                    "id": "args:--html",
+                    "type": "null",
+                    "description": "Forces any *.xhtml or *.xht documents to be parsed using the HTML parser. default: [unset; XML parser is used for *.xhtml and *.xht documents]"
+                },
+                "--also-check-css": {
+                    "id": "args:--also-check-css",
+                    "type": "null",
+                    "description": "Check CSS documents (in addition to checking HTML documents).default: [unset; no documents are checked as CSS]"
+                },
+                "--also-check-svg": {
+                    "id": "args:--also-check-svg",
+                    "type": "null",
+                    "description":"Check SVG documents (in addition to checking HTML documents). default: [unset; no documents are checked as SVG]"
+                },
+                "--user-agent": {
+                    "id": "args:--user-agent",
+                    "type": "string",
+                    "description": "Specifies the value of the User-Agent request header to send when checking HTTPS/HTTP URLs.default: 'Validator.nu/LV'"
+                },
+                "--no-langdetect": {
+                    "id": "args:--no-langdetect",
+                    "type": "null",
+                    "description": "Disables language detection, so that documents are not checked for missing or mislabeled html[lang] attributes. default: [unset; language detection & html[lang] checking are performed]"
+                },
+                "--no-stream": {
+                    "id": "args:--no-stream",
+                    "type": "null",
+                    "description": "Forces all documents to be be parsed in buffered mode instead of streaming mode (causes some parse errors to be treated as non-fatal document errors instead of as fatal document errors). default: [unset; non-streamable parse errors cause fatal document errors]"
+                },
+                "--verbose": {
+                    "id": "--verbose",
+                    "type": "null",
+                    "description": "Specifies 'verbose' output. (Currently this just means that the names of files being checked are written to stdout.)default: [unset; output is not verbose]"
+                },
+                "--version": { 
+                    "id": "linterhub:version", 
+                    "type": "null", 
+                    "description": "output version" 
+                },
+                "": { 
+                    "id": "linterhub:path", 
+                    "type": "string", 
+                    "description": "Provide a path to source code for analysis. " 
+                },
+                "--help": { 
+                    "type": "null", 
+                    "description": "Show help" 
+                },
+                "--v": { 
+                    "id": "linterhub:version", 
+                    "type": "null", 
+                    "description": "Show version." 
+                }
+            } 
+        }, 
+        "section": { 
+            "type": "object", 
+            "description": "The engine configuration section", 
+            "properties": { 
+                "name": { 
+                    "type": "string", 
+                    "description": "The engine name", 
+                    "enum": [ 
+                        "vnu" 
+                    ] 
+                }, 
+                "arguments": { 
+                    "type": "object", 
+                    "description": "The engine configuration", 
+                    "$ref": "#/definitions/arguments" 
+                } 
+            } 
+        } 
+    } 
+} 
