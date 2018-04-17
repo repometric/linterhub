@@ -1,0 +1,57 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+  "id": "jedi",
+  "name": "jedi",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/arguments"
+    }
+  ],
+  "definitions": {
+    "arguments": {
+      "type": "object",
+      "description": "The engine command line arguments",
+      "properties": {
+        "--php":{
+          "id":"args:--php",
+          "type":"null",
+          "description":"Compile to PHP"
+        },
+        "--js":{
+          "id":"args:--js",
+          "type":"null",
+          "description":"Compile to js"
+        },
+        "--watch":{
+          "id":"args:--watch",
+          "type":"null",
+          "description":"Automatically recompile when the contents of the specified file change"
+        },
+        "--port":{
+          "id":"args:--port",
+          "type":"string",
+          "description":"Compilation service port"
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "description": "The engine configuration section",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The engine name",
+          "enum": [
+            "jedi"
+          ]
+        },
+        "arguments": {
+          "type": "object",
+          "description": "The engine configuration",
+          "$ref": "#/definitions/arguments"
+        }
+      }
+    }
+  }
+}
