@@ -5,7 +5,7 @@
         [
             {
                 "manager": "platform",
-                "package": "Chocolatey"
+                "package": "chocolatey"
             },
             {
                 "manager": "chocolatey",

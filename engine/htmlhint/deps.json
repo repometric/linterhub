@@ -1,7 +1,6 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
     "name": "htmlhint",
-    
     "dependencies": [
         [
             {

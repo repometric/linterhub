@@ -4,7 +4,7 @@
     "type": "object",
     "allOf": [
         {
-            "$ref": "#/definitions/options"
+            "$ref": "#/definitions/arguments"
         }
     ],
     "definitions": {

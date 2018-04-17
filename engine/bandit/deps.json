@@ -4,7 +4,7 @@
     "dependencies": [
         [
             {
-                "manager": "pacman",
+                "manager": "platform",
                 "package": "pip"
             },
             {
@@ -14,5 +14,5 @@
                 "engine": true
             }
         ]
-]
+    ]
 }
