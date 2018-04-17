@@ -1,0 +1,18 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+  "name": "sitevalidator",
+  "dependencies": [
+      [
+          {
+              "manager": "platform",
+              "package": "gem"
+          },
+          {
+              "manager": "gem",
+              "package": "site_validator",
+              "version": "2.1.2",
+              "engine": true
+          }
+      ]
+  ]
+}
