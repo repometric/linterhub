@@ -1,0 +1,10 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+  "name": "sitevalidator",
+    "description": "site_validator is the free, open source version of the Site Validator app.",
+    "url": "https://github.com/sitevalidator/site_validator",
+    "languages": [
+        "Ruby"
+    ],
+"license": "MIT"
+}

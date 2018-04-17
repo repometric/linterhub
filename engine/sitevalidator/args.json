@@ -1,0 +1,60 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "sitevalidator",
+    "name": "sitevalidator",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "": {
+                    "id:": "linterhub:path",
+                    "type": "string",
+                    "description": "url"
+                },
+                "url_of_sitemap": {
+                    "id:": "args:url_of_sitemap",
+                    "type": "string",
+                    "hideName": true,
+                    "description": "Url of sitemap"
+                },
+                "output_file": {
+                    "id:": "args:output_file",
+                    "type": "string",
+                    "hideName": true,
+                    "description": "Output file"
+                },
+                "max_pages": {
+                    "id": "args:maxpages",
+                    "type": "string",
+                    "hideName": true,
+                    "description": "Max pages"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "sitevalidator"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}
