@@ -1,0 +1,134 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "codesniffer",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/options"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "-":{
+                    "id":"linterhub:noname",
+                    "type":"null",
+                    "description":"Check STDIN instead of local files and directories"
+                },
+                "-n":{
+                    "id":"-n",
+                    "type":"null",
+                    "description":"Do not print warnings (shortcut for --warning-severity=0)"
+                },
+                "-w":{
+                    "id":"-w",
+                    "type":"null",
+                    "description":"Print both warnings and errors (this is the default)"
+                },
+                "-l":{
+                    "id":"args:-l",
+                    "type":"null",
+                    "description":"Local directory only, no recursion"
+                },
+                "-e":{
+                    "id":"-e",
+                    "type":"null",
+                    "description":"Explain a standard by showing the sniffs it includes"
+                },
+                "-q":{
+                    "id":"-q",
+                    "type":"null",
+                    "description":"Quiet mode; disables progress and verbose output"
+                },
+                "-m":{
+                    "id":"args:-m",
+                    "type":"null",
+                    "description":"Stop error messages from being recorded (saves a lot of memory, but stops many reports from being used)"
+                },
+                "-v":{
+                    "id":"-v",
+                    "type":"null",
+                    "description":"Print processed files"
+                },
+                "-vv":{
+                    "id":"-vv",
+                    "type":"null",
+                    "description":"Print ruleset and token output"
+                },
+                "-vvv":{
+                    "id":"-vvv",
+                    "type":"null",
+                    "description":"Print sniff processing information"
+                },
+                "-i":{
+                    "id":"-i",
+                    "type":"null",
+                    "description":"Show a list of installed coding standards"
+                },
+                "-d":{
+                    "id":"-d",
+                    "type":"string",
+                    "description":"Set the [key] php.ini value to [value] or [true] if value is omitted"
+                },
+                "--colors":{
+                    "id":"--colors",
+                    "type":"null",
+                    "description": "Use colors in output"
+                },
+                "--no-colors":{
+                    "id":"--no-colors",
+                    "type":"null",
+                    "description":"Do not use colors in output (this is the default)"
+                },
+                "--cache":{
+                    "id":"--cache",
+                    "type":"null",
+                    "description":"Cache results between runs"
+                },
+                "--no-cache":{
+                    "id":"--no-cache",
+                    "type":"null",
+                    "description":"Do not cache results between runs (this is the default)"
+                },
+                "--ignore-annotations":{
+                    "id":"--ignore-annotations",
+                    "type":"null",
+                    "description":"Ignore all phpcs: annotations in code comments"
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "Show version"
+                },
+                "--help": {
+                    "type": "null",
+                    "description": "output help message"
+                },
+                "":{
+                    "id":"linterhub:path",
+                    "type":"string",
+                    "description":"path to files for analysys"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "codesniffer"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/options"
+                }
+            }
+        }
+    }
+}
