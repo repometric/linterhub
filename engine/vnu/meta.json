@@ -1,0 +1,12 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "vnu",
+    "description": "The Nu Html Checker (v.Nu) is the backend of checker.html5.org, html5.validator.nu, and validator.w3.org/nu",
+    "url": "https://github.com/validator/validator", 
+    "languages": [
+        "SVG",
+        "HTML",
+        "CSS"
+    ],
+    "license": "MIT"
+}
