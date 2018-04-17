@@ -1,6 +1,9 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
     "name": "PMD",
+    "alias":[
+        "cpd"
+    ],
     "description": "An extensible cross-language static code analyzer.",
     "url": "https://pmd.github.io/",
     "languages": [
