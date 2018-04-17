@@ -1,0 +1,87 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "findbugs",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/options"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "-conserveSpace": {
+                    "id": "args:-conserveSpace",
+                    "type": "null",
+                    "description": "Same as -effort:min (for backward compatibility)"
+                },
+                "-workHard": {
+                    "id": "args:-workHard",
+                    "type": "null",
+                    "description": "Ensure analysis effort is at least 'default'"
+                },
+                "-adjustExperimental": {
+                    "id": "args:-adjustExperimental",
+                    "type": "null",
+                    "description": "Lower priority of experimental Bug Patterns"
+                },
+                "-pluginList": {
+                    "id": "args:-pluginList",
+                    "type": "string",
+                    "description": "Specify list of plugin Jar files to load"
+                },
+                "-effort": {
+                    "id": "args:-effort",
+                    "type": "string",
+                    "enum": [
+                        "min",
+                        "less",
+                        "default",
+                        "more",
+                        "max"
+                    ],
+                    "description": "Set analysis effort level"
+                },
+                "--nodock": {
+                    "id": "args:--nodock",
+                    "type": "null",
+                    "description": "Disable docking"
+                },
+                "-look": {
+                    "id": "args:-look",
+                    "type": "string",
+                    "enum":[
+                        "plastic",
+                        "gtk",
+                        "native"
+                    ],
+                    "description": "Set UI look and feel"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "findbugs"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/options"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "findbugs",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "java"
+            },
+            {
+                "manager": "url",
+                "package": "http://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs/3.1.1/spotbugs-3.1.1.zip",
+                "version": "3.1.1",
+                "engine": true
+            }
+        ]
+    ]
+}
