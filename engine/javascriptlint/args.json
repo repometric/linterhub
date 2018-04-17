@@ -1,0 +1,50 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "javascriptlint",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/options"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "-stdin": {
+                    "id": "linterhub:stdin",
+                    "type": "null",
+                    "description": "Use stdin"
+                },
+                "-conf": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "Path to config"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "javascriptlint"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/options"
+                }
+            }
+        }
+    }
+}
