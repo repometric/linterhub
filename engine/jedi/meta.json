@@ -1,0 +1,13 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+  "name": "jedi",
+    "description": "jedi  a language for Web development",
+    "url": "http://github.com/baixing/jedi",
+    "areas": [],
+    "languages": [
+        "Pug",
+        "JEDI",
+        "CoffeeCup"
+    ],
+"license": "Apache-2.0"
+}
