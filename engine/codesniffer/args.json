@@ -140,37 +140,37 @@
                     "description":"A path to strip from the front of file paths inside reports"
                 },
                 "--bootstrap":{
-                    "id":"--bootstrap",
+                    "id":"args:--bootstrap",
                     "type":"string",
                     "description":"A comma separated list of files to run before processing begins"
                 },
                 "--severity":{
-                    "id":"--severity",
+                    "id":"args:--severity",
                     "type":"string",
                     "description":"The minimum severity required to display an error or warning"
                 },
                 "--error-severity":{
-                    "id":"--error-severity",
+                    "id":"args:--error-severity",
                     "type":"string",
                     "description":"The minimum severity required to display an error or warning"
                 },
                 "--warning-severity":{
-                    "id":"--warning-severity",
+                    "id":"args:--warning-severity",
                     "type":"string",
                     "description":"The minimum severity required to display an error or warning"
                 },
                 "--runtime-set":{
-                    "id":"--runtime-set",
+                    "id":"args:--runtime-set",
                     "type":"string",
                     "description":"set key value"
                 },
                 "--config-set":{
-                    "id":"--config-set",
+                    "id":"args:--config-set",
                     "type":"string",
                     "description":"set key value"
                 },
                 "--config-delete":{
-                    "id":"--config-delete",
+                    "id":"args:--config-delete",
                     "type":"string",
                     "description":"key to delete"
                 },
@@ -185,22 +185,22 @@
                     "description":"The name or path of the coding standard to use"
                 },
                 "--sniffs":{
-                    "id":"--sniffs",
+                    "id":"args:--sniffs",
                     "type":"string",
                     "description":"A comma separated list of sniff codes to include or exclude from checking (all sniffs must be part of the specified standard)"
                 },
                 "--exclude":{
-                    "id":"--exclude",
+                    "id":"args:--exclude",
                     "type":"string",
                     "description":"A comma separated list of sniff codes to include or exclude from checking (all sniffs must be part of the specified standard)"
                 },
                 "--encoding":{
-                    "id":"--encoding",
+                    "id":"args:--encoding",
                     "type":"string",
                     "description":"The encoding of the files being checked (default is utf-8)"
                 },
                 "--processes":{
-                    "id":"--processes",
+                    "id":"args:--processes",
                     "type":"number",
                     "description":"How many files should be checked simultaneously (default is 1)",
                     "default":"1"
@@ -211,12 +211,12 @@
                     "description":"Uses either the 'HTML', 'Markdown' or 'Text' generator (forces documentation generation instead of checking)"
                 },
                 "--extensions":{
-                    "id":"--extensions",
+                    "id":"args:--extensions",
                     "type":"string",
                     "description":"A comma separated list of file extensions to check (extension filtering only valid when checking a directory) The type of the file can be specified using: ext/type e.g., module/php,es/js"
                 },
                 "--ignore":{
-                    "id":"--ignore",
+                    "id":"args:--ignore",
                     "type":"string",
                     "description":"A comma separated list of patterns to ignore files and directories"
                 },
