@@ -5,6 +5,7 @@
         "build": "gulp",
         "format": "npm run schema-format && npm run engine-format",
         "validate": "npm run schema-validate && npm run engine-validate",
+        "bundle": "npm run engine-bundle",
         "git-changed": "git diff --exit-code || true",
         "language-import": "node script/js/language.import.js",
         "license-import": "node script/js/license.import.js",
