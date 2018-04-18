@@ -47,7 +47,7 @@
           "id:": "linterhub:path",
           "type": "string",
           "description": "path to code for analysys"
-      },
+      }
       }
     },
     "section": {
