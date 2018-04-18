@@ -2,14 +2,14 @@
     "name": "linterhub",
     "version": "1.0.0",
     "scripts": {
-        "www": "gulp",
-        "language-import": "node .ci/language.import.js",
-        "license-import": "node .ci/license.import.js",
-        "schema-format": "node .ci/schema.format.js",
-        "schema-validate": "node .ci/schema.validate.js",
-        "engine-bundle": "node .ci/engine.bundle.js",
-        "engine-format": "node .ci/engine.format.js",
-        "engine-validate": "node .ci/engine.validate.js"
+        "build": "gulp",
+        "language-import": "node script/js/language.import.js",
+        "license-import": "node script/js/license.import.js",
+        "schema-format": "node script/js/schema.format.js",
+        "schema-validate": "node script/js/schema.validate.js",
+        "engine-bundle": "node script/js/engine.bundle.js",
+        "engine-format": "node script/js/engine.format.js",
+        "engine-validate": "node script/js/engine.validate.js"
     },
     "license": "MIT",
     "repository": {

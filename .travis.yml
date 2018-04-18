@@ -13,13 +13,13 @@ install:
   - npm run engine-validate
   - npm run engine-bundle
 script:
-  - npm run www
-  - cd www
+  - npm run build
+  - cd build
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  local-dir: www
+  local-dir: build
   on:
     branch: master
     target_branch: gh-pages
