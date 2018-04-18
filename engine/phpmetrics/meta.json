@@ -1,0 +1,11 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+  "name": "phpmetrics",
+    "description": "PhpMetrics provides metrics about PHP project and classes, with beautiful and readable HTML report.",
+    "url": "https://github.com/phpmetrics/PhpMetrics",
+    "areas": [],
+    "languages": [
+        "PHP"
+    ],
+"license": "MIT"
+}

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+  "id": "phpmetrics",
+  "name": "phpmetrics",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/arguments"
+    }
+  ],
+  "definitions": {
+    "arguments": {
+      "type": "object",
+      "description": "The engine command line arguments",
+      "properties": {
+        "--exclude":{
+          "id":"args:--exclude",
+          "type":"string",
+          "description":"List of directories to exclude, separated by a comma (,)."
+        },
+        "--extensions":{
+          "id":"args:--extensions",
+          "type":"string",
+          "description":"List of extensions to parse, separated by a comma (,)"
+        },
+        "--report-html":{
+          "id":"--report-html",
+          "type":"string",
+          "description":"Folder where report HTML will be generated"
+        },
+        "--report-csv":{
+          "id":"--report-csv",
+          "type":"string",
+          "description":"File where report CSV will be generated"
+        },
+        "--report-json":{
+          "id":"--report-json",
+          "type":"string",
+          "description":"File where report Json will be generated"
+        },
+        "--report-violations":{
+          "id":"--report-violations",
+          "type":"string",
+          "description":"File where XML violations report will be generated"
+        },
+        "--git":{
+          "id":"args:--git",
+          "type":"string",
+          "description":"Perform analyses based on Git History (default binary path: 'git')",
+          "default":"git"
+        },
+        "--junit":{
+          "id":"args:--junit",
+          "type":"string",
+          "description":"[=</path/to/junit.xml>] Evaluates metrics according to JUnit logs"
+        },
+        "--quiet":{
+          "id":"--quiet",
+          "type":"null",
+          "description":"Quiet mode"
+        },
+        "--version":{
+          "id":"linterhub:version",
+          "type":"null",
+          "description":"Display current version"
+        },
+        "": {
+          "id:": "linterhub:path",
+          "type": "string",
+          "description": "path to code for analysys"
+      }
+      }
+    },
+    "section": {
+      "type": "object",
+      "description": "The engine configuration section",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The engine name",
+          "enum": [
+            "phpmetrics"
+          ]
+        },
+        "arguments": {
+          "type": "object",
+          "description": "The engine configuration",
+          "$ref": "#/definitions/arguments"
+        }
+      }
+    }
+  }
+}
