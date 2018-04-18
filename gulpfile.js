@@ -7,7 +7,7 @@ var path = {
   docs: './docs/**/*.*',
   engine: './engine/*.json',
   schema: './schema/*.json',
-  dest: './www'
+  dest: './build'
 };
 
 // Clean output
