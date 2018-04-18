@@ -82,7 +82,7 @@
                     "description": "Do not print semicolons, except at the beginning of lines which may need them."
                 },
                 "--single-quote ": {
-                    "id": "args:--single-quote ",
+                    "id": "args:--single-quote",
                     "type": "null",
                     "description": "Use single quotes instead of double quotes. Defaults to false."
                 },
@@ -172,7 +172,7 @@
                     "description": "Do not colorize error messages."
                 },
                 "--insert-pragma ": {
-                    "id": "args:--insert-pragma ",
+                    "id": "args:--insert-pragma",
                     "type": "null",
                     "description": "Insert @format pragma into file's first docblock comment. Defaults to false."
                 },
