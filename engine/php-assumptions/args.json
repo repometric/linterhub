@@ -1,0 +1,86 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+  "id": "php-assumptions",
+  "name": "php-assumptions",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/arguments"
+    }
+  ],
+  "definitions": {
+    "arguments": {
+      "type": "object",
+      "description": "The engine command line arguments",
+      "properties": {
+        "--dump":{
+          "id":"args:--dump",
+          "type":"string",
+          "description":"Dump nodes using NodeDumper"
+        },
+        "--pretty-print":{
+          "id":"--pretty-print",
+          "type":"string",
+          "description":"Pretty print file using 'PrettyPrinter/Standard' "
+        },
+        "--serialize-xml":{
+          "id":"args:--serialize-xml",
+          "type":"string",
+          "description":"Serialize nodes using Serializer/XML"
+        },
+        "--var-dump":{
+          "id":"args:--var-dump",
+          "type":"string",
+          "description":"var_dump() nodes (for exact structure)"
+        },
+        "--resolve-names":{
+          "id":"args:--resolve-names",
+          "type":"string",
+          "description":"Resolve names using NodeVisitorNameResolver"
+        },
+        "--with-column-info":{
+          "id":"--with-column-info",
+          "type":"string",
+          "description":"Show column-numbers for errors (if available)"
+        },
+        "--with-positions":{
+          "id":"--with-positions",
+          "type":"string",
+          "description":"Show positions in node dumps"
+        },
+        "--with-recovery":{
+          "id":"args:--with-recovery",
+          "type":"string",
+          "description":"Use parsing with error recovery"
+        },
+        "--help":{
+          "type":"null",
+          "description":"Show help message"
+        },
+        "":{
+          "id":"linterhub:path",
+          "type":"string",
+          "description":"path for analysys"
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "description": "The engine configuration section",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The engine name",
+          "enum": [
+            "php-assumptions"
+          ]
+        },
+        "arguments": {
+          "type": "object",
+          "description": "The engine configuration",
+          "$ref": "#/definitions/arguments"
+        }
+      }
+    }
+  }
+}
