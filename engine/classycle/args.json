@@ -1,0 +1,93 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "classycle",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/options"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "-csvFile": {
+                    "type": "null",
+                    "description": "Creates the specified comma-separated-value (CSV) file containing a table with all classes but no dependencies."
+                },    
+                "-xmlFile": {
+                    "type": "null",
+                    "description": "Creates the specified file with an XML report."
+                },
+                "-title": {
+                    "id": "args:-title",
+                    "type": "string",
+                    "description": "Value of the title element of the XML report. If the title is not specified the first argument of the list of class files will be used."
+                },
+                "-reflectionPattern": {
+                    "id": "args:-reflectionPattern",
+                    "type": "string",
+                    "description": "Comma-separated list of zero or more wild-card patterns for fully-qualified class names which are referred in the class file by plain string constants. Only '*' is interpreted as wild-card character.  This allows e.g. that a class with the following line of code has a reference to java.lang.Thread:  Class clazz = Thread.class; The following code has the same effect:  String className = 'java.lang.Thread'; If no pattern is defined all strings which are valid class names (like hello, www.w3c.org) would be treated like class references."
+                },
+                "-excludingClasses": {
+                    "id": "args:-excludingClasses",
+                    "type": "string",
+                    "description": "Comma-separated list of one or more wild-card patterns for fully-qualified class names of classes which are excluded from the graph. Only '*' is interpreted as wild-card character."
+                },
+                "-includingClasses": {
+                    "id": "args:-includingClasses",
+                    "type": "string",
+                    "description": "Comma-separated list of one or more wild-card patterns for fully-qualified class names of classes which are included in the graph. Only '*' is interpreted as wild-card character."
+                },
+                "-mergeInnerClasses": {
+                    "id": "args:-mergeInnerClasses",
+                    "type": "null",
+                    "description": "Inner class vertices will be merged with their outer classes"
+                },
+                "-packagesOnly": {
+                    "id": "args:-packagesOnly",
+                    "type": "null",
+                    "description": "Only package dependencies are calculated."
+                },
+                "-strong": {
+                    "id": "args:-strong",
+                    "type": "null",
+                    "description": "Like -cycles but also the strong components with only one member are printed onto the console. Thus all classes are printed."
+                },
+                "-cycles": {
+                    "id": "args:-cycles",
+                    "type": "null",
+                    "description": "All cycles and their containing classes are printed onto the console."
+                },
+                "-raw": {
+                    "id": "args:-raw",
+                    "type": "null",
+                    "description": "The complete digraph will be printed onto the console."
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "classycle"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/options"
+                }
+            }
+        }
+    }
+}

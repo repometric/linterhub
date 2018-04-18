@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "classycle",
+    "description": "Classycle's Analyser analyses the static class and package dependencies in Java applications or libraries. It is especially helpful for finding cyclic dependencies between classes or packages.",
+    "url": "http://classycle.sourceforge.net/index.html",
+    "languages": [
+        "Java"
+    ],
+    "license": "BSD-1-Clause"
+}

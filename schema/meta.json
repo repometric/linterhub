@@ -14,6 +14,13 @@
             "type": "string",
             "description": "The engine official name, may not be unique"
         },
+        "alias": {
+            "type": "array",
+            "description": "List of engine aliases.",
+            "items": {
+                "type": "string"
+            }
+        },
         "description": {
             "type": "string",
             "description": "The engine official description"

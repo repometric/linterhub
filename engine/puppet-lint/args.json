@@ -1,0 +1,331 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id":"puppet-lint",
+    "name":"puppet-lint",
+    "type":"object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "--no-config": {
+                    "id": "args:--no-config",
+                    "type": "null",
+                    "description": "Do not load default puppet-lint option files."
+                },
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "Load puppet-lint options from file."
+                },
+                "--with-context": {
+                    "id":"--with-context",
+                    "type": "null",
+                    "description": "Show where in the manifest the problem is."
+                },
+                "--with-filename": {
+                    "id":"--with-filename",
+                    "type": "null",
+                    "description": "Display the filename before the warning."
+                },
+                "--fail-on-warnings": {
+                    "id": "--fail-on-warnings",
+                    "type": "null",
+                    "description": "Return a non-zero exit status for warnings"
+                },
+                "--error-level": {
+                    "id": "args:--error-level",
+                    "type": "string",
+                    "description": "The level of error to return (warning, error or all)."
+                },
+                "--show-ignored": {
+                    "id":"--show-ignored",
+                    "type": "null",
+                    "description": "Show problems that have been ignored by control comments"
+                },
+                "--relative": {
+                    "id": "args:--relative",
+                    "type": "null",
+                    "description": "Compare module layout relative to the module root"
+                },
+                "--load": {
+                    "id": "args:--load",
+                    "type": "string",
+                    "description": "Load a file containing custom puppet-lint checks."
+                },
+                "--log-format": {
+                    "id": "--log-format",
+                    "type": "string",
+                    "description": "Change the log format. Overrides --with-filename.The following placeholders can be used: %{filename} - Filename without path. %{path}     - Path as provided to puppet-lint.%{fullpath} - Expanded path to the file. %{line}     - Line number. %{column}   - Column number. %{kind}     - The kind of message (warning, error). %{KIND}     - Uppercase version of %{kind}. %{check}    - The name of the check. %{message}  - The message."
+                },
+                "--load-from-puppet": {
+                    "id": "args:--load-from-puppet",
+                    "type": "string",
+                    "description":"Load plugins from the given Puppet module path."
+                },
+                "--fix ": {
+                    "id": "--fix",
+                    "type": "null",
+                    "description":"Attempt to automatically fix errors"
+                },
+                "--json": {
+                    "id": "--json",
+                    "type": "null",
+                    "description":"Log output as JSON"
+                },
+                "--list-checks": {
+                    "id": "--list-checks",
+                    "type": "null",
+                    "description":"List available check names"
+                },
+                "--only-checks": {
+                    "id": "args:--only-checks",
+                    "type": "string",
+                    "description":"A comma separated list of checks that should be run"
+                },
+                "--ignore-paths": {
+                    "id": "args:--ignore-paths",
+                    "type": "string",
+                    "description":"A comma separated list of patterns to ignore"
+                },          
+                "--no-arrow_on_right_operand_line-check": {
+                    "id": "args:-no-arrow_on_right_operand_line-check",
+                    "type": "null",
+                    "description":"Skip the arrow_on_right_operand_line check."
+                },
+                "--no-class_inherits_from_params_class-check": {
+                    "id": "args:--no-class_inherits_from_params_class-check",
+                    "type": "null",
+                    "description":"Skip the class_inherits_from_params_class check."
+                },
+                "--class_inherits_from_params_class-check": {
+                    "id": "args:--class_inherits_from_params_class-check",
+                    "type": "null",
+                    "description":"Enable the class_inherits_from_params_class check."
+                },
+                "--no-code_on_top_scope-check": {
+                    "id": "args:--no-code_on_top_scope-check",
+                    "type": "null",
+                    "description":"Skip the code_on_top_scope check."
+                },
+                "--code_on_top_scope-check": {
+                    "id": "args:--code_on_top_scope-check",
+                    "type": "null",
+                    "description":"Enable the code_on_top_scope check."
+                },
+                "--no-inherits_across_namespaces-check": {
+                    "id": "args:--no-inherits_across_namespaces-check",
+                    "type": "null",
+                    "description":"Skip the inherits_across_namespaces check."
+                },
+                "--no-names_containing_dash-check": {
+                    "id": "args:--no-names_containing_dash-check",
+                    "type": "null",
+                    "description":"Skip the names_containing_dash check."
+                },
+                "--no-names_containing_uppercase-check": {
+                    "id": "args:--no-names_containing_uppercase-check",
+                    "type": "null",
+                    "description":"Skip the names_containing_uppercase check."
+                },
+                "--no-nested_classes_or_defines-check": {
+                    "id": "args:--no-nested_classes_or_defines-check",
+                    "type": "null",
+                    "description":"Skip the nested_classes_or_defines check."
+                },
+                "--no-parameter_order-check": {
+                    "id": "args:--no-parameter_order-check",
+                    "type": "null",
+                    "description":"Skip the parameter_order check."
+                },
+                "--no-right_to_left_relationship-check": {
+                    "id": "args:--no-right_to_left_relationship-check",
+                    "type": "null",
+                    "description":"Skip the right_to_left_relationship check."
+                },
+                "--no-variable_scope-check": {
+                    "id": "args:--no-variable_scope-check",
+                    "type": "null",
+                    "description":"Skip the variable_scope check."
+                },
+                "--no-slash_comments-check": {
+                    "id": "args:--no-slash_comments-check",
+                    "type": "null",
+                    "description":"Skip the slash_comments check."
+                },
+                "--no-star_comments-check": {
+                    "id": "args:--no-star_comments-check",
+                    "type": "null",
+                    "description":"Skip the star_comments check."
+                },
+                "--no-case_without_default-check": {
+                    "id": "args:--no-case_without_default-check",
+                    "type": "null",
+                    "description":"Skip the case_without_default check."
+                },
+                "--no-selector_inside_resource-check": {
+                    "id": "args:--no-selector_inside_resource-check",
+                    "type": "null",
+                    "description":"Skip the selector_inside_resource check."
+                },
+                "--no-autoloader_layout-check": {
+                    "id": "args:--no-autoloader_layout-check",
+                    "type": "null",
+                    "description":"Skip the autoloader_layout check."
+                },
+                "--no-documentation-check": {
+                    "id": "args:--no-documentation-check",
+                    "type": "null",
+                    "description":"Skip the documentation check."
+                },
+                "--no-unquoted_node_name-check": {
+                    "id": "args:--no-unquoted_node_name-check",
+                    "type": "null",
+                    "description":"Skip the unquoted_node_name check.."
+                },
+                "--no-duplicate_params-check": {
+                    "id": "args:--no-duplicate_params-check",
+                    "type": "null",
+                    "description":"Skip the duplicate_params check."
+                },
+                "--no-ensure_first_param-check": {
+                    "id": "args:--no-ensure_first_param-check",
+                    "type": "null",
+                    "description":"Skip the ensure_first_param check."
+                },
+                "--no-ensure_not_symlink_target-check": {
+                    "id": "args:--no-ensure_not_symlink_target-check",
+                    "type": "null",
+                    "description":"Skip the ensure_not_symlink_target check."
+                },
+                "--no-file_mode-check": {
+                    "id": "args:--no-file_mode-check",
+                    "type": "null",
+                    "description":"Skip the file_mode check."
+                },
+                "--no-unquoted_file_mode-check": {
+                    "id": "args:--no-unquoted_file_mode-check",
+                    "type": "null",
+                    "description":" Skip the unquoted_file_mode check.."
+                },
+                "--no-unquoted_resource_title-check": {
+                    "id": "args:--no-unquoted_resource_title-check",
+                    "type": "null",
+                    "description":"Skip the unquoted_resource_title check."
+                },
+                "--no-double_quoted_strings-check": {
+                    "id": "args:--no-double_quoted_strings-check",
+                    "type": "null",
+                    "description":"Skip the double_quoted_strings check."
+                },
+                "--no-only_variable_string-check": {
+                    "id": "args:--no-only_variable_string-check",
+                    "type": "null",
+                    "description":"Skip the only_variable_string check."
+                },
+                "--no-puppet_url_without_modules-check": {
+                    "id": "args:--no-puppet_url_without_modules-check",
+                    "type": "null",
+                    "description":"Skip the puppet_url_without_modules check."
+                },
+                "--no-quoted_booleans-check": {
+                    "id": "args:--no-quoted_booleans-check",
+                    "type": "null",
+                    "description":"Skip the quoted_booleans check."
+                },
+                "--no-single_quote_string_with_variables-check": {
+                    "id": "args:--no-single_quote_string_with_variables-check",
+                    "type": "null",
+                    "description":"Skip the single_quote_string_with_variables check."
+                },
+                "--no-variables_not_enclosed-check": {
+                    "id": "args:--no-variables_not_enclosed-check",
+                    "type": "null",
+                    "description":"Skip the variables_not_enclosed check."
+                },
+                "--no-variable_contains_dash-check": {
+                    "id": "args:--no-variable_contains_dash-check",
+                    "type": "null",
+                    "description":"Skip the variable_contains_dash check."
+                },
+                "--no-variable_is_lowercase-check": {
+                    "id": "args:--no-variable_is_lowercase-check",
+                    "type": "null",
+                    "description":"Skip the variable_is_lowercase check."
+                },
+                "--no-140chars-check": {
+                    "id": "args:--no-140chars-check",
+                    "type": "null",
+                    "description":"Skip the 140chars check."
+                },
+                "--no-2sp_soft_tabs-check": {
+                    "id": "args:--no-2sp_soft_tabs-check",
+                    "type": "null",
+                    "description":"Skip the 2sp_soft_tabs check."
+                },
+                "--no-80chars-check": {
+                    "id": "args:--no-80chars-check",
+                    "type": "null",
+                    "description":"Skip the 80chars check.."
+                },
+                "--80chars-check": {
+                    "id": "args:--80chars-check",
+                    "type": "null",
+                    "description":"Enable the 80chars check."
+                },
+                "--no-arrow_alignment-check": {
+                    "id": "args:--no-arrow_alignment-check",
+                    "type": "null",
+                    "description":"Skip the arrow_alignment check."
+                },
+                "--no-hard_tabs-check": {
+                    "id": "args:--no-hard_tabs-check",
+                    "type": "null",
+                    "description":"Skip the hard_tabs check."
+                },
+                "--no-trailing_whitespace-check": {
+                    "id": "args:--no-trailing_whitespace-check",
+                    "type": "null",
+                    "description":"Skip the trailing_whitespace check."
+                },
+                "--help": {
+                    "type": "string",
+                    "description": "Show help"
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "string",
+                    "description": "Show version"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "puppet-lint"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

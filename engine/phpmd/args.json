@@ -1,0 +1,72 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+  "id": "phpmd",
+  "name": "phpmd",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/arguments"
+    }
+  ],
+  "definitions": {
+    "arguments": {
+      "type": "object",
+      "description": "The engine command line arguments",
+      "properties": {
+        "--minimumpriority":{
+          "id":"args:--minimumpriority",
+          "type":"string",
+          "description":"The rule priority threshold; rules with lower priority than they will not be used."
+        },
+        "--reportfile":{
+          "id":"--reportfile",
+          "type":"string",
+          "description":"Sends the report output to the specified file, instead of the default output target STDOUT"
+        },
+        "--suffixes":{
+          "id":"args:--suffixes",
+          "type":"string",
+          "description":"Comma-separated string of valid source code filename extensions, e.g. php,phtml."
+        },
+        "--exclude":{
+          "id":"args:--exclude",
+          "type":"string",
+          "description":"Comma-separated string of patterns that are used to ignore directories."
+        },
+        "--strict":{
+          "id":"--strict",
+          "type":"null",
+          "description":"Also report those nodes with a @SuppressWarnings annotation."
+        },
+        "--ignore-violations-on-exit":{
+          "id":"--ignore-violations-on-exit",
+          "type":"null",
+          "description":"will exit with a zero code, even if any violations are found."
+        },
+        "": {
+          "id:": "linterhub:path",
+          "type": "string",
+          "description": "path to code for analysys"
+      }
+      }
+    },
+    "section": {
+      "type": "object",
+      "description": "The engine configuration section",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The engine name",
+          "enum": [
+            "phpmd"
+          ]
+        },
+        "arguments": {
+          "type": "object",
+          "description": "The engine configuration",
+          "$ref": "#/definitions/arguments"
+        }
+      }
+    }
+  }
+}

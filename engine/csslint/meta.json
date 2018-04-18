@@ -1,11 +1,15 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
     "name": "csslint",
+    "alias":[
+        "grunt-lesslint"
+    ],
     "description": "CSSLint",
     "url": "http://csslint.net/",
     "languages": [
         "CSS",
-        "OOCSS"
+        "OOCSS",
+        "Less"
     ],
     "configs": [
         ".csslintrc"

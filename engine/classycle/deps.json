@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "classycle",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "java"
+            },
+            {
+                "manager": "url",
+                "package": "https://sourceforge.net/projects/classycle/files/latest/download?source=files",
+                "version": "1.4.2",
+                "engine": true
+            }
+        ]
+    ]
+}

@@ -1,6 +1,9 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
     "name": "pycodestyle",
+    "alias": [
+        "pep8"
+    ],
     "description": "Pycodestyle is a tool to check your Python code against some of the style conventions in PEP 8.",
     "url": "https://github.com/PyCQA/pycodestyle",
     "languages": [

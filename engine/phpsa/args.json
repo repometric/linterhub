@@ -1,0 +1,59 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+  "id": "phpsa",
+  "name": "phpsa",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "#/definitions/arguments"
+    }
+  ],
+  "definitions": {
+    "arguments": {
+      "type": "object",
+      "description": "The engine command line arguments",
+      "properties": {
+        "--raw":{
+          "id":"--raw",
+          "type":"null",
+          "description":"To output raw command list"
+        },
+        "--format":{
+          "id":"--format",
+          "type":"string",
+          "description":"The output format (txt, xml, json, or md) [default: 'txt']",
+          "enum":[
+            "txt",
+            "xml",
+            "json",
+            "md"
+          ],
+          "default":"txt"
+        },
+        "":{
+          "id":"linterhub:path",
+          "type":"string",
+          "description":"path for analysys"
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "description": "The engine configuration section",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The engine name",
+          "enum": [
+            "phpsa"
+          ]
+        },
+        "arguments": {
+          "type": "object",
+          "description": "The engine configuration",
+          "$ref": "#/definitions/arguments"
+        }
+      }
+    }
+  }
+}

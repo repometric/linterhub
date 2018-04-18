@@ -1,0 +1,13 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "findbugs",
+    "alias":[
+        "spotbugs"
+    ],
+    "description": "FindBugs is a program which uses static analysis to look for bugs in Java code.  ",
+    "url": "https://github.com/findbugsproject/findbugs",
+    "languages": [
+        "Java"
+    ],
+    "license": "LGPL-2.1"
+}

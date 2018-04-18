@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "javascriptlint",
+    "description": "With JavaScript Lint, you can check all your JavaScript source code for common mistakes without actually running the script or opening the web page.",
+    "url": "http://www.javascriptlint.com",
+    "languages": [
+        "JavaScript"
+    ],
+    "license": "GPL-2.0"
+}
