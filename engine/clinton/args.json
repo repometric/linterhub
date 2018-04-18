@@ -1,0 +1,56 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name":"clinton",
+    "type":"object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "--no-inherit": {
+                    "id": "args:--no-inherit",
+                    "type": "null",
+                    "description": "Prevent inheriting from the default rules."
+                },
+                "--ignores": {
+                    "id": "args:--ignores",
+                    "type": "null",
+                    "description": "Ignore files. Can be added multiple times."
+                },
+                "--fix": {
+                    "id": "args:--fix",
+                    "type": "null",
+                    "description": "Automatically fix problems."
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "clinton"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

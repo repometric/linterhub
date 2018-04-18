@@ -1,0 +1,10 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "clinton",
+    "description": "JavaScript project style linter",
+    "url": "https://github.com/SamVerschueren/clinton",
+    "languages": [
+        "JavaScript"
+    ],
+    "license": "MIT"
+}
