@@ -1,16 +1,16 @@
-{ 
-    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
-    "name": "checkstyle", 
-    "type": "object", 
-    "allOf": [ 
-        { 
-            "$ref": "#/definitions/arguments" 
-        } 
-    ], 
-    "definitions": { 
-        "arguments": { 
-            "type": "object", 
-            "properties": { 
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "checkstyle",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
                 "--exclude-regexp": {
                     "id": "args:--exclude-regexp",
                     "type": "string",
@@ -80,39 +80,39 @@
                     "type": "string",
                     "description": "Sets the check configuration file to use."
                 },
-                "": { 
-                    "id": "linterhub:path", 
-                    "type": "string", 
-                    "description": "Provide a path to source code for analysis. " 
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Provide a path to source code for analysis. "
                 },
-                "--help": { 
-                    "type": "null", 
-                    "description": "Show help" 
+                "--help": {
+                    "type": "null",
+                    "description": "Show help"
                 },
-                "--v": { 
-                    "id": "linterhub:version", 
-                    "type": "null", 
-                    "description": "Show version." 
+                "--v": {
+                    "id": "linterhub:version",
+                    "type": "null",
+                    "description": "Show version."
                 }
-            } 
-        }, 
-        "section": { 
-            "type": "object", 
-            "description": "The engine configuration section", 
-            "properties": { 
-                "name": { 
-                    "type": "string", 
-                    "description": "The engine name", 
-                    "enum": [ 
-                        "checkstyle" 
-                    ] 
-                }, 
-                "arguments": { 
-                    "type": "object", 
-                    "description": "The engine configuration", 
-                    "$ref": "#/definitions/arguments" 
-                } 
-            } 
-        } 
-    } 
-} 
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "checkstyle"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

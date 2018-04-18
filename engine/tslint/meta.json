@@ -1,10 +1,10 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
-  "name": "tslint",
-  "description": "An extensible linter for the TypeScript language",
-  "url": "https://palantir.github.io/tslint/",
-  "languages": [
-    "TypeScript"
-  ],
-  "license": "Apache-2.0"
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "tslint",
+    "description": "An extensible linter for the TypeScript language",
+    "url": "https://palantir.github.io/tslint/",
+    "languages": [
+        "TypeScript"
+    ],
+    "license": "Apache-2.0"
 }

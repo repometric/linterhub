@@ -4,7 +4,7 @@
     "description": "JavaScript style guide, linter, and formatter",
     "url": "https://standardjs.com/",
     "languages": [
-      "JavaScript"
+        "JavaScript"
     ],
     "license": "MIT"
-  }
+}

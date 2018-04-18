@@ -1,20 +1,20 @@
-{ 
-    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
-    "name": "pylint", 
-    "type": "object", 
-    "allOf": [ 
-        { 
-            "$ref": "#/definitions/arguments" 
-        } 
-    ], 
-    "definitions": { 
-        "arguments": { 
-            "type": "object", 
-            "properties": { 
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "pylint",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
                 "--msg-template": {
                     "id": "args:--msg-template",
                     "type": "string",
-                    "description": "Template used to display messages. This is a python new-style format string used to format the message information. See doc for all details" 
+                    "description": "Template used to display messages. This is a python new-style format string used to format the message information. See doc for all details"
                 },
                 "--score": {
                     "id": "args:--score",
@@ -23,12 +23,12 @@
                         "yes",
                         "no"
                     ],
-                    "description": "Activate the evaluation score. [current: yes]" 
+                    "description": "Activate the evaluation score. [current: yes]"
                 },
                 "--evaluation": {
                     "id": "args:--evaluation",
                     "type": "string",
-                    "description": "Python expression which should return a note less than 10 (10 is the highest note). You have access to the variables errors warning, statement which respectively contain the number of errors / warnings messages and the total number of statements analyzed. This is used by the global evaluation report (RP0004). [current: 10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)]" 
+                    "description": "Python expression which should return a note less than 10 (10 is the highest note). You have access to the variables errors warning, statement which respectively contain the number of errors / warnings messages and the total number of statements analyzed. This is used by the global evaluation report (RP0004). [current: 10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)]"
                 },
                 "--reports": {
                     "id": "args:--reports",
@@ -37,46 +37,46 @@
                         "yes",
                         "no"
                     ],
-                    "description": "Tells whether to display a full report or only the messages [current: no]" 
+                    "description": "Tells whether to display a full report or only the messages [current: no]"
                 },
                 "--output-format": {
                     "type": "string",
-                    "description": "Set the output format. Available formats are text,  parseable, colorized, json and msvs (visual studio).You can also give a reporter class, eg  mypackage.mymodule.MyReporterClass. [current: text]" 
+                    "description": "Set the output format. Available formats are text,  parseable, colorized, json and msvs (visual studio).You can also give a reporter class, eg  mypackage.mymodule.MyReporterClass. [current: text]"
                 },
                 "--disable": {
                     "id": "args:--disable",
                     "type": "string",
-                    "description": "Disable the message, report, category or checker with the given id(s). You can either give multiple identifiers separated by comma (,) or put this option multiple times (only on the command line, not in the configuration file where it should appear only once).You can also use --disable=all to disable everything first and then reenable specific checks. For example, if you want to run only the similarities checker, you can use --disable=all --enable=similarities. If you want to run only the classes checker, but have no Warning level messages displayed, use--disable=all --enable=classes -disable=W" 
+                    "description": "Disable the message, report, category or checker with the given id(s). You can either give multiple identifiers separated by comma (,) or put this option multiple times (only on the command line, not in the configuration file where it should appear only once).You can also use --disable=all to disable everything first and then reenable specific checks. For example, if you want to run only the similarities checker, you can use --disable=all --enable=similarities. If you want to run only the classes checker, but have no Warning level messages displayed, use--disable=all --enable=classes -disable=W"
                 },
                 "--enable": {
                     "id": "args:--enable",
                     "type": "string",
-                    "description": "Enable the message, report, category or checker with the given id(s). You can either give multiple identifier separated by comma (,) or put this option multiple time (only on the command line, not in the configuration file where it should appear only once). See also the --disable option for examples." 
+                    "description": "Enable the message, report, category or checker with the given id(s). You can either give multiple identifier separated by comma (,) or put this option multiple time (only on the command line, not in the configuration file where it should appear only once). See also the --disable option for examples."
                 },
                 "--confidence": {
                     "id": "args:--confidence",
                     "type": "string",
-                    "description": "Only show warnings with the listed confidence levels. Leave empty to show all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED [current: none]" 
+                    "description": "Only show warnings with the listed confidence levels. Leave empty to show all. Valid levels: HIGH, INFERENCE, INFERENCE_FAILURE, UNDEFINED [current: none]"
                 },
                 "--generate-rcfile": {
                     "id": "args:--generate-rcfile",
                     "type": "null",
-                    "description": "Generate a sample configuration file according to the current configuration. You can put other options before this one to get them in the generated configuration." 
+                    "description": "Generate a sample configuration file according to the current configuration. You can put other options before this one to get them in the generated configuration."
                 },
                 "--full-documentation": {
                     "id": "args:--full-documentation",
                     "type": "null",
-                    "description": "Generate pylint's full documentation." 
+                    "description": "Generate pylint's full documentation."
                 },
                 "--list-conf-levels": {
                     "id": "args:--list-conf-levels",
                     "type": "null",
-                    "description": "Generate pylint's messages." 
+                    "description": "Generate pylint's messages."
                 },
                 "--list-msgs": {
                     "id": "args:--list-msgs",
                     "type": "null",
-                    "description": "Generate pylint's messages." 
+                    "description": "Generate pylint's messages."
                 },
                 "--suggestion-mode": {
                     "id": "args:--suggestion-mode",
@@ -85,95 +85,95 @@
                         "yes",
                         "no"
                     ],
-                    "description": "When enabled, pylint would attempt to guess common misconfiguration and emit user-friendly hints instead of false-positive error messages [current: yes]" 
+                    "description": "When enabled, pylint would attempt to guess common misconfiguration and emit user-friendly hints instead of false-positive error messages [current: yes]"
                 },
                 "--extension-pkg-whitelist": {
                     "id": "args:--extension-pkg-whitelist",
                     "type": "string",
-                    "description": "A comma-separated list of package or module names from where C extensions may be loaded. Extensions are loading into the active Python interpreter and may run arbitrary code [current: none]" 
+                    "description": "A comma-separated list of package or module names from where C extensions may be loaded. Extensions are loading into the active Python interpreter and may run arbitrary code [current: none]"
                 },
                 "--jobs": {
                     "id": "args:--jobs",
                     "type": "number",
-                    "description": "Use multiple processes to speed up Pylint. [current: 1]" 
+                    "description": "Use multiple processes to speed up Pylint. [current: 1]"
                 },
                 "--load-plugins": {
                     "id": "args:--load-plugins",
                     "type": "string",
-                    "description": "List of plugins (as comma separated values of python modules names) to load, usually to register additional checkers. [current: none]" 
+                    "description": "List of plugins (as comma separated values of python modules names) to load, usually to register additional checkers. [current: none]"
                 },
                 "--persistent": {
                     "id": "args:--persistent",
                     "type": "string",
-                    "enum":[
+                    "enum": [
                         "yes",
                         "no"
                     ],
-                    "description": "Pickle collected data for later comparisons. [current: yes]" 
+                    "description": "Pickle collected data for later comparisons. [current: yes]"
                 },
                 "--ignore-patterns": {
                     "id": "args:--ignore-patterns",
                     "type": "string",
-                    "description": "Add files or directories matching the regex patterns to the blacklist. The regex matches against base names, not paths. [current: none]" 
+                    "description": "Add files or directories matching the regex patterns to the blacklist. The regex matches against base names, not paths. [current: none]"
                 },
                 "--ignore": {
                     "id": "args:--ignore",
                     "type": "string",
-                    "description": "Add files or directories to the blacklist. They should be base names, not paths. [current: CVS]" 
+                    "description": "Add files or directories to the blacklist. They should be base names, not paths. [current: CVS]"
                 },
                 "--py3k": {
                     "id": "args:--py3k",
                     "type": "null",
-                    "description": "In Python 3 porting mode, all checkers will be disabled and only messages emitted by the porting checker will be displayed" 
+                    "description": "In Python 3 porting mode, all checkers will be disabled and only messages emitted by the porting checker will be displayed"
                 },
                 "--errors-only": {
                     "id": "args:--errors-only",
                     "type": "null",
-                    "description": "In error mode, checkers without error messages are disabled and for others, only the ERROR messages are displayed, and no reports are done by default" 
+                    "description": "In error mode, checkers without error messages are disabled and for others, only the ERROR messages are displayed, and no reports are done by default"
                 },
                 "--init-hook": {
                     "id": "args:--init-hook",
                     "type": "string",
-                    "description": "Python code to execute, usually for sys.path manipulation such as pygtk.require()." 
+                    "description": "Python code to execute, usually for sys.path manipulation such as pygtk.require()."
                 },
                 "--rcfile": {
                     "id": "linterhub:config",
                     "type": "string",
-                    "description": "Specify a configuration file." 
+                    "description": "Specify a configuration file."
                 },
-                "":{
+                "": {
                     "id": "linterhub:path",
                     "type": "string",
                     "description": "The path to a Python project to inspect."
                 },
-                "--version":{
+                "--version": {
                     "id": "linterhub:version",
                     "type": "null",
                     "description": "Show program's version number and exit"
                 },
-                "--help":{
+                "--help": {
                     "type": "null",
                     "description": "Show help"
                 }
-            } 
-        }, 
-        "section": { 
-            "type": "object", 
-            "description": "The engine configuration section", 
-            "properties": { 
-                "name": { 
-                    "type": "string", 
-                    "description": "The engine name", 
-                    "enum": [ 
-                        "pylint" 
-                    ] 
-                }, 
-                "arguments": { 
-                    "type": "object", 
-                    "description": "The engine configuration", 
-                    "$ref": "#/definitions/arguments" 
-                } 
-            } 
-        } 
-    } 
-} 
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "pylint"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

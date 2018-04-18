@@ -2,7 +2,7 @@
     "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
     "name": "pylint",
     "description": "Pylint is a Python source code analyzer which looks for programming errors, helps enforcing a coding standard and sniffs for some code smells (as defined in Martin Fowler’s Refactoring book).",
-    "url": "https://github.com/PyCQA/pylint/", 
+    "url": "https://github.com/PyCQA/pylint/",
     "languages": [
         "Python"
     ],

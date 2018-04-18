@@ -8,7 +8,7 @@
                 "package": "npm"
             },
             {
-                "manager": "npm", 
+                "manager": "npm",
                 "package": "stylint",
                 "version": "1.5.9",
                 "engine": true

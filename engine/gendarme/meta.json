@@ -2,7 +2,7 @@
     "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
     "name": "gendarme",
     "description": "Gendarme is a extensible rule-based tool to find problems in .NET applications and libraries.",
-    "url": "https://github.com/mono/website/blob/gh-pages/docs/tools+libraries/tools/gendarme/index.md", 
+    "url": "https://github.com/mono/website/blob/gh-pages/docs/tools+libraries/tools/gendarme/index.md",
     "languages": [
         "C#"
     ],

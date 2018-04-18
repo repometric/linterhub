@@ -1,18 +1,18 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
-  "name": "rubocop",
-  "dependencies": [
-      [
-          {
-              "manager": "platform",
-              "package": "gem"
-          },
-          {
-              "manager": "gem",
-              "package": "rubocop",
-              "version": "0.55.0",
-              "engine": true
-          }
-      ]
-  ]
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "rubocop",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "gem"
+            },
+            {
+                "manager": "gem",
+                "package": "rubocop",
+                "version": "0.55.0",
+                "engine": true
+            }
+        ]
+    ]
 }

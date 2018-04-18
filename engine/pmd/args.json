@@ -1,8 +1,8 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/args.json",
-    "id":"PMD",
-    "name":"PMD",
-    "type":"object",
+    "id": "PMD",
+    "name": "PMD",
+    "type": "object",
     "allOf": [
         {
             "$ref": "#/definitions/arguments"
@@ -24,12 +24,12 @@
                     "description": "Specifies the classpath for libraries used by the source code. This is used by the type resolution. Alternatively, a 'file://' URL to a text file containing path elements on consecutive lines can be specified."
                 },
                 "-benchmark": {
-                    "id":"-benchmark",
+                    "id": "-benchmark",
                     "type": "null",
                     "description": "Benchmark mode - output a benchmark report upon completion; default to System.err. Default: false"
                 },
                 "-cache": {
-                    "id":"args:-cache",
+                    "id": "args:-cache",
                     "type": "string",
                     "description": "Specify the location of the cache file for incremental analysis."
                 },
@@ -44,7 +44,7 @@
                     "description": "Specifies the character set encoding of the source code files PMD is reading (i.e., UTF-8). Default: UTF-8"
                 },
                 "-filelist": {
-                    "id":"-filelist",
+                    "id": "-filelist",
                     "type": "string",
                     "description": "Path to a file containing a list of files to analyze."
                 },
@@ -62,74 +62,74 @@
                     "id": "args:-minimumpriority",
                     "type": "string",
                     "description": "Rule priority threshold; rules with lower priority than configured here won't be used. Default is '5' which is the lowest priority. Default: Low",
-                    "enum":[
-                        "High", 
+                    "enum": [
+                        "High",
                         "Medium High",
                         "Medium",
-                        "Medium Low", 
+                        "Medium Low",
                         "Low"
-                        ]
+                    ]
                 },
                 "-norulesetcompatibility": {
                     "id": "-norulesetcompatibility",
                     "type": "null",
-                    "description":"Disable the ruleset compatibility filter. The filter is active by default and tries automatically 'fix' old ruleset files with old rule names/ Default: false"
+                    "description": "Disable the ruleset compatibility filter. The filter is active by default and tries automatically 'fix' old ruleset files with old rule names/ Default: false"
                 },
                 "-reportfile": {
                     "id": "-reportfile",
                     "type": "string",
-                    "description":"Sends report output to a file; default to System.out."
+                    "description": "Sends report output to a file; default to System.out."
                 },
                 "-property": {
                     "id": "-property",
                     "type": "string",
-                    "description":"{name}={value}: Define a property for the report format. Default: []"
+                    "description": "{name}={value}: Define a property for the report format. Default: []"
                 },
                 "-rulesets": {
                     "id": "args:-rulesets",
                     "type": "string",
-                    "description":"Comma separated list of ruleset names to use."
+                    "description": "Comma separated list of ruleset names to use."
                 },
                 "-shortnames": {
                     "id": "-shortnames",
                     "type": "null",
-                    "description":"Prints shortened filenames in the report. Default: false"
+                    "description": "Prints shortened filenames in the report. Default: false"
                 },
                 "-showsuppressed": {
                     "id": "-showsuppressed",
                     "type": "null",
-                    "description":"Report should show suppressed rule violations. Default: false"
-                },          
+                    "description": "Report should show suppressed rule violations. Default: false"
+                },
                 "-stress": {
                     "id": "-stress",
                     "type": "null",
-                    "description":"Performs a stress test. Default: false"
+                    "description": "Performs a stress test. Default: false"
                 },
                 "-suppressmarker": {
                     "id": "args:-suppressmarker",
                     "type": "string",
-                    "description":"Specifies the string that marks the a line which PMD should ignore; default is NOPMD"
+                    "description": "Specifies the string that marks the a line which PMD should ignore; default is NOPMD"
                 },
                 "-threads": {
                     "id": "args:-threads",
                     "type": "string",
-                    "description":"Sets the number of threads used by PMD. Default: 1",
-                    "default":"1"
+                    "description": "Sets the number of threads used by PMD. Default: 1",
+                    "default": "1"
                 },
                 "-uri": {
                     "id": "-uri",
                     "type": "string",
-                    "description":"Database URI for sources."
+                    "description": "Database URI for sources."
                 },
                 "-debug": {
                     "id": "args:-debug",
                     "type": "null",
-                    "description":"Debug mode."
+                    "description": "Debug mode."
                 },
                 "-verbose": {
                     "id": "args:-verbose",
                     "type": "null",
-                    "description":"Debug mode."
+                    "description": "Debug mode."
                 },
                 "--help": {
                     "type": "string",

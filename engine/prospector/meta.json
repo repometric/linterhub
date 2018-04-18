@@ -2,7 +2,7 @@
     "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
     "name": "prospector",
     "description": "Prospector is a tool to analyse Python code and output information about errors, potential problems, convention violations and complexity.",
-    "url": "https://github.com/PyCQA/prospector", 
+    "url": "https://github.com/PyCQA/prospector",
     "languages": [
         "Python"
     ],

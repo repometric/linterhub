@@ -26,7 +26,7 @@
                     "type": "null",
                     "description": "Read source from standard input"
                 },
-                "--output":{
+                "--output": {
                     "id": "linterhub:filename",
                     "type": "string",
                     "description": "write issues to file (no console)"
@@ -36,12 +36,12 @@
                     "type": "string",
                     "description": "Path for analysis"
                 },
-                "--help":{
-                    "type":"null",
+                "--help": {
+                    "type": "null",
                     "description": "output usage information"
                 },
-                "--version":{
-                    "type":"null",
+                "--version": {
+                    "type": "null",
                     "description": "output the version number"
                 }
             }

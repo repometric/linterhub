@@ -1,7 +1,7 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/args.json",
     "id": "bootlint",
-    "name":"bootlint",
+    "name": "bootlint",
     "type": "object",
     "allOf": [
         {

@@ -1,89 +1,89 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
-  "id": "flay",
-  "name": "flay",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "#/definitions/arguments"
-    }
-  ],
-  "definitions": {
-    "arguments": {
-      "type": "object",
-      "description": "The engine command line arguments",
-      "properties": {
-        "--fuzzy":{
-          "id":"args:--fuzzy",
-          "type":"number",
-          "description":"Detect fuzzy (copy & paste) duplication (default 1).",
-          "default":"1"
-        },
-        "--liberal":{
-          "id": "args:--liberal",
-          "type": "null",
-          "description": "Use a more liberal detection method."
-        },
-        "--mass":{
-          "id":"args:--mass",
-          "type":"number",
-          "description":"Sets mass threshold (default = 16)",
-          "default":"16"
-        },
-        "-#":{
-          "id":"-#",
-          "type":"null",
-          "description":"Don't number output (helps with diffs)"
-        },
-        "--verbose":{
-          "id":"--verbose",
-          "type":"null",
-          "description":"Verbose. Show progress processing files."
-        },
-        "--only":{
-          "id":"--only",
-          "type":"string",
-          "description":"Only show matches on NODE type."
-        },
-        "--diff":{
-          "id":"--diff",
-          "type":"null",
-          "description":"Diff Mode. Display N-Way diff for ruby."
-        },
-        "--summary":{
-          "id":"--summary",
-          "type":"null",
-          "description":"Summarize. Show flay score per file only."
-        },
-        "--timeout":{
-          "id":"--timeout",
-          "type":"number",
-          "description":"Set the timeout. (default = 10)",
-          "default":"16"
-        },
-        "--help": {
-          "type": "null",
-          "description": "Output usage information"
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "flay",
+    "name": "flay",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
         }
-      }
-    },
-    "section": {
-      "type": "object",
-      "description": "The engine configuration section",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The engine name",
-          "enum": [
-            "flay"
-          ]
-        },
+    ],
+    "definitions": {
         "arguments": {
-          "type": "object",
-          "description": "The engine configuration",
-          "$ref": "#/definitions/arguments"
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "--fuzzy": {
+                    "id": "args:--fuzzy",
+                    "type": "number",
+                    "description": "Detect fuzzy (copy & paste) duplication (default 1).",
+                    "default": "1"
+                },
+                "--liberal": {
+                    "id": "args:--liberal",
+                    "type": "null",
+                    "description": "Use a more liberal detection method."
+                },
+                "--mass": {
+                    "id": "args:--mass",
+                    "type": "number",
+                    "description": "Sets mass threshold (default = 16)",
+                    "default": "16"
+                },
+                "-#": {
+                    "id": "-#",
+                    "type": "null",
+                    "description": "Don't number output (helps with diffs)"
+                },
+                "--verbose": {
+                    "id": "--verbose",
+                    "type": "null",
+                    "description": "Verbose. Show progress processing files."
+                },
+                "--only": {
+                    "id": "--only",
+                    "type": "string",
+                    "description": "Only show matches on NODE type."
+                },
+                "--diff": {
+                    "id": "--diff",
+                    "type": "null",
+                    "description": "Diff Mode. Display N-Way diff for ruby."
+                },
+                "--summary": {
+                    "id": "--summary",
+                    "type": "null",
+                    "description": "Summarize. Show flay score per file only."
+                },
+                "--timeout": {
+                    "id": "--timeout",
+                    "type": "number",
+                    "description": "Set the timeout. (default = 10)",
+                    "default": "16"
+                },
+                "--help": {
+                    "type": "null",
+                    "description": "Output usage information"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "flay"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
         }
-      }
     }
-  }
 }

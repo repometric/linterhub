@@ -1,22 +1,22 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
-  "name": "tslint",
-  "dependencies": [
-    [
-      {
-        "manager": "platform",
-        "package": "npm"
-      },
-      {
-      	"manager": "npm",
-        "package": "typescript"
-      },
-      {
-        "manager": "npm",
-        "package": "tslint",
-        "version": "5.9.1",
-        "engine": true
-      }
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "tslint",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "npm"
+            },
+            {
+                "manager": "npm",
+                "package": "typescript"
+            },
+            {
+                "manager": "npm",
+                "package": "tslint",
+                "version": "5.9.1",
+                "engine": true
+            }
+        ]
     ]
-  ]
 }

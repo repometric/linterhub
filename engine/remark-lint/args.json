@@ -12,106 +12,106 @@
         "arguments": {
             "type": "object",
             "properties": {
-                "--ignore":{
+                "--ignore": {
                     "type": "null",
                     "description": "Search for ignore files"
                 },
-                "--no-ignore":{
+                "--no-ignore": {
                     "type": "null",
                     "description": "Ingores files by default"
                 },
-                "--stdout":{
+                "--stdout": {
                     "type": "null",
                     "description": "Specify writing to stdout"
                 },
-                "--no-stdout":{
+                "--no-stdout": {
                     "type": "null",
                     "description": "Stdout by default"
                 },
-                "--no-color":{
+                "--no-color": {
                     "type": "null",
                     "description": "Color in report by default"
                 },
-                "--color":{
+                "--color": {
                     "type": "null",
                     "description": "Specify color in report"
                 },
-                "--no-config":{
+                "--no-config": {
                     "type": "null",
                     "description": "Configuration files  by default"
                 },
-                "--config":{
+                "--config": {
                     "type": "null",
                     "description": "Search for configuration files"
                 },
-                "--inspect":{
+                "--inspect": {
                     "type": "null",
                     "description": "Output formatted syntax tree"
                 },
-                "--tree-out":{
+                "--tree-out": {
                     "type": "null",
                     "description": "Output syntax tree"
                 },
-                "--tree-in":{
+                "--tree-in": {
                     "type": "null",
                     "description": "Specify input as syntax tree"
                 },
-                "--file-path":{
-                    "id":"args:--file-path",
+                "--file-path": {
+                    "id": "args:--file-path",
                     "type": "string",
                     "description": "Specify path to process as"
                 },
-                "--report":{
+                "--report": {
                     "id": "args:--report",
                     "type": "string",
                     "description": "Specify reporter"
                 },
-                "--tree":{
+                "--tree": {
                     "type": "null",
                     "description": "Specify input and output as syntax tree"
                 },
-                "--frail":{
+                "--frail": {
                     "type": "null",
                     "description": "Exit with 1 on warnings"
                 },
-                "--silent":{
+                "--silent": {
                     "type": "null",
                     "description": "Output only errors"
                 },
-                "--quiet":{
+                "--quiet": {
                     "type": "null",
                     "description": "Output only warnings and errors"
                 },
-                "--watch":{
+                "--watch": {
                     "type": "null",
                     "description": "Watch for changes and reprocess"
                 },
-                "--use":{
-                    "id":"args:--use",
+                "--use": {
+                    "id": "args:--use",
                     "type": "string",
                     "description": "Use plugins"
                 },
-                "--ext":{
+                "--ext": {
                     "id": "args:--ext",
                     "type": "string",
                     "description": "Specify extensions"
                 },
-                "--setting":{
-                    "id":"args:--setting",
+                "--setting": {
+                    "id": "args:--setting",
                     "type": "string",
                     "description": "Specify settings"
                 },
-                "--ingore-path":{
+                "--ingore-path": {
                     "id": "args:--ingore-path",
-                    "type":"string",
+                    "type": "string",
                     "description": "Specify ignore file"
                 },
-                "--rc-path":{
+                "--rc-path": {
                     "id": "args:--rc-path",
-                    "type":"string",
+                    "type": "string",
                     "description": "Specify configuration file"
                 },
-                "--output":{
+                "--output": {
                     "id": "linterhub:filename",
                     "type": "string",
                     "description": "The path and filename where you would like output to be written"

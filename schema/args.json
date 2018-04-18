@@ -77,7 +77,7 @@
             "description": "The engine argument",
             "properties": {
                 "id": {
-                    "oneOf":[
+                    "oneOf": [
                         {
                             "type": "string",
                             "pattern": "^linterhub:[a-z]+$"
@@ -115,7 +115,7 @@
                     "description": "Need to use if the argument value has a limited list. Type of argument must be string"
                 }
             },
-            "required":[
+            "required": [
                 "type",
                 "description"
             ]

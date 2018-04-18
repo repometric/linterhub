@@ -1,7 +1,7 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/args.json",
     "id": "flake8",
-    "name":"flake8",
+    "name": "flake8",
     "type": "object",
     "allOf": [
         {
@@ -45,25 +45,25 @@
                     "id": "--exclude",
                     "type": "string",
                     "description": "Provide a comma-separated list of glob patterns to exclude from checks. This can be specified in config files.",
-                    "default":".svn,CVS,.bzr,.hg,.git,__pycache__,.tox"
+                    "default": ".svn,CVS,.bzr,.hg,.git,__pycache__,.tox"
                 },
                 "--filename": {
                     "id": "--filename",
                     "type": "string",
                     "description": "Provide a comma-separate list of glob patterns to include for checks.This can be specified in config files.",
-                    "default":"*.py"
+                    "default": "*.py"
                 },
                 "--stdin-display-name": {
                     "id": "linterhub:--stdin-display-name",
                     "type": "string",
                     "description": "Provide the name to use to report warnings and errors from code on stdin. Instead of reporting an error as something like: stdin:82:73 E501 line too long. You can specify this option to have it report whatever value you want instead of stdin. This can not be specified in config files.",
-                    "default":"stdin"
+                    "default": "stdin"
                 },
                 "--format": {
                     "id": "--format",
                     "type": "string",
                     "description": "Select the formatter used to display errors to the user. This can be specified in config files.",
-                    "enum":[
+                    "enum": [
                         "default",
                         "pylint"
                     ]
@@ -77,19 +77,19 @@
                     "id": "args:--ignore",
                     "type": "string",
                     "description": "Specify a list of codes to ignore. The list is expected to be comma-separated, and does not need to specify an error code exactly. Since Flake8 3.0, this can be combined with --select. See --select for more information. For example, if you wish to only ignore W234, then you can specify that. But if you want to ignore all codes that start with W23 you need only specify W23 to ignore them. This also works for W2 and W (for example). This can be specified in config files.",
-                    "default":"E121,E123,E126,E226,E24,E704"
+                    "default": "E121,E123,E126,E226,E24,E704"
                 },
                 "--max-line-length": {
                     "id": "args:--max-line-length",
                     "type": "string",
                     "description": "Set the maximum length that any line (with some exceptions) may be. Exceptions include lines that are either strings or comments which are entirely URLs. For example: # https://some-super-long-domain-name.com/with/some/very/long/path url = ('http://...') This can be specified in config files.",
-                    "default":"79"
+                    "default": "79"
                 },
                 "--select": {
                     "id": "args:--select",
                     "type": "string",
                     "description": "Specify the list of error codes you wish Flake8 to report. Similarly to --ignore. You can specify a portion of an error code to get all that start with that string. For example, you can use E, E4, E43, and E431. This can be specified in config files.",
-                    "default":"E,F,W,C"
+                    "default": "E,F,W,C"
                 },
                 "--disable-noqa": {
                     "id": "args:--disable-noqa",
@@ -120,7 +120,7 @@
                     "id": "--install-hook",
                     "type": "string",
                     "description": "Install a hook for your version control system that is executed before or during commit. This can not be specified in config files.",
-                    "enum":[
+                    "enum": [
                         "git",
                         "mercurial"
                     ]
@@ -129,7 +129,7 @@
                     "id": "--jobs",
                     "type": "string",
                     "description": "Specify the number of subprocesses that Flake8 will use to run checks in parallel. This option is ignored on Windows because multiprocessing does not support Windows across all supported versions of Python. The default behaviour will use the number of CPUs on your machine as reported by multiprocessing.cpu_count(). This can be specified in config files.",
-                    "default":"auto"
+                    "default": "auto"
                 },
                 "--output-file": {
                     "id": "--ouput-file",
@@ -144,12 +144,12 @@
                 "--append-config": {
                     "type": "string",
                     "description": "Provide extra config files to parse in after and in addition to the files that Flake8 found on its own. Since these files are the last ones read into the Configuration Parser, so it has the highest precedence if it provides an option specified in another config file. This can not be specified in config files."
-                }, 
+                },
                 "--config": {
                     "id": "linterhub:config",
                     "type": "string",
                     "description": " Provide a path to a config file that will be the only config file read and used. This will cause Flake8 to ignore all other config files that exist. This can not be specified in config files."
-                },               
+                },
                 "--isolated": {
                     "id": "--isolated",
                     "type": "string",

@@ -14,7 +14,7 @@
             "description": "The engine command line arguments",
             "properties": {
                 "--config": {
-                    "id":"linterhub:config",
+                    "id": "linterhub:config",
                     "type": "string",
                     "description": "Custom configuration file"
                 },

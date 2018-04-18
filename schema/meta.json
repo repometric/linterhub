@@ -41,7 +41,7 @@
             "type": "array",
             "description": "Common file extensions parsed by engine, if empty then corresponding language extensions are used",
             "items": {
-                "oneOf":[
+                "oneOf": [
                     {
                         "$ref": "#/definitions/extension"
                     },

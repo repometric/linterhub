@@ -4,110 +4,109 @@
     "name": "scss-lint",
     "type": "object",
     "allOf": [
-      {
-        "$ref": "#/definitions/arguments"
-      }
+        {
+            "$ref": "#/definitions/arguments"
+        }
     ],
     "definitions": {
-      "arguments": {
-        "type": "object",
-        "description": "The engine command line arguments",
-        "properties": {
-          "--config":{
-            "id":"linterhub:config",
-            "type":"string",
-            "description":"Specify a configuration file to use"
-          },
-          "--exclude":{
-            "id": "args:--exclude",
-            "type": "string",
-            "description": "Exclude one or more files from being linted",
-            "default": "5"
-          },
-          "--format":{
-            "id":"--format",
-            "type":"string",
-            "description":"Output format"
-          },
-          "--out":{
-            "id":"--out",
-            "type":"null",
-            "description":"Write output to a file instead of STDOUT"
-          },
-          "--require":{
-            "id":"args:--require",
-            "type":"string",
-            "description":"Require file/library (mind $LOAD_PATH, uses Kernel.require)"
-          },
-          "--include-linter":{
-            "id":"args:--include-linter",
-            "type":"string",
-            "description":"Specify which linters you specifically want to run"
-          },
-          "--exclude-linter":{
-            "id":"args:--exclude-linter",
-            "type":"string",
-            "description":"Specify which linters you don't want to run"
-          },
-          "--stdin-file-path":{
-            "id":"linterhub:stdin-file-path",
-            "type":"string",
-            "description":"When linting a file passed via standard input, treat it as having the specified path to apply the appropriate configuration"
-          },
-          "--color":{
-            "id":"--color",
-            "type":"null",
-            "description":"Output in color"
-          },
-          "--no-color":{
-            "id":"--no-color",
-            "type":"null",
-            "description":"Not to output in color"
-          },
-          "--show-formatters":{
-            "id":"args:--show-formatters",
-            "type":"null",
-            "description":"Show all available formatters"
-          },
-          "--show-linters":{
-            "id":"--show-linters",
-            "type":"null",
-            "description":"Show all available linters"
-          },
-          "--version": {
-            "id:": "linterhub:version",
-            "type": "null",
-            "description": "Output the version number"
-          },
-          "--help": {
-            "type": "null",
-            "description": "Output usage information"
-          },
-          "": {
-            "id": "linterhub:path",
-            "type": "string",
-            "description": "Path for analysis"
-        }
-        }
-      },
-      "section": {
-        "type": "object",
-        "description": "The engine configuration section",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The engine name",
-            "enum": [
-              "scss-lint"
-            ]
-          },
-          "arguments": {
+        "arguments": {
             "type": "object",
-            "description": "The engine configuration",
-            "$ref": "#/definitions/arguments"
-          }
+            "description": "The engine command line arguments",
+            "properties": {
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "Specify a configuration file to use"
+                },
+                "--exclude": {
+                    "id": "args:--exclude",
+                    "type": "string",
+                    "description": "Exclude one or more files from being linted",
+                    "default": "5"
+                },
+                "--format": {
+                    "id": "--format",
+                    "type": "string",
+                    "description": "Output format"
+                },
+                "--out": {
+                    "id": "--out",
+                    "type": "null",
+                    "description": "Write output to a file instead of STDOUT"
+                },
+                "--require": {
+                    "id": "args:--require",
+                    "type": "string",
+                    "description": "Require file/library (mind $LOAD_PATH, uses Kernel.require)"
+                },
+                "--include-linter": {
+                    "id": "args:--include-linter",
+                    "type": "string",
+                    "description": "Specify which linters you specifically want to run"
+                },
+                "--exclude-linter": {
+                    "id": "args:--exclude-linter",
+                    "type": "string",
+                    "description": "Specify which linters you don't want to run"
+                },
+                "--stdin-file-path": {
+                    "id": "linterhub:stdin-file-path",
+                    "type": "string",
+                    "description": "When linting a file passed via standard input, treat it as having the specified path to apply the appropriate configuration"
+                },
+                "--color": {
+                    "id": "--color",
+                    "type": "null",
+                    "description": "Output in color"
+                },
+                "--no-color": {
+                    "id": "--no-color",
+                    "type": "null",
+                    "description": "Not to output in color"
+                },
+                "--show-formatters": {
+                    "id": "args:--show-formatters",
+                    "type": "null",
+                    "description": "Show all available formatters"
+                },
+                "--show-linters": {
+                    "id": "--show-linters",
+                    "type": "null",
+                    "description": "Show all available linters"
+                },
+                "--version": {
+                    "id:": "linterhub:version",
+                    "type": "null",
+                    "description": "Output the version number"
+                },
+                "--help": {
+                    "type": "null",
+                    "description": "Output usage information"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "scss-lint"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
         }
-      }
     }
-  }
-  
+}

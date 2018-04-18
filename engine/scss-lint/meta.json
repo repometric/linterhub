@@ -4,7 +4,7 @@
     "description": "Configurable tool for writing clean and consistent SCSS",
     "url": "https://github.com/brigade/scss-lint",
     "languages": [
-      "SCSS"
+        "SCSS"
     ],
     "license": "MIT"
-  }
+}

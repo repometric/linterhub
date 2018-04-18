@@ -14,7 +14,7 @@
             "description": "The engine command line arguments",
             "properties": {
                 "--fix": {
-                    "id":"args:--fix",
+                    "id": "args:--fix",
                     "type": "null",
                     "description": "Automatically fix problems"
                 },

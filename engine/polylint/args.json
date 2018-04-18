@@ -40,7 +40,7 @@
                     "description": "Root directory against which URLs in inputs are resolved. If not specified, then the current working directory is used."
                 },
                 "--input": {
-                    "id": "linterhub:filename", 
+                    "id": "linterhub:filename",
                     "type": "string",
                     "description": "Polymer source files."
                 },

@@ -2,7 +2,7 @@
     "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
     "name": "ccm",
     "description": "CCM is a tool that analyzes c, c++, c#, javascript and TypeScript code and reports back with cyclomatic complexity metric.",
-    "url": "https://github.com/jonasblunck/ccm", 
+    "url": "https://github.com/jonasblunck/ccm",
     "languages": [
         "C#",
         "C++",

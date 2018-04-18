@@ -1,18 +1,18 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
-  "name": "pug-lint",
-  "dependencies": [
-      [
-          {
-              "manager": "platform",
-              "package": "npm"
-          },
-          {
-              "manager": "npm",
-              "package": "pug-lint",
-              "version": "2.5.0",
-              "engine": true
-          }
-      ]
-  ]
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "pug-lint",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "npm"
+            },
+            {
+                "manager": "npm",
+                "package": "pug-lint",
+                "version": "2.5.0",
+                "engine": true
+            }
+        ]
+    ]
 }
