@@ -1,0 +1,11 @@
+{
+  "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+  "name": "phpsa",
+    "description": "PHPSA is a development tool aimed at bringing complex analysis for PHP applications and libraries.",
+    "url": "https://github.com/ovr/phpsa",
+    "areas": [],
+    "languages": [
+        "PHP"
+    ],
+"license": "MIT"
+}
