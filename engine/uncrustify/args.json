@@ -1,0 +1,151 @@
+{ 
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
+    "name": "uncrustify", 
+    "type": "object", 
+    "allOf": [ 
+        { 
+            "$ref": "#/definitions/arguments" 
+        } 
+    ], 
+    "definitions": { 
+        "arguments": { 
+            "type": "object", 
+            "properties": { 
+                "-c": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "Use the config file CFG."
+                },
+                "-o": {
+                    "id": "linterhub:filename",
+                    "type": "string",
+                    "description": "Redirect stdout to FILE."
+                },
+                "--suffix": {
+                    "id": "args:--suffix",
+                    "type": "string",
+                    "description": "Append SFX to the output filename. The default is '.uncrustify'"
+                },
+                "--prefix": {
+                    "id": "args:--prefix",
+                    "type": "string",
+                    "description": "Prepend PFX to the output filename path."
+                },
+                "--replace": {
+                    "id": "args:--replace",
+                    "type": "null",
+                    "description": "Replace source files (creates a backup)."
+                },
+                "--no-backup": {
+                    "id": "args:--no-backup",
+                    "type": "null",
+                    "description": "Replace files, no backup. Useful if files are under source control."
+                },
+                "-l": {
+                    "id": "args:-l",
+                    "type": "null",
+                    "description": "Language override: C, CPP, D, CS, JAVA, PAWN, OC, OC+, VALA."
+                },
+                "-t": {
+                    "id": "args:-t",
+                    "type": "null",
+                    "description": "Load a file with types (usually not needed)."
+                },
+                "-q": {
+                    "id": "args:-q",
+                    "type": "null",
+                    "description": "Quiet mode - no output on stderr (-L will override)."
+                },
+                "--frag": {
+                    "id": "args:--frag",
+                    "type": "null",
+                    "description": "Code fragment, assume the first line is indented correctly."
+                },
+                "--assume": {
+                    "id": "args:--assume",
+                    "type": "string",
+                    "description": "Uses the filename FN for automatic language detection if reading from stdin unless -l is specified."
+                },
+                "--show-config": {
+                    "id": "args:--show-config",
+                    "type": "null",
+                    "description": "Print out option documentation and exit."
+                },
+                "--update-config": {
+                    "type": "null",
+                    "description": "Output a new config file. Use with -o FILE."
+                },
+                "--update-config-with-doc": {
+                    "type": "null",
+                    "description": "Output a new config file. Use with -o FILE."
+                },
+                "--universalindent": {
+                    "type": "null",
+                    "description": "Output a config file for Universal Indent GUI."
+                },
+                "--detect": {
+                    "id": "args:--detect",
+                    "type": "null",
+                    "description": "Detects the config from a source file. Use with '-f FILE'. Detection is fairly limited."
+                },
+                "--set": {
+                    "id": "args:--set",
+                    "type": "string",
+                    "description": "Sets a new value to a config option."
+                },
+                "-p": {
+                    "id": "args:-p",
+                    "type": "null",
+                    "description": "Dump debug info to a file."
+                },
+                "-L": {
+                    "id": "args:-L",
+                    "type": "string",
+                    "description": "Set the log severity (see log_levels.h; note 'A' = 'all')"
+                },
+                "-s": {
+                    "id": "args:-s",
+                    "type": "null",
+                    "description": "Show the log severity in the logs."
+                },
+                "--decode": {
+                    "id": "args:--decode",
+                    "type": "null",
+                    "description": "Decode remaining args (chunk flags) and exit."
+                },
+                "--version": { 
+                    "id": "linterhub:version", 
+                    "type": "null", 
+                    "description": "output version" 
+                },
+                "": { 
+                    "id": "linterhub:path", 
+                    "type": "string", 
+                    "description": "Provide a path to source code for analysis. " 
+                },
+                "--help": { 
+                    "type": "null", 
+                    "description": "Show help" 
+                }
+            } 
+        }, 
+        "section": { 
+            "type": "object", 
+            "description": "The engine configuration section", 
+            "properties": { 
+                "name": { 
+                    "type": "string", 
+                    "description": "The engine name", 
+                    "enum": [ 
+                        "uncrustify" 
+                    ] 
+                }, 
+                "arguments": { 
+                    "type": "object", 
+                    "description": "The engine configuration", 
+                    "$ref": "#/definitions/arguments" 
+                } 
+            } 
+        } 
+    } 
+} 
