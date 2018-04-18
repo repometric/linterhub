@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json", 
+    "name": "uncrustify",
+    "dependencies": [
+        [
+            {
+                "manager": "os",
+                "package": "win"
+            },
+            {
+                "manager": "url",
+                "package": "https://sourceforge.net/projects/uncrustify/files/uncrustify/",
+                "version": "0.66.1",
+                "engine": true
+            }
+        ]
+    ]
+}

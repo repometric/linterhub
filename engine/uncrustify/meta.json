@@ -1,0 +1,17 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "uncrustify",
+    "description": "Source code beautifier for C, C++, C#, ObjectiveC, D, Java, Pawn and VALA.",
+    "url": "https://github.com/uncrustify/uncrustify", 
+    "languages": [
+        "C",
+        "C++",
+        "C#",
+        "Objective-C",
+        "D",
+        "Java",
+        "PAWN",
+        "Vala"
+    ],
+    "license": "MIT"
+}
