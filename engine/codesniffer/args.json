@@ -1,6 +1,7 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/args.json",
-    "name": "codesniffer",
+    "name": "php_codesniffer",
+    "id": "php_codesniffer",
     "type": "object",
     "allOf": [
         {
@@ -12,17 +13,17 @@
             "type": "object",
             "properties": {
                 "-":{
-                    "id":"linterhub:noname",
+                    "id":"linterhub:stdin",
                     "type":"null",
                     "description":"Check STDIN instead of local files and directories"
                 },
                 "-n":{
-                    "id":"-n",
+                    "id":"args:-n",
                     "type":"null",
                     "description":"Do not print warnings (shortcut for --warning-severity=0)"
                 },
                 "-w":{
-                    "id":"-w",
+                    "id":"args:-w",
                     "type":"null",
                     "description":"Print both warnings and errors (this is the default)"
                 },
@@ -67,8 +68,8 @@
                     "description":"Show a list of installed coding standards"
                 },
                 "-d":{
-                    "id":"-d",
-                    "type":"string",
+                    "id":"args:-d",
+                    "type":"array",
                     "description":"Set the [key] php.ini value to [value] or [true] if value is omitted"
                 },
                 "--colors":{
@@ -92,10 +93,143 @@
                     "description":"Do not cache results between runs (this is the default)"
                 },
                 "--ignore-annotations":{
-                    "id":"--ignore-annotations",
+                    "id":"args:--ignore-annotations",
                     "type":"null",
                     "description":"Ignore all phpcs: annotations in code comments"
                 },
+                "--tab-width":{
+                    "id":"--tab-width",
+                    "type":"string",
+                    "description":"set The number of spaces each tab represents"
+                },
+                "--report":{
+                    "id":"--report",
+                    "type":"string",
+                    "description":" Print the report (the 'full' report is printed by default)",
+                    "enum":[
+                        "full",
+                        "xml",
+                        "checkstyle",
+                        "csv",
+                        "json",
+                        "junit",
+                        "emacs",
+                        "source",
+                        "summary",
+                        "diff",
+                        "svnblame",
+                        "gitblame",
+                        "hgblame",
+                        "notifysend"
+                    ],
+                    "default":"full"
+                },
+                "--report-file":{
+                    "id":"--report-file",
+                    "type":"string",
+                    "description":"Write the report to the specified file path"
+                },
+                "--report-width":{
+                    "id":"--report-width",
+                    "type":"string",
+                    "description":"How many columns wide screen reports should be printed or set to 'auto' to use current screen width, where supported"
+                },
+                "--basepath":{
+                    "id":"--basepath",
+                    "type":"string",
+                    "description":"A path to strip from the front of file paths inside reports"
+                },
+                "--bootstrap":{
+                    "id":"--bootstrap",
+                    "type":"string",
+                    "description":"A comma separated list of files to run before processing begins"
+                },
+                "--severity":{
+                    "id":"--severity",
+                    "type":"string",
+                    "description":"The minimum severity required to display an error or warning"
+                },
+                "--error-severity":{
+                    "id":"--error-severity",
+                    "type":"string",
+                    "description":"The minimum severity required to display an error or warning"
+                },
+                "--warning-severity":{
+                    "id":"--warning-severity",
+                    "type":"string",
+                    "description":"The minimum severity required to display an error or warning"
+                },
+                "--runtime-set":{
+                    "id":"--runtime-set",
+                    "type":"string",
+                    "description":"set key value"
+                },
+                "--config-set":{
+                    "id":"--config-set",
+                    "type":"string",
+                    "description":"set key value"
+                },
+                "--config-delete":{
+                    "id":"--config-delete",
+                    "type":"string",
+                    "description":"key to delete"
+                },
+                "--config-show":{
+                    "id":"--config-show",
+                    "type":"string",
+                    "description":"show config"
+                },
+                "--standard":{
+                    "id":"--standard",
+                    "type":"string",
+                    "description":"The name or path of the coding standard to use"
+                },
+                "--sniffs":{
+                    "id":"--sniffs",
+                    "type":"string",
+                    "description":"A comma separated list of sniff codes to include or exclude from checking (all sniffs must be part of the specified standard)"
+                },
+                "--exclude":{
+                    "id":"--exclude",
+                    "type":"string",
+                    "description":"A comma separated list of sniff codes to include or exclude from checking (all sniffs must be part of the specified standard)"
+                },
+                "--encoding":{
+                    "id":"--encoding",
+                    "type":"string",
+                    "description":"The encoding of the files being checked (default is utf-8)"
+                },
+                "--processes":{
+                    "id":"--processes",
+                    "type":"number",
+                    "description":"How many files should be checked simultaneously (default is 1)",
+                    "default":"1"
+                },
+                "--generator":{
+                    "id":"--generator",
+                    "type":"string",
+                    "description":"Uses either the 'HTML', 'Markdown' or 'Text' generator (forces documentation generation instead of checking)"
+                },
+                "--extensions":{
+                    "id":"--extensions",
+                    "type":"string",
+                    "description":"A comma separated list of file extensions to check (extension filtering only valid when checking a directory) The type of the file can be specified using: ext/type e.g., module/php,es/js"
+                },
+                "--ignore":{
+                    "id":"--ignore",
+                    "type":"string",
+                    "description":"A comma separated list of patterns to ignore files and directories"
+                },
+                "--stdin-path":{
+                    "id":"--stdin-path",
+                    "type":"string",
+                    "description":"If processing STDIN, the file path that STDIN will be processed as"
+                }, 
+                "--file-list":{
+                    "id":"--file-list",
+                    "type":"string",
+                    "description":"A file containing a list of files and/or directories to check (one per line)"
+                },          
                 "--version": {
                     "id": "linterhub:version",
                     "type": "null",
@@ -120,7 +254,7 @@
                     "type": "string",
                     "description": "The engine name",
                     "enum": [
-                        "codesniffer"
+                        "php_codesniffer"
                     ]
                 },
                 "options": {

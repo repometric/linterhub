@@ -1,6 +1,6 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
-    "name": "codesniffer",
+    "name": "php_codesniffer",
     "dependencies": [
         [
             {
