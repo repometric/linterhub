@@ -1,49 +1,49 @@
-{ 
-    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
-    "name": "ocstyle", 
-    "type": "object", 
-    "allOf": [ 
-        { 
-            "$ref": "#/definitions/arguments" 
-        } 
-    ], 
-    "definitions": { 
-        "arguments": { 
-            "type": "object", 
-            "properties": { 
-               "--maxLineLength":{
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "ocstyle",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--maxLineLength": {
                     "id": "args:--maxLineLength",
                     "type": "number",
                     "description": "Maximum line length"
                 },
-                "":{
+                "": {
                     "id": "linterhub:path",
                     "type": "string",
                     "description": "The path to a Python project to inspect. Defaults to PWD if not specified. If multiple paths are specified, they must all be files (no directories)."
                 },
-                "--help":{
+                "--help": {
                     "type": "null",
                     "description": "Show help"
                 }
-            } 
-        }, 
-        "section": { 
-            "type": "object", 
-            "description": "The engine configuration section", 
-            "properties": { 
-                "name": { 
-                    "type": "string", 
-                    "description": "The engine name", 
-                    "enum": [ 
-                        "ocstyle" 
-                    ] 
-                }, 
-                "arguments": { 
-                    "type": "object", 
-                    "description": "The engine configuration", 
-                    "$ref": "#/definitions/arguments" 
-                } 
-            } 
-        } 
-    } 
-} 
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "ocstyle"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

@@ -1,96 +1,96 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
-  "id": "jscs",
-  "name": "jscs",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "#/definitions/arguments"
-    }
-  ],
-  "definitions": {
-    "arguments": {
-      "type": "object",
-      "description": "The engine command line arguments",
-      "properties": {
-        "--config":{
-          "id":"linterhub:config",
-          "type":"string",
-          "description":"path to config file"
-        },
-        "--auto-configure":{
-          "id": "--auto-configure",
-          "type": "string",
-          "description": "auto-generate a JSCS configuration file"
-        },
-        "--fix":{
-          "id":"args:--fix",
-          "type":"null",
-          "description":"fix code style violations (applies to fixable violations)"
-        },
-        "--extract":{
-          "id":"args:--extract",
-          "type":"string",
-          "description":"set file masks from which to extract JavaScript"
-        },
-        "--es3":{
-          "id":"args:--es3",
-          "type":"null",
-          "description":"validates code as es3"
-        },
-        "--no-colors":{
-          "id":"--no-colors",
-          "type":"null",
-          "description":"clean output without colors"
-        },
-        "--preset":{
-          "id":"--preset",
-          "type":"string",
-          "description":"preset config"
-        },
-        "--max-errors":{
-          "id":"--max-errors",
-          "type":"number",
-          "description":"maximum number of errors to report"
-        },
-        "--error-filter":{
-          "id":"args:--error-filter",
-          "type":"string",
-          "description":"a module to filter errors"
-        },
-        "--reporter":{
-          "id":"--reporter",
-          "type":"string",
-          "description":"error reporter, console - default, text, checkstyle, junit, inline, unix, summary, json. Also accepts relative or absolute path to custom reporter. For instance: ../some-dir/my-reporter.js    (relative path with extension), ../some-dir/my-reporter       (relative path without extension), /path/to/my-reporter.js       (absolute path with extension), /path/to/my-reporter          (absolute path without extension)"
-        },
-        "--version": {
-          "id:": "linterhub:version",
-          "type": "null",
-          "description": "Output the version number"
-        },
-        "--help": {
-          "type": "null",
-          "description": "Output usage information"
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "jscs",
+    "name": "jscs",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
         }
-      }
-    },
-    "section": {
-      "type": "object",
-      "description": "The engine configuration section",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The engine name",
-          "enum": [
-            "nsp"
-          ]
-        },
+    ],
+    "definitions": {
         "arguments": {
-          "type": "object",
-          "description": "The engine configuration",
-          "$ref": "#/definitions/arguments"
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "path to config file"
+                },
+                "--auto-configure": {
+                    "id": "--auto-configure",
+                    "type": "string",
+                    "description": "auto-generate a JSCS configuration file"
+                },
+                "--fix": {
+                    "id": "args:--fix",
+                    "type": "null",
+                    "description": "fix code style violations (applies to fixable violations)"
+                },
+                "--extract": {
+                    "id": "args:--extract",
+                    "type": "string",
+                    "description": "set file masks from which to extract JavaScript"
+                },
+                "--es3": {
+                    "id": "args:--es3",
+                    "type": "null",
+                    "description": "validates code as es3"
+                },
+                "--no-colors": {
+                    "id": "--no-colors",
+                    "type": "null",
+                    "description": "clean output without colors"
+                },
+                "--preset": {
+                    "id": "--preset",
+                    "type": "string",
+                    "description": "preset config"
+                },
+                "--max-errors": {
+                    "id": "--max-errors",
+                    "type": "number",
+                    "description": "maximum number of errors to report"
+                },
+                "--error-filter": {
+                    "id": "args:--error-filter",
+                    "type": "string",
+                    "description": "a module to filter errors"
+                },
+                "--reporter": {
+                    "id": "--reporter",
+                    "type": "string",
+                    "description": "error reporter, console - default, text, checkstyle, junit, inline, unix, summary, json. Also accepts relative or absolute path to custom reporter. For instance: ../some-dir/my-reporter.js    (relative path with extension), ../some-dir/my-reporter       (relative path without extension), /path/to/my-reporter.js       (absolute path with extension), /path/to/my-reporter          (absolute path without extension)"
+                },
+                "--version": {
+                    "id:": "linterhub:version",
+                    "type": "null",
+                    "description": "Output the version number"
+                },
+                "--help": {
+                    "type": "null",
+                    "description": "Output usage information"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "nsp"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
         }
-      }
     }
-  }
 }

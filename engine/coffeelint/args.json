@@ -1,8 +1,8 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/args.json",
-    "id":"coffeelint",
-    "name":"coffeelint",
-    "type":"object",
+    "id": "coffeelint",
+    "name": "coffeelint",
+    "type": "object",
     "allOf": [
         {
             "$ref": "#/definitions/arguments"

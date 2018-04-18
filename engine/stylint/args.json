@@ -1,67 +1,67 @@
-{ 
-    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
-    "name": "stylint", 
-    "type": "object", 
-    "allOf": [ 
-        { 
-            "$ref": "#/definitions/arguments" 
-        } 
-    ], 
-    "definitions": { 
-        "arguments": { 
-            "type": "object", 
-            "properties": { 
-                "--watch": { 
-                    "id": "args:--watch", 
-                    "type": "boolean", 
-                    "description": "Watch file or directory and run lint on change" 
-                }, 
-                "--strict": { 
-                    "type": "boolean", 
-                    "description": "Run all tests, regardless of config" 
-                }, 
-                "--reporter": { 
-                    "type": "string", 
-                    "description": "Custom reporter npm module name" 
-                }, 
-                "--config": { 
-                    "id": "linterhub:config", 
-                    "type": "string", 
-                    "description": "Reads csslint options from specified file" 
-                }, 
-                "--help": { 
-                    "type": "null", 
-                    "description": "Show help" 
-                }, 
-                "--version": { 
-                    "id": "linterhub:version", 
-                    "type": "string", 
-                    "description": "Show version" 
-                }, 
-                "": { 
-                    "id": "linterhub:path", 
-                    "type": "string", 
-                    "description": "Path for analysis" 
-                } 
-            } 
-        }, 
-        "section": { 
-            "type": "object", 
-            "description": "The engine configuration section", 
-            "properties": { 
-                "name": { 
-                    "type": "string", 
-                    "description": "The engine name", 
-                    "enum": [ 
-                        "stylint" 
-                    ] 
-                }, 
-                "arguments": { 
-                    "type": "object", 
-                    "description": "The engine configuration", 
-                    "$ref": "#/definitions/arguments" 
-                } 
-            } 
-        } 
-    } 
-} 
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "stylint",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--watch": {
+                    "id": "args:--watch",
+                    "type": "boolean",
+                    "description": "Watch file or directory and run lint on change"
+                },
+                "--strict": {
+                    "type": "boolean",
+                    "description": "Run all tests, regardless of config"
+                },
+                "--reporter": {
+                    "type": "string",
+                    "description": "Custom reporter npm module name"
+                },
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "Reads csslint options from specified file"
+                },
+                "--help": {
+                    "type": "null",
+                    "description": "Show help"
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "string",
+                    "description": "Show version"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "stylint"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

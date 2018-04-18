@@ -1,130 +1,130 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
-  "id": "jscpd",
-  "name": "jscpd",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "#/definitions/arguments"
-    }
-  ],
-  "definitions": {
-    "arguments": {
-      "type": "object",
-      "description": "The engine command line arguments",
-      "properties": {
-        "--config":{
-          "id":"linterhub:config",
-          "type":"string",
-          "description":"path to config file"
-        },
-        "--min-lines":{
-          "id": "args:--min-lines",
-          "type": "integer",
-          "description": "min size of duplication in code lines",
-          "default": "5"
-        },
-        "--min-tokens":{
-          "id":"args:--min-tokens",
-          "type":"integer",
-          "description":"min size of duplication in code tokens",
-          "default": "70"
-        },
-        "--files":{
-          "id":"args:--files",
-          "type":"string",
-          "description":"glob pattern for find code"
-        },
-        "--exclude":{
-          "id":"args:--exclude",
-          "type":"string",
-          "description":"directory to ignore"
-        },
-        "--skip-comments":{
-          "id":"args:--skip-comments",
-          "type":"null",
-          "description":"skip comments in code"
-        },
-        "--blame":{
-          "id":"args:--blame",
-          "type":"null",
-          "description":"blame authors of duplications (get information about authors from git)"
-        },
-        "--languages-exts":{
-          "id":"args:--languages-exts",
-          "type":"string",
-          "description":"list of languages with file extensions (language:ext1,ext2;language:ext3)"
-        },
-        "--languages":{
-          "id":"args:--languages",
-          "type":"string",
-          "description":"list of languages which scan for duplicates, separated with comma"
-        },
-        "--output":{
-          "id":"args:--output",
-          "type":"string",
-          "description":"path to report file"
-        },
-        "--reporter":{
-          "id":"args:--reporter",
-          "type":"string",
-          "description":"reporter to use",
-          "default": "xml"
-        },
-        "--xsl-href":{
-          "id":"args:--xsl-href",
-          "type":"string",
-          "description":"path to xsl for include to xml report"
-        },
-        "--verbose":{
-          "id":"args:--verbose",
-          "type":"null",
-          "description":"show full info about copies"
-        },
-        "--debug":{
-          "id":"args:--debug",
-          "type":"null",
-          "description":"show debug information(options list and selected files)"
-        },
-        "--path":{
-          "id":"linterhub:path",
-          "type":"string",
-          "description":"path to code"
-        },
-        "--limit":{
-          "id":"args:--limit",
-          "type":"integer",
-          "description":"limit of allowed duplications, if real duplications percent more then limit jscpd exit with error",
-          "default": "50"
-        },
-        "--version": {
-          "id:": "linterhub:version",
-          "type": "null",
-          "description": "Output the version number"
-        },
-        "--help": {
-          "type": "null",
-          "description": "Output usage information"
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "jscpd",
+    "name": "jscpd",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
         }
-      }
-    },
-    "section": {
-      "type": "object",
-      "description": "The engine configuration section",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The engine name",
-          "enum": [
-            "jscpd"
-          ]
-        },
+    ],
+    "definitions": {
         "arguments": {
-          "type": "object",
-          "description": "The engine configuration",
-          "$ref": "#/definitions/arguments"
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "path to config file"
+                },
+                "--min-lines": {
+                    "id": "args:--min-lines",
+                    "type": "integer",
+                    "description": "min size of duplication in code lines",
+                    "default": "5"
+                },
+                "--min-tokens": {
+                    "id": "args:--min-tokens",
+                    "type": "integer",
+                    "description": "min size of duplication in code tokens",
+                    "default": "70"
+                },
+                "--files": {
+                    "id": "args:--files",
+                    "type": "string",
+                    "description": "glob pattern for find code"
+                },
+                "--exclude": {
+                    "id": "args:--exclude",
+                    "type": "string",
+                    "description": "directory to ignore"
+                },
+                "--skip-comments": {
+                    "id": "args:--skip-comments",
+                    "type": "null",
+                    "description": "skip comments in code"
+                },
+                "--blame": {
+                    "id": "args:--blame",
+                    "type": "null",
+                    "description": "blame authors of duplications (get information about authors from git)"
+                },
+                "--languages-exts": {
+                    "id": "args:--languages-exts",
+                    "type": "string",
+                    "description": "list of languages with file extensions (language:ext1,ext2;language:ext3)"
+                },
+                "--languages": {
+                    "id": "args:--languages",
+                    "type": "string",
+                    "description": "list of languages which scan for duplicates, separated with comma"
+                },
+                "--output": {
+                    "id": "args:--output",
+                    "type": "string",
+                    "description": "path to report file"
+                },
+                "--reporter": {
+                    "id": "args:--reporter",
+                    "type": "string",
+                    "description": "reporter to use",
+                    "default": "xml"
+                },
+                "--xsl-href": {
+                    "id": "args:--xsl-href",
+                    "type": "string",
+                    "description": "path to xsl for include to xml report"
+                },
+                "--verbose": {
+                    "id": "args:--verbose",
+                    "type": "null",
+                    "description": "show full info about copies"
+                },
+                "--debug": {
+                    "id": "args:--debug",
+                    "type": "null",
+                    "description": "show debug information(options list and selected files)"
+                },
+                "--path": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "path to code"
+                },
+                "--limit": {
+                    "id": "args:--limit",
+                    "type": "integer",
+                    "description": "limit of allowed duplications, if real duplications percent more then limit jscpd exit with error",
+                    "default": "50"
+                },
+                "--version": {
+                    "id:": "linterhub:version",
+                    "type": "null",
+                    "description": "Output the version number"
+                },
+                "--help": {
+                    "type": "null",
+                    "description": "Output usage information"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "jscpd"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
         }
-      }
     }
-  }
 }

@@ -2,7 +2,7 @@
     "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
     "name": "html-inspector",
     "description": "HTML Inspector is a code quality tool to help you and your team write better markup. It's written in JavaScript and runs in the browser, so testing your HTML has never been easier.",
-    "url": "https://github.com/philipwalton/html-inspector", 
+    "url": "https://github.com/philipwalton/html-inspector",
     "languages": [
         "HTML"
     ],

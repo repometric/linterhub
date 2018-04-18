@@ -1,16 +1,16 @@
-{ 
-    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
-    "name": "pycodestyle", 
-    "type": "object", 
-    "allOf": [ 
-        { 
-            "$ref": "#/definitions/arguments" 
-        } 
-    ], 
-    "definitions": { 
-        "arguments": { 
-            "type": "object", 
-            "properties": { 
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "pycodestyle",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
                 "--config": {
                     "id": "linterhub:config",
                     "type": "string",
@@ -101,39 +101,39 @@
                     "type": "null",
                     "description": "Print status messages, or debug with -vv"
                 },
-                "":{
+                "": {
                     "id": "linterhub:path",
                     "type": "string",
                     "description": "The path to a Python project to inspect. Defaults to PWD if not specified. If multiple paths are specified, they must all be files (no directories)."
                 },
-                "--version":{
+                "--version": {
                     "id": "linterhub:version",
                     "type": "null",
                     "description": "Show program's version number and exit"
                 },
-                "--help":{
+                "--help": {
                     "type": "null",
                     "description": "Show help"
                 }
-            } 
-        }, 
-        "section": { 
-            "type": "object", 
-            "description": "The engine configuration section", 
-            "properties": { 
-                "name": { 
-                    "type": "string", 
-                    "description": "The engine name", 
-                    "enum": [ 
-                        "pycodestyle" 
-                    ] 
-                }, 
-                "arguments": { 
-                    "type": "object", 
-                    "description": "The engine configuration", 
-                    "$ref": "#/definitions/arguments" 
-                } 
-            } 
-        } 
-    } 
-} 
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "pycodestyle"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

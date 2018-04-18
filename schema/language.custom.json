@@ -71,7 +71,7 @@
                     "enum": [
                         "TTCN-3"
                     ],
-                    "extensions":[
+                    "extensions": [
                         ".ttcn"
                     ]
                 }

@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "scripts": {
         "build": "gulp",
+        "format": "npm run schema-format && npm run engine-format",
+        "validate": "npm run schema-validate && npm run engine-validate",
+        "git-changed": "git diff --exit-code --quiet",
         "language-import": "node script/js/language.import.js",
         "license-import": "node script/js/license.import.js",
         "schema-format": "node script/js/schema.format.js",

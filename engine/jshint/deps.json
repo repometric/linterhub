@@ -2,17 +2,17 @@
     "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
     "name": "jshint",
     "dependencies": [
-      [
-        {
-          "manager": "platform",
-          "package": "npm"
-        },
-        {
-          "manager": "npm",
-          "package": "jshint",
-          "version": "2.9.5",
-          "engine": true
-        }
-      ]
+        [
+            {
+                "manager": "platform",
+                "package": "npm"
+            },
+            {
+                "manager": "npm",
+                "package": "jshint",
+                "version": "2.9.5",
+                "engine": true
+            }
+        ]
     ]
-  }
+}

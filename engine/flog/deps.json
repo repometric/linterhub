@@ -1,18 +1,18 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
-  "name": "flog",
-  "dependencies": [
-      [
-          {
-              "manager": "platform",
-              "package": "gem"
-          },
-          {
-              "manager": "gem",
-              "package": "flog",
-              "version": "4.6.2",
-              "engine": true
-          }
-      ]
-  ]
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "flog",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "gem"
+            },
+            {
+                "manager": "gem",
+                "package": "flog",
+                "version": "4.6.2",
+                "engine": true
+            }
+        ]
+    ]
 }

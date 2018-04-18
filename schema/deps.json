@@ -66,10 +66,11 @@
         "manager": {
             "type": "string",
             "description": "The package manager",
-            "oneOf": [        
-            {
-                "$ref": "https://repometric.github.io/linterhub/schema/platform.json"
-            }]
+            "oneOf": [
+                {
+                    "$ref": "https://repometric.github.io/linterhub/schema/platform.json"
+                }
+            ]
         }
     }
 }

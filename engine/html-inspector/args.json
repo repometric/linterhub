@@ -1,54 +1,54 @@
-{ 
-    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
-    "name": "html-inspector", 
-    "type": "object", 
-    "allOf": [ 
-        { 
-            "$ref": "#/definitions/arguments" 
-        } 
-    ], 
-    "definitions": { 
-        "arguments": { 
-            "type": "object", 
-            "properties": { 
-                "--config": { 
-                    "id": "linterhub:config", 
-                    "type": "string", 
-                    "description": "Reads csslint options from specified file" 
-                }, 
-                "--help": { 
-                    "type": "null", 
-                    "description": "Show help" 
-                }, 
-                "--version": { 
-                    "id": "linterhub:version", 
-                    "type": "string", 
-                    "description": "Show version" 
-                }, 
-                "": { 
-                    "id": "linterhub:path", 
-                    "type": "string", 
-                    "description": "Path for analysis" 
-                } 
-            } 
-        }, 
-        "section": { 
-            "type": "object", 
-            "description": "The engine configuration section", 
-            "properties": { 
-                "name": { 
-                    "type": "string", 
-                    "description": "The engine name", 
-                    "enum": [ 
-                        "html-inspector" 
-                    ] 
-                }, 
-                "arguments": { 
-                    "type": "object", 
-                    "description": "The engine configuration", 
-                    "$ref": "#/definitions/arguments" 
-                } 
-            } 
-        } 
-    } 
-} 
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "html-inspector",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "Reads csslint options from specified file"
+                },
+                "--help": {
+                    "type": "null",
+                    "description": "Show help"
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "string",
+                    "description": "Show version"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "html-inspector"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

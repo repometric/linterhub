@@ -1,10 +1,10 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
-  "name": "rubocop",
+    "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+    "name": "rubocop",
     "description": "RuboCop is a Ruby static code analyzer",
     "url": "https://github.com/bbatsov/rubocop",
     "languages": [
         "Ruby"
     ],
-"license": "MIT"
+    "license": "MIT"
 }

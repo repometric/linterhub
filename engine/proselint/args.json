@@ -12,19 +12,19 @@
         "arguments": {
             "type": "object",
             "properties": {
-                "--json":{
-                    "id":"args:--json",
-                    "type":"null",
+                "--json": {
+                    "id": "args:--json",
+                    "type": "null",
                     "description": "Output as JSON."
                 },
-                "--time":{
-                    "id":"args:--time",
-                    "type":"null",
+                "--time": {
+                    "id": "args:--time",
+                    "type": "null",
                     "description": "Time on a corpus."
                 },
                 "--debug": {
-                    "id":"args:--debug",
-                    "type":"null",
+                    "id": "args:--debug",
+                    "type": "null",
                     "description": "Give verbose output."
                 },
                 "": {

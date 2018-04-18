@@ -1,18 +1,18 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
-  "name": "flay",
-  "dependencies": [
-      [
-          {
-              "manager": "platform",
-              "package": "gem"
-          },
-          {
-              "manager": "gem",
-              "package": "flay",
-              "version": "2.11.0",
-              "engine": true
-          }
-      ]
-  ]
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "flay",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "gem"
+            },
+            {
+                "manager": "gem",
+                "package": "flay",
+                "version": "2.11.0",
+                "engine": true
+            }
+        ]
+    ]
 }

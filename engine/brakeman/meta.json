@@ -4,7 +4,7 @@
     "description": "A static analysis security vulnerability scanner for Ruby on Rails applications.",
     "url": "https://brakemanscanner.org/",
     "languages": [
-      "Ruby"
+        "Ruby"
     ],
-  "license": "MIT"
+    "license": "MIT"
 }

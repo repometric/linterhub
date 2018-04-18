@@ -1,14 +1,14 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
-  "id": "pug-lint",
-  "name":"pug-lint",
-  "type": "object",
-  "allOf": [
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "pug-lint",
+    "name": "pug-lint",
+    "type": "object",
+    "allOf": [
         {
             "$ref": "#/definitions/arguments"
         }
-  ],
-  "definitions": {
+    ],
+    "definitions": {
         "arguments": {
             "type": "object",
             "properties": {
@@ -27,9 +27,9 @@
                     "description": "Show version"
                 },
                 "--reporter": {
-                  "id":"--reporter",
-                  "type": "string",
-                  "description": "error reporter; console - default, inline (default: console)"
+                    "id": "--reporter",
+                    "type": "string",
+                    "description": "error reporter; console - default, inline (default: console)"
                 },
                 "": {
                     "id": "linterhub:path",
@@ -56,5 +56,5 @@
                 }
             }
         }
-  }
+    }
 }

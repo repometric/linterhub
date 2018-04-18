@@ -1,5 +1,5 @@
 {
-    "$schema": "https://repometric.github.io/linterhub/schema/deps.json", 
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
     "name": "html-inspector",
     "dependencies": [
         [

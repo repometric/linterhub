@@ -1,106 +1,106 @@
 {
-  "$schema": "https://repometric.github.io/linterhub/schema/args.json",
-  "id": "nsp",
-  "name": "nsp",
-  "type": "object",
-  "allOf": [
-    {
-      "$ref": "#/definitions/arguments"
-    }
-  ],
-  "definitions": {
-    "arguments": {
-      "type": "object",
-      "description": "The engine command line arguments",
-      "properties": {
-        "--config":{
-          "id":"linterhub:--config",
-          "type":"string",
-          "description":"path to config file"
-        },
-        "check":{
-          "id": "args:check",
-          "type": "string",
-          "description": "checks a project for known vulnerabilities against the Node Security API",
-          "enum":[
-            "--filter",
-            "--threshold"
-          ]
-        },
-        "gather":{
-          "id":"args:gather",
-          "type":"null",
-          "description":"gathers current advisories into a json file for offline checks"
-        },
-        "login":{
-          "id":"login",
-          "type":"string",
-          "description":"login to the node security project"
-        },
-        "--proxy":{
-          "id":"args:--proxy",
-          "type":"string",
-          "description":"https proxy to be used for API calls"
-        },
-        "--token":{
-          "id":"args:--token",
-          "type":"string",
-          "description":"authentication token used to make api requests"
-        },
-        "--reporter":{
-          "id":"args:--reporter",
-          "type":"string",
-          "description":"output reporter",
-          "default":"table"
-        },
-        "--verbose":{
-          "id":"args:--verbose",
-          "type":"null",
-          "description":"provide more verbose output"
-        },
-        "--quiet":{
-          "id":"args:--quiet",
-          "type":"null",
-          "description":"suppress output"
-        },
-        "--ignore-server-errors":{
-          "id":"args:--ignore-server-errors",
-          "type":"null",
-          "description":"do not exit with an error code when errors are due to server problems"
-        },
-        "--preprocessor":{
-          "id":"args:--preprocessor",
-          "type":"string",
-          "description":"project preprocessor"
-        },
-        "--version": {
-          "id:": "linterhub:version",
-          "type": "null",
-          "description": "Output the version number"
-        },
-        "--help": {
-          "type": "null",
-          "description": "Output usage information"
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id": "nsp",
+    "name": "nsp",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
         }
-      }
-    },
-    "section": {
-      "type": "object",
-      "description": "The engine configuration section",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The engine name",
-          "enum": [
-            "nsp"
-          ]
-        },
+    ],
+    "definitions": {
         "arguments": {
-          "type": "object",
-          "description": "The engine configuration",
-          "$ref": "#/definitions/arguments"
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "--config": {
+                    "id": "linterhub:--config",
+                    "type": "string",
+                    "description": "path to config file"
+                },
+                "check": {
+                    "id": "args:check",
+                    "type": "string",
+                    "description": "checks a project for known vulnerabilities against the Node Security API",
+                    "enum": [
+                        "--filter",
+                        "--threshold"
+                    ]
+                },
+                "gather": {
+                    "id": "args:gather",
+                    "type": "null",
+                    "description": "gathers current advisories into a json file for offline checks"
+                },
+                "login": {
+                    "id": "login",
+                    "type": "string",
+                    "description": "login to the node security project"
+                },
+                "--proxy": {
+                    "id": "args:--proxy",
+                    "type": "string",
+                    "description": "https proxy to be used for API calls"
+                },
+                "--token": {
+                    "id": "args:--token",
+                    "type": "string",
+                    "description": "authentication token used to make api requests"
+                },
+                "--reporter": {
+                    "id": "args:--reporter",
+                    "type": "string",
+                    "description": "output reporter",
+                    "default": "table"
+                },
+                "--verbose": {
+                    "id": "args:--verbose",
+                    "type": "null",
+                    "description": "provide more verbose output"
+                },
+                "--quiet": {
+                    "id": "args:--quiet",
+                    "type": "null",
+                    "description": "suppress output"
+                },
+                "--ignore-server-errors": {
+                    "id": "args:--ignore-server-errors",
+                    "type": "null",
+                    "description": "do not exit with an error code when errors are due to server problems"
+                },
+                "--preprocessor": {
+                    "id": "args:--preprocessor",
+                    "type": "string",
+                    "description": "project preprocessor"
+                },
+                "--version": {
+                    "id:": "linterhub:version",
+                    "type": "null",
+                    "description": "Output the version number"
+                },
+                "--help": {
+                    "type": "null",
+                    "description": "Output usage information"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "nsp"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
         }
-      }
     }
-  }
 }

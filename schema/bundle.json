@@ -5,9 +5,11 @@
     "description": "The engines bundle",
     "type": "object",
     "patternProperties": {
-    "^.*$": {
-        "allOf": [
-                { "$ref": "#/definitions/item" }
+        "^.*$": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/item"
+                }
             ]
         }
     },

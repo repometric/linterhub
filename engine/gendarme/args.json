@@ -1,22 +1,22 @@
-{ 
-    "$schema": "https://repometric.github.io/linterhub/schema/args.json", 
-    "name": "gendarme", 
-    "type": "object", 
-    "allOf": [ 
-        { 
-            "$ref": "#/definitions/arguments" 
-        } 
-    ], 
-    "definitions": { 
-        "arguments": { 
-            "type": "object", 
-            "properties": { 
-                "--config": { 
-                    "id": "linterhub:config", 
-                    "type": "string", 
-                    "description": "Specify the rule sets and rule settings. Default is 'rules.xml'." 
-                }, 
-                "--set":{
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "name": "gendarme",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "properties": {
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "Specify the rule sets and rule settings. Default is 'rules.xml'."
+                },
+                "--set": {
                     "id": "args:--set",
                     "type": "string",
                     "description": "Specify a rule set from configfile. Default is 'default'."
@@ -26,39 +26,39 @@
                     "type": "string",
                     "description": "Save the report to the specified file."
                 },
-                "--xml":{
+                "--xml": {
                     "id": "args:--xml",
                     "type": "string",
                     "description": "Save the report, as XML, to the specified file."
                 },
-                "--html":{
+                "--html": {
                     "id": "args:--html",
                     "type": "string",
                     "description": "Save the report, as HTML, to the specified file."
                 },
-                "--ingore":{
+                "--ingore": {
                     "id": "args:--ignore",
                     "type": "string",
                     "description": "Do not report defects listed in the specified file."
                 },
-                "--limit":{
+                "--limit": {
                     "id": "args:--limit",
                     "type": "number",
                     "description": "Stop reporting after N defects are found."
                 },
-                "--quiet":{
+                "--quiet": {
                     "id": "args:--quiet",
                     "type": "null",
                     "description": "Used to disable progress and other information which is normally written to stdout."
                 },
-                "--v": { 
-                    "id": "args:--v", 
-                    "type": "null", 
-                    "description": "When present additional progress information is written to stdout (can be used multiple times)." 
+                "--v": {
+                    "id": "args:--v",
+                    "type": "null",
+                    "description": "When present additional progress information is written to stdout (can be used multiple times)."
                 },
-                "--confidence": { 
-                    "id": "args:--confidence", 
-                    "type": "string", 
+                "--confidence": {
+                    "id": "args:--confidence",
+                    "type": "string",
                     "enum": [
                         "all",
                         "low+",
@@ -70,7 +70,7 @@
                         "total+",
                         "total-"
                     ],
-                    "description": "Filter defects for the specified confidence levels. Default is 'normal+'" 
+                    "description": "Filter defects for the specified confidence levels. Default is 'normal+'"
                 },
                 "--severity": {
                     "id": "args:--severity",
@@ -90,34 +90,34 @@
                     ],
                     "description": "Filter defects for the specified severity levels. Default is 'medium+'"
                 },
-                "": { 
-                    "id": "linterhub:path", 
-                    "type": "string", 
-                    "description": "Path for analysis" 
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
                 },
-                "--help": { 
-                    "type": "null", 
-                    "description": "Show help" 
+                "--help": {
+                    "type": "null",
+                    "description": "Show help"
                 }
-            } 
-        }, 
-        "section": { 
-            "type": "object", 
-            "description": "The engine configuration section", 
-            "properties": { 
-                "name": { 
-                    "type": "string", 
-                    "description": "The engine name", 
-                    "enum": [ 
-                        "gendarme" 
-                    ] 
-                }, 
-                "arguments": { 
-                    "type": "object", 
-                    "description": "The engine configuration", 
-                    "$ref": "#/definitions/arguments" 
-                } 
-            } 
-        } 
-    } 
-} 
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "gendarme"
+                    ]
+                },
+                "arguments": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}

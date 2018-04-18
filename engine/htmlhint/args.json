@@ -1,7 +1,7 @@
 {
     "$schema": "https://repometric.github.io/linterhub/schema/args.json",
-    "name":"htmlhint",
-    "id":"htmlhint",
+    "name": "htmlhint",
+    "id": "htmlhint",
     "type": "object",
     "allOf": [
         {
@@ -18,7 +18,7 @@
                     "description": "Read the source from stdin"
                 },
                 "--nocolor": {
-                    "id":"--nocolor",
+                    "id": "--nocolor",
                     "type": "null",
                     "description": "Disable color"
                 },
@@ -28,7 +28,7 @@
                     "description": "Add pattern to exclude matches"
                 },
                 "--format": {
-                    "id":"--format",
+                    "id": "--format",
                     "type": "string",
                     "description": "Output messages as custom format",
                     "enum": [
@@ -56,7 +56,7 @@
                     "description": "Custom configuration file"
                 },
                 "--list": {
-                    "id":"--list",
+                    "id": "--list",
                     "type": "string",
                     "description": "Show all of the rules available"
                 },

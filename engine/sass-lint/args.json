@@ -17,36 +17,36 @@
                     "type": "string",
                     "description": "Path to custom config file"
                 },
-                "--ignore":{
+                "--ignore": {
                     "id": "args:--ingnore",
                     "type": "string",
                     "description": "Pattern to ignore. For multiple ignores, separate each pattern by `, ` within a string"
                 },
-                "--no-exit":{
+                "--no-exit": {
                     "type": "null",
                     "description": "Do not exit on errors"
                 },
-                "--verbose":{
+                "--verbose": {
                     "type": "null",
                     "description": "Verbose output"
                 },
-                "--format":{
+                "--format": {
                     "id": "args:--format",
                     "type": "string",
                     "description": "Pass one of the available eslint formats",
                     "default": "json"
                 },
-                "--output":{
+                "--output": {
                     "id": "linterhub:filename",
                     "type": "string",
                     "description": "The path and filename where you would like output to be written"
                 },
-                "--syntax":{
+                "--syntax": {
                     "id": "args:--syntax",
                     "type": "string",
                     "description": "Syntax to evaluate the file(s) with (either sass or scss)"
                 },
-                "--max-warnings":{
+                "--max-warnings": {
                     "id": "args:--max-warnings",
                     "type": "number",
                     "description": "Number of warnings to trigger nonzero exit code"

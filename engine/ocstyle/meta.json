@@ -2,7 +2,7 @@
     "$schema": "https://repometric.github.io/linterhub/schema/meta.json",
     "name": "ocstyle",
     "description": "OCStyle is a Objective-C style checker",
-    "url": "https://github.com/Cue/ocstyle", 
+    "url": "https://github.com/Cue/ocstyle",
     "languages": [
         "Python",
         "Objective-C"
