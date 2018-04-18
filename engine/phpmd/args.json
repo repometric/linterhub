@@ -15,7 +15,7 @@
       "properties": {
         "--minimumpriority":{
           "id":"args:--minimumpriority",
-          "type":"args:string",
+          "type":"string",
           "description":"The rule priority threshold; rules with lower priority than they will not be used."
         },
         "--reportfile":{
