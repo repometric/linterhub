@@ -9,10 +9,11 @@ before_install:
   - git submodule update --init
 install:
   - npm install
-  - npm run schema-validate
-  - npm run engine-validate
-  - npm run engine-bundle
+  - npm run validate
+  - npm run format
+  - npm run git-changed
 script:
+  - npm run bundle
   - npm run build
   - cd build
 deploy:
