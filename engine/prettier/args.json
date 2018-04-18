@@ -1,0 +1,247 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/args.json",
+    "id":"prettier",
+    "name":"prettier",
+    "type":"object",
+    "allOf": [
+        {
+            "$ref": "#/definitions/arguments"
+        }
+    ],
+    "definitions": {
+        "arguments": {
+            "type": "object",
+            "description": "The engine command line arguments",
+            "properties": {
+                "--write": {
+                    "id": "args:--write",
+                    "type": "null",
+                    "description": "Edit files in-place. (Beware!)"
+                },
+                "--list-different": {
+                    "id": "args:--list-different",
+                    "type": "null",
+                    "description": "Print the names of files that are different from Prettier's formatting."
+                },
+                "--arrow-parens": {
+                    "id": "args:--arrow-parens",
+                    "type": "string",
+                    "enum": [
+                        "avoid",
+                        "always"
+                    ],
+                    "default": "avoid",
+                    "description": "Include parentheses around a sole arrow function parameter. Defaults to avoid."
+                },
+                "--no-bracket-spacing": {
+                    "id": "args:--no-bracket-spacing",
+                    "type": "null",
+                    "description": "Do not print spaces between brackets."
+                },
+                "-jsx-bracket-same-line": {
+                    "id": "args:-jsx-bracket-same-line",
+                    "type": "null",
+                    "description": "Put > on the last line instead of at a new line. Defaults to false."
+                },
+                "--parser": {
+                    "id": "args:--parser",
+                    "type": "string",
+                    "enum": [
+                        "flow",
+                        "babylon",
+                        "typescript",
+                        "css",
+                        "less",
+                        "scss",
+                        "json",
+                        "graphql",
+                        "markdown",
+                        "vue"
+                    ],
+                    "default": "babylon",
+                    "description": "Which parser to use. Defaults to babylon."
+                },
+                "--print-width": {
+                    "id": "args:--print-width",
+                    "type": "number",
+                    "description": "The line length where Prettier will try wrap. Defaults to 80."
+                },
+                "--prose-wrap": {
+                    "id": "args:--prose-wrap",
+                    "type": "string",
+                    "enum": [
+                        "always",
+                        "never",
+                        "preserve"
+                    ],
+                    "description": "How to wrap prose. (markdown) Defaults to preserve."
+                },
+                "--no-semi": {
+                    "id": "args:--no-semi",
+                    "type": "null",
+                    "description": "Do not print semicolons, except at the beginning of lines which may need them."
+                },
+                "--single-quote ": {
+                    "id": "args:--single-quote",
+                    "type": "null",
+                    "description": "Use single quotes instead of double quotes. Defaults to false."
+                },
+                "--tab-width": {
+                    "id": "args:--tab-width",
+                    "type": "number",
+                    "description": "Number of spaces per indentation level. Defaults to 2."
+                },
+                "--trailing-comma": {
+                    "id": "args:--trailing-comma",
+                    "type": "string",
+                    "enum": [
+                        "none",
+                        "es5",
+                        "all"
+                    ],
+                    "description": "Print trailing commas wherever possible when multi-line.  Defaults to none."
+                },
+                "--use-tabs": {
+                    "id": "args:--use-tabs",
+                    "type": "null",
+                    "description": "Indent with tabs instead of spaces. Defaults to false."
+                },
+                "--config": {
+                    "id": "linterhub:config",
+                    "type": "string",
+                    "description": "Path to a Prettier configuration file (.prettierrc, package.json, prettier.config.js)."
+                },
+                "--no-config": {
+                    "id": "args:--no-config",
+                    "type": "null",
+                    "description": "Do not look for a configuration file."
+                },
+                "--config-precedence": {
+                    "id": "args:--config-precedence",
+                    "type": "string",
+                    "enum": [
+                        "cli-override",
+                        "file-override",
+                        "prefer-file"
+                    ],
+                    "description": "Define in which order config files and CLI options should be evaluated. Defaults to cli-override."
+                },
+                "--no-editorconfig": {
+                    "id": "args:--no-editorconfig",
+                    "type": "null",
+                    "description": " Don't take .editorconfig into account when parsing configuration"
+                },
+                "--find-config-path": {
+                    "id": "args:--find-config-path",
+                    "type": "string",
+                    "description": "Find and print the path to a configuration file for the given input file."
+                },
+                "--ignore-path": {
+                    "id": "args:--ignore-path",
+                    "type": "string",
+                    "description": "Path to a file with patterns describing files to ignore. Defaults to .prettierignore."
+                },
+                "--plugin": {
+                    "id": "args:--plugin",
+                    "type": "string",
+                    "description": "Add a plugin. Multiple plugins can be passed as separate `--plugin`s. Defaults to []."
+                },
+                "--with-node-modules": {
+                    "id": "args:--with-node-modules",
+                    "type": "null",
+                    "description": "Process files inside 'node_modules' directory."
+                },
+                "--cursor-offset": {
+                    "id": "args:--cursor-offset",
+                    "type": "number",
+                    "description": "Print (to stderr) where a cursor at the given position would move to after formatting. This option cannot be used with --range-start and --range-end. Defaults to -1"
+                },
+                "--range-end": {
+                    "id": "args:--range-end",
+                    "type": "number",
+                    "description": "Format code ending at a given character offset (exclusive). The range will extend forwards to the end of the selected statement. This option cannot be used with --cursor-offset. Defaults to Infinity."
+                },
+                "--range-start": {
+                    "id": "args:--range-start",
+                    "type": "number",
+                    "description": "Format code starting at a given character offset. The range will extend backwards to the start of the first line containing the selected statement. This option cannot be used with --cursor-offset. Defaults to 0."
+                },
+                "--no-color": {
+                    "id": "args:--no-color",
+                    "type": "null",
+                    "description": "Do not colorize error messages."
+                },
+                "--insert-pragma ": {
+                    "id": "args:--insert-pragma",
+                    "type": "null",
+                    "description": "Insert @format pragma into file's first docblock comment. Defaults to false."
+                },
+                "--loglevel": {
+                    "id": "args:--loglevel",
+                    "type": "string",
+                    "enum": [
+                        "silent",
+                        "error",
+                        "warn",
+                        "log",
+                        "debug"
+                    ],
+                    "default": "log",
+                    "description": "What level of logs to report. Defaults to log."
+                },
+                "--require-pragma": {
+                    "id": "args:--require-pragma",
+                    "type": "null",
+                    "description": "Require either '@prettier' or '@format' to be present in the file's first docblock comment in order for it to be formatted. Defaults to false."
+                },
+                "--stdin": {
+                    "id": "linterhub:stdin",
+                    "type": "null",
+                    "description": "Force reading input from stdin."
+                },
+                "--stdin-filepath": {
+                    "id": "linterhub:filename",
+                    "type": "string",
+                    "description": "Path to the file to pretend that stdin comes from."
+                },
+                "--support-info": {
+                    "id": "args:--support-info",
+                    "type": "null",
+                    "description": "Print support information as JSON."
+                },
+                "--help": {
+                    "type": "string",
+                    "description": "Show help"
+                },
+                "--version": {
+                    "id": "linterhub:version",
+                    "type": "string",
+                    "description": "Show version"
+                },
+                "": {
+                    "id": "linterhub:path",
+                    "type": "string",
+                    "description": "Path for analysis"
+                }
+            }
+        },
+        "section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "prettier"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+        }
+    }
+}
