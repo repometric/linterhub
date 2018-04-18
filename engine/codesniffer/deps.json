@@ -1,0 +1,18 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+    "name": "php_codesniffer",
+    "dependencies": [
+        [
+            {
+                "manager": "platform",
+                "package": "composer"
+            },
+            {
+                "manager": "composer",
+                "package": "php_codesniffer",
+                "version": "3.2.3",
+                "engine": true
+            }
+        ]
+    ]
+}
