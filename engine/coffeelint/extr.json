@@ -1,0 +1,16 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/extr.json",
+    "id": "coffeelint",
+    "name": "coffeelint",
+    "pipeline": [
+		{
+			"cmd": "coffeelint",
+			"success": 1
+		}
+	],
+    "environment": {
+		"executable": "coffeelint",
+		"masks": true,
+		"version": "v1.16.0"
+    }
+}
