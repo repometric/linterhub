@@ -34,11 +34,6 @@
                     "description": "Whether filename masks are supported by engine",
                     "default": true
                 },
-                "success": {
-                    "type": "number",
-                    "description": "Success exit code",
-                    "default": 0
-                },
                 "version": {
                     "type": "string",
                     "description": "The engine version, equal to the output of version command"
