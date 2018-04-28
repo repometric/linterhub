@@ -2,7 +2,7 @@
     "id": "https://repometric.github.io/linterhub/schema/extr.json",
     "$schema": "http://json-schema.org/draft-04/schema",
     "title": "This schema describes the engine extra information",
-    "description": "The meta information of engine",
+    "description": "The extra information of engine",
     "type": "object",
     "properties": {
         "id": {
