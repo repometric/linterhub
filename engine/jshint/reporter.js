@@ -1,31 +1,31 @@
 "use strict";
 module.exports = {
-	reporter: function (results, data, opts) {
+	reporter(results, data, opts) {
         let files = {};
 		opts = opts || {};
-        results.forEach(function(record) {
+        results.forEach((record) => {
             let error = record.error;
-            let severity = "";
+            let severityString = "";
             if (!files[record.file]) {
                 files[record.file] = [];
             }
 
             switch (error.code[0]) {
                 case "I":
-                    severity = "info";
+                    severityString = "info";
                     break;
                 case "W":
-                    severity = "warning";
+                    severityString = "warning";
                     break;
                 default:
                 case "E":
-                    severity = "error";
+                    severityString = "error";
                     break;
             }
 
             files[record.file].push({
                 message: error.reason,
-                severity: severity,
+                severity: severityString,
                 line: error.line,
                 lineEnd: error.line,
                 column: error.character,
