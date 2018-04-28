@@ -10,7 +10,6 @@ module.exports = class Reporter
 
     publish: () ->
         filesResult = []
-        md5 = require('../md5.min')
         for path, errors of @errorReport.paths
             fileResult = {
                 path: path
@@ -26,7 +25,6 @@ module.exports = class Reporter
                     line: e.lineNumber - 1,
                     lineEnd: if e.lineNumberEnd then e.lineNumberEnd - 1 else e.lineNumber - 1
                     column: 0,
-                    ruleId: 'coffeelint:' + md5(e.description).substr(0, 6),
                     ruleName: e.name,
                     ruleNamespace: e.rule
                 })
