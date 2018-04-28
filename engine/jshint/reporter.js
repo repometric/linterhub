@@ -1,25 +1,25 @@
-'use strict';
+"use strict";
 module.exports = {
 	reporter: function (results, data, opts) {
         let files = {};
 		opts = opts || {};
         results.forEach(function(record) {
             let error = record.error;
-            let severity = '';
+            let severity = "";
             if (!files[record.file]) {
                 files[record.file] = [];
             }
 
             switch (error.code[0]) {
-                case 'I':
-                    severity = 'info';
+                case "I":
+                    severity = "info";
                     break;
-                case 'W':
-                    severity = 'warning';
+                case "W":
+                    severity = "warning";
                     break;
                 default:
-                case 'E':
-                    severity = 'error';
+                case "E":
+                    severity = "error";
                     break;
             }
 
@@ -29,7 +29,7 @@ module.exports = {
                 line: error.line,
                 lineEnd: error.line,
                 column: error.character,
-                ruleId: 'jshint:' + error.code,
+                ruleId: "jshint:" + error.code,
                 ruleName: error.id,
                 ruleNamespace: error.scope,
             });
