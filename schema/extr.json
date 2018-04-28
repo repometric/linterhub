@@ -12,7 +12,7 @@
         },
         "name": {
             "type": "string",
-            "description": "The engine official name, may not be unique"
+            "description": "The engine official name"
         },
         "pipeline": {
             "type": "array",
