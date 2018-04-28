@@ -1,0 +1,16 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/extr.json",
+    "id": "jshint",
+    "name": "jshint",
+    "pipeline": [
+		{
+			"cmd": "jshint",
+			"success": 2
+		}
+	],
+    "environment": {
+		"executable": "jshint",
+		"masks": true,
+		"version": "v2.9.5"
+    }
+}
