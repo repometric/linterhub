@@ -4,13 +4,13 @@
     "name": "jshint",
     "pipeline": [
 		{
-			"cmd": "jshint"
+			"cmd": "jshint",
+			"success": 2
 		}
 	],
     "environment": {
 		"executable": "jshint",
 		"masks": true,
-		"success": 2,
 		"version": "v2.9.5"
     }
 }
