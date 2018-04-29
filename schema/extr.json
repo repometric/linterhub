@@ -25,10 +25,6 @@
             "type": "object",
             "description": "Object, which stores execution information for engine",
             "properties": {
-                "executable":{
-                    "type": "string",
-                    "description": "The engine executable name, the name that used in the OS may differ from the official name; if not set then assumed that it's equal to engine name"
-                },
                 "masks": {
                     "type": "boolean",
                     "description": "Whether filename masks are supported by engine",
@@ -59,6 +55,11 @@
                     "type": "number",
                     "description": "Success exit code",
                     "default": 0
+                },
+                "engine": {
+                    "type": "boolean",
+                    "decsription":"Whether the command-line option is an executable engine name",
+                    "default": false
                 }
             }
         }
