@@ -10,7 +10,7 @@
             {
                 "manager": "npm",
                 "package": "coffeelint",
-                "version": "1.16.0",
+                "version": "2.1.0",
                 "engine": true
             }
         ]

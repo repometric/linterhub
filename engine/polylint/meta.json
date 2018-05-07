@@ -7,8 +7,5 @@
         "HTML",
         "JavaScript"
     ],
-    "configs": [
-        ".json"
-    ],
     "license": "BSD-3-Clause"
 }

@@ -10,7 +10,7 @@
             {
                 "manager": "npm",
                 "package": "plato",
-                "version": "1.2.1",
+                "version": "1.7.0",
                 "engine": true
             }
         ]

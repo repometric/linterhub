@@ -32,5 +32,8 @@
         "Lua",
         "Perl"
     ],
+    "configs": [
+        ".cpd.yaml"
+    ],
     "license": "MIT"
 }

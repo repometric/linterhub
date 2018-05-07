@@ -17,8 +17,7 @@
     ],
     "configs": [
         ".prettierrc",
-        ".json",
-        ".config.js"
+        "prettier.config.js"
     ],
     "license": "MIT"
 }

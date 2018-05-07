@@ -6,8 +6,5 @@
     "languages": [
         "JavaScript"
     ],
-    "configs": [
-        ".json"
-    ],
     "license": "MIT"
 }
