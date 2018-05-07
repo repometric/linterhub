@@ -7,7 +7,6 @@
         "CSS"
     ],
     "configs": [
-        ".configrc",
         ".stylintrc"
     ],
     "license": "AGPL-3.0"

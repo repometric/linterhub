@@ -6,8 +6,5 @@
     "languages": [
         "HTML"
     ],
-    "configs": [
-        ".js"
-    ],
     "license": "MIT"
 }

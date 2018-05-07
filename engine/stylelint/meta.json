@@ -9,11 +9,8 @@
         "SCSS"
     ],
     "configs": [
-        ".json",
-        ".yml",
-        ".js",
         ".stylelintrc",
-        ".yaml"
+        "stylelint.config.js"
     ],
     "license": "MIT"
 }

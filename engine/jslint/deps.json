@@ -10,7 +10,7 @@
             {
                 "manager": "npm",
                 "package": "jslint",
-                "version": "0.10.3"
+                "version": "0.12.0"
             }
         ]
     ]
