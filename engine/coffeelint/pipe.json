@@ -5,7 +5,11 @@
     "pipeline": [
 		{
 			"cmd": "coffeelint",
-			"success": 1
+			"success": 1,
+			"engine" : true,
+			"args": {
+				"--reporter":"{{hub}}/{{engine}}/reporter.coffee"
+			}
 		}
 	],
     "environment": {
