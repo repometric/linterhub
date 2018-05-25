@@ -5,7 +5,11 @@
     "pipeline": [
 		{
 			"cmd": "jshint",
-			"success": 2
+			"success": 2,
+			"engine": true,
+			"args": {
+				"--reporter":"{{hub}}/{{engine}}/reporter.js"
+			}
 		}
 	],
     "environment": {
