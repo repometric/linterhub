@@ -27,7 +27,6 @@
                     "description": "character(s) to use for indentation"
                 },
                 "--compact": {
-                    "id": "args:--compact",
                     "type": "null",
                     "description": "compact error display"
                 },
