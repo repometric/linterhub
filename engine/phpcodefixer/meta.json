@@ -1,0 +1,11 @@
+{
+	"$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+	"name": "phpcodefixer",
+	"description": "A console scanner that checks compatibility of your code with new interpreter versions.",
+	"url": "https://github.com/wapmorgan/PhpCodeFixer",
+	"languages": [
+		"PHP",
+		"HTML+PHP"
+	],
+	"license": "BSD-3-Clause"
+}

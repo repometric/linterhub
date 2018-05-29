@@ -1,0 +1,64 @@
+{
+	"$schema": "https://repometric.github.io/linterhub/schema/args.json",
+	"name": "phpcodefixer",
+	"type": "object",
+	"allOf": [
+		{
+			"$ref": "#/definitions/arguments"
+		}
+	],
+	"delimeters": " ",
+	"definitions": {
+		"arguments": {
+			"type": "object",
+			"properties": {
+				"--version": {
+					"id": "linterhub:version",
+					"type": "null",
+					"description": "Show version."
+				},
+				"--target": {
+					"id": "arg:--target",
+					"type": "string",
+					"default": "7.2",
+					"description": "Sets target php version."
+				},
+				"--excluded": {
+					"id": "arg:--excluded",
+					"type": "string",
+					"description": "Sets excluded file or directory names for scanning. Names can be joined with comma."
+				},
+				"--max-size": {
+					"id": "arg:--max-size",
+					"type": "string",
+					"default": "1mb",
+					"description": "Sets max size of php file. If file is larger, it will be skipped."
+				},
+				"--file-extensions": {
+					"id": "arg:--file-extensions",
+					"type": "string",
+					"default": "php,php5,phtml",
+					"description": "Sets file extensions to be parsed.",
+				}
+			}
+		}, 
+		"section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "phpcodefixer"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+		}
+	}
+}
