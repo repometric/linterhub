@@ -6,7 +6,7 @@ const template = module.exports = {
         let lingeringLine = "";
         let lines = [];
         
-        process.stdin.on("data", function(chunk) {
+        process.stdin.on("data", (chunk) => {
             let linesParsed = chunk.split("\n");
             linesParsed[0] = lingeringLine + linesParsed[0];
             lingeringLine = linesParsed.pop();
