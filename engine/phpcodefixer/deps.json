@@ -1,0 +1,18 @@
+{
+	"$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+	"name": "phpcodefixer",
+	"dependencies": [
+		[
+			{
+				"manager": "platform",
+				"package": "composer"
+			},
+			{
+				"manager": "composer",
+				"package": "wapmorgan/php-code-fixer",
+				"version": "2.0.14",
+				"engine": true
+			}
+		]
+	]
+}
