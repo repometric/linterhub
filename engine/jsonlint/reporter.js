@@ -33,8 +33,7 @@ const reporter = module.exports = {
          * @param {*} line Line to parse
          */
         function processLine(line) {
-            const regex = /(.*): line ([0-9]+), col ([0-9]+), (.*)/g;
-            const match = new RegExp(regex).exec(line);
+            const match = new RegExp("/(.*): line ([0-9]+), col ([0-9]+), (.*)/g").exec(line);
 
             if (match === null) {
                 return;
@@ -42,7 +41,7 @@ const reporter = module.exports = {
  
             let objParsed = convertMatch(match);
 
-            let obj = results.find(function(element) {
+            let obj = results.find((element) => {
                 return objParsed.path === element.path;
             });
 
@@ -57,15 +56,15 @@ const reporter = module.exports = {
             obj.messages.push(objParsed.message);
         }
 
-        template.run(function(lines) {
+        template.run((lines) => {
             lines.forEach(processLine);
-            Console.log(JSON.stringify(results));
+            сonsole.log(JSON.stringify(results));
         });
     },
 };
 
 
-reporter.run(function(match) {
+reporter.run((match) => {
     return {
         path: match[1].trim(),
         message: {
