@@ -8,7 +8,7 @@
             "success": 1,
             "engine": true,
             "args":{
-                "":"--compact",
+                "--compact":"",
 				"2>&1":""
             }
         },

@@ -1,5 +1,5 @@
 const template = module.exports = {
-    run: function(onFinish) {
+    run(onFinish) {
         process.stdin.resume();
         process.stdin.setEncoding("utf8");
 
@@ -7,7 +7,7 @@ const template = module.exports = {
         let lines = [];
         
         process.stdin.on("data", function(chunk) {
-            let linesParsed = chunk.split('\n');
+            let linesParsed = chunk.split("\n");
             linesParsed[0] = lingeringLine + linesParsed[0];
             lingeringLine = linesParsed.pop();
             linesParsed.forEach((line) => {
@@ -17,7 +17,7 @@ const template = module.exports = {
             });
         });
 
-        process.stdin.on("end", function() {
+        process.stdin.on("end", () => {
             onFinish(lines);
         });
       
@@ -25,7 +25,7 @@ const template = module.exports = {
 };
 
 const reporter = module.exports = {
-    run: function(regex, convertMatch) {
+    run(convertMatch) {
         let results = [];
 
          /**
@@ -33,8 +33,8 @@ const reporter = module.exports = {
          * @param {*} line Line to parse
          */
         function processLine(line) {
-            //console.log(line);
-            let match = new RegExp(regex).exec(line);
+            const regex = /(.*): line ([0-9]+), col ([0-9]+), (.*)/g;
+            const match = new RegExp(regex).exec(line);
 
             if (match === null) {
                 return;
@@ -46,7 +46,7 @@ const reporter = module.exports = {
                 return objParsed.path === element.path;
             });
 
-            if (obj === undefined) {
+            if (obj === "undefined") {
                 obj = {
                     path: objParsed.path,
                     messages: [],
@@ -59,13 +59,13 @@ const reporter = module.exports = {
 
         template.run(function(lines) {
             lines.forEach(processLine);
-            console.log(JSON.stringify(results));
+            Console.log(JSON.stringify(results));
         });
     },
 };
-let regex = /(.*): line ([0-9]+), col ([0-9]+), (.*)/g;
 
-reporter.run(regex, function(match) {
+
+reporter.run(function(match) {
     return {
         path: match[1].trim(),
         message: {
