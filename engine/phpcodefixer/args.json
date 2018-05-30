@@ -38,27 +38,27 @@
 					"id": "arg:--file-extensions",
 					"type": "string",
 					"default": "php,php5,phtml",
-					"description": "Sets file extensions to be parsed.",
+					"description": "Sets file extensions to be parsed."
 				}
 			}
-		}, 
+		},
 		"section": {
-            "type": "object",
-            "description": "The engine configuration section",
-            "properties": {
-                "name": {
-                    "type": "string",
-                    "description": "The engine name",
-                    "enum": [
-                        "phpcodefixer"
-                    ]
-                },
-                "options": {
-                    "type": "object",
-                    "description": "The engine configuration",
-                    "$ref": "#/definitions/arguments"
-                }
-            }
+			"type": "object",
+			"description": "The engine configuration section",
+			"properties": {
+				"name": {
+					"type": "string",
+					"description": "The engine name",
+					"enum": [
+						"phpcodefixer"
+					]
+				},
+				"options": {
+					"type": "object",
+					"description": "The engine configuration",
+					"$ref": "#/definitions/arguments"
+				}
+			}
 		}
 	}
 }

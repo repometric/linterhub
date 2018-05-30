@@ -1,11 +1,11 @@
 {
 	"$schema": "https://repometric.github.io/linterhub/schema/deps.json",
 	"name": "phpcodefixer",
-	"requirement": [
+	"dependencies": [
 		[
 			{
 				"manager": "platform",
-				"package": "composer" 
+				"package": "composer"
 			},
 			{
 				"manager": "composer",
