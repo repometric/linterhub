@@ -1,0 +1,127 @@
+{
+	"$schema": "https://repometric.github.io/linterhub/schema/args.json",
+	"name": "phpcpd",
+	"type": "object",
+	"allOf": [
+		{
+			"$ref": "#/definitions/arguments"
+		}
+	],
+	"delimeters": "=",
+	"definitions": {
+		"arguments": {
+			"type": "object",
+			"properties": {
+				"": {
+					"id": "linterhub:path",
+					"type": "string",
+					"description": "Path for analysis"
+				},
+				"--names": {
+					"id": "arg:--names",
+					"type": "string",
+					"default": "*.php",
+					"description": "A comma-separated list of file names to check"
+				},
+				"--names-exclude": {
+					"id": "arg:--names-exclude",
+					"type": "string",
+					"description": "A comma-separated list of file names to exclude"
+				},
+				"--regexp-exclude": {
+					"id": "arg:--regexp-exclude",
+					"type": "string",
+					"description": "A comma-separated list of paths regexps to exclude (example: '#var/.*_tmp#')"
+				},
+				"--exclude": {
+					"id": "arg:--exclude",
+					"type": "string",
+					"description": "Exclude a directory from code analysis (must be relative to source) (multiple values allowed)"
+				},
+				"--log-pmd": {
+					"id": "arg:--log-pmd",
+					"type": "string",
+					"description": "Write result in PMD-CPD XML format to file"
+				},
+				"--min-lines": {
+					"id": "arg:--min-lines",
+					"type": "integer",
+					"default": "5",
+					"description": "Minimum number of identical lines"
+				},
+				"--min-tokens": {
+					"id": "arg:--min-tokens",
+					"type": "integer",
+					"default": "70",
+					"description": "Minimum number of identical tokens"
+				},
+				"--fuzzy": {
+					"id": "--fuzzy",
+					"type": "null",
+					"description": "Fuzz variable names"
+				},
+				"--progress": {
+					"type": "null",
+					"description": "Show progress bar"
+				},
+				"--help": {
+					"type": "null",
+					"description": "Show help message" 
+				},
+				"--quiet": {
+					"id": "--quiet",
+					"type": "null",
+					"description": "Do not output any message"
+				},
+				"--version": {
+					"id": "linterhub:version",
+					"type": "null",
+					"description": "Show version"
+				},
+				"--ansi": {
+					"id": "--ansi",
+					"type": "null",
+					"description": "Force ANSI output"
+				},
+				"--no-ansi": {
+					"id": "--no-ansi",
+					"type": "null",
+					"description": "Disable ANSI output"
+				},
+				"--no-interaction": {
+					"id": "--no-interaction",
+					"type": "null",
+					"description": "Do not ask any interactive question"
+				},
+				"--verbose": {
+					"id": "--verbose",
+					"type": "null",
+					"description": "More verbose output"
+				},
+				"-vvv": {
+					"id": "-vvv",
+					"type": "null",
+					"description": "Output for debug"
+				}
+			}
+		}, 
+		"section": {
+            "type": "object",
+            "description": "The engine configuration section",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "The engine name",
+                    "enum": [
+                        "phpcpd"
+                    ]
+                },
+                "options": {
+                    "type": "object",
+                    "description": "The engine configuration",
+                    "$ref": "#/definitions/arguments"
+                }
+            }
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"$schema": "https://repometric.github.io/linterhub/schema/deps.json",
+	"name": "phpcpd",
+	"dependencies": [
+		[
+			{
+				"manager": "platform",
+				"package": "php",
+				"version": "7.1"
+			},
+			{
+				"manager": "platform",
+				"package": "composer" 
+			},
+			{
+				"manager": "composer",
+				"package": "sebastian/phpcpd",
+				"version": "4.0.0",
+				"engine": true
+			}
+		],
+		[
+			{
+				"manager": "platform",
+				"package": "php",
+				"version": "5.6"
+			},
+			{
+				"manager": "platform",
+				"package": "composer" 
+			},
+			{
+				"manager": "composer",
+				"package": "sebastian/phpcpd",
+				"version": "3.0.1",
+				"engine": true
+			}
+		]
+	]
+}
