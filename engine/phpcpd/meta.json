@@ -1,0 +1,10 @@
+{
+	"$schema": "https://repometric.github.io/linterhub/schema/meta.json",
+	"name": "phpcpd",
+	"description": "Copy/Paste Detector (CPD) for PHP code.",
+	"url": "https://github.com/sebastianbergmann/phpcpd",
+	"languages": [
+		"PHP"
+	],
+	"license": "BSD-3-Clause"
+}
