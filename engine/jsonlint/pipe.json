@@ -1,0 +1,24 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/extr.json",
+    "id": "jsonlint",
+    "name": "jsonlint",
+    "pipeline": [
+        {
+            "cmd": "jsonlint",
+            "success": 1,
+            "engine": true,
+            "stream": "stderr",
+            "args":{
+                "--compact": null
+            }
+        },
+        {
+            "cmd": "node",
+            "args": "{{hub}}/{{engine}}/reporter.js"
+        }
+    ],
+    "environment": {
+        "masks": false,
+        "version": "v1.6.3"
+    }
+}
