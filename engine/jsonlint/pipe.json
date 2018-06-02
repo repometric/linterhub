@@ -7,9 +7,9 @@
             "cmd": "jsonlint",
             "success": 1,
             "engine": true,
+            "stream": "stderr",
             "args":{
-                "--compact":"",
-				"2>&1":""
+                "--compact": null
             }
         },
         {
