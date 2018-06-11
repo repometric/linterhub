@@ -1,0 +1,23 @@
+{
+    "$schema": "https://repometric.github.io/linterhub/schema/extr.json",
+    "id": "jslint",
+    "name": "jslint",
+    "pipeline": [
+        {
+            "cmd": "jslint",
+            "success": 1,
+            "engine": true,
+            "args":{
+                "--json":null
+            }
+        },
+        {
+            "cmd": "node",
+            "args": "{{hub}}/{{engine}}/reporter.js"
+        }
+    ],
+    "environment": {
+        "masks": false,
+        "version": "v0.12.0"
+    }
+}
