@@ -1,0 +1,40 @@
+{
+    "id": "https://repometric.github.io/linterhub/schema/bundle.json",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "This schema describes the bundle of engines",
+    "description": "The engines bundle",
+    "type": "object",
+    "patternProperties": {
+        "^.*$": {
+            "allOf": [
+                {
+                    "$ref": "#/definitions/item"
+                }
+            ]
+        }
+    },
+    "additionalItems": false,
+    "definitions": {
+        "item": {
+            "type": "object",
+            "description": "The item in a bundle that describes the engine",
+            "properties": {
+                "args": {
+                    "type": "object",
+                    "description": "The engine args",
+                    "$ref": "https://repometric.github.io/linterhub/schema/args.json"
+                },
+                "deps": {
+                    "type": "object",
+                    "description": "The engine deps",
+                    "$ref": "https://repometric.github.io/linterhub/schema/deps.json"
+                },
+                "meta": {
+                    "type": "object",
+                    "description": "The engine meta",
+                    "$ref": "https://repometric.github.io/linterhub/schema/meta.json"
+                }
+            }
+        }
+    }
+}

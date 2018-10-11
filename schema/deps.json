@@ -1,0 +1,76 @@
+{
+    "id": "https://repometric.github.io/linterhub/schema/deps.json",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "This schema describes the engine dependencies",
+    "description": "The engine dependencies",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The engine id"
+        },
+        "name": {
+            "type": "string",
+            "description": "The engine name"
+        },
+        "dependencies": {
+            "type": "array",
+            "description": "The engine dependencies",
+            "items": {
+                "$ref": "#/definitions/dependencies"
+            }
+        }
+    },
+    "required": [
+        "name",
+        "dependencies"
+    ],
+    "additionalItems": false,
+    "definitions": {
+        "dependencies": {
+            "type": "array",
+            "description": "The engine requirements",
+            "items": {
+                "$ref": "#/definitions/requirement"
+            }
+        },
+        "requirement": {
+            "type": "object",
+            "description": "The engine dependencies",
+            "properties": {
+                "manager": {
+                    "type": "string",
+                    "description": "The manager for dependency",
+                    "$ref": "#/definitions/manager"
+                },
+                "package": {
+                    "type": "string",
+                    "description": "The package name"
+                },
+                "version": {
+                    "type": "string",
+                    "description": "The package version"
+                },
+                "engine": {
+                    "type": "boolean",
+                    "description": "The flag indicating whether it's engine itself",
+                    "default": false
+                }
+            },
+            "required": [
+                "manager",
+                "package"
+            ],
+            "additionalProperties": false
+        },
+        "manager": {
+            "type": "string",
+            "description": "The package manager",
+            "oneOf": [
+                {
+                    "$ref": "https://repometric.github.io/linterhub/schema/platform.json"
+                }
+            ]
+        }
+    }
+}

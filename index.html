@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linters Hub</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/sandstone/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <style>
+      body { padding-top:50px; }
+  </style>
+</head>
+<body>
+  <div class="container" ng-app="sortApp" ng-controller="mainController">
+    <form>
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-search"></i></div>
+          <input type="text" class="form-control" placeholder="Search" ng-model="search">
+        </div>
+      </div>
+    </form>
+    <h4>Showing {{filtered.length}} Linters.</h4>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td>
+            <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+              Name
+              <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+          <td class="hidden-xs">
+            <a href="#" ng-click="sortType = 'description'; sortReverse = !sortReverse">
+            Description
+              <span ng-show="sortType == 'description' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'description' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+          <td>
+            <a href="#" ng-click="sortType = 'languages'; sortReverse = !sortReverse">
+            Languages 
+              <span ng-show="sortType == 'languages' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'languages' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+          <td>
+            <a href="#" ng-click="sortType = 'platform'; sortReverse = !sortReverse">
+            Dockerfile 
+              <span ng-show="sortType == 'platform' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'platform' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+          <td class="hidden-xs">
+            <a href="#" ng-click="sortType = 'license'; sortReverse = !sortReverse">
+            License 
+              <span ng-show="sortType == 'license' && !sortReverse" class="fa fa-caret-down"></span>
+              <span ng-show="sortType == 'license' && sortReverse" class="fa fa-caret-up"></span>
+            </a>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="linter in linters | orderBy:sortType:sortReverse | filter:search as filtered">
+          <td><a href="{{ linter.url }}">{{ linter.name }}</a></td>
+          <td class="hidden-xs">{{ linter.description }}</td>
+          <td>{{ linter.languages.join(", ") }}</td>
+          <td class="{{ linter.rm_docker ? 'danger': '' }}"><a href='dockers/alpine/{{linter.name}}/Dockerfile'>{{ linter.rm_docker ? "No" : "Yes" }}</a></td>
+          <td class="{{ linter.licenseUnknown ? 'danger hidden-xs' : 'hidden-xs'}}">
+            <span ng-repeat="license in linter.licenses">
+              <a href="{{ licenses[license] }}">{{license}}</a>{{$last ? '' : ', '}}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <h4>References</h4>
+      <ul ng-repeat="reference in references">
+        <li><a href="{{reference}}">{{reference}}</a></li>
+      </ul>
+    </div>
+
+  </div>
+<script>
+angular.module('sortApp', [])
+  .controller('mainController', function($scope, $http) {
+    $scope.sortType = 'name';
+    $scope.sortReverse = false;
+    $scope.search = '';
+    $scope.linters = [];
+    $scope.licenses = [];
+    $scope.references = [
+      "https://samate.nist.gov/index.php/Source_Code_Security_Analyzers.html",
+      "https://security.web.cern.ch/security/recommendations/en/code_tools.shtml",
+      "http://spinroot.com/static/",
+      "https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis",
+      "http://www.dwheeler.com/flawfinder/",
+      "http://www.cert.org/secure-coding/tools/index.cfm",
+      "https://github.com/exakat/php-static-analysis-tools",
+      "http://www.codeanalysistools.com",
+      "https://github.com/caramelomartins/awesome-linters"
+    ]
+    $http.get("linters.json")
+      .then(function (res) { 
+        $scope.linters = res.data.linters.map(function (item) {
+          return {
+            name: item.name,
+            description: item.description,
+            url: item.url,
+            platform: item.platform,
+            licenses: item.license.split(','),
+            licenseUnknown: item.license.indexOf('Unknown') >= 0,
+            languages: item.languages.split(','),
+            rm_docker: item.platform == "TODO",
+            rm_cli: false
+          }
+        });
+        $scope.licenses = res.data.licenses;
+      });
+});
+</script>
+</body>
+</html>

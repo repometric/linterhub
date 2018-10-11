@@ -1,0 +1,14 @@
+{
+    "id": "https://repometric.github.io/linterhub/schema/language.json",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "This schema describes programming languages and extensions",
+    "description": "The list of programming languages and extensions",
+    "oneOf": [
+        {
+            "$ref": "https://repometric.github.io/linterhub/schema/language.custom.json"
+        },
+        {
+            "$ref": "https://repometric.github.io/linterhub/schema/language.linguist.json"
+        }
+    ]
+}

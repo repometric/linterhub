@@ -1,0 +1,1162 @@
+{
+  "linters": [
+    {
+      "name": "alex",
+      "description": "Catch insensitive, inconsiderate writing.",
+      "url": "http://alexjs.com",
+      "languages": "plaintext",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "bandit",
+      "description": "Security oriented static analyser for python code.",
+      "url": "https://pypi.python.org/pypi/bandit",
+      "languages": "python",
+      "license": "Apache-2.0",
+      "platform": "python"
+    },
+    {
+      "name": "blast",
+      "description": "BLAST is a static software verification tool for C language that solves the reachability problem.",
+      "url": "http://forge.ispras.ru/projects/blast",
+      "languages": "c",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "bootlint",
+      "description": "HTML linter for Bootstrap projects.",
+      "url": "https://github.com/twbs/bootlint",
+      "languages": "html",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "brakeman",
+      "description": "A static analysis security vulnerability scanner for Ruby on Rails applications.",
+      "url": "http://brakemanscanner.org",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
+      "name": "ccm",
+      "description": "CCM is a tool that analyzes c, c++, c#, javascript and TypeScript code and reports back with cyclomatic complexity metric.",
+      "url": "https://github.com/jonasblunck/ccm",
+      "languages": "c,c++,c#,javascript,typescript",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "checkstyle",
+      "description": "Checkstyle is a development tool to help programmers write Java code that adheres to a coding standard.",
+      "url": "http://checkstyle.sourceforge.net",
+      "languages": "java",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "ckjm",
+      "description": "The program ckjm calculates Chidamber and Kemerer object-oriented metrics by processing the bytecode of compiled Java files.",
+      "url": "http://www.spinellis.gr/sw/ckjm/",
+      "languages": "java",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "clang",
+      "description": "The Clang Static Analyzer is a source code analysis tool that finds bugs in C, C++, and Objective-C programs.",
+      "url": "http://clang-analyzer.llvm.org",
+      "languages": "c,c++,objective c",
+      "license": "LLVM",
+      "platform": "TODO"
+    },
+    {
+      "name": "classycle",
+      "description": "Classycle's Analyser analyses the static class and package dependencies in Java applications or libraries.",
+      "url": "http://classycle.sourceforge.net",
+      "languages": "java",
+      "license": "BSD-2-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "codenarc",
+      "description": "CodeNarc analyzes Groovy code for defects, bad practices, inconsistencies, style issues and more.",
+      "url": "http://codenarc.sourceforge.net",
+      "languages": "groovy",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "coffeelint",
+      "description": "CoffeeLint is a style checker that helps keep CoffeeScript code clean and consistent.",
+      "url": "http://www.coffeelint.org",
+      "languages": "coffeescript",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "cpd",
+      "description": "CPD, the copy-paste-detector.",
+      "url": "https://pmd.github.io",
+      "languages": "java,javascript,apex,pl/sql,velocity,xml,xsl,c,c++,c#,ruby,fortran,ruby,scala,objective c,matlab,python,go,swift",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "cppcheck",
+      "description": "Cppcheck is a static analysis tool for C/C++ code.",
+      "url": "http://cppcheck.sourceforge.net",
+      "languages": "c,c++",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "cqual",
+      "description": "Cqual is a type-based analysis tool that provides a lightweight, practical mechanism for specifying and checking properties of C programs.",
+      "url": "http://www.cs.umd.edu/~jfoster/cqual/",
+      "languages": "c",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "credo",
+      "description": "Credo is a static code analysis tool for the Elixir language with a focus on teaching and code consistency.",
+      "url": "http://credo-ci.org",
+      "languages": "elixir",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "csscomb",
+      "description": "CSScomb is a coding style formatter for CSS.",
+      "url": "http://csscomb.com",
+      "languages": "css",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "csslint",
+      "version": "1.0.3",
+      "description": "Automated linting of Cascading Stylesheets.",
+      "url": "http://csslint.net",
+      "languages": "css",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "daikon",
+      "description": "Dynamic invariant detection runs a program, observes the values that the program computes, and then reports properties that were true over the observed executions.",
+      "url": "http://classycle.sourceforge.net",
+      "languages": "c,c++,c#,eiffel,f#,java,perl,vb",
+      "license": "LGPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "deptrac",
+      "description": "Deptrac is a static code analysis tool that helps to enforce rules for dependencies between software layers.",
+      "url": "https://github.com/sensiolabs-de/deptrac",
+      "languages": "php",
+      "license": "MIT",
+      "platform": "TODO",
+      "config": {
+        "package": "sensiolabs-de/deptrac:dev-master"
+      }
+    },
+    {
+      "name": "drivenmetrics",
+      "description": "DrivenMetrics is a metrics library to be used with your .net project.",
+      "url": "https://github.com/garrensmith/DrivenMetrics",
+      "languages": "c#,vb.net",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "elvis",
+      "description": "Erlang Style Reviewer.",
+      "url": "https://github.com/inaka/elvis",
+      "languages": "erlang",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "eslint",
+      "description": "A fully pluggable tool for identifying and reporting on patterns in JavaScript.",
+      "url": "http://eslint.org",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "findbugs",
+      "description": "Program which uses static analysis to look for bugs in Java code",
+      "url": "http://findbugs.sourceforge.net",
+      "languages": "java",
+      "license": "LGPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "flake8",
+      "description": "flake8 is a python tool that glues together pep8, pyflakes, mccabe, and third-party plugins to check the style and quality of some python code.",
+      "url": "http://flake8.pycqa.org",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "python"
+    },
+    {
+      "name": "flawfinder",
+      "description": "FlawFinder is a simple yet efficient ad quick tool that scans your C/C++ source code for calls to typical vulnerable library functions.",
+      "url": "http://www.dwheeler.com/flawfinder/",
+      "languages": "c,c++",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "flay",
+      "description": "Flay analyzes code for structural similarities.",
+      "url": "https://github.com/seattlerb/flay",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
+      "name": "flexpmd",
+      "description": "FlexPMD is a tool that helps to improve code quality by auditing any AS3/Flex source directory and detecting common bad practices.",
+      "url": "https://sourceforge.net/adobe/flexpmd/home/Home/",
+      "languages": "flex",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "flog",
+      "description": "Flog reports the most tortured code in an easy to read pain report.",
+      "url": "https://github.com/seattlerb/flog",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
+      "name": "fxcop",
+      "description": "FxCop is an application that analyzes managed code assemblies and reports information about the assemblies, such as possible design, localization, performance, and security improvements.",
+      "url": "http://www.scovetta.com/yasca.html",
+      "languages": "c#,vb.net",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "gendarme",
+      "description": "Gendarme is a extensible rule-based tool to find problems in .NET applications and libraries.",
+      "url": "http://www.mono-project.com/docs/tools+libraries/tools/gendarme/",
+      "languages": "c#,vb.net",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "gmetrics",
+      "description": "The GMetrics project provides calculation and reporting of size and complexity metrics for Groovy source code.",
+      "url": "http://gmetrics.sourceforge.net",
+      "languages": "groovy",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "golint",
+      "description": "This is a linter for Go source code.",
+      "url": "https://github.com/golang/lint",
+      "languages": "go",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "golint",
+      "description": "This is a linter for Go source code.",
+      "url": "https://github.com/golang/lint",
+      "languages": "go",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "gometalinter",
+      "description": "Concurrently run Go lint tools and normalise their output.",
+      "url": "https://github.com/alecthomas/gometalinter",
+      "languages": "go",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "govet",
+      "description": "Vet examines Go source code and reports suspicious constructs.",
+      "url": "https://golang.org/cmd/vet/",
+      "languages": "go",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "helium",
+      "description": "Helium is a tool for discovering unused CSS across many pages on a web site.",
+      "url": "https://github.com/geuis/helium-css",
+      "languages": "css",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "hlint",
+      "description": "Haskell source code suggestions.",
+      "url": "https://github.com/ndmitchell/hlint",
+      "languages": "haskell",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "html-inspector",
+      "description": "HTML Inspector is a code quality tool to help you and your team write better markup.",
+      "url": "https://github.com/philipwalton/html-inspector",
+      "languages": "html",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "htmlhint",
+      "description": "HTMLHint is a Static Code Analysis Tool for HTML.",
+      "url": "http://htmlhint.com",
+      "languages": "html",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "infer",
+      "description": "Infer is a static analysis tool for Java, Objective-C and C.",
+      "url": "http://fbinfer.com/",
+      "languages": "java,c,objective c",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "javascriptlint",
+      "description": "It provides a robust framework that can not only check JavaScript syntax but also examine the coding techniques used in the script and warn against questionable practices.",
+      "url": "http://www.javascriptlint.com",
+      "languages": "javascript",
+      "license": "PL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "jedi",
+      "description": "Awesome autocompletion and static analysis library for python.",
+      "url": "http://jedi.jedidjah.ch",
+      "languages": "python",
+      "license": "MIT,PSF",
+      "platform": "python"
+    },
+    {
+      "name": "jlint",
+      "description": "Jlint will check your Java code and find bugs, inconsistencies and synchronization problems by doing data flow analysis and building the lock graph.",
+      "url": "http://jlint.sourceforge.net",
+      "languages": "java",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "jscpd",
+      "description": "Copy/paste detector for programming source code.",
+      "url": "https://github.com/kucherenko/jscpd",
+      "languages": "javascript,java,yaml,coffeescript,c++,haxe,php,c#,typescript,go,python,html,ruby,c,scss,less,css,erlang,swift",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "jscs",
+      "description": "JSCS is a code style linter and formatter for your style guide.",
+      "url": "http://jscs.info",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "jshint",
+      "description": "JSHint is a tool that helps to detect errors and potential problems in your JavaScript code.",
+      "url": "http://jshint.com",
+      "languages": "javascript",
+      "license": "MIT,JSON",
+      "platform": "nodejs"
+    },
+    {
+      "name": "jslint",
+      "description": "The JavaScript Code Quality Tool.",
+      "url": "http://jslint.com",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "lapse",
+      "description": "The Security Scanner for Java EE Applications.",
+      "url": "https://www.owasp.org/index.php/Category:OWASP_LAPSE_Project",
+      "languages": "java",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "lapseplus",
+      "description": "OWASP LAPSE Project is an initiative to make available to developers and auditors a tool for detecting vulnerabilities in Java EE Applications.",
+      "url": "https://www.owasp.org/index.php/OWASP_LAPSE_Project",
+      "languages": "java",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "lesslint",
+      "description": "Lint less styles.",
+      "url": "https://github.com/ecomfe/node-lesslint",
+      "languages": "less",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "linter",
+      "description": "Linter is a Scala static analysis compiler plugin which adds compile-time checks for various possible bugs, inefficiencies, and style problems.",
+      "url": "https://github.com/HairyFotr/linter",
+      "languages": "scala",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "linter",
+      "description": "Style linter for Dart.",
+      "url": "https://dart-lang.github.io/linter/",
+      "languages": "dart",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "linty-fresh",
+      "description": "Keep your codebase sparkly clean with the power of LINT.",
+      "url": "https://github.com/lyft/linty_fresh",
+      "languages": "python",
+      "license": "Apache-2.0",
+      "platform": "python"
+    },
+    {
+      "name": "lizard",
+      "description": "A simple code complexity analyser without caring about the C/C++ header files or Java imports, supports most of the popular languages.",
+      "url": "https://github.com/terryyin/lizard",
+      "languages": "c,c++,java,c#,javascript,objective c,swift,python,ruby,ttcn-3,php,scala",
+      "license": "MIT",
+      "platform": "python"
+    },
+    {
+      "name": "lualint",
+      "description": "lualint performs luac-based static analysis of global variable usage in Lua source code.",
+      "url": "https://github.com/philips/lualint",
+      "languages": "lua",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "markdownlint",
+      "description": "Style checker and lint tool for Markdown files.",
+      "url": "https://github.com/DavidAnson/markdownlint",
+      "languages": "markdown",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "mdl",
+      "description": "Markdown lint tool.",
+      "url": "https://github.com/mivok/markdownlint",
+      "languages": "markdown",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
+      "name": "metric_fu",
+      "description": "Metric_fu is a set of rake tasks that make it easy to generate metrics reports.",
+      "url": "http://metricfu.github.com/metric_fu",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "mops",
+      "description": "MOPS is a tool for finding security bugs in C programs and for verifying conformance to rules of defensive programming.",
+      "url": "https://people.eecs.berkeley.edu/~daw/mops/",
+      "languages": "c",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "nsp",
+      "description": "Node Security helps you keep your node applications secure.",
+      "url": "https://nodesecurity.io",
+      "languages": "nodejs",
+      "license": "Apache-2.0",
+      "platform": "nodejs"
+    },
+    {
+      "name": "oclint",
+      "description": "OCLint is a static code analysis tool for improving quality and reducing defects by inspecting C, C++ and Objective-C code and looking for potential problems.",
+      "url": "http://oclint.org",
+      "languages": "c,c++,objective c",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "ocstyle",
+      "description": "Objective-C style checker.",
+      "url": "https://github.com/Cue/ocstyle",
+      "languages": "objective c",
+      "license": "Apache-2.0",
+      "platform": "python"
+    },
+    {
+      "name": "parse",
+      "description": "The Parse scanner is a static scanning tool to review your PHP code for potential security-related issues.",
+      "url": "https://github.com/psecio/parse",
+      "languages": "php",
+      "license": "MIT",
+      "platform": "php",
+      "config": {
+        "package": "psecio/parse"
+      }
+    },
+    {
+      "name": "pdepend",
+      "description": "PHP_Depend is a small program that performs static code analysis on a given source base.",
+      "url": "https://pdepend.org",
+      "languages": "php",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "pep8",
+      "description": "pep8 is a tool to check your Python code against some of the style conventions in PEP 8.",
+      "url": "https://pypi.python.org/pypi/pep8",
+      "languages": "python",
+      "license": "Expat",
+      "platform": "python"
+    },
+    {
+      "name": "perlcritic",
+      "description": "Perl Critic external link checks whether your code complies with best practices.",
+      "url": "http://search.cpan.org/dist/Perl-Critic/lib/Perl/Critic.pm#COPYRIGHT",
+      "languages": "perl",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "perltidy",
+      "description": "Perltidy is a Perl script which indents and reformats Perl scripts to make them easier to read.",
+      "url": "http://perltidy.sourceforge.net",
+      "languages": "perl",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "phan",
+      "description": "Phan is a static analyzer that looks for common issues and will verify type compatibility on various operations when type information is available or can be deduced.",
+      "url": "https://github.com/etsy/phan",
+      "languages": "php",
+      "license": "MIT",
+      "platform": "TODO",
+      "config": {
+        "package": "etsy/phan:dev-master"
+      }
+    },
+    {
+      "name": "php-assumptions",
+      "description": "PHP Assumptions is a static code analysis tool doing checks for weak assumptions.",
+      "url": "https://github.com/rskuipers/php-assumptions",
+      "languages": "php",
+      "license": "MIT",
+      "platform": "php",
+      "config": {
+        "package": "rskuipers/php-assumptions"
+      }
+    },
+    {
+      "name": "php-sat",
+      "description": "Static analysis for PHP.",
+      "url": "http://www.program-transformation.org/PHP/PhpSat",
+      "languages": "php",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "php_codesniffer",
+      "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files to detect and fix violations of a defined set of coding standards.",
+      "url": "https://github.com/squizlabs/PHP_CodeSniffer",
+      "languages": "css,javascript,php",
+      "license": "BSD-3-Clause",
+      "platform": "php",
+      "config": {
+        "package": "squizlabs/php_codesniffer=*"
+      }
+    },
+    {
+      "name": "phpcheckstyle",
+      "description": "PHPCheckstyle is an open-source tool that helps PHP programmers adhere to certain coding conventions.",
+      "url": "https://phpcheckstyle.github.io",
+      "languages": "php",
+      "license": "OSL-2.1",
+      "platform": "TODO",
+      "config": {
+        "package": "phpcheckstyle/phpcheckstyle"
+      }
+    },
+    {
+      "name": "phpcodefixer",
+      "description": "PhpCodeFixer finds usage of deprecated functions, variables and ini directives in your php code.",
+      "url": "https://github.com/wapmorgan/PhpCodeFixer",
+      "languages": "php",
+      "license": "BSD-3-Clause",
+      "platform": "TODO",
+      "config": {
+        "package": "wapmorgan/php-code-fixer"
+      }
+    },
+    {
+      "name": "phpcpd",
+      "description": "Copy/Paste Detector (CPD) for PHP code.",
+      "url": "https://github.com/sebastianbergmann/phpcpd",
+      "languages": "php",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "phplint",
+      "description": "PHPLint is a validator and documentator for PHP 5 and PHP 7 programs.",
+      "url": "http://www.icosaedro.it/phplint/",
+      "languages": "php",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "phpmd",
+      "description": "It takes a given PHP source code base and look for several potential problems within that source.",
+      "url": "https://phpmd.org",
+      "languages": "php",
+      "license": "BSD-3-Clause",
+      "platform": "php",
+      "config": {
+        "package": "phpmd/phpmd"
+      }
+    },
+    {
+      "name": "phpmetrics",
+      "description": "PhpMetrics provides various metrics about PHP projects.",
+      "url": "http://phpmetrics.org",
+      "languages": "php",
+      "license": "MIT",
+      "platform": "php",
+      "config": {
+        "package": "phpmetrics/phpmetrics"
+      }
+    },
+    {
+      "name": "phpparser",
+      "description": "PHP Parser analyses PHP scripts including all included files and checks whether variables, constants, functions and classes are both used and defined.",
+      "url": "https://sourceforge.net/projects/phpparser/",
+      "languages": "php",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "phpsa",
+      "description": "PHPSA is a development tool aimed at bringing static analysis for PHP applications and libraries.",
+      "url": "https://phpsa.dmtry.me",
+      "languages": "php",
+      "license": "MIT",
+      "platform": "php",
+      "config": {
+        "package": "ovr/phpsa"
+      }
+    },
+    {
+      "name": "pixy",
+      "description": "Pixy is a scanner static code analysis tools that scans PHP applications for security vulnerabilities.",
+      "url": "https://github.com/oliverklee/pixy",
+      "languages": "php",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "plato",
+      "description": "JavaScript source code visualization, static analysis, and complexity tool.",
+      "url": "https://github.com/es-analysis/plato",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "pmd",
+      "description": "PMD is a source code analyzer. It finds common programming flaws like unused variables, empty catch blocks, unnecessary object creation, and so forth.",
+      "url": "https://pmd.github.io",
+      "languages": "java,javascript,apex,pl/sql,velocity,xml,xsl",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "polylint",
+      "description": "Catch errors in your polymer project before even running your code.",
+      "url": "https://github.com/PolymerLabs/polylint",
+      "languages": "html,polymer",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "proselint",
+      "description": "A linter for prose.",
+      "url": "http://proselint.com",
+      "languages": "plaintext",
+      "license": "Unknown",
+      "platform": "python"
+    },
+    {
+      "name": "prospector",
+      "description": "Prospector is a tool to analyse Python code and output information about errors, potential problems, convention violations and complexity.",
+      "url": "http://prospector.landscape.io",
+      "languages": "python",
+      "license": "GPL-2.0",
+      "platform": "python"
+    },
+    {
+      "name": "puppet-lint",
+      "description": "Puppet Lint will test modules and manifests against the recommended Puppet style guidelines.",
+      "url": "https://github.com/rodjek/puppet-lint",
+      "languages": "puppet",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
+      "name": "py_static_check",
+      "description": "py_static_check can statically check your Python code for a lot of common errors.",
+      "url": "https://pypi.python.org/pypi/py_static_check",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "pychecker",
+      "description": "Pychecker is a lint-like tool for python, which will mostly find bugs that would be found by compilers for less dynamic languages..",
+      "url": "http://pychecker.sourceforge.net",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "pycodestyle",
+      "description": "Simple Python style checker in one Python file.",
+      "url": "http://pycodestyle.pycqa.org/en/latest/",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "python"
+    },
+    {
+      "name": "pyflakes",
+      "description": "Pyflakes analyzes programs and detects various errors.",
+      "url": "https://pypi.python.org/pypi/pyflakes",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "python"
+    },
+    {
+      "name": "pylint",
+      "description": "Pylint is a Python source code analyzer which looks for programming errors, helps enforcing a coding standard and sniffs for some code smells.",
+      "url": "https://pylint.org",
+      "languages": "python",
+      "license": "GPL-2.0",
+      "platform": "python"
+    },
+    {
+      "name": "radon",
+      "description": "Radon is a Python tool that computes various metrics from the source code.",
+      "url": "https://pypi.python.org/pypi/radon",
+      "languages": "python",
+      "license": "MIT",
+      "platform": "python"
+    },
+    {
+      "name": "rats",
+      "description": "RATS targets various languages and has specific detection rules for each.",
+      "url": "https://security.web.cern.ch/security/recommendations/en/codetools/rats.shtml",
+      "languages": "c,c++,php,python,perl,ruby",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "reek",
+      "description": "Code smell detector for Ruby.",
+      "url": "https://github.com/troessner/reek/wiki",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "remark-lint",
+      "description": "Markdown code style linter.",
+      "url": "https://github.com/mivok/markdownlint",
+      "languages": "markdown",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "rips",
+      "description": "RIPS is a static source code analyser for the detection of vulnerabilities in PHP applications.",
+      "url": "http://rips-scanner.sourceforge.net",
+      "languages": "php",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "roodi",
+      "description": "It parses your Ruby code and warns you about design issues you have based on the checks that is has configured.",
+      "url": "http://roodi.rubyforge.org",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "rosecheckers",
+      "description": "Rosecheckers tool performs static analysis on C/C++ source files.",
+      "url": "http://www.cert.org/secure-coding/tools/rosecheckers.cfm",
+      "languages": "c,c++",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "rubocop",
+      "description": "RuboCop is a Ruby static code analyzer.",
+      "url": "http://batsov.com/rubocop",
+      "languages": "ruby",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
+      "name": "ruby-lint",
+      "description": "ruby-lint is a static code analysis tool for Ruby.",
+      "url": "http://code.yorickpeterse.com/ruby-lint/latest/",
+      "languages": "ruby",
+      "license": "MPL-2.0",
+      "platform": "ruby"
+    },
+    {
+      "name": "rust-clippy",
+      "description": "A bunch of lints to catch common mistakes and improve your Rust code.",
+      "url": "https://github.com/Manishearth/rust-clippy",
+      "languages": "rust",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "saikuro",
+      "description": "Saikuro is a Ruby cyclomatic complexity analyzer.",
+      "url": "http://saikuro.rubyforge.org",
+      "languages": "ruby",
+      "license": "BSD-3-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "sass-lint",
+      "description": "A Node-only Sass linter for both sass and scss syntax.",
+      "url": "https://github.com/sasstools/sass-lint",
+      "languages": "sass,scss",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "scalastyle",
+      "description": "Scalastyle examines your Scala code and indicates potential problems with it.",
+      "url": "http://www.scalastyle.org",
+      "languages": "scala",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "scapegoat",
+      "description": "Scala compiler plugin for static code analysis.",
+      "url": "https://github.com/sksamuel/scapegoat",
+      "languages": "scala",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "scss-lint",
+      "description": "Configurable tool for writing clean and consistent SCSS.",
+      "url": "https://github.com/brigade/scss-lint",
+      "languages": "scss",
+      "license": "MIT",
+      "platform": "ruby"
+    },
+    {
+      "name": "shellcheck",
+      "description": "ShellCheck, a static analysis tool for shell scripts.",
+      "url": "https://www.shellcheck.net",
+      "languages": "shell",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "shlint",
+      "description": "Shlint uses locally available shells to test a shellscript for portability issues.",
+      "url": "https://github.com/duggan/shlint",
+      "languages": "shell",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "simian",
+      "description": "Simian (Similarity Analyser) identifies duplication in source code",
+      "url": "http://www.harukizaemon.com/simian/index.html",
+      "languages": "java,c#,c,c++,cobol,ruby,jsp,asp,html,xml,vb,groovy",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "smatch",
+      "description": "Smatch has been completely rewritten in C and now uses sparse as a C parser instead of gcc as a C parser.",
+      "url": "http://smatch.sourceforge.net",
+      "languages": "c",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "splint",
+      "description": "Splint is a tool for statically checking C programs for security vulnerabilities and coding mistakes.",
+      "url": "http://www.splint.org",
+      "languages": "c",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "squale",
+      "description": "Perltidy is a Perl script which indents and reformats Perl scripts to make them easier to read.",
+      "url": "hhttp://www.squale.org",
+      "languages": "java,c,c++,c#,php,cobol",
+      "license": "LGPL-3.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "standard",
+      "description": "JavaScript Standard Style Guide.",
+      "url": "http://standardjs.com",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "stanse",
+      "description": "Error-finding tool based on static analysis.",
+      "url": "http://www.scovetta.com/yasca.html",
+      "languages": "c,c++,c#,java",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "stylelint",
+      "description": "A mighty, modern CSS linter that helps you enforce consistent conventions and avoid errors in your stylesheets.",
+      "url": "http://stylelint.io/",
+      "languages": "css,less,scss",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "stylint",
+      "description": "Improve your Stylus code with Stylint.",
+      "url": "https://rosspatton.github.io/stylint",
+      "languages": "stylus",
+      "license": "GPL-2.0",
+      "platform": "nodejs"
+    },
+    {
+      "name": "swiftlint",
+      "description": "A tool to enforce Swift style and conventions.",
+      "url": "https://github.com/realm/SwiftLint",
+      "languages": "swift",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "tailor",
+      "description": "It analyzes your code to ensure consistent styling and help avoid bugs.",
+      "url": "https://tailor.sh/",
+      "languages": "swift",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "tattletale",
+      "description": "Tattletale is a tool that can help you get an overview of the project you are working on or a product that you depend on.",
+      "url": "http://tattletale.jboss.org",
+      "languages": "java",
+      "license": "LGPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "tern",
+      "description": "Tern is a stand-alone code-analysis engine for JavaScript.",
+      "url": "http://ternjs.net",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "tslint",
+      "description": "TSLint checks your TypeScript code for readability, maintainability, and functionality errors.",
+      "url": "http://palantir.github.io/tslint/",
+      "languages": "typescript",
+      "license": "Apache-2.0",
+      "platform": "nodejs"
+    },
+    {
+      "name": "tuli",
+      "description": "A static analysis engine for php.",
+      "url": "https://github.com/ircmaxell/Tuli",
+      "languages": "php",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "ucdetector",
+      "description": "UCDetector is a tool to find unnecessary (dead) public java code..",
+      "url": "http://www.ucdetector.org",
+      "languages": "java",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "uno",
+      "description": "Uno is a simple tool for source code analysis.",
+      "url": "http://spinroot.com/uno/",
+      "languages": "c",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "usus",
+      "description": "Common coding and design practices in software projects.",
+      "url": "https://github.com/usus/usus-plugins/wiki",
+      "languages": "java",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "ususnet",
+      "description": "Provides static code analysis for software developed with .NET.",
+      "url": "https://github.com/usus/Usus.NET",
+      "languages": "c#,vb.net",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "vcg",
+      "description": "Visual Code Grepper is an automated code security review tool that handles C/C++, Java, C#, VB and PL/SQL.",
+      "url": "c,c++,java,c#,vb,pl/sql",
+      "languages": "c,c++",
+      "license": "GPL-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "visualcodegrepper",
+      "description": "VCG is an automated code security review tool for C++, C#, VB, PHP, Java and PL/SQL which is intended to drastically speed up the code review process by identifying bad/insecure code.",
+      "url": "https://github.com/nccgroup/VCG",
+      "languages": "c++,c#,vb,php,java,sql",
+      "license": "Unknown",
+      "platform": "TODO"
+    },
+    {
+      "name": "vnu",
+      "description": "It analyzes your code to ensure consistent styling and help avoid bugs.",
+      "url": "https://validator.github.io/validator/",
+      "languages": "html",
+      "license": "MIT",
+      "platform": "TODO"
+    },
+    {
+      "name": "wap",
+      "description": "WAP is a source code static analysis and data mining tool to detect and correct input validation vulnerabilities in web applications written in PHP with a low rate of false positives.",
+      "url": "http://awap.sourceforge.net",
+      "languages": "java,c,c++,html,css,javascript,asp,coldfusion,php,perl,python,cobol,.net,c#,vb.net,visual basic",
+      "license": "BSD-2-Clause",
+      "platform": "TODO"
+    },
+    {
+      "name": "wartremover",
+      "description": "WartRemover is a flexible Scala code linting tool.",
+      "url": "https://github.com/puffnfresh/wartremover",
+      "languages": "scala",
+      "license": "Apache-2.0",
+      "platform": "TODO"
+    },
+    {
+      "name": "xo",
+      "description": "JavaScript happiness style linter.",
+      "url": "https://github.com/sindresorhus/xo",
+      "languages": "javascript",
+      "license": "MIT",
+      "platform": "nodejs"
+    },
+    {
+      "name": "yasca",
+      "description": "Yasca is a source code analysis tool.",
+      "url": "http://www.scovetta.com/yasca.html",
+      "languages": "php",
+      "license": "GPL-3.0",
+      "platform": "TODO"
+    }
+  ],
+  "platforms": {
+    "custom": {
+      "latest": "",
+      "stable": ""
+    },
+    "go": {
+      "latest": "",
+      "stable": ""
+    },
+    "nodejs": {
+      "latest": "npm install -g {package}",
+      "stable": "npm install -g {package}@{version}"
+    },
+    "php": {
+      "latest": "composer global require {package}",
+      "stable": "composer global require {package}:{version}"
+    },
+    "python": {
+      "latest": "pip install {package}",
+      "stable": "pip install {package}=={version}"
+    },
+    "ruby": {
+      "latest": "gem install {package}",
+      "stable": "gem install {package} -v {version}"
+    }
+  },
+  "dockers": {
+    "alpine": {
+      "TODO": "",
+      "base": "alpine",
+      "go": "golang:alpine",
+      "java": "openjdk:8-alpine",
+      "nodejs": "mhart/alpine-node",
+      "php": "composer/composer:alpine",
+      "python": "python:3-alpine",
+      "ruby": "cybercode/alpine-ruby:2.3"
+    }
+  },
+  "licenses": {
+    "Unknown": "#",
+    "MIT": "https://opensource.org/licenses/MIT",
+    "GPL-2.0": "https://opensource.org/licenses/GPL-2.0",
+    "Apache-2.0": "https://opensource.org/licenses/Apache-2.0",
+    "BSD-3-Clause": "https://opensource.org/licenses/BSD-3-Clause",
+    "OSL-2.1": "https://opensource.org/licenses/OSL-2.1",
+    "JSON": "http://directory.fsf.org/wiki/License:JSON",
+    "PSF": "https://opensource.org/licenses/Python-2.0",
+    "Expat": "http://directory.fsf.org/wiki/License:Expat",
+    "MPL-2.0": "https://opensource.org/licenses/MPL-2.0",
+    "GPL-3.0": "https://opensource.org/licenses/GPL-3.0",
+    "BSD-2-Clause": "https://opensource.org/licenses/BSD-2-Clause",
+    "LGPL-3.0": "https://opensource.org/licenses/LGPL-3.0",
+    "LGPL-2.0": "http://directory.fsf.org/wiki/License:LGPLv2",
+    "LLVM": "http://llvm.org/releases/2.8/LICENSE.TXT"
+  }
+}

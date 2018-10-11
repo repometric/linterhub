@@ -1,0 +1,81 @@
+{
+    "id": "https://repometric.github.io/linterhub/schema/language.custom.json",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "This schema describes programming languages and extensions",
+    "description": "The custom list of programming languages and extensions",
+    "oneOf": [
+        {
+            "$ref": "#/definitions/language"
+        }
+    ],
+    "definitions": {
+        "language": {
+            "type": "string",
+            "description": "The programming language name",
+            "oneOf": [
+                {
+                    "enum": [
+                        "OOCSS"
+                    ],
+                    "extensions": [
+                        ".css"
+                    ]
+                },
+                {
+                    "enum": [
+                        "Jade"
+                    ],
+                    "extensions": [
+                        ".jade"
+                    ]
+                },
+                {
+                    "enum": [
+                        "JSP"
+                    ],
+                    "extensions": [
+                        ".jsp"
+                    ]
+                },
+                {
+                    "enum": [
+                        "Apache Velocity"
+                    ],
+                    "extensions": [
+                        ".vm"
+                    ]
+                },
+                {
+                    "enum": [
+                        "CoffeeCup"
+                    ],
+                    "extensions": [
+                        ".сtf",
+                        ".rsd",
+                        ".snp",
+                        ".css",
+                        ".html",
+                        ".php",
+                        ".xml"
+                    ]
+                },
+                {
+                    "enum": [
+                        "JEDI"
+                    ],
+                    "extensions": [
+                        ".jedi"
+                    ]
+                },
+                {
+                    "enum": [
+                        "TTCN-3"
+                    ],
+                    "extensions": [
+                        ".ttcn"
+                    ]
+                }
+            ]
+        }
+    }
+}

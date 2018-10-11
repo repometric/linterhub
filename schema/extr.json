@@ -1,0 +1,67 @@
+{
+    "id": "https://repometric.github.io/linterhub/schema/extr.json",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "This schema describes the engine extra information",
+    "description": "The extra information of engine",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The engine id, used only when the engine name is not unique",
+            "default": ""
+        },
+        "name": {
+            "type": "string",
+            "description": "The engine official name"
+        },
+        "pipeline": {
+            "type": "array",
+            "description": "Ordered chain of elements, containing command-line options, which allows to get a specific output format after executing",
+            "items": {
+                "$ref": "#/definitions/pipeline"
+            }
+        },
+        "environment": {
+            "type": "object",
+            "description": "Object, which stores execution information for engine",
+            "properties": {
+                "masks": {
+                    "type": "boolean",
+                    "description": "Whether filename masks are supported by engine",
+                    "default": true
+                },
+                "version": {
+                    "type": "string",
+                    "description": "The engine version, equal to the output of version command"
+                }
+            }
+        }
+    },
+    "required": [
+        "name",
+        "pipeline",
+        "environment"
+    ],
+    "definitions": {
+        "pipeline": {
+            "type": "string",
+            "description": "The engine license",
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "The executable string"
+                },
+                "success": {
+                    "type": "number",
+                    "description": "Success exit code",
+                    "default": 0
+                },
+                "engine": {
+                    "type": "boolean",
+                    "decsription": "Whether the command-line option is an executable engine name",
+                    "default": false
+                }
+            }
+        }
+    }
+}

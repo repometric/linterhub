@@ -1,0 +1,105 @@
+{
+    "id": "https://repometric.github.io/linterhub/schema/args.json",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "name": "The engine name",
+    "title": "This schema describes the engine arguments schema",
+    "description": "The engine arguments schema",
+    "type": "object",
+    "$ref": "http://json-schema.org/draft-04/schema",
+    "properties": {
+        "$schema": {},
+        "type": {},
+        "allOf": {},
+        "id": {
+            "type": "string",
+            "description": "The engine id"
+        },
+        "name": {
+            "type": "string",
+            "description": "The engine id"
+        },
+        "delimeters": {
+            "type": "string",
+            "description": "delimeters used between command-line options and their arguments"
+        },
+        "definitions": {
+            "description": "The arguments definitions",
+            "type": "object",
+            "$ref": "http://json-schema.org/draft-04/schema",
+            "properties": {
+                "arguments": {
+                    "type": "array",
+                    "description": "The engine arguments",
+                    "items": {
+                        "$ref": "#/definitions/argument"
+                    }
+                },
+                "section": {
+                    "type": "object",
+                    "description": "The engine configuration section",
+                    "$ref": "http://json-schema.org/draft-04/schema"
+                }
+            },
+            "required": [
+                "section",
+                "arguments"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "name",
+        "definitions"
+    ],
+    "definitions": {
+        "argument": {
+            "type": "object",
+            "description": "The engine argument",
+            "properties": {
+                "id": {
+                    "oneOf": [
+                        {
+                            "type": "string",
+                            "pattern": "^linterhub:[a-z]+$"
+                        },
+                        {
+                            "type": "string",
+                            "pattern": "^args:[-a-z]+$"
+                        },
+                        {
+                            "type": "string",
+                            "pattern": "^[-a-z]+$"
+                        }
+                    ],
+                    "description": "The name of the argument from the original tool"
+                },
+                "hideName": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Hide orignal name. Used when engine have multiple arguments without prefix."
+                },
+                "type": {
+                    "type": "string",
+                    "description": "The value type of the argument. Example: null, number, string"
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Help text from the original tool for that argument, two sentences maximum"
+                },
+                "default": {
+                    "type": "object",
+                    "description": "The default value for that argument; if argument is readonly and default is not set then 0, \"\" or null is used"
+                },
+                "enum": {
+                    "type": "array",
+                    "description": "Need to use if the argument value has a limited list. Type of argument must be string"
+                }
+            },
+            "required": [
+                "type",
+                "description"
+            ]
+        }
+    },
+    "additionalProperties": false
+}

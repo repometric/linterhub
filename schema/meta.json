@@ -1,0 +1,114 @@
+{
+    "id": "https://repometric.github.io/linterhub/schema/meta.json",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "This schema describes the engine definition",
+    "description": "The meta information of engine",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The engine id, used only when the engine name is not unique",
+            "default": ""
+        },
+        "name": {
+            "type": "string",
+            "description": "The engine official name, may not be unique"
+        },
+        "alias": {
+            "type": "array",
+            "description": "List of engine aliases.",
+            "items": {
+                "type": "string"
+            }
+        },
+        "description": {
+            "type": "string",
+            "description": "The engine official description"
+        },
+        "url": {
+            "type": "string",
+            "description": "The engine url (homepage, documentation or repository)",
+            "format": "uri"
+        },
+        "languages": {
+            "type": "array",
+            "description": "The list of supported languages",
+            "items": {
+                "$ref": "#/definitions/language"
+            }
+        },
+        "extensions": {
+            "type": "array",
+            "description": "Common file extensions parsed by engine, if empty then corresponding language extensions are used",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "#/definitions/extension"
+                    },
+                    {
+                        "$ref": "#/definitions/language"
+                    }
+                ]
+            }
+        },
+        "configs": {
+            "type": "array",
+            "description": "List of file names which could be treated as engine config",
+            "items": {
+                "type": "string"
+            }
+        },
+        "license": {
+            "type": "string",
+            "description": "The engine license",
+            "$ref": "#/definitions/license"
+        },
+        "agreement": {
+            "type": "string",
+            "description": "The engine custom agreement"
+        }
+    },
+    "required": [
+        "name",
+        "description",
+        "license"
+    ],
+    "additionalProperties": true,
+    "definitions": {
+        "license": {
+            "type": "string",
+            "description": "The engine license",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "custom"
+                    ]
+                },
+                {
+                    "$ref": "https://repometric.github.io/linterhub/schema/license.json"
+                }
+            ]
+        },
+        "language": {
+            "description": "The programming language",
+            "type": "string",
+            "oneOf": [
+                {
+                    "type": "string",
+                    "enum": [
+                        "any"
+                    ]
+                },
+                {
+                    "$ref": "https://repometric.github.io/linterhub/schema/language.json"
+                }
+            ]
+        },
+        "extension": {
+            "description": "The filename extension",
+            "type": "string",
+            "pattern": "^\\..*"
+        }
+    }
+}
